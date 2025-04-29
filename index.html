@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Weimar Miranda | BI Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Google Fonts: Oswald (300,400) & Poppins (300,400) -->
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+  <style>
+    /* Reset & Base */
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family:'Poppins',sans-serif; color:#333; background:#fff; line-height:1.6; }
+    a { color:#26403b; text-decoration:none; }
+    ul { list-style:none; }
+    .container { max-width:1000px; margin:0 auto; padding:0 1rem; }
+
+    /* Color & Font Variables */
+    :root {
+      --primary: #26403b;
+      --accent: #f5b841;
+      --light-bg: #f9f9f9;
+      --heading-font: 'Oswald', sans-serif;
+    }
+    /* Headings in Oswald Claro */
+    h1,h2,h3,h4,h5,h6 {
+      font-family: var(--heading-font);
+      font-weight: 300;
+      color: var(--primary);
+    }
+
+    /* Header */
+    header {
+      position: sticky; top:0; width:100%;
+      background: var(--primary); color:#fff;
+      padding:1rem 0; z-index:1000;
+    }
+    header .nav { display:flex; justify-content:space-between; align-items:center; }
+    header .logo { font-family: var(--heading-font); font-weight:400; font-size:1.5rem; margin-left:1rem; }
+    header nav ul { display:flex; gap:1.5rem; margin-right:1rem; }
+    header nav ul li a { color:#fff; font-weight:300; transition:opacity .2s; }
+    header nav ul li a:hover { opacity:.8; }
+
+    /* Hero */
+    .hero {
+      background: var(--primary); color:#fff;
+      text-align:center; padding:5rem 1rem;
+    }
+    .hero h1 { font-size:3rem; margin-bottom:1rem; }
+    .hero p { font-size:1.25rem; max-width:800px; margin:0 auto .5rem; line-height:1.4; }
+    .hero span { color: var(--accent); }
+    .hero .specialties { font-style:italic; margin-top:.5rem; }
+
+    /* About */
+    #about { background: var(--light-bg); padding:4rem 0; }
+    #about .about-container { display:flex; flex-wrap:wrap; align-items:center; gap:2rem; }
+    #about img { width:200px; height:200px; border-radius:50%; object-fit:cover; }
+    #about .intro { flex:1; min-width:250px; }
+    #about .intro h2 { font-size:2rem; margin-bottom:1rem; }
+    #about .intro ul li { margin-bottom:.75rem; }
+
+    /* Skills */
+    #skills { padding:4rem 0; }
+    #skills h2 { font-size:1.75rem; text-align:center; margin-bottom:1.5rem; }
+    #skills ul { display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:1rem; }
+    #skills li {
+      background:#fff; padding:1rem; border-radius:8px;
+      box-shadow:0 2px 6px rgba(0,0,0,0.05); text-align:center;
+      font-weight:300;
+    }
+
+    /* Projects */
+    #projects { background: var(--light-bg); padding:4rem 0; }
+    #projects h2 { font-size:1.75rem; text-align:center; margin-bottom:1.5rem; }
+    .project {
+      background:#fff; padding:1.5rem; border-radius:8px;
+      box-shadow:0 2px 6px rgba(0,0,0,0.05); margin-bottom:2rem;
+    }
+    .project h3 { font-size:1.5rem; margin-bottom:.5rem; }
+    .project p { margin-bottom:1rem; }
+    .project img { width:100%; border-radius:6px; }
+
+    /* Timeline (Experience/Education) */
+    .timeline { padding:4rem 0; }
+    .timeline h2 { font-size:1.75rem; text-align:center; margin-bottom:1.5rem; }
+    .timeline ul { border-left:3px solid var(--accent); padding-left:1rem; }
+    .timeline li {
+      position:relative; margin-bottom:2rem; padding-left:1rem;
+    }
+    .timeline li::before {
+      content:''; position:absolute; left:-9px; top:5px;
+      width:14px; height:14px; background:var(--accent);
+      border-radius:50%;
+    }
+    .timeline h3 { font-size:1.25rem; margin-bottom:.25rem; }
+    .timeline em { font-style:italic; color:#555; }
+    .timeline p { margin-top:.5rem; }
+
+    /* Testimonials */
+    #testimonials { padding:4rem 0; }
+    #testimonials h2 { font-size:1.75rem; text-align:center; margin-bottom:1.5rem; }
+    blockquote {
+      background:#fff; border-left:4px solid var(--accent);
+      padding:1.5rem; font-style:italic; margin-bottom:2rem;
+      box-shadow:0 2px 6px rgba(0,0,0,0.05);
+    }
+    blockquote footer {
+      text-align:right; margin-top:.5rem; font-weight:500;
+    }
+
+    /* Contact */
+    #contact { background: var(--light-bg); padding:4rem 0; }
+    #contact h2 { font-size:1.75rem; text-align:center; margin-bottom:1.5rem; }
+    #contact form {
+      max-width:600px; margin:0 auto; display:grid; gap:1rem;
+    }
+    #contact input, #contact textarea {
+      width:100%; padding:.75rem; border:1px solid #ccc; border-radius:4px;
+      font-family:'Poppins',sans-serif; font-weight:300; font-size:1rem;
+    }
+    #contact button {
+      background:var(--accent); border:none; padding:.75rem 1.5rem;
+      border-radius:4px; font-weight:400; cursor:pointer;
+      transition:opacity .2s;
+    }
+    #contact button:hover { opacity:.9; }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="container nav">
+      <div class="logo">Weimar Miranda</div>
+      <nav>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#testimonials">Testimonials</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <h1>HI, I’M WEIMAR</h1>
+      <p>I <span>help teams</span> across organizations <span>transform complex data</span> into clear, actionable insights.</p>
+      <p class="specialties">Specialties: Dashboards · Forecasting · Data Storytelling · Power Query · DAX</p>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about">
+    <div class="container about-container">
+      <img src="YOUR_PHOTO_URL" alt="Weimar Miranda">
+      <div class="intro">
+        <h2>About Me</h2>
+        <ul>
+          <li>Industrial Engineer with a Master’s in Business Intelligence (University of Barcelona).</li>
+          <li>3 years specializing in Power BI: interactive dashboards, advanced DAX & storytelling.</li>
+          <li>10+ years leading BI projects in Bolivia’s public sector, overseeing $20 M in investments.</li>
+          <li>Certified in DataScience4Business: Python forecasting (SARIMA) & English C1 (Kaplan, NY).</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills">
+    <div class="container">
+      <h2>Skills & Tools</h2>
+      <ul>
+        <li>Power BI & DAX</li>
+        <li>Power Query</li>
+        <li>Python (Pandas, NumPy)</li>
+        <li>MySQL</li>
+        <li>Advanced Excel & VBA</li>
+        <li>Data Modeling & ETL</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects">
+    <div class="container">
+      <h2>Featured Projects</h2>
+      <div class="project">
+        <h3>Seattle 911 Calls Dashboard</h3>
+        <p>Analyzed over 2 million emergency call records to identify patterns in timing, location, and response. Built SARIMA forecasting in Python and embedded results in Power BI.</p>
+        <img src="YOUR_PROJECT_IMAGE_URL" alt="Seattle Dashboard">
+      </div>
+      <div class="project">
+        <h3>GNV Investment Monitoring</h3>
+        <p>Created Power BI reports to monitor $20 M annual investments in vehicle natural gas conversions, improving decision speed by 20 % and report quality by 45 %.</p>
+        <img src="YOUR_PROJECT_IMAGE_URL_2" alt="GNV Reports">
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience -->
+  <section id="experience">
+    <div class="container timeline">
+      <h2>Professional Experience</h2>
+      <ul>
+        <li>
+          <h3>Project Planning Professional</h3>
+          <em>Apr 2023 – Apr 2024 | NGV Conversion Executing Entity, Ministry of Hydrocarbons and Energy – Bolivia</em>
+          <p>Implemented Power BI in the planning area for the Executive General Directorate, optimizing visualization and monitoring of annual investment programs. Developed interactive dashboards for real-time tracking of $20 M in annual investments, significantly improving strategic decision-making. Coordinated with technical teams to integrate key data into a centralized model, ensuring accuracy and consistency in reporting.</p>
+        </li>
+        <li>
+          <h3>National Supervisory & Technical Monitoring Officer</h3>
+          <em>Jan 2022 – Mar 2023 | Ministry of Hydrocarbons and Energy – Bolivia</em>
+          <p>Supervised technical monitoring and inspection of vehicle conversions to natural gas. Utilized Power BI to track inspection data through dashboards, generate reports, and analyze trends, ensuring compliance with national regulations and improving operational efficiency.</p>
+        </li>
+        <li>
+          <h3>Inspection & Technical Monitoring Professional</h3>
+          <em>Aug 2021 – Dec 2021</em>
+          <p>Supported inspection and technical monitoring processes by collecting data and generating operational compliance and performance reports using Excel and VBA.</p>
+        </li>
+        <li>
+          <h3>Technical Standardization Professional</h3>
+          <em>Mar 2021 – Jul 2021</em>
+          <p>Developed and implemented technical standards for the conversion process. Documented procedures and monitored compliance with national standards using Excel and VBA.</p>
+        </li>
+        <li>
+          <h3>Control & Monitoring Professional in Program Management</h3>
+          <em>Jan 2018 – Sep 2019</em>
+          <p>Managed and supervised multiple projects, creating progress reports, monitoring budgets, and automating workflows in Excel and VBA to drive efficient project execution.</p>
+        </li>
+        <li>
+          <h3>National Manager, CNG Conversion Equipment Warehouses & Operations</h3>
+          <em>Jan 2017 – Dec 2017</em>
+          <p>Managed national warehouses of CNG conversion equipment. Controlled inventories, optimized distribution, tracked logistics, and coordinated with IT to design a SQL-based inventory management system.</p>
+        </li>
+        <li>
+          <h3>National Warehouse Manager</h3>
+          <em>Jan 2016 – Dec 2016</em>
+          <p>Led management of CNG conversion equipment, tracking inventory levels and coordinating distribution across regional offices using Excel and VBA.</p>
+        </li>
+        <li>
+          <h3>Planning Professional</h3>
+          <em>Dec 2015</em>
+          <p>Supported planning and execution of CNG conversion projects by creating detailed schedules, monitoring progress, and generating reports with advanced Excel and VBA.</p>
+        </li>
+        <li>
+          <h3>Consultant – Operating Unit</h3>
+          <em>Sep 2015 – Nov 2015</em>
+          <p>Provided consulting services to improve CNG conversion processes, analyzing operational data in Excel and recommending process improvements.</p>
+        </li>
+        <li>
+          <h3>Regional Coordinator – Tarija</h3>
+          <em>May 2014 – Jun 2015</em>
+          <p>Coordinated regional activities by managing operations, monitoring performance, and reporting data to national headquarters using Excel and VBA.</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Education -->
+  <section id="education">
+    <div class="container timeline">
+      <h2>Education & Certifications</h2>
+      <ul>
+        <li>
+          <h3>Master’s in Business Intelligence</h3>
+          <em>University of Barcelona, 2022</em>
+        </li>
+        <li>
+          <h3>B.Sc. Industrial Engineering</h3>
+          <em>Universidad Católica Boliviana “San Pablo”, 2013</em>
+        </li>
+        <li>
+          <h3>English C1</h3>
+          <em>Kaplan International Languages (2nd Semester 2024)</em>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section id="testimonials">
+    <div class="container">
+      <h2>Testimonials</h2>
+      <blockquote>
+        “Weimar’s dashboards transformed our reporting—fast, clear, data-driven. His insights led to a 15% reduction in operational costs.”
+        <footer>— Former Director, NGV Conversion Executing Entity</footer>
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <div class="container">
+      <h2>Contact Me</h2>
+      <form action="mailto:weimar.miranda.s@gmail.com" method="post" enctype="text/plain">
+        <input type="text" name="Name" placeholder="Your Name" required>
+        <input type="email" name="Email" placeholder="Your Email" required>
+        <textarea name="Message" rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </section>
+</body>
+</html>
