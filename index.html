@@ -3,9 +3,6 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Portfolio of Weimar Miranda, Business Intelligence Analyst specializing in Power BI, SQL, and Python.">
-  <meta name="keywords" content="Business Intelligence, Power BI, SQL, Python, Data Analysis, Weimar Miranda">
-  <meta name="author" content="Weimar Miranda">
   <title>Portfolio - Business Intelligence</title>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&family=Poppins:wght@300;400;500&display=swap');
@@ -255,12 +252,6 @@
       max-width: 500px;
       margin: 0 auto;
     }
-    .contact label {
-      font-size: 0.9rem;
-      color: var(--clr-text);
-      margin-bottom: 5px;
-      display: block;
-    }
     .contact input,
     .contact textarea {
       padding: 10px;
@@ -280,11 +271,6 @@
     }
     .contact button:hover {
       background: var(--clr-highlight);
-    }
-    #form-message {
-      margin-top: 10px;
-      text-align: center;
-      font-size: 1rem;
     }
 
     /* FOOTER */
@@ -431,7 +417,7 @@
       </div>
 
       <div class="project-card">
-        <a href="#" class="project-link" onclick="alert('This project is under development.'); return false;">
+        <a href="#" class="project-link">
           <img src="./assets/images/OtherProject.gif" alt="Sales Warehouse demo" class="project-gif">
         </a>
         <div class="project-content">
@@ -450,16 +436,21 @@
 
   <section id="contact" class="contact">
     <h2>Contact</h2>
-    <form id="contact-form">
-      <label for="name">Name</label>
-      <input type="text" id="name" placeholder="Name" required />
-      <label for="email">Email</label>
-      <input type="email" id="email" placeholder="Email" required />
-      <label for="message">Message</label>
-      <textarea id="message" placeholder="Message" rows="5" required></textarea>
+    <!-- iframe oculto para evitar recarga -->
+    <iframe name="hidden_iframe" style="display:none;"></iframe>
+
+    <form
+      id="contact-form"
+      action="https://script.google.com/macros/s/AKfycbwC106EBD0J1PnVnrJFL0YZanl4eQYAUNmQeofhWKsgIYiPlhHzM2YZuDJEyKGTO5uc/exec"
+      method="post"
+      target="hidden_iframe"
+      onsubmit="alert('¡Mensaje enviado! Gracias por contactarme.');"
+    >
+      <input type="text"   name="name"    placeholder="Name"    required />
+      <input type="email"  name="email"   placeholder="Email"   required />
+      <textarea          name="message" placeholder="Message" rows="5" required></textarea>
       <button type="submit">Send</button>
     </form>
-    <div id="form-message" style="display: none;"></div>
   </section>
 
   <footer>
@@ -467,63 +458,13 @@
   </footer>
 
   <script>
-    // Smooth scroll for navigation links
+    // Smooth scroll para enlaces de navegación
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function(e) {
         e.preventDefault();
         document.querySelector(this.getAttribute('href')).scrollIntoView({
           behavior: "smooth"
         });
-      });
-    });
-
-    // Contact form submission
-    document.getElementById("contact-form").addEventListener("submit", function(e) {
-      e.preventDefault();
-      
-      // Validar email
-      const email = document.getElementById("email").value;
-      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      const formMessage = document.getElementById("form-message");
-      
-      if (!emailRegex.test(email)) {
-        formMessage.style.display = "block";
-        formMessage.style.color = "red";
-        formMessage.textContent = "Please enter a valid email address.";
-        return;
-      }
-
-      // Preparar datos
-      const name = document.getElementById("name").value;
-      const message = document.getElementById("message").value;
-      const data = { name, email, message };
-
-      // Enviar datos a Google Sheets
-      fetch("https://script.google.com/macros/s/AKfycbwu6mdkCe912BOLDlheiEHzq24ZMYW3LMOeYB3XIq_qusJwnAOWs1IW6uT9OH5JTpWZ/exec", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data),
-        mode: "cors"
-      })
-      .then(response => response.json())
-      .then(data => {
-        if (data.result === "success") {
-          formMessage.style.display = "block";
-          formMessage.style.color = "green";
-          formMessage.textContent = "Message sent successfully!";
-          document.getElementById("contact-form").reset();
-          setTimeout(() => { formMessage.style.display = "none"; }, 3000);
-        } else {
-          formMessage.style.display = "block";
-          formMessage.style.color = "red";
-          formMessage.textContent = "Error: " + data.error;
-        }
-      })
-      .catch(error => {
-        console.error("Error:", error);
-        formMessage.style.display = "block";
-        formMessage.style.color = "red";
-        formMessage.textContent = "There was an error sending your message.";
       });
     });
   </script>
