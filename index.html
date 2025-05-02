@@ -42,10 +42,10 @@
     .nav-container {
       display: flex;
       align-items: center;
-      justify-content: space-between; /* Distribuye los elementos a los extremos */
-      max-width: 1200px; /* Igual que las secciones */
-      margin: 0 auto; /* Centra el contenedor */
-      padding: 10px 20px; /* Padding interno */
+      justify-content: space-between;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 10px 20px;
     }
 
     .nav-left, .nav-right {
@@ -54,7 +54,7 @@
     }
 
     .nav-right {
-      gap: 20px; /* Espacio entre los enlaces de la derecha */
+      gap: 20px;
     }
 
     nav ul li a {
@@ -303,14 +303,14 @@
       .hero-content .title { font-size: 2rem; }
       .hero-content p { font-size: 1rem; }
       .nav-container {
-        flex-direction: column; /* Apila los elementos en pantallas pequeñas */
+        flex-direction: column;
         gap: 10px;
       }
       .nav-left, .nav-right {
-        justify-content: center; /* Centra ambos grupos en pantallas pequeñas */
+        justify-content: center;
       }
       .nav-right {
-        flex-direction: column; /* Apila los enlaces de la derecha */
+        flex-direction: column;
         gap: 10px;
       }
       .about-container {
@@ -402,7 +402,7 @@
     <div class="projects-grid">
       <div class="project-card">
         <a href="https://app.powerbi.com/view?r=eyJrIjoiNWY5OGVlMzAtY2ZlOS00M2FhLWIwODUtMGZmN2ViMDBkYTY1IiwidCI6ImJhODQzY2Q3LWNiN2MtNGJiMS1hZWE3LTEzY2NhOGZlYzRjOSIsImMiOjR9" target="_blank" class="project-link">
-          <img src="./assets/images/ComprimidoGEo.gif" alt="Seattle Forecast demo" class="project-gif">
+          <img src="./assets/images/ComprimidoGeo.gif" alt="Seattle Forecast demo" class="project-gif">
         </a>
         <div class="project-content">
           <div class="project-tools">
@@ -436,10 +436,10 @@
 
   <section id="contact" class="contact">
     <h2>Contact</h2>
-    <form>
-      <input type="text" placeholder="Name" required />
-      <input type="email" placeholder="Email" required />
-      <textarea placeholder="Message" rows="5" required></textarea>
+    <form action="https://script.google.com/macros/s/AKfycbwWWZKq-rRXmlw6bu6ftvcjQlHe9MlQHIbyY_bIdm8YT0PPNj2rcap9Bqp6P6IMMnZBzA/exec" method="POST">
+      <input type="text"   name="name"    placeholder="Name"    required />
+      <input type="email"  name="email"   placeholder="Email"   required />
+      <textarea            name="message" placeholder="Message" rows="5" required></textarea>
       <button type="submit">Send</button>
     </form>
   </section>
