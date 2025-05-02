@@ -258,6 +258,7 @@
       border: 1px solid #ddd;
       border-radius: 5px;
       font-size: 1rem;
+      font-family: 'Poppins', sans-serif; /* asegura Poppins */
     }
     .contact button {
       padding: 10px;
@@ -444,7 +445,6 @@
       action="https://script.google.com/macros/s/AKfycbwC106EBD0J1PnVnrJFL0YZanl4eQYAUNmQeofhWKsgIYiPlhHzM2YZuDJEyKGTO5uc/exec"
       method="post"
       target="hidden_iframe"
-      onsubmit="alert('¡Mensaje enviado! Gracias por contactarme.');"
     >
       <input type="text"   name="name"    placeholder="Name"    required />
       <input type="email"  name="email"   placeholder="Email"   required />
@@ -466,6 +466,22 @@
           behavior: "smooth"
         });
       });
+    });
+
+    // Control de envío y limpieza tras respuesta del iframe
+    const form = document.getElementById('contact-form');
+    const iframe = document.querySelector('iframe[name="hidden_iframe"]');
+    let submitting = false;
+
+    form.addEventListener('submit', () => {
+      submitting = true;
+    });
+
+    iframe.addEventListener('load', () => {
+      if (!submitting) return;
+      submitting = false;
+      alert('¡Mensaje enviado! Gracias por contactarme.');
+      form.reset();
     });
   </script>
 </body>
