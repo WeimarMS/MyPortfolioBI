@@ -14,13 +14,11 @@
       --clr-warm-accent: #E9C46A;
       --clr-highlight: #F4A261;
     }
-
     *, *::before, *::after {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
-
     body {
       font-family: 'Poppins', sans-serif;
       background: var(--clr-bg);
@@ -38,7 +36,6 @@
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
       z-index: 1000;
     }
-
     .nav-container {
       display: flex;
       align-items: center;
@@ -47,23 +44,19 @@
       margin: 0 auto;
       padding: 10px 20px;
     }
-
     .nav-left, .nav-right {
       display: flex;
       list-style: none;
     }
-
     .nav-right {
       gap: 20px;
     }
-
     nav ul li a {
       color: var(--clr-bg);
       font-weight: 500;
       text-decoration: none;
       transition: color 0.3s ease;
     }
-
     nav ul li a:hover {
       color: var(--clr-highlight);
     }
@@ -217,18 +210,11 @@
       flex: 0 0 50%;
       display: block;
     }
-    .project-link:hover .project-gif {
-      cursor: pointer;
-      opacity: 0.9;
-    }
     .project-gif {
       width: 100%;
       height: auto;
       border-radius: 8px;
       object-fit: cover;
-    }
-    .project-content {
-      flex: 1;
     }
     .project-tools {
       margin-bottom: 10px;
@@ -271,6 +257,11 @@
     }
     .contact button:hover {
       background: var(--clr-highlight);
+    }
+    #form-response {
+      text-align: center;
+      margin-top: 15px;
+      font-weight: 500;
     }
 
     /* FOOTER */
@@ -317,15 +308,9 @@
         flex-direction: column;
         text-align: center;
       }
-      .about-text { padding: 20px 0; }
       .project-card {
         flex-direction: column;
         align-items: center;
-      }
-      .project-link {
-        flex: 0 0 auto;
-        width: 100%;
-        max-width: 400px;
       }
       .project-gif {
         width: 100%;
@@ -336,9 +321,7 @@
 <body>
   <nav>
     <div class="nav-container">
-      <ul class="nav-left">
-        <li><a href="#home">Home</a></li>
-      </ul>
+      <ul class="nav-left"><li><a href="#home">Home</a></li></ul>
       <ul class="nav-right">
         <li><a href="#about">About Me</a></li>
         <li><a href="#skills">Skills</a></li>
@@ -379,20 +362,16 @@
     <h2>Skills</h2>
     <div class="skills-grid">
       <div class="skill-item">
-        <img src="./assets/images/pbilogo.png" alt="Power BI logo">
-        <span>Power BI</span>
+        <img src="./assets/images/pbilogo.png" alt="Power BI logo"><span>Power BI</span>
       </div>
       <div class="skill-item">
-        <img src="./assets/images/logomysql.png" alt="MySQL logo">
-        <span>SQL</span>
+        <img src="./assets/images/logomysql.png" alt="MySQL logo"><span>SQL</span>
       </div>
       <div class="skill-item">
-        <img src="./assets/images/python.png" alt="Python logo">
-        <span>Python</span>
+        <img src="./assets/images/python.png" alt="Python logo"><span>Python</span>
       </div>
       <div class="skill-item">
-        <img src="./assets/images/excelicon.png" alt="Excel Advanced logo">
-        <span>Advanced Excel</span>
+        <img src="./assets/images/excelicon.png" alt="Excel Advanced logo"><span>Advanced Excel</span>
       </div>
     </div>
   </section>
@@ -404,44 +383,40 @@
         <a href="https://app.powerbi.com/view?r=eyJrIjoiNWY5OGVlMzAtY2ZlOS00M2FhLWIwODUtMGZmN2ViMDBkYTY1IiwidCI6ImJhODQzY2Q3LWNiN2MtNGJiMS1hZWE3LTEzY2NhOGZlYzRjOSIsImMiOjR9" target="_blank" class="project-link">
           <img src="./assets/images/ComprimidoGeo.gif" alt="Seattle Forecast demo" class="project-gif">
         </a>
-        <div class="project-content">
-          <div class="project-tools">
-            <span class="tool-badge">Power BI</span>
-            <span class="tool-badge">Python</span>
-          </div>
-          <h3>Seattle 911 Fire Department Incident Report</h3>
-          <p>
-            This Power BI dashboard analyzes over 2 million Seattle 911 fire emergency calls, uncovering trends in frequency, timing, and geographic distribution. Featuring performance comparisons, Azure Maps for district-level insights, and a Python-integrated SARIMA model for forecasting, it empowers data-driven operational and strategic planning.
-          </p>
+        <div class="project-tools">
+          <span class="tool-badge">Power BI</span>
+          <span class="tool-badge">Python</span>
         </div>
+        <h3>Seattle 911 Fire Department Incident Report</h3>
+        <p>
+          This Power BI dashboard analyzes over 2 million Seattle 911 fire emergency calls, uncovering trends in frequency, timing, and geographic distribution. Featuring performance comparisons, Azure Maps for district-level insights, and a Python-integrated SARIMA model for forecasting, it empowers data-driven operational and strategic planning.
+        </p>
       </div>
-
       <div class="project-card">
         <a href="#" class="project-link">
           <img src="./assets/images/OtherProject.gif" alt="Sales Warehouse demo" class="project-gif">
         </a>
-        <div class="project-content">
-          <div class="project-tools">
-            <span class="tool-badge">MySQL</span>
-            <span class="tool-badge">Power BI</span>
-          </div>
-          <h3>Sales Data Warehouse</h3>
-          <p>
-            Designed a MySQL data mart to centralize sales figures and created interactive Power BI reports to track KPIs in real time.
-          </p>
+        <div class="project-tools">
+          <span class="tool-badge">MySQL</span>
+          <span class="tool-badge">Power BI</span>
         </div>
+        <h3>Sales Data Warehouse</h3>
+        <p>
+          Designed a MySQL data mart to centralize sales figures and created interactive Power BI reports to track KPIs in real time.
+        </p>
       </div>
     </div>
   </section>
 
   <section id="contact" class="contact">
     <h2>Contact</h2>
-    <form action="https://script.google.com/macros/s/AKfycbwWWZKq-rRXmlw6bu6ftvcjQlHe9MlQHIbyY_bIdm8YT0PPNj2rcap9Bqp6P6IMMnZBzA/exec" method="POST">
-      <input type="text"   name="name"    placeholder="Name"    required />
-      <input type="email"  name="email"   placeholder="Email"   required />
-      <textarea            name="message" placeholder="Message" rows="5" required></textarea>
+    <form id="contact-form">
+      <input  type="text"   name="name"    placeholder="Name"    required />
+      <input  type="email"  name="email"   placeholder="Email"   required />
+      <textarea           name="message" placeholder="Message" rows="5" required></textarea>
       <button type="submit">Send</button>
     </form>
+    <div id="form-response"></div>
   </section>
 
   <footer>
@@ -451,13 +426,41 @@
   <script>
     // Smooth scroll for navigation links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function(e) {
+      anchor.addEventListener('click', e => {
         e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-          behavior: "smooth"
-        });
+        document.querySelector(anchor.getAttribute('href'))
+          .scrollIntoView({ behavior: "smooth" });
       });
+    });
+
+    // Handle form submit via fetch to Apps Script
+    const form = document.getElementById('contact-form');
+    const responseDiv = document.getElementById('form-response');
+    form.addEventListener('submit', async e => {
+      e.preventDefault();
+      responseDiv.textContent = 'Sending…';
+      const endpoint = 
+        'https://script.google.com/macros/s/AKfycbwWWZKq-rRXmlw6bu6ftvcjQlHe9MlQHIbyY_bIdm8YT0PPNj2rcap9Bqp6P6IMMnZBzA/exec';
+      const formData = new FormData(form);
+
+      try {
+        const res = await fetch(endpoint, {
+          method: 'POST',
+          body: new URLSearchParams(formData)
+        });
+        const json = await res.json();
+        if (json.result === 'success') {
+          responseDiv.textContent = 'Thank you! I’ll be in touch soon.';
+          form.reset();
+        } else {
+          responseDiv.textContent = 'Oops! Something went wrong.';
+        }
+      } catch (err) {
+        console.error(err);
+        responseDiv.textContent = 'Error sending message.';
+      }
     });
   </script>
 </body>
 </html>
+
