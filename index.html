@@ -115,6 +115,24 @@
       transform: rotate(-45deg) translate(7px, -7px);
     }
 
+    /* Social Icon (LinkedIn) */
+    .social-icon {
+      display: inline-block;
+      margin-bottom: 10px;
+      transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    .social-icon img {
+      width: 40px;
+      height: 40px;
+      object-fit: contain;
+    }
+
+    .social-icon:hover {
+      transform: scale(1.1);
+      opacity: 0.9;
+    }
+
     /* HERO */
     .hero {
       height: 100vh;
@@ -329,6 +347,10 @@
       color: var(--clr-bg);
     }
 
+    footer p {
+      margin-top: 10px;
+    }
+
     /* ANIMATIONS */
     @keyframes fadeIn {
       from { opacity: 0; } to { opacity: 1; }
@@ -395,6 +417,10 @@
       }
       .project-gif {
         width: 100%;
+      }
+      .social-icon img {
+        width: 32px;
+        height: 32px;
       }
     }
 
@@ -510,24 +536,6 @@
           </p>
         </div>
       </div>
-
-      <!-- 
-      <div class="project-card">
-        <a href="#" class="project-link">
-          <img src="./assets/images/OtherProject.gif" alt="Sales Warehouse demo" class="project-gif">
-        </a>
-        <div class="project-content">
-          <div class="project-tools">
-            <span class="tool-badge">MySQL</span>
-            <span class="tool-badge">Power BI</span>
-          </div>
-          <h3>Sales Data Warehouse</h3>
-          <p>
-            Designed a MySQL data mart to centralize sales figures and created interactive Power BI reports to track KPIs in real time.
-          </p>
-        </div>
-      </div>
-      -->
     </div>
   </section>
 
@@ -550,6 +558,9 @@
   </section>
 
   <footer>
+    <a href="https://www.linkedin.com/in/weimar-miranda-salazar/" target="_blank" class="social-icon">
+      <img src="./assets/images/linkedin.png" alt="LinkedIn Profile">
+    </a>
     <p data-translate="footer.text">© 2025 - BI Portfolio. All rights reserved.</p>
   </footer>
 
