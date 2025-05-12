@@ -68,6 +68,35 @@
       color: var(--clr-highlight);
     }
 
+    /* Hamburger Menu */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 30px;
+      height: 20px;
+      cursor: pointer;
+    }
+
+    .hamburger span {
+      background: var(--clr-bg);
+      height: 3px;
+      width: 100%;
+      transition: all 0.3s ease;
+    }
+
+    .hamburger.active span:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .hamburger.active span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .hamburger.active span:nth-child(3) {
+      transform: rotate(-45deg) translate(7px, -7px);
+    }
+
     /* HERO */
     .hero {
       height: 100vh;
@@ -304,15 +333,29 @@
       .hero-content .title { font-size: 2rem; }
       .hero-content p { font-size: 1rem; }
       .nav-container {
-        flex-direction: column;
-        gap: 10px;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
       }
       .nav-left, .nav-right {
-        justify-content: center;
+        display: none;
       }
-      .nav-right {
+      .nav-right.active, .nav-left.active {
+        display: flex;
         flex-direction: column;
-        gap: 10px;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: var(--clr-cold-accent);
+        padding: 20px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      }
+      .nav-right.active li, .nav-left.active li {
+        margin: 10px 0;
+      }
+      .hamburger {
+        display: flex;
       }
       .about-container {
         flex-direction: column;
@@ -332,6 +375,25 @@
         width: 100%;
       }
     }
+
+    /* Horizontal (landscape) view on mobile */
+    @media (max-width: 768px) and (orientation: landscape) {
+      .nav-left, .nav-right {
+        display: flex;
+        justify-content: center;
+      }
+      .nav-right {
+        flex-direction: row;
+        gap: 20px;
+      }
+      .hamburger {
+        display: none;
+      }
+      .nav-container {
+        flex-direction: row;
+        justify-content: space-between;
+      }
+    }
   </style>
 </head>
 <body>
@@ -346,6 +408,11 @@
         <li><a href="#projects">Projects</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
     </div>
   </nav>
 
@@ -484,6 +551,26 @@
       submitting = false;
       alert('¡Mensaje enviado! Gracias por contactarme.');
       form.reset();
+    });
+
+    // Hamburger menu toggle
+    const hamburger = document.querySelector('.hamburger');
+    const navLeft = document.querySelector('.nav-left');
+    const navRight = document.querySelector('.nav-right');
+
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      navLeft.classList.toggle('active');
+      navRight.classList.toggle('active');
+    });
+
+    // Close menu when clicking a link
+    document.querySelectorAll('.nav-left a, .nav-right a').forEach(link => {
+      link.addEventListener('click', () => {
+        hamburger.classList.remove('active');
+        navLeft.classList.remove('active');
+        navRight.classList.remove('active');
+      });
     });
   </script>
 </body>
