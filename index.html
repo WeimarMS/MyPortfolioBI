@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -66,6 +67,24 @@
 
     nav ul li a:hover {
       color: var(--clr-highlight);
+    }
+
+    /* Language Button */
+    .lang-btn {
+      background: transparent;
+      border: 1px solid var(--clr-bg);
+      color: var(--clr-bg);
+      padding: 5px 10px;
+      border-radius: 5px;
+      font-family: 'Oswald', sans-serif;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s ease, color 0.3s ease;
+    }
+
+    .lang-btn:hover {
+      background: var(--clr-highlight);
+      color: var(--clr-bg);
     }
 
     /* Hamburger Menu */
@@ -337,7 +356,7 @@
         justify-content: space-between;
         align-items: center;
       }
-      .nav-left, .nav-right {
+      .nav-left, .nav-right, .lang-btn {
         display: none;
       }
       .nav-right.active, .nav-left.active {
@@ -350,6 +369,11 @@
         background: var(--clr-cold-accent);
         padding: 20px;
         box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      }
+      .lang-btn.active {
+        display: block;
+        margin: 10px 0;
+        text-align: center;
       }
       .nav-right.active li, .nav-left.active li {
         margin: 10px 0;
@@ -378,7 +402,7 @@
 
     /* Horizontal (landscape) view on mobile */
     @media (max-width: 768px) and (orientation: landscape) {
-      .nav-left, .nav-right {
+      .nav-left, .nav-right, .lang-btn {
         display: flex;
         justify-content: center;
       }
@@ -400,14 +424,15 @@
   <nav>
     <div class="nav-container">
       <ul class="nav-left">
-        <li><a href="#home">Home</a></li>
+        <li><a href="#home" data-translate="nav.home">Home</a></li>
       </ul>
       <ul class="nav-right">
-        <li><a href="#about">About Me</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#about" data-translate="nav.about">About Me</a></li>
+        <li><a href="#skills" data-translate="nav.skills">Skills</a></li>
+        <li><a href="#projects" data-translate="nav.projects">Projects</a></li>
+        <li><a href="#contact" data-translate="nav.contact">Contact</a></li>
       </ul>
+      <button class="lang-btn" data-lang="es">EN/ES</button>
       <div class="hamburger">
         <span></span>
         <span></span>
@@ -423,20 +448,20 @@
         <img src="./assets/images/blanco.png" alt="Logo Weimar Miranda">
         <span>Miranda</span>
       </h1>
-      <h2 class="title">Business Intelligence Analyst</h2>
-      <p>I transform data into strategic decisions with innovative solutions.</p>
-      <a href="#contact" class="btn">Contact Me</a>
+      <h2 class="title" data-translate="hero.title">Business Intelligence Analyst</h2>
+      <p data-translate="hero.description">I transform data into strategic decisions with innovative solutions.</p>
+      <a href="#contact" class="btn" data-translate="hero.button">Contact Me</a>
     </div>
   </section>
 
   <section id="about" class="about">
-    <h2>About Me</h2>
+    <h2 data-translate="section.about">About Me</h2>
     <div class="about-container">
       <div class="about-image">
         <img src="./assets/images/digital.png" alt="Weimar Miranda">
       </div>
       <div class="about-text">
-        <p>
+        <p data-translate="about.text">
           I’m Weimar Miranda, an Industrial Engineer with a Master’s degree in Business Intelligence from the University of Barcelona. With over a decade of experience leading BI initiatives in Bolivia’s public sector—managing $20 million in annual investments—I’ve spent the last three years crafting Power BI solutions that enhanced operational efficiency by 20%. I leverage Python and MySQL to enrich data workflows and optimize reporting, complementing my core expertise in Power BI. Fluent in English at C1 level (Kaplan, New York, 2024).
         </p>
       </div>
@@ -444,7 +469,7 @@
   </section>
 
   <section id="skills" class="skills">
-    <h2>Skills</h2>
+    <h2 data-translate="section.skills">Skills</h2>
     <div class="skills-grid">
       <div class="skill-item">
         <img src="./assets/images/pbilogo.png" alt="Power BI logo">
@@ -466,7 +491,7 @@
   </section>
 
   <section id="projects" class="projects">
-    <h2>Projects</h2>
+    <h2 data-translate="section.projects">Projects</h2>
     <div class="projects-grid">
       <div class="project-card">
         <a href="https://app.powerbi.com/view?r=eyJrIjoiNWY5OGVlMzAtY2ZlOS00M2FhLWIwODUtMGZmN2ViMDBkYTY1IiwidCI6ImJhODQzY2Q3LWNiN2MtNGJiMS1hZWE3LTEzY2NhOGZlYzRjOSIsImMiOjR9" target="_blank" class="project-link">
@@ -477,8 +502,8 @@
             <span class="tool-badge">Power BI</span>
             <span class="tool-badge">Python</span>
           </div>
-          <h3>Seattle 911 Fire Department Incident Report</h3>
-          <p>
+          <h3 data-translate="project.seattle.title">Seattle 911 Fire Department Incident Report</h3>
+          <p data-translate="project.seattle.description">
             This Power BI dashboard analyzes over 2 million Seattle 911 fire emergency calls, uncovering trends in frequency, timing, and geographic distribution. Featuring performance comparisons, Azure Maps for district-level insights, and a Python-integrated SARIMA model for forecasting, it empowers data-driven operational and strategic planning.
           </p>
         </div>
@@ -505,25 +530,25 @@
   </section>
 
   <section id="contact" class="contact">
-    <h2>Contact</h2>
+    <h2 data-translate="section.contact">Contact</h2>
     <!-- iframe oculto para evitar recarga -->
     <iframe name="hidden_iframe" style="display:none;"></iframe>
 
     <form
       id="contact-form"
-      action="https://script.google.com/macros/s/AKfycbwC106EBD0J1PnVnrJFL0YZanl4eQYAUNmQeofhWKsgIYiPlhHzM2YZuDJEyKGTO5uc/exec"
+      action="https://script.google.com/macros/s/AKfycbwC106EBD0J1PnV|(
       method="post"
       target="hidden_iframe"
     >
       <input type="text"   name="name"    placeholder="Name"    required />
       <input type="email"  name="email"   placeholder="Email"   required />
       <textarea          name="message" placeholder="Message" rows="5" required></textarea>
-      <button type="submit">Send</button>
+      <button type="submit" data-translate="contact.button">Send</button>
     </form>
   </section>
 
   <footer>
-    <p>© 2025 - BI Portfolio. All rights reserved.</p>
+    <p data-translate="footer.text">© 2025 - BI Portfolio. All rights reserved.</p>
   </footer>
 
   <script>
@@ -557,11 +582,13 @@
     const hamburger = document.querySelector('.hamburger');
     const navLeft = document.querySelector('.nav-left');
     const navRight = document.querySelector('.nav-right');
+    const langBtn = document.querySelector('.lang-btn');
 
     hamburger.addEventListener('click', () => {
       hamburger.classList.toggle('active');
       navLeft.classList.toggle('active');
       navRight.classList.toggle('active');
+      langBtn.classList.toggle('active');
     });
 
     // Close menu when clicking a link
@@ -570,6 +597,62 @@
         hamburger.classList.remove('active');
         navLeft.classList.remove('active');
         navRight.classList.remove('active');
+        langBtn.classList.remove('active');
+      });
+    });
+
+    // Language switcher
+    const translations = {
+      en: {
+        'nav.home': 'Home',
+        'nav.about': 'About Me',
+        'nav.skills': 'Skills',
+        'nav.projects': 'Projects',
+        'nav.contact': 'Contact',
+        'hero.title': 'Business Intelligence Analyst',
+        'hero.description': 'I transform data into strategic decisions with innovative solutions.',
+        'hero.button': 'Contact Me',
+        'section.about': 'About Me',
+        'about.text': 'I’m Weimar Miranda, an Industrial Engineer with a Master’s degree in Business Intelligence from the University of Barcelona. With over a decade of experience leading BI initiatives in Bolivia’s public sector—managing $20 million in annual investments—I’ve spent the last three years crafting Power BI solutions that enhanced operational efficiency by 20%. I leverage Python and MySQL to enrich data workflows and optimize reporting, complementing my core expertise in Power BI. Fluent in English at C1 level (Kaplan, New York, 2024).',
+        'section.skills': 'Skills',
+        'section.projects': 'Projects',
+        'project.seattle.title': 'Seattle 911 Fire Department Incident Report',
+        'project.seattle.description': 'This Power BI dashboard analyzes over 2 million Seattle 911 fire emergency calls, uncovering trends in frequency, timing, and geographic distribution. Featuring performance comparisons, Azure Maps for district-level insights, and a Python-integrated SARIMA model for forecasting, it empowers data-driven operational and strategic planning.',
+        'section.contact': 'Contact',
+        'contact.button': 'Send',
+        'footer.text': '© 2025 - BI Portfolio. All rights reserved.'
+      },
+      es: {
+        'nav.home': 'Inicio',
+        'nav.about': 'Sobre Mí',
+        'nav.skills': 'Habilidades',
+        'nav.projects': 'Proyectos',
+        'nav.contact': 'Contacto',
+        'hero.title': 'Analista de Inteligencia de Negocios',
+        'hero.description': 'Transformo datos en decisiones estratégicas con soluciones innovadoras.',
+        'hero.button': 'Contáctame',
+        'section.about': 'Sobre Mí',
+        'about.text': 'Soy Weimar Miranda, Ingeniero Industrial con un Máster en Inteligencia de Negocios de la Universidad de Barcelona. Con más de una década de experiencia liderando iniciativas de BI en el sector público de Bolivia, gestionando $20 millones en inversiones anuales, he pasado los últimos tres años creando soluciones de Power BI que mejoraron la eficiencia operativa en un 20%. Utilizo Python y MySQL para enriquecer flujos de datos y optimizar informes, complementando mi experiencia principal en Power BI. Fluidez en idioma inglés a nivel C1 (Kaplan, Nueva York, 2024).',
+        'section.skills': 'Habilidades',
+        'section.projects': 'Proyectos',
+        'project.seattle.title': 'Informe de Incidentes del Departamento de Bomberos 911 de Seattle',
+        'project.seattle.description': 'Este panel de Power BI analiza más de 2 millones de llamadas de emergencia 911 de bomberos en Seattle, identificando tendencias en frecuencia, horarios y distribución geográfica. Incluye comparaciones de rendimiento, Azure Maps para información a nivel de distrito y un modelo SARIMA integrado en Python para pronósticos, lo que permite una planificación operativa y estratégica basada en datos.',
+        'section.contact': 'Contacto',
+        'contact.button': 'Enviar',
+        'footer.text': '© 2025 - Portafolio de BI. Todos los derechos reservados.'
+      }
+    };
+
+    const langButton = document.querySelector('.lang-btn');
+    let currentLang = 'en';
+
+    langButton.addEventListener('click', () => {
+      currentLang = currentLang === 'en' ? 'es' : 'en';
+      langButton.setAttribute('data-lang', currentLang === 'en' ? 'es' : 'en');
+      langButton.textContent = currentLang === 'en' ? 'EN/ES' : 'ES/EN';
+      document.querySelectorAll('[data-translate]').forEach(element => {
+        const key = element.getAttribute('data-translate');
+        element.textContent = translations[currentLang][key];
       });
     });
   </script>
