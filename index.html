@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-NYFN151M89"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-NYFN151M89');
+  </script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Portfolio - Business Intelligence</title>
@@ -561,7 +569,10 @@
     <a href="https://www.linkedin.com/in/weimar-miranda-salazar/" target="_blank" class="social-icon">
       <img src="./assets/images/linkedin.png" alt="LinkedIn Profile">
     </a>
-    <p data-translate="footer.text">© 2025 - BI Portfolio. All rights reserved.</p>
+    <p>
+      <span data-translate="footer.text"></span> | 
+      <a href="privacy.html" data-translate="footer.privacy"></a>
+    </p>
   </footer>
 
   <script>
@@ -630,7 +641,8 @@
         'project.seattle.description': 'This Power BI dashboard analyzes over 2 million Seattle 911 fire emergency calls, uncovering trends in frequency, timing, and geographic distribution. Featuring performance comparisons, Azure Maps for district-level insights, and a Python-integrated SARIMA model for forecasting, it empowers data-driven operational and strategic planning.',
         'section.contact': 'Contact',
         'contact.button': 'Send',
-        'footer.text': '© 2025 - BI Portfolio. All rights reserved.'
+        'footer.text': '© 2025 - BI Portfolio. All rights reserved.',
+        'footer.privacy': 'Privacy Policy'
       },
       es: {
         'nav.home': 'Inicio',
@@ -649,15 +661,28 @@
         'project.seattle.description': 'Este panel de Power BI analiza más de 2 millones de llamadas de emergencia 911 de bomberos en Seattle, identificando tendencias en frecuencia, horarios y distribución geográfica. Incluye comparaciones de rendimiento, Azure Maps para información a nivel de distrito y un modelo SARIMA integrado en Python para pronósticos, lo que permite una planificación operativa y estratégica basada en datos.',
         'section.contact': 'Contacto',
         'contact.button': 'Enviar',
-        'footer.text': '© 2025 - Portafolio de BI. Todos los derechos reservados.'
+        'footer.text': '© 2025 - Portafolio de BI. Todos los derechos reservados.',
+        'footer.privacy': 'Política de Privacidad'
       }
     };
 
     const langButton = document.querySelector('.lang-btn');
-    let currentLang = 'en';
+    let currentLang = localStorage.getItem('language') || 'en';
 
     langButton.addEventListener('click', () => {
       currentLang = currentLang === 'en' ? 'es' : 'en';
+      localStorage.setItem('language', currentLang); // Almacena el idioma
+      langButton.setAttribute('data-lang', currentLang === 'en' ? 'es' : 'en');
+      langButton.textContent = currentLang === 'en' ? 'EN/ES' : 'ES/EN';
+      document.querySelectorAll('[data-translate]').forEach(element => {
+        const key = element.getAttribute('data-translate');
+        element.textContent = translations[currentLang][key];
+      });
+    });
+
+    // Aplica el idioma inicial desde localStorage
+    document.addEventListener('DOMContentLoaded', () => {
+      currentLang = localStorage.getItem('language') || 'en';
       langButton.setAttribute('data-lang', currentLang === 'en' ? 'es' : 'en');
       langButton.textContent = currentLang === 'en' ? 'EN/ES' : 'ES/EN';
       document.querySelectorAll('[data-translate]').forEach(element => {
