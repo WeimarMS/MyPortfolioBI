@@ -1,16 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-NYFN151M89"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-NYFN151M89');
-  </script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Weimar Miranda's Business Intelligence Portfolio showcasing Power BI, Python, and SQL projects.">
+  <meta name="keywords" content="Business Intelligence, Data Analyst, Power BI, Python, SQL, Weimar Miranda">
+  <meta name="author" content="Weimar Miranda">
   <title>Portfolio - Business Intelligence</title>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&family=Poppins:wght@300;400;500&display=swap');
@@ -21,6 +16,7 @@
       --clr-cold-accent: #2A9D8F;
       --clr-warm-accent: #E9C46A;
       --clr-highlight: #F4A261;
+      --clr-gold: #FFD700; /* Dorado para las estrellas */
     }
 
     *, *::before, *::after {
@@ -210,7 +206,7 @@
       color: var(--clr-text);
       line-height: 1.2;
     }
-    .about, .skills, .projects, .contact {
+    .about, .skills, .projects, .testimonials, .contact {
       background: var(--clr-bg);
       border-radius: 10px;
       padding: 40px;
@@ -317,6 +313,55 @@
       margin-right: 5px;
     }
 
+    /* TESTIMONIALS */
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+    }
+    .testimonial-card {
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .testimonial-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+    .testimonial-card p {
+      font-style: italic;
+      margin-bottom: 15px;
+    }
+    .testimonial-author-container {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 8px;
+    }
+    .testimonial-card .author {
+      font-family: 'Oswald', sans-serif;
+      font-size: 1rem;
+      color: var(--clr-cold-accent);
+    }
+    .testimonial-card .platform-logo {
+      width: 100px;
+      height: 40px;
+      object-fit: contain;
+      transition: transform 0.3s ease, opacity 0.3s ease;
+      margin-top: 0;
+    }
+    .testimonial-card .platform-logo:hover {
+      transform: scale(1.1);
+      opacity: 0.9;
+    }
+    /* Clase para las estrellas doradas */
+    .stars {
+      color: var(--clr-gold);
+      font-size: 1rem; /* Ajusta tamaño si fuese necesario */
+    }
+
     /* CONTACT */
     .contact form {
       display: flex;
@@ -407,7 +452,7 @@
       }
       .lang-btn {
         display: block;
-        margin-left: auto; /* Asegura que el botón esté a la derecha */
+        margin-left: auto;
       }
       .about-container {
         flex-direction: column;
@@ -430,9 +475,12 @@
         width: 32px;
         height: 32px;
       }
+      .testimonial-card .platform-logo {
+        width: 80px;
+        height: 32px;
+      }
     }
 
-    /* Horizontal (landscape) view on mobile */
     @media (max-width: 768px) and (orientation: landscape) {
       .nav-left, .nav-right {
         display: flex;
@@ -451,7 +499,7 @@
       }
       .lang-btn {
         display: block;
-        margin-left: auto; /* Asegura que el botón esté a la derecha */
+        margin-left: auto;
       }
     }
   </style>
@@ -459,7 +507,7 @@
 <body>
   <nav>
     <div class="nav-container">
-      <div class="hamburger">
+      <div class="hamburger" role="button" aria-label="Toggle navigation menu">
         <span></span>
         <span></span>
         <span></span>
@@ -471,6 +519,7 @@
         <li><a href="#about" data-translate="nav.about">About Me</a></li>
         <li><a href="#skills" data-translate="nav.skills">Skills</a></li>
         <li><a href="#projects" data-translate="nav.projects">Projects</a></li>
+        <li><a href="#testimonials" data-translate="nav.testimonials">Testimonials</a></li>
         <li><a href="#contact" data-translate="nav.contact">Contact</a></li>
       </ul>
       <button class="lang-btn" data-lang="es">EN/ES</button>
@@ -498,7 +547,9 @@
       </div>
       <div class="about-text">
         <p data-translate="about.text">
-          I’m Weimar Miranda, an Industrial Engineer with a Master’s degree in Business Intelligence from the University of Barcelona. With over a decade of experience leading BI initiatives in Bolivia’s public sector—managing $20 million in annual investments—I’ve spent the last three years crafting Power BI solutions that enhanced operational efficiency by 20%. I leverage Python and MySQL to enrich data workflows and optimize reporting, complementing my core expertise in Power BI. Fluent in English at C1 level (Kaplan, New York, 2024).
+          I’m Weimar Miranda, an Industrial Engineer with a Master’s degree in Business Intelligence from the University of Barcelona. With over a decade of experience leading BI initiatives in Bolivia’s public sector—managing $20 million in annual investments—I’ve spent the last three years crafting Power BI solutions that enhanced operational efficiency by 20%. I leverage Python and MySQL to enrich data workflows y optimi
+
+          zando informes, complementando mi experiencia principal en Power BI. Fluent en inglés a nivel C1 (Kaplan, New York, 2024).
         </p>
       </div>
     </div>
@@ -531,7 +582,7 @@
     <div class="projects-grid">
       <div class="project-card">
         <a href="https://app.powerbi.com/view?r=eyJrIjoiNWY5OGVlMzAtY2ZlOS00M2FhLWIwODUtMGZmN2ViMDBkYTY1IiwidCI6ImJhODQzY2Q3LWNiN2MtNGJiMS1hZWE3LTEzY2NhOGZlYzRjOSIsImMiOjR9" target="_blank" class="project-link">
-          <img src="./assets/images/ComprimidoGEo.gif" alt="Seattle Forecast demo" class="project-gif">
+          <img src="./assets/images/ComprimidoGEo.gif" alt="Seattle Forecast demo" class="project-gif" loading="lazy">
         </a>
         <div class="project-content">
           <div class="project-tools">
@@ -540,8 +591,23 @@
           </div>
           <h3 data-translate="project.seattle.title">Seattle 911 Fire Department Incident Report</h3>
           <p data-translate="project.seattle.description">
-            This Power BI dashboard analyzes over 2 million Seattle 911 fire emergency calls, uncovering trends in frequency, timing, and geographic distribution. Featuring performance comparisons, Azure Maps for district-level insights, and a Python-integrated SARIMA model for forecasting, it empowers data-driven operational and strategic planning.
+            This Power BI dashboard analyzes over 2 million Seattle 911 fire emergency calls, uncovering trends en frecuencia, timing, y geographic distribution. Featuring performance comparisons, Azure Maps para información a nivel de distrito, y un modelo SARIMA integrado en Python para forecasting, it empowers planificación operativa y estratégica basada en datos.
           </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="testimonials" class="testimonials">
+    <h2 data-translate="section.testimonials">Testimonios</h2>
+    <div class="testimonials-grid">
+      <div class="testimonial-card">
+        <p>
+          &ldquo;<span data-translate="testimonial.leonardo.text"></span>&rdquo; <span class="stars">★★★★★</span>
+        </p>
+        <div class="testimonial-author-container">
+          <div class="author" data-translate="testimonial.leonardo.author">Leonardo</div>
+          <img src="./assets/images/workana.png" alt="Workana Logo" class="platform-logo">
         </div>
       </div>
     </div>
@@ -549,18 +615,17 @@
 
   <section id="contact" class="contact">
     <h2 data-translate="section.contact">Contact</h2>
-    <!-- iframe oculto para evitar recarga -->
     <iframe name="hidden_iframe" style="display:none;"></iframe>
-
+    <div id="form-message" style="display: none; text-align: center; margin-top: 10px; color: var(--clr-cold-accent);"></div>
     <form
       id="contact-form"
       action="https://script.google.com/macros/s/AKfycbwC106EBD0J1PnVnrJFL0YZanl4eQYAUNmQeofhWKsgIYiPlhHzM2YZuDJEyKGTO5uc/exec"
       method="post"
       target="hidden_iframe"
     >
-      <input type="text"   name="name"    placeholder="Name"    required />
-      <input type="email"  name="email"   placeholder="Email"   required />
-      <textarea          name="message" placeholder="Message" rows="5" required></textarea>
+      <input type="text" name="name" placeholder="Name" required />
+      <input type="email" name="email" placeholder="Email" required />
+      <textarea name="message" placeholder="Message" rows="5" required></textarea>
       <button type="submit" data-translate="contact.button">Send</button>
     </form>
   </section>
@@ -569,10 +634,7 @@
     <a href="https://www.linkedin.com/in/weimar-miranda-salazar/" target="_blank" class="social-icon">
       <img src="./assets/images/linkedin.png" alt="LinkedIn Profile">
     </a>
-    <p>
-      <span data-translate="footer.text"></span> | 
-      <a href="privacy.html" data-translate="footer.privacy"></a>
-    </p>
+    <p data-translate="footer.text">© 2025 - BI Portfolio. All rights reserved.</p>
   </footer>
 
   <script>
@@ -591,15 +653,22 @@
     const iframe = document.querySelector('iframe[name="hidden_iframe"]');
     let submitting = false;
 
-    form.addEventListener('submit', () => {
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
       submitting = true;
+      form.submit();
     });
 
     iframe.addEventListener('load', () => {
       if (!submitting) return;
       submitting = false;
-      alert('¡Mensaje enviado! Gracias por contactarme.');
+      const message = document.getElementById('form-message');
+      message.style.display = 'block';
+      message.textContent = currentLang === 'en' ? 'Message sent! Thank you for contacting me.' : '¡Mensaje enviado! Gracias por contactarme.';
       form.reset();
+      setTimeout(() => {
+        message.style.display = 'none';
+      }, 3000);
     });
 
     // Hamburger menu toggle
@@ -622,6 +691,15 @@
       });
     });
 
+    // Close menu cuando haces clic fuera
+    document.addEventListener('click', (e) => {
+      if (!hamburger.contains(e.target) && !navLeft.contains(e.target) && !navRight.contains(e.target)) {
+        hamburger.classList.remove('active');
+        navLeft.classList.remove('active');
+        navRight.classList.remove('active');
+      }
+    });
+
     // Language switcher
     const translations = {
       en: {
@@ -629,6 +707,7 @@
         'nav.about': 'About Me',
         'nav.skills': 'Skills',
         'nav.projects': 'Projects',
+        'nav.testimonials': 'Testimonials',
         'nav.contact': 'Contact',
         'hero.title': 'Data Analyst',
         'hero.description': 'I transform data into strategic decisions with innovative solutions.',
@@ -639,16 +718,19 @@
         'section.projects': 'Projects',
         'project.seattle.title': 'Seattle 911 Fire Department Incident Report',
         'project.seattle.description': 'This Power BI dashboard analyzes over 2 million Seattle 911 fire emergency calls, uncovering trends in frequency, timing, and geographic distribution. Featuring performance comparisons, Azure Maps for district-level insights, and a Python-integrated SARIMA model for forecasting, it empowers data-driven operational and strategic planning.',
+        'section.testimonials': 'Testimonials',
+        'testimonial.leonardo.text': 'Excellent service and flexible to make the necessary adjustments. Recommended.',
+        'testimonial.leonardo.author': 'Leonardo',
         'section.contact': 'Contact',
         'contact.button': 'Send',
-        'footer.text': '© 2025 - BI Portfolio. All rights reserved.',
-        'footer.privacy': 'Privacy Policy'
+        'footer.text': '© 2025 - BI Portfolio. All rights reserved.'
       },
       es: {
         'nav.home': 'Inicio',
         'nav.about': 'Sobre Mí',
         'nav.skills': 'Habilidades',
         'nav.projects': 'Proyectos',
+        'nav.testimonials': 'Testimonios',
         'nav.contact': 'Contacto',
         'hero.title': 'Analista de Datos',
         'hero.description': 'Transformo datos en decisiones estratégicas con soluciones innovadoras.',
@@ -659,30 +741,27 @@
         'section.projects': 'Proyectos',
         'project.seattle.title': 'Informe de Incidentes del Departamento de Bomberos 911 de Seattle',
         'project.seattle.description': 'Este panel de Power BI analiza más de 2 millones de llamadas de emergencia 911 de bomberos en Seattle, identificando tendencias en frecuencia, horarios y distribución geográfica. Incluye comparaciones de rendimiento, Azure Maps para información a nivel de distrito y un modelo SARIMA integrado en Python para pronósticos, lo que permite una planificación operativa y estratégica basada en datos.',
+        'section.testimonials': 'Testimonios',
+        'testimonial.leonardo.text': 'Excelente servicio y flexible a hacer los ajustes que sean necesarios. Recomendado.',
+        'testimonial.leonardo.author': 'Leonardo',
         'section.contact': 'Contacto',
         'contact.button': 'Enviar',
-        'footer.text': '© 2025 - Portafolio de BI. Todos los derechos reservados.',
-        'footer.privacy': 'Política de Privacidad'
+        'footer.text': '© 2025 - Portafolio de BI. Todos los derechos reservados.'
       }
     };
 
     const langButton = document.querySelector('.lang-btn');
-    let currentLang = localStorage.getItem('language') || 'en';
+    let currentLang = localStorage.getItem('lang') || 'en';
+    langButton.setAttribute('data-lang', currentLang === 'en' ? 'es' : 'en');
+    langButton.textContent = currentLang === 'en' ? 'EN/ES' : 'ES/EN';
+    document.querySelectorAll('[data-translate]').forEach(element => {
+      const key = element.getAttribute('data-translate');
+      element.textContent = translations[currentLang][key];
+    });
 
     langButton.addEventListener('click', () => {
       currentLang = currentLang === 'en' ? 'es' : 'en';
-      localStorage.setItem('language', currentLang); // Almacena el idioma
-      langButton.setAttribute('data-lang', currentLang === 'en' ? 'es' : 'en');
-      langButton.textContent = currentLang === 'en' ? 'EN/ES' : 'ES/EN';
-      document.querySelectorAll('[data-translate]').forEach(element => {
-        const key = element.getAttribute('data-translate');
-        element.textContent = translations[currentLang][key];
-      });
-    });
-
-    // Aplica el idioma inicial desde localStorage
-    document.addEventListener('DOMContentLoaded', () => {
-      currentLang = localStorage.getItem('language') || 'en';
+      localStorage.setItem('lang', currentLang);
       langButton.setAttribute('data-lang', currentLang === 'en' ? 'es' : 'en');
       langButton.textContent = currentLang === 'en' ? 'EN/ES' : 'ES/EN';
       document.querySelectorAll('[data-translate]').forEach(element => {
