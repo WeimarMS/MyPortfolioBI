@@ -367,11 +367,65 @@
     }
 
     /* Sección EXPERIENCE (Nueva) */
+    .experience-header { /* Contenedor para el título */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 40px;
+    }
+
+    .experience-header h2 {
+      margin-bottom: 0; /* Elimina el margen inferior del h2 dentro de este contenedor */
+    }
+
+    /* Estilo para la nueva línea de alternancia global */
+    #toggle-experience-footer {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px; /* Espacio entre texto y flecha */
+      width: fit-content; /* Ajusta el ancho al contenido */
+      margin: 40px auto 0 auto; /* Centra la línea y añade margen superior */
+      padding: 8px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-family: 'Poppins', sans-serif; /* Fuente más sutil */
+      font-size: 0.9rem; /* Tamaño de letra pequeño */
+      color: var(--clr-text); /* Color de texto principal */
+      border: 1px solid var(--clr-text); /* Borde sutil */
+      transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+    }
+
+    #toggle-experience-footer:hover {
+      background-color: var(--clr-cold-accent);
+      color: var(--clr-bg);
+      border-color: var(--clr-cold-accent);
+    }
+
+    #toggle-experience-footer .arrow-icon {
+      display: inline-block;
+      transition: transform 0.3s ease;
+    }
+
+    #toggle-experience-footer.expanded .arrow-icon {
+      transform: rotate(180deg); /* Rota la flecha cuando está expandido */
+    }
+
+
     .timeline-container {
       position: relative;
       max-width: 800px;
       margin: 0 auto;
       padding: 20px 0;
+      max-height: 3000px; /* Inicia expandido */
+      overflow: hidden;
+      opacity: 1;
+      transition: max-height 0.8s ease-in-out, opacity 0.8s ease-in-out; /* Transición elegante */
+    }
+
+    .timeline-container.collapsed-section { /* Nueva clase para el estado colapsado */
+      max-height: 0;
+      opacity: 0;
     }
 
     .timeline-container::after { /* Línea central del tiempo (el "tronco") */
@@ -640,6 +694,11 @@
       .timeline-item.right::after {
         left: 15px; /* Asegura que los círculos estén a la izquierda para todos */
       }
+
+      .experience-header {
+        flex-direction: column;
+        gap: 15px;
+      }
     }
 
     /* Media query para orientación horizontal en móviles */
@@ -742,8 +801,8 @@
     <h2 data-translate="section.projects">Projects</h2>
     <div class="projects-grid">
       <div class="project-card">
-        <a href="https://app.powerbi.com/view?r=eyJrIjoiNWY5OGVlMzAtY2ZlOS00M2FhLWIwODUtMGZmN2ViMDBkYTY1IiwidCI6ImJhODQzY2Q3LWNiN2MtNGJiMS1hZWE3LTEzY2NhOGZlYzRjOSIsImc0IjR9" target="_blank" class="project-link">
-          <img src="./assets/images/ComprimidoGEo.gif" alt="Seattle Forecast demo" class="project-gif" loading="lazy" onerror="this.onerror=null;this.src='https://placehold.co/400x250/2A9D8F/FFFFFF?text=Project+GIF';">
+        <a href="https://app.powerbi.com/view?r=eyJrIjoiNWY5OGVlMzAtY2ZlOS00M2FhLWIwODUtMGZmN2ViMDBkYTY1IiwidCI6ImJhODQzY2Q3LWNiN2MtNGJiMS1hZWE3LTEzY2NhOGZlYzRjOSIsImg0IjR9" target="_blank" class="project-link">
+          <img src="./assets/images/ComprimidoGEo.gif" alt="Seattle Forecast demo" loading="lazy" onerror="this.onerror=null;this.src='https://placehold.co/400x250/2A9D8F/FFFFFF?text=Project+GIF';">
         </a>
         <div class="project-content">
           <div class="project-tools">
@@ -776,8 +835,10 @@
 
   <!-- Nueva Sección de Experiencia -->
   <section id="experience" class="experience">
-    <h2 data-translate="section.experience">My Professional Journey</h2>
-    <div class="timeline-container">
+    <div class="experience-header">
+      <h2 data-translate="section.experience">My Professional Journey</h2>
+    </div>
+    <div class="timeline-container"> <!-- Eliminada la clase expanded-section por defecto para que inicie colapsado -->
 
       <!-- Item 1: Data Analyst Consultant / Freelance (Newest role) -->
       <div class="timeline-item left">
@@ -938,6 +999,10 @@
       </div>
 
     </div>
+    <!-- Nueva línea para expandir/colapsar toda la sección -->
+    <div id="toggle-experience-footer" class="toggle-experience-footer">
+      <span data-translate="experience.toggleAll.expand">Expand All</span> <span class="arrow-icon">&#9660;</span>
+    </div>
   </section>
 
   <section id="contact" class="contact">
@@ -1044,6 +1109,9 @@
         'about.text': 'I’m Weimar Miranda, an Industrial Engineer with a Master’s degree in Business Intelligence from the University of Barcelona. With over a decade of experience leading BI initiatives in Bolivia’s public sector—managing $20 million in annual investments—I’ve spent the last three years crafting Power BI solutions that enhanced operational efficiency by 20%. I leverage Python and MySQL to enrich data workflows and optimize reporting, complementing my core expertise in Power BI. Fluent in English at C1 level (Kaplan, New York, 2024).',
         'section.skills': 'Skills',
         'section.experience': 'My Professional Journey',
+        'experience.toggleAll': 'Collapse All', /* New translation for global toggle */
+        'experience.toggleAll.expand': 'Expand All', /* New translation for global toggle */
+
         'experience.role1.title': 'Data Analyst Consultant / Freelance',
         'experience.role1.company': 'Self-Employed',
         'experience.role1.date': 'Feb 2025 - Present',
@@ -1141,6 +1209,9 @@
         'about.text': 'Soy Weimar Miranda, Ingeniero Industrial con un Máster en Inteligencia de Negocios de la Universidad de Barcelona. Con más de una década de experiencia liderando iniciativas de BI en el sector público de Bolivia, gestionando $20 millones en inversiones anuales, he pasado los últimos tres años creando soluciones de Power BI que mejoraron la eficiencia operativa en un 20%. Utilizo Python y MySQL para enriquecer flujos de datos y optimizar informes, complementando mi experiencia principal en Power BI. Fluidez en idioma inglés a nivel C1 (Kaplan, Nueva York, 2024).',
         'section.skills': 'Habilidades',
         'section.experience': 'Mi Trayectoria Profesional',
+        'experience.toggleAll': 'Ocultar Todo', /* Nueva traducción para el botón global */
+        'experience.toggleAll.expand': 'Expandir Todo', /* Nueva traducción para el botón global */
+
         'experience.role1.title': 'Consultor / Freelance de Análisis de Datos',
         'experience.role1.company': 'Independiente',
         'experience.role1.date': 'Feb 2025 - Actualidad',
@@ -1229,63 +1300,116 @@
     const langButton = document.querySelector('.lang-btn');
     let currentLang = localStorage.getItem('lang') || 'en'; // Obtiene el idioma guardado o usa 'en'
     
-    // Función para aplicar las traducciones
-    function applyTranslations() {
-        document.querySelectorAll('[data-translate]').forEach(element => {
-            const key = element.getAttribute('data-translate');
-            // Si es el botón de alternar detalles, maneja el texto específico
-            if (element.classList.contains('toggle-details-btn')) {
-                // Comprueba el texto actual del botón para determinar si está expandido o colapsado
-                const isExpanded = element.textContent === translations['en']['experience.toggle.hide'] || element.textContent === translations['es']['experience.toggle.hide'];
-                if (isExpanded) {
-                    element.textContent = translations[currentLang]['experience.toggle.hide'];
+    // Envuelve todo el código que interactúa con el DOM en DOMContentLoaded
+    document.addEventListener('DOMContentLoaded', function() {
+        // Declaraciones de elementos DOM dentro de DOMContentLoaded
+        const toggleExperienceFooter = document.getElementById('toggle-experience-footer');
+        const timelineContainer = document.querySelector('.timeline-container');
+
+        // Función para aplicar las traducciones
+        function applyTranslations() {
+            document.querySelectorAll('[data-translate]').forEach(element => {
+                const key = element.getAttribute('data-translate');
+                // Si es el botón de alternar detalles, maneja el texto específico
+                if (element.classList.contains('toggle-details-btn')) {
+                    // Comprueba el texto actual del botón para determinar si está expandido o colapsado
+                    const isExpanded = element.textContent === translations['en']['experience.toggle.hide'] || element.textContent === translations['es']['experience.toggle.hide'];
+                    if (isExpanded) {
+                        element.textContent = translations[currentLang]['experience.toggle.hide'];
+                    } else {
+                        element.textContent = translations[currentLang]['experience.toggle'];
+                    }
                 } else {
-                    element.textContent = translations[currentLang]['experience.toggle'];
+                    element.textContent = translations[currentLang][key];
                 }
-            } else {
-                element.textContent = translations[currentLang][key];
+            });
+            // Actualiza el texto y la flecha de la línea global de experiencia
+            if (toggleExperienceFooter && timelineContainer) { // Asegúrate de que los elementos existen
+                const textSpan = toggleExperienceFooter.querySelector('span:first-child');
+                const arrowIcon = toggleExperienceFooter.querySelector('.arrow-icon');
+
+                if (timelineContainer.classList.contains('collapsed-section')) { // Si está colapsado
+                    textSpan.textContent = translations[currentLang]['experience.toggleAll.expand'];
+                    arrowIcon.innerHTML = '&#9660;'; // Flecha hacia abajo
+                    toggleExperienceFooter.classList.remove('expanded');
+                } else { // Si está expandido
+                    textSpan.textContent = translations[currentLang]['experience.toggleAll'];
+                    arrowIcon.innerHTML = '&#9650;'; // Flecha hacia arriba
+                    toggleExperienceFooter.classList.add('expanded');
+                }
             }
-        });
-    }
-
-    // Inicializa el texto del botón de idioma y aplica las traducciones al cargar
-    langButton.setAttribute('data-lang', currentLang === 'en' ? 'es' : 'en');
-    langButton.textContent = currentLang === 'en' ? 'EN/ES' : 'ES/EN';
-    applyTranslations();
-
-    // Event listener para el botón de cambio de idioma
-    langButton.addEventListener('click', () => {
-      currentLang = currentLang === 'en' ? 'es' : 'en';
-      localStorage.setItem('lang', currentLang); // Guarda el idioma seleccionado
-      langButton.setAttribute('data-lang', currentLang === 'en' ? 'es' : 'en');
-      langButton.textContent = currentLang === 'en' ? 'EN/ES' : 'ES/EN';
-      applyTranslations(); // Vuelve a aplicar las traducciones
-    });
-
-    // Funcionalidad para expandir/colapsar detalles de la experiencia
-    document.querySelectorAll('.toggle-details-btn').forEach(button => {
-      button.addEventListener('click', function() {
-        const responsibilitiesList = this.previousElementSibling; // La lista UL
-        responsibilitiesList.classList.toggle('expanded');
-
-        // Cambia el texto del botón según el estado
-        if (responsibilitiesList.classList.contains('expanded')) {
-          this.textContent = translations[currentLang]['experience.toggle.hide'];
-        } else {
-          this.textContent = translations[currentLang]['experience.toggle'];
         }
-      });
-    });
 
-    // Fallback para imágenes si no cargan
-    document.querySelectorAll('img').forEach(img => {
-        img.addEventListener('error', function() {
-            // Reemplaza la imagen con un placeholder si hay un error de carga
-            this.src = this.dataset.fallback || 'https://placehold.co/100x100/CCCCCC/000000?text=Image';
-            this.style.width = 'auto'; // Ajusta el ancho para el placeholder
-            this.style.height = 'auto'; // Ajusta la altura para el placeholder
+        // Inicializa el texto del botón de idioma y aplica las traducciones al cargar
+        langButton.setAttribute('data-lang', currentLang === 'en' ? 'es' : 'en');
+        langButton.textContent = currentLang === 'en' ? 'EN/ES' : 'ES/EN';
+        applyTranslations(); // Aplica las traducciones al cargar la página
+
+        // Event listener para el botón de cambio de idioma
+        langButton.addEventListener('click', () => {
+          currentLang = currentLang === 'en' ? 'es' : 'en';
+          localStorage.setItem('lang', currentLang); // Guarda el idioma seleccionado
+          langButton.setAttribute('data-lang', currentLang === 'en' ? 'es' : 'en');
+          langButton.textContent = currentLang === 'en' ? 'EN/ES' : 'ES/EN';
+          applyTranslations(); // Vuelve a aplicar las traducciones
         });
-    });
+
+        // Funcionalidad para expandir/colapsar detalles de la experiencia
+        document.querySelectorAll('.toggle-details-btn').forEach(button => {
+          button.addEventListener('click', function() {
+            const responsibilitiesList = this.previousElementSibling; // La lista UL
+            responsibilitiesList.classList.toggle('expanded');
+
+            // Cambia el texto del botón según el estado
+            if (responsibilitiesList.classList.contains('expanded')) {
+              this.textContent = translations[currentLang]['experience.toggle.hide'];
+            } else {
+              this.textContent = translations[currentLang]['experience.toggle'];
+            }
+          });
+        });
+
+        // Funcionalidad para expandir/colapsar TODA la sección de experiencia
+        if (toggleExperienceFooter && timelineContainer) { // Asegúrate de que los elementos existan
+            // Establece el estado inicial de la sección de experiencia a colapsado
+            timelineContainer.classList.add('collapsed-section');
+            toggleExperienceFooter.classList.remove('expanded'); // Asegura que la flecha apunte hacia abajo
+            toggleExperienceFooter.querySelector('span:first-child').textContent = translations[currentLang]['experience.toggleAll.expand'];
+            toggleExperienceFooter.querySelector('.arrow-icon').innerHTML = '&#9660;';
+
+            toggleExperienceFooter.addEventListener('click', () => {
+                timelineContainer.classList.toggle('collapsed-section'); // Alterna la clase de colapsado
+                toggleExperienceFooter.classList.toggle('expanded'); // Alterna la clase para la flecha
+
+                // Colapsar todos los detalles individuales si la sección principal se colapsa
+                if (timelineContainer.classList.contains('collapsed-section')) {
+                    document.querySelectorAll('.responsibilities-list.expanded').forEach(list => {
+                        list.classList.remove('expanded');
+                    });
+                    document.querySelectorAll('.toggle-details-btn').forEach(btn => {
+                        btn.textContent = translations[currentLang]['experience.toggle'];
+                    });
+                    // Actualiza el texto y la flecha del botón global
+                    toggleExperienceFooter.querySelector('span:first-child').textContent = translations[currentLang]['experience.toggleAll.expand'];
+                    toggleExperienceFooter.querySelector('.arrow-icon').innerHTML = '&#9660;'; // Flecha hacia abajo
+                } else {
+                    // Actualiza el texto y la flecha del botón global
+                    toggleExperienceFooter.querySelector('span:first-child').textContent = translations[currentLang]['experience.toggleAll'];
+                    toggleExperienceFooter.querySelector('.arrow-icon').innerHTML = '&#9650;'; // Flecha hacia arriba
+                }
+            });
+        }
+
+        // Fallback para imágenes si no cargan
+        document.querySelectorAll('img').forEach(img => {
+            img.addEventListener('error', function() {
+                // Reemplaza la imagen con un placeholder si hay un error de carga
+                this.src = this.dataset.fallback || 'https://placehold.co/100x100/CCCCCC/000000?text=Image';
+                this.style.width = 'auto'; // Ajusta el ancho para el placeholder
+                this.style.height = 'auto'; // Ajusta la altura para el placeholder
+            });
+        });
+    }); // Fin de DOMContentLoaded
   </script>
 </body>
 </html>
