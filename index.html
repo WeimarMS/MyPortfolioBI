@@ -7,18 +7,27 @@
   <meta name="keywords" content="Business Intelligence, Data Analyst, Power BI, Python, SQL, Weimar Miranda">
   <meta name="author" content="Weimar Miranda">
   <title>Portfolio - Business Intelligence</title>
+
+  <!-- Open Graph Meta Tags para miniaturas al compartir el enlace -->
+  <meta property="og:title" content="Portafolio de Weimar Miranda - Analista de Datos" />
+  <meta property="og:description" content="Transformo datos en decisiones estratégicas con soluciones innovadoras. Experto en Power BI, Python y SQL." />
+  <meta property="og:image" content="https://placehold.co/1200x630/2A9D8F/FFFFFF?text=Weimar+Miranda+BI+Portfolio" />
+  <meta property="og:url" content="https://tu-dominio.com/portfolio" />
+  <meta property="og:type" content="website" />
+  <!-- Fin Open Graph Meta Tags -->
+
   <style>
     /* Importa las fuentes de Google Fonts */
     @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&family=Poppins:wght@300;400;500&display=swap');
 
     /* Variables CSS para colores */
     :root {
-      --clr-bg: #F2F5F7; /* Color de fondo claro */
-      --clr-text: #264653; /* Color de texto oscuro (azul verdoso) */
-      --clr-cold-accent: #2A9D8F; /* Color de acento frío (verde azulado) */
-      --clr-warm-accent: #E9C46A; /* Color de acento cálido (amarillo mostaza) */
-      --clr-highlight: #F4A261; /* Color de resaltado (naranja) */
-      --clr-gold: #FFD700; /* Dorado para las estrellas */
+      --clr-bg: #F2F5F7;
+      --clr-text: #264653;
+      --clr-cold-accent: #2A9D8F;
+      --clr-warm-accent: #E9C46A;
+      --clr-highlight: #F4A261;
+      --clr-gold: #FFD700;
     }
 
     /* Reset básico de CSS */
@@ -34,53 +43,53 @@
       background: var(--clr-bg);
       color: var(--clr-text);
       line-height: 1.6;
-      overflow-x: hidden; /* Previene el scroll horizontal */
+      overflow-x: hidden;
     }
 
     /* Estilos de la barra de navegación */
     nav {
-      position: fixed; /* Fija la navegación en la parte superior */
+      position: fixed;
       top: 0;
       width: 100%;
-      background: var(--clr-cold-accent); /* Color de fondo de la navegación */
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Sombra sutil */
-      z-index: 1000; /* Asegura que esté por encima de otros elementos */
+      background: var(--clr-cold-accent);
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      z-index: 1000;
     }
 
     .nav-container {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      max-width: 1200px; /* Ancho máximo del contenedor */
-      margin: 0 auto; /* Centra el contenedor */
+      max-width: 1200px;
+      margin: 0 auto;
       padding: 10px 20px;
     }
 
     .nav-left, .nav-right {
       display: flex;
-      list-style: none; /* Quita los puntos de la lista */
+      list-style: none;
     }
 
     .nav-right {
-      gap: 20px; /* Espaciado entre elementos de la derecha */
+      gap: 20px;
     }
 
     nav ul li a {
-      color: var(--clr-bg); /* Color del texto de los enlaces */
+      color: var(--clr-bg);
       font-weight: 500;
-      text-decoration: none; /* Quita el subrayado */
-      transition: color 0.3s ease; /* Transición suave al pasar el mouse */
+      text-decoration: none;
+      transition: color 0.3s ease;
     }
 
     nav ul li a:hover {
-      color: var(--clr-highlight); /* Color al pasar el mouse */
+      color: var(--clr-highlight);
     }
 
     /* Estilos del botón de idioma */
     .lang-btn {
       background: transparent;
-      border: 1px solid var(--clr-bg); /* Borde blanco */
-      color: var(--clr-bg); /* Texto blanco */
+      border: 1px solid var(--clr-bg);
+      color: var(--clr-bg);
       padding: 5px 10px;
       border-radius: 5px;
       font-family: 'Oswald', sans-serif;
@@ -90,13 +99,13 @@
     }
 
     .lang-btn:hover {
-      background: var(--clr-highlight); /* Fondo naranja al pasar el mouse */
+      background: var(--clr-highlight);
       color: var(--clr-bg);
     }
 
     /* Estilos del menú de hamburguesa */
     .hamburger {
-      display: none; /* Oculto por defecto en pantallas grandes */
+      display: none;
       flex-direction: column;
       justify-content: space-between;
       width: 30px;
@@ -105,22 +114,22 @@
     }
 
     .hamburger span {
-      background: var(--clr-bg); /* Color de las barras */
+      background: var(--clr-bg);
       height: 3px;
       width: 100%;
-      transition: all 0.3s ease; /* Transición para la animación */
+      transition: all 0.3s ease;
     }
 
     .hamburger.active span:nth-child(1) {
-      transform: rotate(45deg) translate(5px, 5px); /* Gira y mueve la primera barra */
+      transform: rotate(45deg) translate(5px, 5px);
     }
 
     .hamburger.active span:nth-child(2) {
-      opacity: 0; /* Oculta la barra del medio */
+      opacity: 0;
     }
 
     .hamburger.active span:nth-child(3) {
-      transform: rotate(-45deg) translate(7px, -7px); /* Gira y mueve la tercera barra */
+      transform: rotate(-45deg) translate(7px, -7px);
     }
 
     /* Icono social (LinkedIn) */
@@ -137,31 +146,31 @@
     }
 
     .social-icon:hover {
-      transform: scale(1.1); /* Escala el icono al pasar el mouse */
+      transform: scale(1.1);
       opacity: 0.9;
     }
 
     /* Sección HERO (Inicio) */
     .hero {
-      height: 100vh; /* Ocupa toda la altura de la ventana */
+      height: 100vh;
       display: flex;
       align-items: center;
       justify-content: center;
       text-align: center;
-      background: linear-gradient(135deg, var(--clr-cold-accent), var(--clr-warm-accent)); /* Degradado de fondo */
-      color: var(--clr-bg); /* Texto blanco */
-      clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%); /* Forma de onda en la parte inferior */
+      background: linear-gradient(135deg, var(--clr-cold-accent), var(--clr-warm-accent));
+      color: var(--clr-bg);
+      clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
     }
     .hero-content .name {
       font-family: 'Oswald', sans-serif;
       font-size: 4rem;
       margin-bottom: 5px;
       line-height: 1.1;
-      animation: fadeIn 1s ease-in; /* Animación de aparición */
+      animation: fadeIn 1s ease-in;
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 10px; /* Espacio entre el texto y el logo */
+      gap: 10px;
     }
     .hero-content .name img {
       height: 70px;
@@ -183,17 +192,17 @@
     .btn {
       display: inline-block;
       padding: 10px 20px;
-      background: var(--clr-highlight); /* Fondo naranja */
-      color: var(--clr-bg); /* Texto blanco */
+      background: var(--clr-highlight);
+      color: var(--clr-bg);
       text-decoration: none;
       border-radius: 5px;
       font-weight: 500;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
     .btn:hover {
-      transform: translateY(-3px); /* Mueve el botón ligeramente hacia arriba */
-      box-shadow: 0 5px 15px rgba(0,0,0,0.2); /* Sombra al pasar el mouse */
-      background: var(--clr-warm-accent); /* Cambia de color al pasar el mouse */
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+      background: var(--clr-warm-accent);
     }
 
     /* Estilos generales de las secciones */
@@ -210,13 +219,13 @@
       color: var(--clr-text);
       line-height: 1.2;
     }
-    .about, .skills, .projects, .testimonials, .contact, .experience { /* Se añade .experience */
+    .about, .skills, .projects, .testimonials, .contact, .experience {
       background: var(--clr-bg);
       border-radius: 10px;
       padding: 40px;
       margin-bottom: 20px;
       box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-      animation: slideUp 1s ease-in-out; /* Animación de aparición */
+      animation: slideUp 1s ease-in-out;
     }
 
     /* Sección ABOUT (Sobre Mí) */
@@ -231,7 +240,7 @@
     .about-image img {
       width: 200px;
       height: 200px;
-      border-radius: 50%; /* Imagen circular */
+      border-radius: 50%;
       object-fit: cover;
     }
     .about-text {
@@ -245,7 +254,7 @@
     /* Sección SKILLS (Habilidades) */
     .skills-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Columnas responsivas */
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
       gap: 20px;
       text-align: center;
     }
@@ -270,7 +279,7 @@
     /* Sección PROJECTS (Proyectos) */
     .projects-grid {
       display: grid;
-      grid-template-columns: 1fr; /* Una columna por defecto */
+      grid-template-columns: 1fr;
       gap: 20px;
     }
     .project-card {
@@ -280,6 +289,7 @@
       background: var(--clr-bg);
       padding: 20px;
       border-radius: 8px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
     .project-card:hover {
@@ -287,8 +297,10 @@
       box-shadow: 0 5px 15px rgba(0,0,0,0.2);
     }
     .project-link {
-      flex: 0 0 50%; /* Ocupa el 50% del ancho */
+      flex: 0 0 50%;
       display: block;
+      max-width: 100%;
+      overflow: hidden;
     }
     .project-link:hover .project-gif {
       cursor: pointer;
@@ -298,10 +310,12 @@
       width: 100%;
       height: auto;
       border-radius: 8px;
-      object-fit: cover;
+      display: block;
     }
     .project-content {
       flex: 1;
+      max-height: 300px; /* Limita la altura del contenido */
+      overflow-y: auto; /* Permite desplazamiento si el contenido es largo */
     }
     .project-tools {
       margin-bottom: 10px;
@@ -360,14 +374,13 @@
       transform: scale(1.1);
       opacity: 0.9;
     }
-    /* Clase para las estrellas doradas */
     .stars {
       color: var(--clr-gold);
       font-size: 1rem;
     }
 
     /* Sección EXPERIENCE (Nueva) */
-    .experience-header { /* Contenedor para el título */
+    .experience-header {
       display: flex;
       justify-content: center;
       align-items: center;
@@ -375,24 +388,23 @@
     }
 
     .experience-header h2 {
-      margin-bottom: 0; /* Elimina el margen inferior del h2 dentro de este contenedor */
+      margin-bottom: 0;
     }
 
-    /* Estilo para la nueva línea de alternancia global */
     #toggle-experience-footer {
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 8px; /* Espacio entre texto y flecha */
-      width: fit-content; /* Ajusta el ancho al contenido */
-      margin: 40px auto 0 auto; /* Centra la línea y añade margen superior */
+      gap: 8px;
+      width: fit-content;
+      margin: 40px auto 0 auto;
       padding: 8px 15px;
       border-radius: 5px;
       cursor: pointer;
-      font-family: 'Poppins', sans-serif; /* Fuente más sutil */
-      font-size: 0.9rem; /* Tamaño de letra pequeño */
-      color: var(--clr-text); /* Color de texto principal */
-      border: 1px solid var(--clr-text); /* Borde sutil */
+      font-family: 'Poppins', sans-serif;
+      font-size: 0.9rem;
+      color: var(--clr-text);
+      border: 1px solid var(--clr-text);
       transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
     }
 
@@ -408,34 +420,33 @@
     }
 
     #toggle-experience-footer.expanded .arrow-icon {
-      transform: rotate(180deg); /* Rota la flecha cuando está expandido */
+      transform: rotate(180deg);
     }
-
 
     .timeline-container {
       position: relative;
       max-width: 800px;
       margin: 0 auto;
       padding: 20px 0;
-      max-height: 3000px; /* Inicia expandido */
+      max-height: 3000px;
       overflow: hidden;
       opacity: 1;
-      transition: max-height 0.8s ease-in-out, opacity 0.8s ease-in-out; /* Transición elegante */
+      transition: max-height 0.8s ease-in-out, opacity 0.8s ease-in-out;
     }
 
-    .timeline-container.collapsed-section { /* Nueva clase para el estado colapsado */
+    .timeline-container.collapsed-section {
       max-height: 0;
       opacity: 0;
     }
 
-    .timeline-container::after { /* Línea central del tiempo (el "tronco") */
+    .timeline-container::after {
       content: '';
       position: absolute;
       width: 4px;
-      background: var(--clr-cold-accent); /* Color de la línea */
+      background: var(--clr-cold-accent);
       top: 0;
       bottom: 0;
-      left: 50%; /* Centrada */
+      left: 50%;
       margin-left: -2px;
       border-radius: 2px;
     }
@@ -444,18 +455,18 @@
       padding: 10px 40px;
       position: relative;
       background-color: inherit;
-      width: 50%; /* Cada item ocupa la mitad del ancho */
-      margin-bottom: 30px; /* Espacio entre items */
+      width: 50%;
+      margin-bottom: 30px;
     }
 
-    .timeline-item::after { /* Círculos en la línea de tiempo (los "nodos") */
+    .timeline-item::after {
       content: '';
       position: absolute;
       width: 20px;
       height: 20px;
-      right: -10px; /* Posición del círculo a la derecha */
-      background-color: var(--clr-highlight); /* Color del círculo */
-      border: 3px solid var(--clr-bg); /* Borde blanco */
+      right: -10px;
+      background-color: var(--clr-highlight);
+      border: 3px solid var(--clr-bg);
       top: 15px;
       border-radius: 50%;
       z-index: 1;
@@ -466,10 +477,10 @@
     }
 
     .timeline-item.right {
-      left: 50%; /* Mueve los items de la derecha */
+      left: 50%;
     }
 
-    .timeline-item.right::after { /* Ajusta la posición del círculo para los items de la derecha */
+    .timeline-item.right::after {
       left: -10px;
     }
 
@@ -511,14 +522,14 @@
       list-style: none;
       padding-left: 0;
       margin-top: 10px;
-      max-height: 0; /* Oculto por defecto */
+      max-height: 0;
       overflow: hidden;
-      transition: max-height 0.5s ease-out, opacity 0.5s ease-out; /* Transición suave */
+      transition: max-height 0.5s ease-out, opacity 0.5s ease-out;
       opacity: 0;
     }
 
     .responsibilities-list.expanded {
-      max-height: 500px; /* Suficientemente grande para mostrar todo el contenido */
+      max-height: 500px;
       opacity: 1;
     }
 
@@ -529,7 +540,7 @@
       font-size: 0.9rem;
     }
 
-    .responsibilities-list li::before { /* Viñetas personalizadas */
+    .responsibilities-list li::before {
       content: '•';
       color: var(--clr-warm-accent);
       position: absolute;
@@ -547,7 +558,7 @@
       font-size: 0.85rem;
       margin-top: 10px;
       transition: background 0.3s ease;
-      display: block; /* Para que ocupe su propia línea */
+      display: block;
     }
 
     .toggle-details-btn:hover {
@@ -623,13 +634,13 @@
         align-items: center;
       }
       .nav-left, .nav-right {
-        display: none; /* Oculta los elementos de la navegación */
+        display: none;
       }
       .nav-right.active, .nav-left.active {
         display: flex;
         flex-direction: column;
         position: absolute;
-        top: 60px; /* Debajo de la barra de navegación */
+        top: 60px;
         left: 0;
         width: 100%;
         background: var(--clr-cold-accent);
@@ -640,7 +651,7 @@
         margin: 10px 0;
       }
       .hamburger {
-        display: flex; /* Muestra el menú de hamburguesa */
+        display: flex;
       }
       .lang-btn {
         display: block;
@@ -654,14 +665,28 @@
       .project-card {
         flex-direction: column;
         align-items: center;
+        margin-bottom: 40px; /* Aumenta la separación con la sección siguiente */
+        padding: 20px; /* Asegura suficiente espacio interno */
       }
       .project-link {
-        flex: 0 0 auto;
         width: 100%;
-        max-width: 400px;
+        max-width: 100%;
+        overflow: hidden;
       }
       .project-gif {
         width: 100%;
+        height: auto;
+        max-height: 300px;
+        object-fit: contain;
+        display: block;
+      }
+      .project-content {
+        max-height: 200px; /* Limita la altura en móviles */
+        overflow-y: auto; /* Permite desplazamiento vertical si el texto es largo */
+        padding-right: 10px; /* Espacio para la barra de desplazamiento */
+      }
+      .project-content p {
+        font-size: 0.9rem; /* Reduce el tamaño del texto en móviles */
       }
       .social-icon img {
         width: 32px;
@@ -674,25 +699,25 @@
 
       /* Responsive para la línea de tiempo en móviles */
       .timeline-container::after {
-        left: 31px; /* Mueve la línea a la izquierda */
+        left: 31px;
       }
 
       .timeline-item {
-        width: 100%; /* Ocupa todo el ancho */
-        padding-left: 70px; /* Espacio para la línea y el círculo */
+        width: 100%;
+        padding-left: 70px;
         padding-right: 25px;
       }
 
       .timeline-item.right {
-        left: 0%; /* Alinea todos los items a la izquierda */
+        left: 0%;
       }
 
       .timeline-item::after {
-        left: 15px; /* Mueve el círculo a la izquierda */
+        left: 15px;
       }
 
       .timeline-item.right::after {
-        left: 15px; /* Asegura que los círculos estén a la izquierda para todos */
+        left: 15px;
       }
 
       .experience-header {
@@ -741,7 +766,7 @@
         <li><a href="#skills" data-translate="nav.skills">Skills</a></li>
         <li><a href="#projects" data-translate="nav.projects">Projects</a></li>
         <li><a href="#testimonials" data-translate="nav.testimonials">Testimonials</a></li>
-        <li><a href="#experience" data-translate="nav.experience">Experience</a></li> <!-- Nuevo enlace -->
+        <li><a href="#experience" data-translate="nav.experience">Experience</a></li>
         <li><a href="#contact" data-translate="nav.contact">Contact</a></li>
       </ul>
       <button class="lang-btn" data-lang="es">EN/ES</button>
@@ -802,7 +827,7 @@
     <div class="projects-grid">
       <div class="project-card">
         <a href="https://app.powerbi.com/view?r=eyJrIjoiNWY5OGVlMzAtY2ZlOS00M2FhLWIwODUtMGZmN2ViMDBkYTY1IiwidCI6ImJhODQzY2Q3LWNiN2MtNGJiMS1hZWE3LTEzY2NhOGZlYzRjOSIsImg0IjR9" target="_blank" class="project-link">
-          <img src="./assets/images/ComprimidoGEo.gif" alt="Seattle Forecast demo" loading="lazy" onerror="this.onerror=null;this.src='https://placehold.co/400x250/2A9D8F/FFFFFF?text=Project+GIF';">
+          <img src="./assets/images/ComprimidoGEo.gif" alt="Seattle Forecast demo" class="project-gif">
         </a>
         <div class="project-content">
           <div class="project-tools">
@@ -823,7 +848,7 @@
     <div class="testimonials-grid">
       <div class="testimonial-card">
         <p>
-          &ldquo;<span data-translate="testimonial.leonardo.text"></span>&rdquo; <span class="stars">★★★★★</span>
+          “<span data-translate="testimonial.leonardo.text"></span>” <span class="stars">★★★★★</span>
         </p>
         <div class="testimonial-author-container">
           <div class="author" data-translate="testimonial.leonardo.author">Leonardo</div>
@@ -833,14 +858,11 @@
     </div>
   </section>
 
-  <!-- Nueva Sección de Experiencia -->
   <section id="experience" class="experience">
     <div class="experience-header">
       <h2 data-translate="section.experience">My Professional Journey</h2>
     </div>
-    <div class="timeline-container"> <!-- Eliminada la clase expanded-section por defecto para que inicie colapsado -->
-
-      <!-- Item 1: Data Analyst Consultant / Freelance (Newest role) -->
+    <div class="timeline-container">
       <div class="timeline-item left">
         <div class="timeline-content">
           <h3 data-translate="experience.role1.title">Data Analyst Consultant / Freelance</h3>
@@ -854,8 +876,6 @@
           <button class="toggle-details-btn" data-translate="experience.toggle">Show Details</button>
         </div>
       </div>
-
-      <!-- Item 2: Profesional de Planificación de Proyectos -->
       <div class="timeline-item right">
         <div class="timeline-content">
           <h3 data-translate="experience.role2.title">Project Planning Professional</h3>
@@ -869,8 +889,6 @@
           <button class="toggle-details-btn" data-translate="experience.toggle">Show Details</button>
         </div>
       </div>
-
-      <!-- Item 3: Encargado Nacional de Fiscalización y Seguimiento Técnico -->
       <div class="timeline-item left">
         <div class="timeline-content">
           <h3 data-translate="experience.role3.title">National Technical Inspection and Monitoring Manager</h3>
@@ -884,8 +902,6 @@
           <button class="toggle-details-btn" data-translate="experience.toggle">Show Details</button>
         </div>
       </div>
-
-      <!-- Item 4: Profesional de Fiscalización y Seguimiento Técnico -->
       <div class="timeline-item right">
         <div class="timeline-content">
           <h3 data-translate="experience.role4.title">Technical Inspection and Monitoring Professional</h3>
@@ -898,8 +914,6 @@
           <button class="toggle-details-btn" data-translate="experience.toggle">Show Details</button>
         </div>
       </div>
-
-      <!-- Item 5: Profesional de Normalización Técnica -->
       <div class="timeline-item left">
         <div class="timeline-content">
           <h3 data-translate="experience.role5.title">Technical Standardization Professional</h3>
@@ -912,8 +926,6 @@
           <button class="toggle-details-btn" data-translate="experience.toggle">Show Details</button>
         </div>
       </div>
-
-      <!-- Item 6: Program Management Control and Monitoring Professional -->
       <div class="timeline-item right">
         <div class="timeline-content">
           <h3 data-translate="experience.role6.title">Program Management Control and Monitoring Professional</h3>
@@ -926,8 +938,6 @@
           <button class="toggle-details-btn" data-translate="experience.toggle">Show Details</button>
         </div>
       </div>
-
-      <!-- Item 7: Encargado Nacional de Almacenes de Equipos de Conversión a GNV y Gestión Operativa -->
       <div class="timeline-item left">
         <div class="timeline-content">
           <h3 data-translate="experience.role7.title">National Manager of GNV Conversion Equipment Warehouses and Operational Management</h3>
@@ -941,8 +951,6 @@
           <button class="toggle-details-btn" data-translate="experience.toggle">Show Details</button>
         </div>
       </div>
-
-      <!-- Item 8: Encargado Nacional de Almacenes de Equipos de Conversión a GNV -->
       <div class="timeline-item right">
         <div class="timeline-content">
           <h3 data-translate="experience.role8.title">National Manager of GNV Conversion Equipment Warehouses</h3>
@@ -955,8 +963,6 @@
           <button class="toggle-details-btn" data-translate="experience.toggle">Show Details</button>
         </div>
       </div>
-
-      <!-- Item 9: Profesional de Planificación -->
       <div class="timeline-item left">
         <div class="timeline-content">
           <h3 data-translate="experience.role9.title">Planning Professional</h3>
@@ -969,8 +975,6 @@
           <button class="toggle-details-btn" data-translate="experience.toggle">Show Details</button>
         </div>
       </div>
-
-      <!-- Item 10: Consultor - Unidad Operativa -->
       <div class="timeline-item right">
         <div class="timeline-content">
           <h3 data-translate="experience.role10.title">Consultant - Operational Unit</h3>
@@ -983,8 +987,6 @@
           <button class="toggle-details-btn" data-translate="experience.toggle">Show Details</button>
         </div>
       </div>
-
-      <!-- Item 11: Coordinador Regional en Tarija -->
       <div class="timeline-item left">
         <div class="timeline-content">
           <h3 data-translate="experience.role11.title">Regional Coordinator in Tarija</h3>
@@ -997,11 +999,9 @@
           <button class="toggle-details-btn" data-translate="experience.toggle">Show Details</button>
         </div>
       </div>
-
     </div>
-    <!-- Nueva línea para expandir/colapsar toda la sección -->
     <div id="toggle-experience-footer" class="toggle-experience-footer">
-      <span data-translate="experience.toggleAll.expand">Expand All</span> <span class="arrow-icon">&#9660;</span>
+      <span data-translate="experience.toggleAll.expand">Expand All</span> <span class="arrow-icon">▼</span>
     </div>
   </section>
 
@@ -1053,13 +1053,13 @@
     });
 
     iframe.addEventListener('load', () => {
-      if (!submitting) return; // Solo procesar si el formulario fue enviado por el script
+      if (!submitting) return;
       submitting = false;
       formMessage.style.display = 'block';
       formMessage.textContent = currentLang === 'en' ? 'Message sent! Thank you for contacting me.' : '¡Mensaje enviado! Gracias por contactarme.';
-      form.reset(); // Limpia el formulario
+      form.reset();
       setTimeout(() => {
-        formMessage.style.display = 'none'; // Oculta el mensaje después de 3 segundos
+        formMessage.style.display = 'none';
       }, 3000);
     });
 
@@ -1074,7 +1074,6 @@
       navRight.classList.toggle('active');
     });
 
-    // Cierra el menú cuando se hace clic en un enlace de navegación
     document.querySelectorAll('.nav-left a, .nav-right a').forEach(link => {
       link.addEventListener('click', () => {
         hamburger.classList.remove('active');
@@ -1083,7 +1082,6 @@
       });
     });
 
-    // Cierra el menú cuando se hace clic fuera de él
     document.addEventListener('click', (e) => {
       if (!hamburger.contains(e.target) && !navLeft.contains(e.target) && !navRight.contains(e.target)) {
         hamburger.classList.remove('active');
@@ -1109,79 +1107,67 @@
         'about.text': 'I’m Weimar Miranda, an Industrial Engineer with a Master’s degree in Business Intelligence from the University of Barcelona. With over a decade of experience leading BI initiatives in Bolivia’s public sector—managing $20 million in annual investments—I’ve spent the last three years crafting Power BI solutions that enhanced operational efficiency by 20%. I leverage Python and MySQL to enrich data workflows and optimize reporting, complementing my core expertise in Power BI. Fluent in English at C1 level (Kaplan, New York, 2024).',
         'section.skills': 'Skills',
         'section.experience': 'My Professional Journey',
-        'experience.toggleAll': 'Collapse All', /* New translation for global toggle */
-        'experience.toggleAll.expand': 'Expand All', /* New translation for global toggle */
-
+        'experience.toggleAll': 'Collapse All',
+        'experience.toggleAll.expand': 'Expand All',
         'experience.role1.title': 'Data Analyst Consultant / Freelance',
         'experience.role1.company': 'Self-Employed',
         'experience.role1.date': 'Feb 2025 - Present',
         'experience.role1.resp1': 'Providing data analysis and BI consulting services to various clients.',
         'experience.role1.resp2': 'Developing custom dashboards and reports.',
         'experience.role1.resp3': 'Optimizing data workflows and delivering actionable insights.',
-
         'experience.role2.title': 'Project Planning Professional',
         'experience.role2.company': 'Executive Entity for Natural Gas Vehicle Conversion',
         'experience.role2.date': 'Apr 2023 - Apr 2024',
         'experience.role2.resp1': 'Implemented Power BI in the planning area for the General Executive Directorate, optimizing the visualization and monitoring of annual investment programs.',
         'experience.role2.resp2': 'Developed interactive dashboards that allowed real-time monitoring of investment programs managing approximately $20 million annually, significantly improving strategic decision-making.',
         'experience.role2.resp3': 'Coordinated with technical teams to integrate key data into a centralized model, ensuring accuracy and consistency in reports.',
-
         'experience.role3.title': 'National Technical Inspection and Monitoring Manager',
         'experience.role3.company': 'Executive Entity for Natural Gas Vehicle Conversion',
         'experience.role3.date': 'Jan 2022 - Mar 2023',
         'experience.role3.resp1': 'Supervised technical monitoring and inspection of vehicle natural gas conversion.',
         'experience.role3.resp2': 'Used Power BI to track inspection data through dashboards, generate reports, and analyze trends, achieving positive results in my area.',
         'experience.role3.resp3': 'Ensured compliance with national regulations and contributed to improving operational efficiency.',
-
         'experience.role4.title': 'Technical Inspection and Monitoring Professional',
         'experience.role4.company': 'Executive Entity for Natural Gas Vehicle Conversion',
         'experience.role4.date': 'Aug 2021 - Dec 2021',
         'experience.role4.resp1': 'Supported technical inspection and monitoring processes.',
         'experience.role4.resp2': 'Used Excel to collect data and generate reports on operational compliance and performance tracking.',
-
         'experience.role5.title': 'Technical Standardization Professional',
         'experience.role5.company': 'Executive Entity for Natural Gas Vehicle Conversion',
         'experience.role5.date': 'Mar 2021 - Jul 2021',
         'experience.role5.resp1': 'Developed and implemented technical standards for the conversion process.',
         'experience.role5.resp2': 'Used Excel to document technical procedures and monitor compliance with national standards.',
-
         'experience.role6.title': 'Program Management Control and Monitoring Professional',
         'experience.role6.company': 'Executive Entity for Natural Gas Vehicle Conversion',
         'experience.role6.date': 'Jan 2018 - Sep 2019',
         'experience.role6.resp1': 'Managed and supervised multiple projects.',
         'experience.role6.resp2': 'Used Excel extensively to create progress reports, monitor budgets, and automate workflows for efficient project execution.',
-
         'experience.role7.title': 'National Manager of GNV Conversion Equipment Warehouses and Operational Management',
         'experience.role7.company': 'Executive Entity for Natural Gas Vehicle Conversion',
         'experience.role7.date': 'Jan 2017 - Dec 2017',
         'experience.role7.resp1': 'Managed national warehouses for GNV conversion equipment.',
         'experience.role7.resp2': 'Used Excel to control inventories, optimize equipment distribution, and track logistics.',
         'experience.role7.resp3': 'Coordinated with the IT department to design an SQL-based inventory management system for nationwide equipment supply tracking.',
-
         'experience.role8.title': 'National Manager of GNV Conversion Equipment Warehouses',
         'experience.role8.company': 'Executive Entity for Natural Gas Vehicle Conversion',
         'experience.role8.date': 'Jan 2016 - Dec 2016',
         'experience.role8.resp1': 'Led the management of GNV conversion equipment.',
         'experience.role8.resp2': 'Used Excel to track inventory levels and coordinate distribution among regional offices.',
-
         'experience.role9.title': 'Planning Professional',
         'experience.role9.company': 'Executive Entity for Natural Gas Vehicle Conversion',
         'experience.role9.date': 'Dec 2015',
         'experience.role9.resp1': 'Supported the planning and execution of GNV conversion-related projects.',
         'experience.role9.resp2': 'Used advanced Excel and VBA to create detailed project schedules, monitor progress, and generate reports.',
-
         'experience.role10.title': 'Consultant - Operational Unit',
         'experience.role10.company': 'Executive Entity for Natural Gas Vehicle Conversion',
         'experience.role10.date': 'Sep 2015 - Nov 2015',
         'experience.role10.resp1': 'Provided consulting services focused on improving GNV conversion processes.',
         'experience.role10.resp2': 'Used Excel to analyze operational data and propose process improvements.',
-
         'experience.role11.title': 'Regional Coordinator in Tarija',
         'experience.role11.company': 'Executive Entity for Natural Gas Vehicle Conversion',
         'experience.role11.date': 'May 2014 - June 2015',
         'experience.role11.resp1': 'Coordinated regional activities.',
         'experience.role11.resp2': 'Used Excel to manage local operations, monitor performance, and report data to national headquarters.',
-
         'experience.toggle': 'Show Details',
         'experience.toggle.hide': 'Hide Details',
         'section.projects': 'Projects',
@@ -1209,79 +1195,67 @@
         'about.text': 'Soy Weimar Miranda, Ingeniero Industrial con un Máster en Inteligencia de Negocios de la Universidad de Barcelona. Con más de una década de experiencia liderando iniciativas de BI en el sector público de Bolivia, gestionando $20 millones en inversiones anuales, he pasado los últimos tres años creando soluciones de Power BI que mejoraron la eficiencia operativa en un 20%. Utilizo Python y MySQL para enriquecer flujos de datos y optimizar informes, complementando mi experiencia principal en Power BI. Fluidez en idioma inglés a nivel C1 (Kaplan, Nueva York, 2024).',
         'section.skills': 'Habilidades',
         'section.experience': 'Mi Trayectoria Profesional',
-        'experience.toggleAll': 'Ocultar Todo', /* Nueva traducción para el botón global */
-        'experience.toggleAll.expand': 'Expandir Todo', /* Nueva traducción para el botón global */
-
+        'experience FIXED: experience.toggleAll': 'Ocultar Todo',
+        'experience.toggleAll.expand': 'Expandir Todo',
         'experience.role1.title': 'Consultor / Freelance de Análisis de Datos',
         'experience.role1.company': 'Independiente',
         'experience.role1.date': 'Feb 2025 - Actualidad',
         'experience.role1.resp1': 'Proporcionando servicios de consultoría de análisis de datos e inteligencia de negocios a diversos clientes.',
         'experience.role1.resp2': 'Desarrollando paneles e informes personalizados.',
         'experience.role1.resp3': 'Optimizando flujos de trabajo de datos y entregando información procesable.',
-
         'experience.role2.title': 'Profesional de Planificación de Proyectos',
         'experience.role2.company': 'Entidad Ejecutora de Conversión a Gas Natural Vehicular',
         'experience.role2.date': 'Abr 2023 - Abr 2024',
         'experience.role2.resp1': 'Implementé Power BI en el área de planeación para la Dirección General Ejecutiva, optimizando la visualización y seguimiento de los programas anuales de inversión.',
         'experience.role2.resp2': 'Desarrollé cuadros de mando interactivos que permitieron monitorear en tiempo real programas de inversión que manejan aproximadamente 20 millones de dólares anuales, mejorando significativamente la toma de decisiones estratégicas.',
         'experience.role2.resp3': 'Coordiné con equipos técnicos para integrar datos clave en un modelo centralizado, lo que garantiza la precisión y la coherencia en los informes.',
-
         'experience.role3.title': 'Encargado Nacional de Fiscalización y Seguimiento Técnico',
         'experience.role3.company': 'Entidad Ejecutora de Conversión a Gas Natural Vehicular',
         'experience.role3.date': 'Ene 2022 - Mar 2023',
         'experience.role3.resp1': 'Supervisé el seguimiento técnico y la inspección de la conversión de vehículos a gas natural.',
         'experience.role3.resp2': 'Utilicé Power BI para realizar un seguimiento de los datos de inspección a través de paneles de control, generar informes y analizar tendencias, logrando resultados positivos en mi área.',
         'experience.role3.resp3': 'Garantizó el cumplimiento de las regulaciones nacionales y contribuyó a mejorar la eficiencia operativa.',
-
         'experience.role4.title': 'Profesional de Fiscalización y Seguimiento Técnico',
         'experience.role4.company': 'Entidad Ejecutora de Conversión a Gas Natural Vehicular',
         'experience.role4.date': 'Ago 2021 - Dic 2021',
         'experience.role4.resp1': 'Apoyé los procesos de inspección y seguimiento técnico.',
         'experience.role4.resp2': 'Utilicé Excel para recopilar datos y generar informes sobre el cumplimiento operativo y el seguimiento del rendimiento.',
-
         'experience.role5.title': 'Profesional de Normalización Técnica',
         'experience.role5.company': 'Entidad Ejecutora de Conversión a Gas Natural Vehicular',
         'experience.role5.date': 'Mar 2021 - Jul 2021',
         'experience.role5.resp1': 'Normas técnicas desarrolladas e implementadas para el proceso de conversión.',
         'experience.role5.resp2': 'Utilicé Excel para documentar los procedimientos técnicos y supervisar el cumplimiento de las normas nacionales.',
-
         'experience.role6.title': 'Profesional de Control y Seguimiento en Gestión de Programas',
         'experience.role6.company': 'Entidad Ejecutora de Conversión a Gas Natural Vehicular',
         'experience.role6.date': 'Ene 2018 - Sep 2019',
         'experience.role6.resp1': 'Gestioné y supervisé múltiples proyectos.',
         'experience.role6.resp2': 'Utilicé Excel ampliamente para crear informes de progreso, monitorear presupuestos y automatizar flujos de trabajo para una ejecución eficiente de proyectos.',
-
         'experience.role7.title': 'Encargado Nacional de Almacenes de Equipos de Conversión a GNV y Gestión Operativa',
         'experience.role7.company': 'Entidad Ejecutora de Conversión a Gas Natural Vehicular',
         'experience.role7.date': 'Ene 2017 - Dic 2017',
         'experience.role7.resp1': 'Gestioné los almacenes nacionales de equipos de conversión a GNV.',
         'experience.role7.resp2': 'Utilicé Excel para controlar inventarios, optimizar la distribución de equipos y realizar un seguimiento de la logística.',
         'experience.role7.resp3': 'Coordiné con el departamento de TI para diseñar un sistema de gestión de inventario basado en SQL para el seguimiento del suministro de equipos a nivel nacional.',
-
         'experience.role8.title': 'Encargado Nacional de Almacenes de Equipos de Conversión a GNV',
         'experience.role8.company': 'Entidad Ejecutora de Conversión a Gas Natural Vehicular',
         'experience.role8.date': 'Ene 2016 - Dic 2016',
         'experience.role8.resp1': 'Lideré la gestión de los equipos de conversión a GNV.',
         'experience.role8.resp2': 'Utilicé Excel para realizar un seguimiento de los niveles de inventario y coordinar la distribución entre las oficinas regionales.',
-
         'experience.role9.title': 'Profesional de Planificación',
         'experience.role9.company': 'Entidad Ejecutora de Conversión a Gas Natural Vehicular',
         'experience.role9.date': 'Dic 2015',
         'experience.role9.resp1': 'Apoyó la planificación y ejecución de proyectos relacionados con la conversión a GNV.',
         'experience.role9.resp2': 'Utilicé Excel y VBA avanzados para crear cronogramas detallados de proyectos, monitorear el progreso y generar informes.',
-
         'experience.role10.title': 'Consultor - Unidad Operativa',
         'experience.role10.company': 'Entidad Ejecutora de Conversión a Gas Natural Vehicular',
         'experience.role10.date': 'Sep 2015 - Nov 2015',
         'experience.role10.resp1': 'Brindé servicios de consultoría enfocados en mejorar los procesos de conversión a GNV.',
         'experience.role10.resp2': 'Utilicé Excel para analizar datos operativos y proponer mejoras en los procesos.',
-
         'experience.role11.title': 'Coordinador Regional en Tarija',
         'experience.role11.company': 'Entidad Ejecutora de Conversión a Gas Natural Vehicular',
         'experience.role11.date': 'Mayo 2014 - Junio 2015',
         'experience.role11.resp1': 'Coordiné las actividades regionales.',
         'experience.role11.resp2': 'Utilicé Excel para administrar las operaciones locales, monitorear el rendimiento e informar datos a la sede nacional.',
-
         'experience.toggle': 'Mostrar Detalles',
         'experience.toggle.hide': 'Ocultar Detalles',
         'section.projects': 'Proyectos',
@@ -1298,21 +1272,16 @@
 
     // Lógica del cambio de idioma
     const langButton = document.querySelector('.lang-btn');
-    let currentLang = localStorage.getItem('lang') || 'en'; // Obtiene el idioma guardado o usa 'en'
+    let currentLang = localStorage.getItem('lang') || 'en';
     
-    // Envuelve todo el código que interactúa con el DOM en DOMContentLoaded
     document.addEventListener('DOMContentLoaded', function() {
-        // Declaraciones de elementos DOM dentro de DOMContentLoaded
         const toggleExperienceFooter = document.getElementById('toggle-experience-footer');
         const timelineContainer = document.querySelector('.timeline-container');
 
-        // Función para aplicar las traducciones
         function applyTranslations() {
             document.querySelectorAll('[data-translate]').forEach(element => {
                 const key = element.getAttribute('data-translate');
-                // Si es el botón de alternar detalles, maneja el texto específico
                 if (element.classList.contains('toggle-details-btn')) {
-                    // Comprueba el texto actual del botón para determinar si está expandido o colapsado
                     const isExpanded = element.textContent === translations['en']['experience.toggle.hide'] || element.textContent === translations['es']['experience.toggle.hide'];
                     if (isExpanded) {
                         element.textContent = translations[currentLang]['experience.toggle.hide'];
@@ -1323,44 +1292,38 @@
                     element.textContent = translations[currentLang][key];
                 }
             });
-            // Actualiza el texto y la flecha de la línea global de experiencia
-            if (toggleExperienceFooter && timelineContainer) { // Asegúrate de que los elementos existen
+            if (toggleExperienceFooter && timelineContainer) {
                 const textSpan = toggleExperienceFooter.querySelector('span:first-child');
                 const arrowIcon = toggleExperienceFooter.querySelector('.arrow-icon');
 
-                if (timelineContainer.classList.contains('collapsed-section')) { // Si está colapsado
+                if (timelineContainer.classList.contains('collapsed-section')) {
                     textSpan.textContent = translations[currentLang]['experience.toggleAll.expand'];
-                    arrowIcon.innerHTML = '&#9660;'; // Flecha hacia abajo
+                    arrowIcon.innerHTML = '▼';
                     toggleExperienceFooter.classList.remove('expanded');
-                } else { // Si está expandido
+                } else {
                     textSpan.textContent = translations[currentLang]['experience.toggleAll'];
-                    arrowIcon.innerHTML = '&#9650;'; // Flecha hacia arriba
+                    arrowIcon.innerHTML = '▲';
                     toggleExperienceFooter.classList.add('expanded');
                 }
             }
         }
 
-        // Inicializa el texto del botón de idioma y aplica las traducciones al cargar
         langButton.setAttribute('data-lang', currentLang === 'en' ? 'es' : 'en');
         langButton.textContent = currentLang === 'en' ? 'EN/ES' : 'ES/EN';
-        applyTranslations(); // Aplica las traducciones al cargar la página
+        applyTranslations();
 
-        // Event listener para el botón de cambio de idioma
         langButton.addEventListener('click', () => {
           currentLang = currentLang === 'en' ? 'es' : 'en';
-          localStorage.setItem('lang', currentLang); // Guarda el idioma seleccionado
+          localStorage.setItem('lang', currentLang);
           langButton.setAttribute('data-lang', currentLang === 'en' ? 'es' : 'en');
           langButton.textContent = currentLang === 'en' ? 'EN/ES' : 'ES/EN';
-          applyTranslations(); // Vuelve a aplicar las traducciones
+          applyTranslations();
         });
 
-        // Funcionalidad para expandir/colapsar detalles de la experiencia
         document.querySelectorAll('.toggle-details-btn').forEach(button => {
           button.addEventListener('click', function() {
-            const responsibilitiesList = this.previousElementSibling; // La lista UL
+            const responsibilitiesList = this.previousElementSibling;
             responsibilitiesList.classList.toggle('expanded');
-
-            // Cambia el texto del botón según el estado
             if (responsibilitiesList.classList.contains('expanded')) {
               this.textContent = translations[currentLang]['experience.toggle.hide'];
             } else {
@@ -1369,19 +1332,15 @@
           });
         });
 
-        // Funcionalidad para expandir/colapsar TODA la sección de experiencia
-        if (toggleExperienceFooter && timelineContainer) { // Asegúrate de que los elementos existan
-            // Establece el estado inicial de la sección de experiencia a colapsado
+        if (toggleExperienceFooter && timelineContainer) {
             timelineContainer.classList.add('collapsed-section');
-            toggleExperienceFooter.classList.remove('expanded'); // Asegura que la flecha apunte hacia abajo
+            toggleExperienceFooter.classList.remove('expanded');
             toggleExperienceFooter.querySelector('span:first-child').textContent = translations[currentLang]['experience.toggleAll.expand'];
-            toggleExperienceFooter.querySelector('.arrow-icon').innerHTML = '&#9660;';
+            toggleExperienceFooter.querySelector('.arrow-icon').innerHTML = '▼';
 
             toggleExperienceFooter.addEventListener('click', () => {
-                timelineContainer.classList.toggle('collapsed-section'); // Alterna la clase de colapsado
-                toggleExperienceFooter.classList.toggle('expanded'); // Alterna la clase para la flecha
-
-                // Colapsar todos los detalles individuales si la sección principal se colapsa
+                timelineContainer.classList.toggle('collapsed-section');
+                toggleExperienceFooter.classList.toggle('expanded');
                 if (timelineContainer.classList.contains('collapsed-section')) {
                     document.querySelectorAll('.responsibilities-list.expanded').forEach(list => {
                         list.classList.remove('expanded');
@@ -1389,27 +1348,23 @@
                     document.querySelectorAll('.toggle-details-btn').forEach(btn => {
                         btn.textContent = translations[currentLang]['experience.toggle'];
                     });
-                    // Actualiza el texto y la flecha del botón global
                     toggleExperienceFooter.querySelector('span:first-child').textContent = translations[currentLang]['experience.toggleAll.expand'];
-                    toggleExperienceFooter.querySelector('.arrow-icon').innerHTML = '&#9660;'; // Flecha hacia abajo
+                    toggleExperienceFooter.querySelector('.arrow-icon').innerHTML = '▼';
                 } else {
-                    // Actualiza el texto y la flecha del botón global
                     toggleExperienceFooter.querySelector('span:first-child').textContent = translations[currentLang]['experience.toggleAll'];
-                    toggleExperienceFooter.querySelector('.arrow-icon').innerHTML = '&#9650;'; // Flecha hacia arriba
+                    toggleExperienceFooter.querySelector('.arrow-icon').innerHTML = '▲';
                 }
             });
         }
 
-        // Fallback para imágenes si no cargan
         document.querySelectorAll('img').forEach(img => {
             img.addEventListener('error', function() {
-                // Reemplaza la imagen con un placeholder si hay un error de carga
                 this.src = this.dataset.fallback || 'https://placehold.co/100x100/CCCCCC/000000?text=Image';
-                this.style.width = 'auto'; // Ajusta el ancho para el placeholder
-                this.style.height = 'auto'; // Ajusta la altura para el placeholder
+                this.style.width = 'auto';
+                this.style.height = 'auto';
             });
         });
-    }); // Fin de DOMContentLoaded
+    });
   </script>
 </body>
 </html>
