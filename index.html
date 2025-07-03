@@ -379,7 +379,7 @@
       font-size: 1rem;
     }
 
-    /* Sección EXPERIENCE (Nueva) */
+    /* Sección EXPERIENCE (Experiencia) */
     .experience-header {
       display: flex;
       justify-content: center;
@@ -428,15 +428,15 @@
       max-width: 800px;
       margin: 0 auto;
       padding: 20px 0;
-      max-height: 3000px;
+      max-height: 0; /* Estado colapsado */
       overflow: hidden;
-      opacity: 1;
+      opacity: 0;
       transition: max-height 0.8s ease-in-out, opacity 0.8s ease-in-out;
     }
 
-    .timeline-container.collapsed-section {
-      max-height: 0;
-      opacity: 0;
+    .timeline-container:not(.collapsed-section) {
+      max-height: 10000px; /* Valor grande para asegurar que todo el contenido sea visible */
+      opacity: 1;
     }
 
     .timeline-container::after {
@@ -702,10 +702,15 @@
         left: 31px;
       }
 
+      .timeline-container:not(.collapsed-section) {
+        max-height: 15000px; /* Valor grande para asegurar que todo el contenido sea visible en móviles */
+      }
+
       .timeline-item {
         width: 100%;
         padding-left: 70px;
         padding-right: 25px;
+        margin-bottom: 20px; /* Reducir el margen para un diseño más compacto */
       }
 
       .timeline-item.right {
@@ -1195,7 +1200,7 @@
         'about.text': 'Soy Weimar Miranda, Ingeniero Industrial con un Máster en Inteligencia de Negocios de la Universidad de Barcelona. Con más de una década de experiencia liderando iniciativas de BI en el sector público de Bolivia, gestionando $20 millones en inversiones anuales, he pasado los últimos tres años creando soluciones de Power BI que mejoraron la eficiencia operativa en un 20%. Utilizo Python y MySQL para enriquecer flujos de datos y optimizar informes, complementando mi experiencia principal en Power BI. Fluidez en idioma inglés a nivel C1 (Kaplan, Nueva York, 2024).',
         'section.skills': 'Habilidades',
         'section.experience': 'Mi Trayectoria Profesional',
-        'experience FIXED: experience.toggleAll': 'Ocultar Todo',
+        'experience.toggleAll': 'Ocultar Todo',
         'experience.toggleAll.expand': 'Expandir Todo',
         'experience.role1.title': 'Consultor / Freelance de Análisis de Datos',
         'experience.role1.company': 'Independiente',
