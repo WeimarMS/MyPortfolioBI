@@ -96,6 +96,15 @@
       font-size: 1rem;
       cursor: pointer;
       transition: background 0.3s ease, color 0.3s ease;
+      display: flex;
+      align-items: center;
+      gap: 8px; /* Espacio entre la bandera y el texto */
+    }
+
+    .lang-btn img {
+      width: 24px;
+      height: 24px;
+      object-fit: contain;
     }
 
     .lang-btn:hover {
@@ -654,8 +663,16 @@
         display: flex;
       }
       .lang-btn {
-        display: block;
+        display: flex;
+        align-items: center;
+        gap: 6px;
         margin-left: auto;
+        padding: 5px 8px;
+        font-size: 0.9rem;
+      }
+      .lang-btn img {
+        width: 20px;
+        height: 20px;
       }
       .about-container {
         flex-direction: column;
@@ -749,7 +766,9 @@
         justify-content: space-between;
       }
       .lang-btn {
-        display: block;
+        display: flex;
+        align-items: center;
+        gap: 6px;
         margin-left: auto;
       }
     }
@@ -774,7 +793,10 @@
         <li><a href="#experience" data-translate="nav.experience">Experience</a></li>
         <li><a href="#contact" data-translate="nav.contact">Contact</a></li>
       </ul>
-      <button class="lang-btn" data-lang="es">EN/ES</button>
+      <button class="lang-btn" data-lang="es">
+        <img src="./assets/images/USAFLAG.png" alt="US Flag" class="lang-flag" onerror="this.onerror=null;this.src='https://placehold.co/24x24/2A9D8F/FFFFFF?text=Flag';">
+        <span>English</span>
+      </button>
     </div>
   </nav>
 
@@ -1311,17 +1333,28 @@
                     toggleExperienceFooter.classList.add('expanded');
                 }
             }
+
+            // Actualizar el botón de idioma
+            const langImg = langButton.querySelector('img');
+            const langText = langButton.querySelector('span');
+            if (currentLang === 'en') {
+                langImg.src = './assets/images/ESPANA.png';
+                langImg.alt = 'Spanish Flag';
+                langText.textContent = 'Español';
+                langButton.setAttribute('data-lang', 'es');
+            } else {
+                langImg.src = './assets/images/USAFLAG.png';
+                langImg.alt = 'US Flag';
+                langText.textContent = 'English';
+                langButton.setAttribute('data-lang', 'en');
+            }
         }
 
-        langButton.setAttribute('data-lang', currentLang === 'en' ? 'es' : 'en');
-        langButton.textContent = currentLang === 'en' ? 'EN/ES' : 'ES/EN';
         applyTranslations();
 
         langButton.addEventListener('click', () => {
           currentLang = currentLang === 'en' ? 'es' : 'en';
           localStorage.setItem('lang', currentLang);
-          langButton.setAttribute('data-lang', currentLang === 'en' ? 'es' : 'en');
-          langButton.textContent = currentLang === 'en' ? 'EN/ES' : 'ES/EN';
           applyTranslations();
         });
 
