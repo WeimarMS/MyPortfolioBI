@@ -162,6 +162,15 @@
       .timeline-item::after, .timeline-item.right::after { left: 15px; }
     }
   </style>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QW7MW6Z16E"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-QW7MW6Z16E');
+</script>
 </head>
 <body>
   <nav>
@@ -454,15 +463,15 @@
       const hamburger = document.querySelector('.hamburger');
       const navMenu = document.getElementById('nav-menu');
       hamburger.addEventListener('click', () => {
-          const isExpanded = hamburger.classList.toggle('active');
-          hamburger.setAttribute('aria-expanded', isExpanded);
-          navMenu.classList.toggle('active');
+        const isExpanded = hamburger.classList.toggle('active');
+        hamburger.setAttribute('aria-expanded', isExpanded);
+        navMenu.classList.toggle('active');
       });
       document.querySelectorAll('#nav-menu a').forEach(link => {
         link.addEventListener('click', () => {
-            hamburger.classList.remove('active');
-            hamburger.setAttribute('aria-expanded', 'false');
-            navMenu.classList.remove('active');
+          hamburger.classList.remove('active');
+          hamburger.setAttribute('aria-expanded', 'false');
+          navMenu.classList.remove('active');
         });
       });
 
@@ -646,4 +655,6 @@
   </script>
 </body>
 </html>
+
+
 
