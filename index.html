@@ -27,6 +27,10 @@
       --clr-warm-accent: #E9C46A;
       --clr-highlight: #F4A261;
       --clr-gold: #FFD700;
+      --clr-fab-bg: #264653;
+      --clr-fab-hover-bg: #2A9D8F;
+      --clr-ai-bubble: #F5F7FA; 
+      --clr-user-bubble: #E5E7EB;
     }
     *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
     html { scroll-behavior: smooth; }
@@ -77,6 +81,7 @@
     .project-content { flex: 1; display: flex; flex-direction: column; }
     .project-tools { margin-bottom: 10px; }
     .tool-badge { display: inline-block; background: var(--clr-cold-accent); color: #fff; font-family: 'Oswald', sans-serif; font-size: 0.8rem; padding: 3px 8px; border-radius: 4px; margin-right: 5px; }
+    .project-cta { font-size: 0.8rem; font-style: italic; color: var(--clr-cold-accent); margin-top: auto; padding-top: 10px; font-weight: 500; text-align: right; }
     .testimonials-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
     .testimonial-card { background: var(--clr-bg); padding: 20px; border-radius: 8px; box-shadow: 0 3px 10px rgba(0,0,0,0.1); }
     .testimonial-card p { font-style: italic; margin-bottom: 15px; }
@@ -113,18 +118,42 @@
     footer { text-align: center; padding: 20px; background: var(--clr-text); color: var(--clr-bg); }
     .footer-social-container { display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 20px; margin-bottom: 10px; }
     footer p { margin-top: 10px; }
+
     @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
     @keyframes slideUp { from { transform: translateY(50px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+    
     @media (max-width: 768px) {
       .hero-content .name { font-size: 3rem; flex-direction: column; gap: 5px; }
       .hero-content .name img { height: 50px; }
       .hero-content .title { font-size: 2rem; }
       .hero-content p { font-size: 1rem; }
       .nav-container { flex-direction: row; justify-content: space-between; align-items: center; }
-      #nav-menu { display: none; }
-      .nav-left, .nav-right { display: none; }
-      .nav-right.active, .nav-left.active { display: flex; flex-direction: column; position: absolute; top: 60px; left: 0; width: 100%; background: var(--clr-cold-accent); padding: 20px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-      .nav-right.active li, .nav-left.active li { margin: 10px 0; text-align: center; }
+      #nav-menu { 
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: var(--clr-cold-accent);
+        padding: 10px 0;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        transform: translateY(-150%);
+        transition: transform 0.3s ease-in-out;
+        z-index: 999;
+      }
+      #nav-menu.active {
+        transform: translateY(0);
+      }
+      .nav-left, .nav-right {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        gap: 0;
+      }
+      .nav-left li, .nav-right li {
+        margin: 10px 0;
+      }
       .hamburger { display: flex; z-index: 1001; }
       .lang-btn { gap: 6px; margin-left: auto; padding: 5px 8px; font-size: 0.9rem; }
       .lang-btn img { width: 20px; height: 20px; }
@@ -221,13 +250,14 @@
       <p class="project-view-note" data-translate="section.projects.note"></p>
       <div class="projects-grid">
         <div class="project-card">
-          <a href="https://app.powerbi.com/view?r=eyJrIjoiODE5YjdmOTYtN2UyYS00ODUyLTg1ZDYtMzc2N2MzN2JiZWZjIiwidCI6ImJhODQzY2Q3LWNiN2MtNGJiMS1hZWE3LTEzY2NhOGZlYzRjOSIsImMiOjR9" target="_blank" rel="noopener noreferrer" class="project-link">
+          <a href="https://app.powerbi.com/view?r=eyJrIjoiZDk4NmM2M2YtNzYyNi00YTgxLWI1ZmMtMzhkNDQxZjZjNWI5IiwidCI6ImJhODQzY2Q3LWNiN2MtNGJiMS1hZWE3LTEzY2NhOGZlYzRjOSIsImMiOjR9" target="_blank" rel="noopener noreferrer" class="project-link">
             <img src="./assets/images/INV.gif" alt="Investment Programs Analysis Demo" class="project-gif">
           </a>
           <div class="project-content">
             <div class="project-tools"><span class="tool-badge">Power BI</span></div>
             <h3 data-translate="project.inversion.title"></h3>
             <p data-translate="project.inversion.description"></p>
+            <p class="project-cta" data-translate="project.cta"></p>
           </div>
         </div>
         <div class="project-card">
@@ -238,6 +268,7 @@
             <div class="project-tools"><span class="tool-badge">Power BI</span><span class="tool-badge">Python</span></div>
             <h3 data-translate="project.seattle.title"></h3>
             <p data-translate="project.seattle.description"></p>
+            <p class="project-cta" data-translate="project.cta"></p>
           </div>
         </div>
       </div>
@@ -421,13 +452,13 @@
       hamburger.addEventListener('click', () => {
           const isExpanded = hamburger.classList.toggle('active');
           hamburger.setAttribute('aria-expanded', isExpanded);
-          navMenu.querySelectorAll('.nav-left, .nav-right').forEach(nav => nav.classList.toggle('active'));
+          navMenu.classList.toggle('active');
       });
       document.querySelectorAll('#nav-menu a').forEach(link => {
         link.addEventListener('click', () => {
             hamburger.classList.remove('active');
             hamburger.setAttribute('aria-expanded', 'false');
-            navMenu.querySelectorAll('.nav-left, .nav-right').forEach(nav => nav.classList.remove('active'));
+            navMenu.classList.remove('active');
         });
       });
 
@@ -441,6 +472,7 @@
             'section.projects.note': 'For the best experience, it is recommended to view the dashboards on a computer or on a mobile device in landscape orientation.',
             'project.inversion.title': 'GNV Programs Analysis in Bolivia', 'project.inversion.description': 'Comprehensive dashboard developed in Power BI for monitoring and controlling the three Natural Gas Vehicle investment programs in Bolivia: Conversion, Maintenance, and Requalification. The tool centralizes and visualizes key KPIs such as goal progress vs. execution and performance by sector. It allows for detailed geographical analysis by department and workshop, facilitating trend identification and optimizing resource allocation nationwide.',
             'project.seattle.title': 'Seattle 911 Fire Department Incident Report', 'project.seattle.description': 'This Power BI dashboard analyzes over 2 million Seattle 911 fire emergency calls, uncovering trends in frequency, timing, and geographic distribution. Featuring performance comparisons, Azure Maps for district-level insights, and a Python-integrated SARIMA model for forecasting, it empowers data-driven operational and strategic planning.',
+            'project.cta': 'Click on the image to view the interactive dashboard.',
             'section.testimonials': 'Testimonials', 'testimonial.leonardo.text': 'Excellent service and flexible to make the necessary adjustments. Recommended.', 'testimonial.leonardo.author': 'Leonardo',
             'section.experience': 'My Professional Journey',
             'experience.company': 'Executive Entity for Natural Gas Vehicle Conversion',
@@ -457,7 +489,8 @@
             'experience.role11.title': 'Regional Coordinator in Tarija', 'experience.role11.date': 'May 2014 - Jun 2015', 'experience.role11.resp1': 'Coordinated regional maintenance and requalification programs, using Excel and VBA to systematize operational control and report to national headquarters.',
             'experience.toggle': 'Show Details', 'experience.toggle.hide': 'Hide Details', 'experience.toggleAll': 'Collapse All', 'experience.toggleAll.expand': 'Expand All',
             'section.contact': 'Contact', 'contact.button': 'Send',
-            'footer.text': '© 2025 - BI Portfolio. All rights reserved.'
+            'footer.text': '© 2025 - BI Portfolio. All rights reserved.',
+            'chat.welcome': 'Hi! I\'m Weimar\'s AI assistant. How can I help you? You can ask me about his experience, skills, or projects.',
         },
         es: {
             'nav.home': 'Inicio', 'nav.about': 'Sobre Mí', 'nav.skills': 'Habilidades', 'nav.projects': 'Proyectos', 'nav.testimonials': 'Testimonios', 'nav.experience': 'Experiencia', 'nav.contact': 'Contacto',
@@ -468,6 +501,7 @@
             'section.projects.note': 'Para una mejor experiencia, se recomienda visualizar los dashboards en una computadora o en un dispositivo móvil en orientación horizontal.',
             'project.inversion.title': 'Análisis de Programas de GNV en Bolivia', 'project.inversion.description': 'Dashboard integral desarrollado en Power BI para el seguimiento y control de los tres programas de inversión de Gas Natural Vehicular en Bolivia: Conversión, Mantenimiento y Recalificación. La herramienta centraliza y visualiza KPIs clave como el avance de metas vs. ejecución y rendimiento por sector. Permite un análisis geográfico detallado por departamento y taller, facilitando la identificación de tendencias y optimizando la asignación de recursos a nivel nacional.',
             'project.seattle.title': 'Informe de Incidentes del Departamento de Bomberos 911 de Seattle', 'project.seattle.description': 'Este panel de Power BI analiza más de 2 millones de llamadas de emergencia 911 de bomberos en Seattle, identificando tendencias en frecuencia, horarios y distribución geográfica. Incluye comparaciones de rendimiento, Azure Maps para información a nivel de distrito y un modelo SARIMA integrado en Python para pronósticos, lo que permite una planificación operativa y estratégica basada en datos.',
+            'project.cta': 'Haz clic en la imagen para ver el dashboard interactivo.',
             'section.testimonials': 'Testimonios', 'testimonial.leonardo.text': 'Excelente servicio y flexible a hacer los ajustes que sean necesarios. Recomendado.', 'testimonial.leonardo.author': 'Leonardo',
             'section.experience': 'Mi Trayectoria Profesional',
             'experience.company': 'Entidad Ejecutora de Conversión a Gas Natural Vehicular',
@@ -484,7 +518,8 @@
             'experience.role11.title': 'Coordinador Regional en Tarija', 'experience.role11.date': 'Mayo 2014 - Jun 2015', 'experience.role11.resp1': 'Coordiné los programas regionales de mantenimiento y recalificación, utilizando Excel y VBA para sistematizar el control operativo y reportar a la sede nacional.',
             'experience.toggle': 'Mostrar Detalles', 'experience.toggle.hide': 'Ocultar Detalles', 'experience.toggleAll': 'Ocultar Todo', 'experience.toggleAll.expand': 'Expandir Todo',
             'section.contact': 'Contacto', 'contact.button': 'Enviar',
-            'footer.text': '© 2025 - Portafolio de BI. Todos los derechos reservados.'
+            'footer.text': '© 2025 - Portafolio de BI. Todos los derechos reservados.',
+            'chat.welcome': '¡Hola! Soy el asistente de IA de Weimar. ¿En qué puedo ayudarte? Puedes preguntarme sobre su experiencia, habilidades o proyectos.',
         }
       };
 
@@ -577,6 +612,7 @@
       });
 
       applyTranslations(); // Carga inicial de textos
+
     });
   </script>
 </body>
