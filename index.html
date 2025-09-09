@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es"> <!-- Idioma por defecto cambiado a español -->
+<html lang="es">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -12,7 +12,7 @@
   <meta property="og:title" content="Portafolio de Weimar Miranda - Analista de Datos" />
   <meta property="og:description" content="Transformo datos en decisiones estratégicas con soluciones innovadoras. Experto en Power BI, Looker Studio, Python y SQL." />
   <meta property="og:image" content="https://placehold.co/1200x630/2A9D8F/FFFFFF?text=Weimar+Miranda+BI+Portfolio" />
-  <meta property="og:url" content="https://tu-dominio.com/portfolio" />
+  <meta property="og:url" content="https://weirrams.github.io/MyPortfolioB/" />
   <meta property="og:type" content="website" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -446,16 +446,7 @@
       </a>
     </div>
     <p data-translate="footer.text"></p>
-    <a href="#" id="privacy-policy-link" class="privacy-link" data-translate="privacy.title"></a>
   </footer>
-
-  <div id="privacy-modal" class="modal-overlay">
-    <div class="modal-content">
-      <button id="close-modal-btn" class="close-modal">&times;</button>
-      <h2 data-translate="privacy.title"></h2>
-      <p data-translate="privacy.text"></p>
-    </div>
-  </div>
 
   <script>
     document.addEventListener('DOMContentLoaded', () => {
@@ -503,7 +494,6 @@
             'experience.toggle': 'Show Details', 'experience.toggle.hide': 'Hide Details', 'experience.toggleAll': 'Collapse All', 'experience.toggleAll.expand': 'Expand All',
             'section.contact': 'Contact', 'contact.button': 'Send',
             'footer.text': '© 2025 - BI Portfolio. All rights reserved.',
-            'privacy.title': 'Privacy Policy', 'privacy.text': 'This website uses Google Analytics to track visitor activity and improve user experience. Google Analytics collects data such as your IP address, browser type, and pages visited. For more information, see <a href="https://policies.google.com/privacy" target="_blank">Google\'s Privacy Policy</a>.',
         },
         es: {
             'nav.home': 'Inicio', 'nav.about': 'Sobre Mí', 'nav.skills': 'Habilidades', 'nav.projects': 'Proyectos', 'nav.testimonials': 'Testimonios', 'nav.experience': 'Experiencia', 'nav.contact': 'Contacto',
@@ -532,7 +522,6 @@
             'experience.toggle': 'Mostrar Detalles', 'experience.toggle.hide': 'Ocultar Detalles', 'experience.toggleAll': 'Ocultar Todo', 'experience.toggleAll.expand': 'Expandir Todo',
             'section.contact': 'Contacto', 'contact.button': 'Enviar',
             'footer.text': '© 2025 - Portafolio de BI. Todos los derechos reservados.',
-            'privacy.title': 'Política de Privacidad', 'privacy.text': 'Este sitio web utiliza Google Analytics para rastrear la actividad de los visitantes y mejorar la experiencia del usuario. Google Analytics recopila datos como su dirección IP, tipo de navegador y páginas visitadas. Para más información, consulte la <a href="https://policies.google.com/privacy" target="_blank">Política de Privacidad de Google</a>.',
         }
       };
 
@@ -545,7 +534,6 @@
             const key = el.getAttribute('data-translate');
             const translation = translations[currentLang]?.[key];
             if (translation !== undefined) {
-                // Para el texto de privacidad que contiene un enlace, usamos innerHTML
                 if (key === 'privacy.text') {
                     el.innerHTML = translation;
                 } else {
@@ -629,35 +617,9 @@
         setTimeout(() => { formMessage.style.display = 'none'; }, 3000);
       });
 
-      // Lógica para el modal de privacidad
-      const privacyModal = document.getElementById('privacy-modal');
-      const openPrivacyLink = document.getElementById('privacy-policy-link');
-      const closePrivacyBtn = document.getElementById('close-modal-btn');
-
-      openPrivacyLink.addEventListener('click', (e) => {
-        e.preventDefault();
-        privacyModal.style.display = 'flex';
-      });
-
-      closePrivacyBtn.addEventListener('click', () => {
-        privacyModal.style.display = 'none';
-      });
-
-      privacyModal.addEventListener('click', (e) => {
-        if (e.target === privacyModal) {
-          privacyModal.style.display = 'none';
-        }
-      });
-
-
       applyTranslations(); 
     });
   </script>
 </body>
 </html>
-
-
-
-
-
 
