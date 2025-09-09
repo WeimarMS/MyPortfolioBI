@@ -15,6 +15,16 @@
   <meta property="og:url" content="https://tu-dominio.com/portfolio" />
   <meta property="og:type" content="website" />
 
+  <!-- CAMBIO: Script de Google Analytics con tu ID de Medición. -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PHYF1S1M89"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-PHYF1S1M89');
+  </script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
@@ -422,7 +432,7 @@
       <h2 data-translate="section.contact"></h2>
       <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
       <div id="form-message" style="display: none; text-align: center; margin-top: 10px; color: var(--clr-cold-accent);"></div>
-      <form id="contact-form" action="https://script.google.com/macros/s/AKfycbwC106EBD0J1PnVnrJFL0YZanl4eQYAUNmQeofhWKsgIYiPlhHzM2YZuDJEyKGTO5uc/exec" method="post" target="hidden_iframe">
+      <form id="contact-form" action="https://script.google.com/macros/s/AKfycby_UvUqEauWVYHzq_4gLq9yOjHvomkiul1DbUnpfNS0bqznOJzOp-rTfCSRJWjPSBFA/exec" method="post" target="hidden_iframe">
         <input type="text" name="name" placeholder="Nombre" required />
         <input type="email" name="email" placeholder="Correo Electrónico" required />
         <textarea name="message" placeholder="Mensaje" rows="5" required></textarea>
@@ -489,7 +499,6 @@
             'experience.toggle': 'Show Details', 'experience.toggle.hide': 'Hide Details', 'experience.toggleAll': 'Collapse All', 'experience.toggleAll.expand': 'Expand All',
             'section.contact': 'Contact', 'contact.button': 'Send',
             'footer.text': '© 2025 - BI Portfolio. All rights reserved.',
-            'chat.welcome': 'Hi! I\'m Weimar\'s AI assistant. How can I help you? You can ask me about his experience, skills, or projects.',
         },
         es: {
             'nav.home': 'Inicio', 'nav.about': 'Sobre Mí', 'nav.skills': 'Habilidades', 'nav.projects': 'Proyectos', 'nav.testimonials': 'Testimonios', 'nav.experience': 'Experiencia', 'nav.contact': 'Contacto',
@@ -518,7 +527,6 @@
             'experience.toggle': 'Mostrar Detalles', 'experience.toggle.hide': 'Ocultar Detalles', 'experience.toggleAll': 'Ocultar Todo', 'experience.toggleAll.expand': 'Expandir Todo',
             'section.contact': 'Contacto', 'contact.button': 'Enviar',
             'footer.text': '© 2025 - Portafolio de BI. Todos los derechos reservados.',
-            'chat.welcome': '¡Hola! Soy el asistente de IA de Weimar. ¿En qué puedo ayudarte? Puedes preguntarme sobre su experiencia, habilidades o proyectos.',
         }
       };
 
@@ -615,4 +623,7 @@
   </script>
 </body>
 </html>
+
+
+
 
