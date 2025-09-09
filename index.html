@@ -1,662 +1,649 @@
 <!DOCTYPE html>
-<html lang="es"> <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Portafolio de Business Intelligence de Weimar Miranda, mostrando proyectos en Power BI, Looker Studio, Python y SQL.">
-  <meta name="keywords" content="Business Intelligence, Data Analyst, Power BI, Looker Studio, Python, SQL, Weimar Miranda">
-  <meta name="author" content="Weimar Miranda">
-  <title>Portafolio - Business Intelligence</title>
+<html lang="es"> <!-- Idioma por defecto cambiado a español -->
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Portafolio de Business Intelligence de Weimar Miranda, mostrando proyectos en Power BI, Looker Studio, Python y SQL.">
+  <meta name="keywords" content="Business Intelligence, Data Analyst, Power BI, Looker Studio, Python, SQL, Weimar Miranda">
+  <meta name="author" content="Weimar Miranda">
+  <title>Portafolio - Business Intelligence</title>
 
-    <meta property="og:title" content="Portafolio de Weimar Miranda - Analista de Datos" />
-  <meta property="og:description" content="Transformo datos en decisiones estratégicas con soluciones innovadoras. Experto en Power BI, Looker Studio, Python y SQL." />
-  <meta property="og:image" content="https://placehold.co/1200x630/2A9D8F/FFFFFF?text=Weimar+Miranda+BI+Portfolio" />
-  <meta property="og:url" content="https://tu-dominio.com/portfolio" />
-  <meta property="og:type" content="website" />
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="Portafolio de Weimar Miranda - Analista de Datos" />
+  <meta property="og:description" content="Transformo datos en decisiones estratégicas con soluciones innovadoras. Experto en Power BI, Looker Studio, Python y SQL." />
+  <meta property="og:image" content="https://placehold.co/1200x630/2A9D8F/FFFFFF?text=Weimar+Miranda+BI+Portfolio" />
+  <meta property="og:url" content="https://tu-dominio.com/portfolio" />
+  <meta property="og:type" content="website" />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
 
-  <style>
-    :root {
-      --clr-bg: #F2F5F7;
-      --clr-text: #264653;
-      --clr-cold-accent: #2A9D8F;
-      --clr-warm-accent: #E9C46A;
-      --clr-highlight: #F4A261;
-      --clr-gold: #FFD700;
-    }
-    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    body { font-family: 'Poppins', sans-serif; background: var(--clr-bg); color: var(--clr-text); line-height: 1.6; overflow-x: hidden; }
-    nav { position: fixed; top: 0; width: 100%; background: var(--clr-cold-accent); box-shadow: 0 2px 5px rgba(0,0,0,0.1); z-index: 1000; }
-    .nav-container { display: flex; align-items: center; justify-content: space-between; max-width: 1200px; margin: 0 auto; padding: 10px 20px; }
-    #nav-menu { display: flex; align-items: center; gap: 20px; }
-    .nav-left, .nav-right { display: flex; list-style: none; gap: 20px; }
-    nav ul li a { color: var(--clr-bg); font-weight: 500; text-decoration: none; transition: color 0.3s ease; padding: 5px; }
-    nav ul li a:hover { color: var(--clr-highlight); }
-    .lang-btn { background: transparent; border: 1px solid var(--clr-bg); color: var(--clr-bg); padding: 5px 10px; border-radius: 5px; font-family: 'Oswald', sans-serif; font-size: 1rem; cursor: pointer; transition: background 0.3s ease, color 0.3s ease; display: flex; align-items: center; gap: 8px; }
-    .lang-btn img { width: 24px; height: 24px; object-fit: contain; }
-    .lang-btn:hover { background: var(--clr-highlight); color: var(--clr-bg); }
-    .hamburger { display: none; flex-direction: column; justify-content: space-between; width: 30px; height: 21px; cursor: pointer; background: none; border: none; padding: 0; }
-    .hamburger span { background: var(--clr-bg); height: 3px; width: 100%; transition: all 0.3s ease; border-radius: 2px; }
-    .hamburger.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
-    .hamburger.active span:nth-child(2) { opacity: 0; }
-    .hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(7px, -7px); }
-    .social-icon { display: inline-flex; align-items: center; gap: 8px; text-decoration: none; color: var(--clr-bg); margin-bottom: 10px; transition: transform 0.3s ease, opacity 0.3s ease; }
-    .social-icon span { font-size: 1rem; font-weight: 500;}
-    .social-icon img { width: 40px; height: 40px; object-fit: contain; }
-    .social-icon:hover { transform: scale(1.1); opacity: 0.9; }
-    .hero { min-height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center; background: linear-gradient(135deg, var(--clr-cold-accent), var(--clr-warm-accent)); color: var(--clr-bg); clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%); padding: 60px 20px 0; }
-    .hero-content .name { font-family: 'Oswald', sans-serif; font-size: 4rem; margin-bottom: 5px; line-height: 1.1; animation: fadeIn 1s ease-in; display: flex; align-items: center; justify-content: center; gap: 10px; }
-    .hero-content .name img { height: 70px; width: auto; }
-    .hero-content .title { font-family: 'Oswald', sans-serif; font-size: 3rem; margin-bottom: 15px; line-height: 1.1; color: #fff; animation: fadeIn 1.5s ease-in; }
-    .hero-content p { font-size: 1.2rem; margin-bottom: 30px; animation: fadeIn 2s ease-in; }
-    .btn { display: inline-block; padding: 10px 20px; background: var(--clr-highlight); color: var(--clr-bg); text-decoration: none; border-radius: 5px; font-weight: 500; transition: transform 0.3s ease, box-shadow 0.3s ease; }
-    .btn:hover { transform: translateY(-3px); box-shadow: 0 5px 15px rgba(0,0,0,0.2); background: var(--clr-warm-accent); }
-    section { padding: 80px 20px; max-width: 1200px; margin: 0 auto; }
-    h2 { font-family: 'Oswald', sans-serif; font-size: 2.5rem; text-align: center; margin-bottom: 40px; color: var(--clr-text); line-height: 1.2; }
-    .about, .skills, .projects, .testimonials, .contact, .experience { background: #fff; border-radius: 10px; padding: 40px; margin: 20px auto; box-shadow: 0 5px 15px rgba(0,0,0,0.05); animation: slideUp 1s ease-in-out; }
-    .about-container { display: flex; align-items: center; gap: 40px; }
-    .about-image img { width: 200px; height: 200px; border-radius: 50%; object-fit: cover; }
-    .about-text { flex: 1; }
-    .about-text p { text-align: justify; }
-    .skills-grid { display: flex; justify-content: center; align-items: center; gap: 20px; flex-wrap: wrap; }
-    .skill-item { display: flex; flex-direction: column; align-items: center; min-width: 150px; }
-    .skill-item img { max-height: 90px; width: auto; object-fit: contain; margin-bottom: 10px; }
-    .skill-item span { font-family: 'Oswald', sans-serif; font-size: 1rem; line-height: 1.2; color: var(--clr-text); }
-    .projects-grid { display: grid; grid-template-columns: 1fr; gap: 40px; }
-    .project-view-note { text-align: center; margin-top: -20px; margin-bottom: 40px; font-size: 0.9rem; font-style: italic; color: var(--clr-text); }
-    .project-card { display: flex; align-items: stretch; gap: 20px; background: var(--clr-bg); padding: 20px; border-radius: 8px; box-shadow: 0 3px 10px rgba(0,0,0,0.1); transition: transform 0.3s ease, box-shadow 0.3s ease; }
-    .project-card:hover { transform: translateY(-5px); box-shadow: 0 5px 15px rgba(0,0,0,0.2); }
-    .project-link { flex: 0 0 50%; display: block; overflow: hidden; border-radius: 8px;}
-    .project-link:hover .project-gif { transform: scale(1.05); }
-    .project-gif { width: 100%; height: 100%; object-fit: cover; border-radius: 8px; display: block; transition: transform 0.3s ease; }
-    .project-content { flex: 1; display: flex; flex-direction: column; }
-    .project-tools { margin-bottom: 10px; }
-    .tool-badge { display: inline-block; background: var(--clr-cold-accent); color: #fff; font-family: 'Oswald', sans-serif; font-size: 0.8rem; padding: 3px 8px; border-radius: 4px; margin-right: 5px; }
-    .project-cta { font-size: 0.8rem; font-style: italic; color: var(--clr-cold-accent); margin-top: auto; padding-top: 10px; font-weight: 500; text-align: right; }
-    .testimonials-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
-    .testimonial-card { background: var(--clr-bg); padding: 20px; border-radius: 8px; box-shadow: 0 3px 10px rgba(0,0,0,0.1); }
-    .testimonial-card p { font-style: italic; margin-bottom: 15px; }
-    .testimonial-author-container { display: flex; flex-direction: column; align-items: flex-start; gap: 8px; }
-    .testimonial-card .author { font-family: 'Oswald', sans-serif; font-size: 1rem; color: var(--clr-cold-accent); }
-    .testimonial-card .platform-logo { width: 100px; height: 40px; object-fit: contain; }
-    .stars { color: var(--clr-gold); font-size: 1rem; }
-    #toggle-experience-footer { display: flex; align-items: center; justify-content: center; gap: 8px; width: fit-content; margin: 40px auto 0 auto; padding: 8px 15px; border-radius: 5px; cursor: pointer; font-family: 'Poppins', sans-serif; font-size: 0.9rem; color: var(--clr-text); border: 1px solid var(--clr-text); transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease; }
-    #toggle-experience-footer:hover { background-color: var(--clr-cold-accent); color: var(--clr-bg); border-color: var(--clr-cold-accent); }
-    #toggle-experience-footer .arrow-icon { display: inline-block; transition: transform 0.3s ease; }
-    #toggle-experience-footer.expanded .arrow-icon { transform: rotate(180deg); }
-    .timeline-container { position: relative; max-width: 800px; margin: 0 auto; padding: 20px 0; max-height: 0; overflow: hidden; opacity: 0; transition: max-height 0.8s ease-in-out, opacity 0.8s ease-in-out; }
-    .timeline-container.expanded { max-height: 10000px; opacity: 1; }
-    .timeline-container::after { content: ''; position: absolute; width: 4px; background: var(--clr-cold-accent); top: 0; bottom: 0; left: 50%; margin-left: -2px; border-radius: 2px; }
-    .timeline-item { padding: 10px 40px; position: relative; background-color: inherit; width: 50%; margin-bottom: 30px; }
-    .timeline-item::after { content: ''; position: absolute; width: 20px; height: 20px; right: -10px; background-color: var(--clr-highlight); border: 3px solid #fff; top: 15px; border-radius: 50%; z-index: 1; }
-    .timeline-item.left { left: 0; }
-    .timeline-item.right { left: 50%; }
-    .timeline-item.right::after { left: -10px; }
-    .timeline-content { padding: 20px 30px; background-color: var(--clr-bg); position: relative; border-radius: 8px; box-shadow: 0 3px 10px rgba(0,0,0,0.1); }
-    .timeline-content h3 { font-family: 'Oswald', sans-serif; font-size: 1.5rem; color: var(--clr-cold-accent); margin-bottom: 5px; }
-    .timeline-content .company { font-size: 1rem; color: var(--clr-text); margin-bottom: 5px; font-weight: 500;}
-    .timeline-date { font-size: 0.85rem; color: #777; display: block; margin-bottom: 10px; }
-    .responsibilities-list { list-style: none; padding-left: 0; margin-top: 10px; max-height: 0; overflow: hidden; transition: max-height 0.5s ease-out, opacity 0.5s ease-out; opacity: 0; }
-    .responsibilities-list.expanded { max-height: 500px; opacity: 1; }
-    .responsibilities-list li { margin-bottom: 5px; padding-left: 15px; position: relative; font-size: 0.9rem; }
-    .responsibilities-list li::before { content: '•'; color: var(--clr-warm-accent); position: absolute; left: 0; top: 0; }
-    .toggle-details-btn { background: var(--clr-warm-accent); color: var(--clr-text); border: none; padding: 5px 10px; border-radius: 5px; cursor: pointer; font-size: 0.85rem; margin-top: 10px; transition: background 0.3s ease; display: inline-block; font-weight: 500; }
-    .toggle-details-btn:hover { background: var(--clr-highlight); }
-    .contact form { display: flex; flex-direction: column; gap: 15px; max-width: 500px; margin: 0 auto; }
-    .contact input, .contact textarea { padding: 10px; border: 1px solid #ddd; border-radius: 5px; font-size: 1rem; font-family: 'Poppins', sans-serif; }
-    .contact button { padding: 10px; background: var(--clr-cold-accent); color: var(--clr-bg); border: none; border-radius: 5px; cursor: pointer; transition: background 0.3s ease; font-family: 'Oswald', sans-serif; }
-    .contact button:hover { background: var(--clr-highlight); }
-    footer { text-align: center; padding: 20px; background: var(--clr-text); color: var(--clr-bg); }
-    .footer-social-container { display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 20px; margin-bottom: 10px; }
-    footer p { margin-top: 10px; }
-    
-    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
-    @keyframes slideUp { from { transform: translateY(50px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
-    
-    @media (max-width: 768px) {
-      .hero-content .name { font-size: 3rem; flex-direction: column; gap: 5px; }
-      .hero-content .name img { height: 50px; }
-      .hero-content .title { font-size: 2rem; }
-      .hero-content p { font-size: 1rem; }
-      .nav-container { flex-direction: row; justify-content: space-between; align-items: center; }
-      #nav-menu { 
-        display: flex;
-        flex-direction: column;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        width: 100%;
-        background: var(--clr-cold-accent);
-        padding: 10px 0;
-        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        transform: translateY(-150%);
-        transition: transform 0.3s ease-in-out;
-        z-index: 999;
-      }
-      #nav-menu.active {
-        transform: translateY(0);
-      }
-      .nav-left, .nav-right {
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-        gap: 0;
-      }
-      .nav-left li, .nav-right li {
-        margin: 10px 0;
-      }
-      .hamburger { display: flex; z-index: 1001; }
-      .lang-btn { gap: 6px; margin-left: auto; padding: 5px 8px; font-size: 0.9rem; }
-      .lang-btn img { width: 20px; height: 20px; }
-      .about-container { flex-direction: column; text-align: center; }
-      .project-card { flex-direction: column; align-items: center; }
-      .project-link { flex: 0 0 auto; width: 100%; }
-      .timeline-container::after { left: 31px; }
-      .timeline-item { width: 100%; padding-left: 70px; padding-right: 25px; }
-      .timeline-item.right { left: 0%; }
-      .timeline-item::after, .timeline-item.right::after { left: 15px; }
-    }
-  </style>
-
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-QW7MW6Z16E"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-QW7MW6Z16E');
-  </script>
-
+  <style>
+    :root {
+      --clr-bg: #F2F5F7;
+      --clr-text: #264653;
+      --clr-cold-accent: #2A9D8F;
+      --clr-warm-accent: #E9C46A;
+      --clr-highlight: #F4A261;
+      --clr-gold: #FFD700;
+    }
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Poppins', sans-serif; background: var(--clr-bg); color: var(--clr-text); line-height: 1.6; overflow-x: hidden; }
+    nav { position: fixed; top: 0; width: 100%; background: var(--clr-cold-accent); box-shadow: 0 2px 5px rgba(0,0,0,0.1); z-index: 1000; }
+    .nav-container { display: flex; align-items: center; justify-content: space-between; max-width: 1200px; margin: 0 auto; padding: 10px 20px; }
+    #nav-menu { display: flex; align-items: center; gap: 20px; }
+    .nav-left, .nav-right { display: flex; list-style: none; gap: 20px; }
+    nav ul li a { color: var(--clr-bg); font-weight: 500; text-decoration: none; transition: color 0.3s ease; padding: 5px; }
+    nav ul li a:hover { color: var(--clr-highlight); }
+    .lang-btn { background: transparent; border: 1px solid var(--clr-bg); color: var(--clr-bg); padding: 5px 10px; border-radius: 5px; font-family: 'Oswald', sans-serif; font-size: 1rem; cursor: pointer; transition: background 0.3s ease, color 0.3s ease; display: flex; align-items: center; gap: 8px; }
+    .lang-btn img { width: 24px; height: 24px; object-fit: contain; }
+    .lang-btn:hover { background: var(--clr-highlight); color: var(--clr-bg); }
+    .hamburger { display: none; flex-direction: column; justify-content: space-between; width: 30px; height: 21px; cursor: pointer; background: none; border: none; padding: 0; }
+    .hamburger span { background: var(--clr-bg); height: 3px; width: 100%; transition: all 0.3s ease; border-radius: 2px; }
+    .hamburger.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+    .hamburger.active span:nth-child(2) { opacity: 0; }
+    .hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(7px, -7px); }
+    .social-icon { display: inline-flex; align-items: center; gap: 8px; text-decoration: none; color: var(--clr-bg); margin-bottom: 10px; transition: transform 0.3s ease, opacity 0.3s ease; }
+    .social-icon span { font-size: 1rem; font-weight: 500;}
+    .social-icon img { width: 40px; height: 40px; object-fit: contain; }
+    .social-icon:hover { transform: scale(1.1); opacity: 0.9; }
+    .hero { min-height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center; background: linear-gradient(135deg, var(--clr-cold-accent), var(--clr-warm-accent)); color: var(--clr-bg); clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%); padding: 60px 20px 0; }
+    .hero-content .name { font-family: 'Oswald', sans-serif; font-size: 4rem; margin-bottom: 5px; line-height: 1.1; animation: fadeIn 1s ease-in; display: flex; align-items: center; justify-content: center; gap: 10px; }
+    .hero-content .name img { height: 70px; width: auto; }
+    .hero-content .title { font-family: 'Oswald', sans-serif; font-size: 3rem; margin-bottom: 15px; line-height: 1.1; color: #fff; animation: fadeIn 1.5s ease-in; }
+    .hero-content p { font-size: 1.2rem; margin-bottom: 30px; animation: fadeIn 2s ease-in; }
+    .btn { display: inline-block; padding: 10px 20px; background: var(--clr-highlight); color: var(--clr-bg); text-decoration: none; border-radius: 5px; font-weight: 500; transition: transform 0.3s ease, box-shadow 0.3s ease; }
+    .btn:hover { transform: translateY(-3px); box-shadow: 0 5px 15px rgba(0,0,0,0.2); background: var(--clr-warm-accent); }
+    section { padding: 80px 20px; max-width: 1200px; margin: 0 auto; }
+    h2 { font-family: 'Oswald', sans-serif; font-size: 2.5rem; text-align: center; margin-bottom: 40px; color: var(--clr-text); line-height: 1.2; }
+    .about, .skills, .projects, .testimonials, .contact, .experience { background: #fff; border-radius: 10px; padding: 40px; margin: 20px auto; box-shadow: 0 5px 15px rgba(0,0,0,0.05); animation: slideUp 1s ease-in-out; }
+    .about-container { display: flex; align-items: center; gap: 40px; }
+    .about-image img { width: 200px; height: 200px; border-radius: 50%; object-fit: cover; }
+    .about-text { flex: 1; }
+    .about-text p { text-align: justify; }
+    .skills-grid { display: flex; justify-content: center; align-items: center; gap: 20px; flex-wrap: wrap; }
+    .skill-item { display: flex; flex-direction: column; align-items: center; min-width: 150px; }
+    .skill-item img { max-height: 90px; width: auto; object-fit: contain; margin-bottom: 10px; }
+    .skill-item span { font-family: 'Oswald', sans-serif; font-size: 1rem; line-height: 1.2; color: var(--clr-text); }
+    .projects-grid { display: grid; grid-template-columns: 1fr; gap: 40px; }
+    .project-view-note { text-align: center; margin-top: -20px; margin-bottom: 40px; font-size: 0.9rem; font-style: italic; color: var(--clr-text); }
+    .project-card { display: flex; align-items: stretch; gap: 20px; background: var(--clr-bg); padding: 20px; border-radius: 8px; box-shadow: 0 3px 10px rgba(0,0,0,0.1); transition: transform 0.3s ease, box-shadow 0.3s ease; }
+    .project-card:hover { transform: translateY(-5px); box-shadow: 0 5px 15px rgba(0,0,0,0.2); }
+    .project-link { flex: 0 0 50%; display: block; overflow: hidden; border-radius: 8px;}
+    .project-link:hover .project-gif { transform: scale(1.05); }
+    .project-gif { width: 100%; height: 100%; object-fit: cover; border-radius: 8px; display: block; transition: transform 0.3s ease; }
+    .project-content { flex: 1; display: flex; flex-direction: column; }
+    .project-tools { margin-bottom: 10px; }
+    .tool-badge { display: inline-block; background: var(--clr-cold-accent); color: #fff; font-family: 'Oswald', sans-serif; font-size: 0.8rem; padding: 3px 8px; border-radius: 4px; margin-right: 5px; }
+    .project-cta { font-size: 0.8rem; font-style: italic; color: var(--clr-cold-accent); margin-top: auto; padding-top: 10px; font-weight: 500; text-align: right; }
+    .testimonials-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+    .testimonial-card { background: var(--clr-bg); padding: 20px; border-radius: 8px; box-shadow: 0 3px 10px rgba(0,0,0,0.1); }
+    .testimonial-card p { font-style: italic; margin-bottom: 15px; }
+    .testimonial-author-container { display: flex; flex-direction: column; align-items: flex-start; gap: 8px; }
+    .testimonial-card .author { font-family: 'Oswald', sans-serif; font-size: 1rem; color: var(--clr-cold-accent); }
+    .testimonial-card .platform-logo { width: 100px; height: 40px; object-fit: contain; }
+    .stars { color: var(--clr-gold); font-size: 1rem; }
+    #toggle-experience-footer { display: flex; align-items: center; justify-content: center; gap: 8px; width: fit-content; margin: 40px auto 0 auto; padding: 8px 15px; border-radius: 5px; cursor: pointer; font-family: 'Poppins', sans-serif; font-size: 0.9rem; color: var(--clr-text); border: 1px solid var(--clr-text); transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease; }
+    #toggle-experience-footer:hover { background-color: var(--clr-cold-accent); color: var(--clr-bg); border-color: var(--clr-cold-accent); }
+    #toggle-experience-footer .arrow-icon { display: inline-block; transition: transform 0.3s ease; }
+    #toggle-experience-footer.expanded .arrow-icon { transform: rotate(180deg); }
+    .timeline-container { position: relative; max-width: 800px; margin: 0 auto; padding: 20px 0; max-height: 0; overflow: hidden; opacity: 0; transition: max-height 0.8s ease-in-out, opacity 0.8s ease-in-out; }
+    .timeline-container.expanded { max-height: 10000px; opacity: 1; }
+    .timeline-container::after { content: ''; position: absolute; width: 4px; background: var(--clr-cold-accent); top: 0; bottom: 0; left: 50%; margin-left: -2px; border-radius: 2px; }
+    .timeline-item { padding: 10px 40px; position: relative; background-color: inherit; width: 50%; margin-bottom: 30px; }
+    .timeline-item::after { content: ''; position: absolute; width: 20px; height: 20px; right: -10px; background-color: var(--clr-highlight); border: 3px solid #fff; top: 15px; border-radius: 50%; z-index: 1; }
+    .timeline-item.left { left: 0; }
+    .timeline-item.right { left: 50%; }
+    .timeline-item.right::after { left: -10px; }
+    .timeline-content { padding: 20px 30px; background-color: var(--clr-bg); position: relative; border-radius: 8px; box-shadow: 0 3px 10px rgba(0,0,0,0.1); }
+    .timeline-content h3 { font-family: 'Oswald', sans-serif; font-size: 1.5rem; color: var(--clr-cold-accent); margin-bottom: 5px; }
+    .timeline-content .company { font-size: 1rem; color: var(--clr-text); margin-bottom: 5px; font-weight: 500;}
+    .timeline-date { font-size: 0.85rem; color: #777; display: block; margin-bottom: 10px; }
+    .responsibilities-list { list-style: none; padding-left: 0; margin-top: 10px; max-height: 0; overflow: hidden; transition: max-height 0.5s ease-out, opacity 0.5s ease-out; opacity: 0; }
+    .responsibilities-list.expanded { max-height: 500px; opacity: 1; }
+    .responsibilities-list li { margin-bottom: 5px; padding-left: 15px; position: relative; font-size: 0.9rem; }
+    .responsibilities-list li::before { content: '•'; color: var(--clr-warm-accent); position: absolute; left: 0; top: 0; }
+    .toggle-details-btn { background: var(--clr-warm-accent); color: var(--clr-text); border: none; padding: 5px 10px; border-radius: 5px; cursor: pointer; font-size: 0.85rem; margin-top: 10px; transition: background 0.3s ease; display: inline-block; font-weight: 500; }
+    .toggle-details-btn:hover { background: var(--clr-highlight); }
+    .contact form { display: flex; flex-direction: column; gap: 15px; max-width: 500px; margin: 0 auto; }
+    .contact input, .contact textarea { padding: 10px; border: 1px solid #ddd; border-radius: 5px; font-size: 1rem; font-family: 'Poppins', sans-serif; }
+    .contact button { padding: 10px; background: var(--clr-cold-accent); color: var(--clr-bg); border: none; border-radius: 5px; cursor: pointer; transition: background 0.3s ease; font-family: 'Oswald', sans-serif; }
+    .contact button:hover { background: var(--clr-highlight); }
+    footer { text-align: center; padding: 20px; background: var(--clr-text); color: var(--clr-bg); }
+    .footer-social-container { display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 20px; margin-bottom: 10px; }
+    footer p { margin-top: 10px; }
+    
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+    @keyframes slideUp { from { transform: translateY(50px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+    
+    @media (max-width: 768px) {
+      .hero-content .name { font-size: 3rem; flex-direction: column; gap: 5px; }
+      .hero-content .name img { height: 50px; }
+      .hero-content .title { font-size: 2rem; }
+      .hero-content p { font-size: 1rem; }
+      .nav-container { flex-direction: row; justify-content: space-between; align-items: center; }
+      #nav-menu { 
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: var(--clr-cold-accent);
+        padding: 10px 0;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        transform: translateY(-150%);
+        transition: transform 0.3s ease-in-out;
+        z-index: 999;
+      }
+      #nav-menu.active {
+        transform: translateY(0);
+      }
+      .nav-left, .nav-right {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        gap: 0;
+      }
+      .nav-left li, .nav-right li {
+        margin: 10px 0;
+      }
+      .hamburger { display: flex; z-index: 1001; }
+      .lang-btn { gap: 6px; margin-left: auto; padding: 5px 8px; font-size: 0.9rem; }
+      .lang-btn img { width: 20px; height: 20px; }
+      .about-container { flex-direction: column; text-align: center; }
+      .project-card { flex-direction: column; align-items: center; }
+      .project-link { flex: 0 0 auto; width: 100%; }
+      .timeline-container::after { left: 31px; }
+      .timeline-item { width: 100%; padding-left: 70px; padding-right: 25px; }
+      .timeline-item.right { left: 0%; }
+      .timeline-item::after, .timeline-item.right::after { left: 15px; }
+    }
+  </style>
 </head>
 <body>
-  <nav>
-    <div class="nav-container">
-      <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-menu">
-        <span></span><span></span><span></span>
-      </button>
-      <div id="nav-menu">
-        <ul class="nav-left">
-          <li><a href="#home" data-translate="nav.home"></a></li>
-        </ul>
-        <ul class="nav-right">
-          <li><a href="#about" data-translate="nav.about"></a></li>
-          <li><a href="#skills" data-translate="nav.skills"></a></li>
-          <li><a href="#projects" data-translate="nav.projects"></a></li>
-          <li><a href="#testimonials" data-translate="nav.testimonials"></a></li>
-          <li><a href="#experience" data-translate="nav.experience"></a></li>
-          <li><a href="#contact" data-translate="nav.contact"></a></li>
-        </ul>
-      </div>
-      <button class="lang-btn">
-        <img src="./assets/images/USAFLAG.png" alt="US Flag" class="lang-flag">
-        <span></span>
-      </button>
-    </div>
-  </nav>
+  <nav>
+    <div class="nav-container">
+      <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-menu">
+        <span></span><span></span><span></span>
+      </button>
+      <div id="nav-menu">
+        <ul class="nav-left">
+          <li><a href="#home" data-translate="nav.home"></a></li>
+        </ul>
+        <ul class="nav-right">
+          <li><a href="#about" data-translate="nav.about"></a></li>
+          <li><a href="#skills" data-translate="nav.skills"></a></li>
+          <li><a href="#projects" data-translate="nav.projects"></a></li>
+          <li><a href="#testimonials" data-translate="nav.testimonials"></a></li>
+          <li><a href="#experience" data-translate="nav.experience"></a></li>
+          <li><a href="#contact" data-translate="nav.contact"></a></li>
+        </ul>
+      </div>
+      <button class="lang-btn">
+        <img src="./assets/images/USAFLAG.png" alt="US Flag" class="lang-flag">
+        <span></span>
+      </button>
+    </div>
+  </nav>
 
-  <main>
-    <section id="home" class="hero">
-      <div class="hero-content">
-        <h1 class="name">
-          <span>Weimar</span>
-          <img src="./assets/images/blanco.png" alt="Logo Weimar Miranda" onerror="this.onerror=null;this.src='https://placehold.co/70x70/FFFFFF/000000?text=Logo';">
-          <span>Miranda</span>
-        </h1>
-        <h2 class="title" data-translate="hero.title"></h2>
-        <p data-translate="hero.description"></p>
-        <a href="#contact" class="btn" data-translate="hero.button"></a>
-      </div>
-    </section>
+  <main>
+    <section id="home" class="hero">
+      <div class="hero-content">
+        <h1 class="name">
+          <span>Weimar</span>
+          <img src="./assets/images/blanco.png" alt="Logo Weimar Miranda" onerror="this.onerror=null;this.src='https://placehold.co/70x70/FFFFFF/000000?text=Logo';">
+          <span>Miranda</span>
+        </h1>
+        <h2 class="title" data-translate="hero.title"></h2>
+        <p data-translate="hero.description"></p>
+        <a href="#contact" class="btn" data-translate="hero.button"></a>
+      </div>
+    </section>
 
-    <section id="about" class="about">
-      <h2 data-translate="section.about"></h2>
-      <div class="about-container">
-        <div class="about-image">
-          <img src="./assets/images/digital.png" alt="Weimar Miranda" onerror="this.onerror=null;this.src='https://placehold.co/200x200/2A9D8F/FFFFFF?text=Weimar';">
-        </div>
-        <div class="about-text">
-          <p data-translate="about.text"></p>
-        </div>
-      </div>
-    </section>
+    <section id="about" class="about">
+      <h2 data-translate="section.about"></h2>
+      <div class="about-container">
+        <div class="about-image">
+          <img src="./assets/images/digital.png" alt="Weimar Miranda" onerror="this.onerror=null;this.src='https://placehold.co/200x200/2A9D8F/FFFFFF?text=Weimar';">
+        </div>
+        <div class="about-text">
+          <p data-translate="about.text"></p>
+        </div>
+      </div>
+    </section>
 
-    <section id="skills" class="skills">
-      <h2 data-translate="section.skills"></h2>
-      <div class="skills-grid">
-        <div class="skill-item">
-          <img src="./assets/images/pbilogo.png" alt="Power BI logo" onerror="this.onerror=null;this.src='https://placehold.co/90x90/FFFFFF/000000?text=PBI';">
-          <span>Power BI</span>
-        </div>
-        <div class="skill-item">
-          <img src="./assets/images/looker.png" alt="Looker Studio logo" onerror="this.onerror=null;this.src='https://placehold.co/90x90/FFFFFF/000000?text=LS';">
-          <span>Looker Studio</span>
-        </div>
-        <div class="skill-item">
-          <img src="./assets/images/logomysql.png" alt="MySQL logo" onerror="this.onerror=null;this.src='https://placehold.co/90x90/FFFFFF/000000?text=SQL';">
-          <span>SQL</span>
-        </div>
-        <div class="skill-item">
-          <img src="./assets/images/python.png" alt="Python logo" onerror="this.onerror=null;this.src='https://placehold.co/90x90/FFFFFF/000000?text=Py';">
-          <span>Python</span>
-        </div>
-        <div class="skill-item">
-          <img src="./assets/images/excelicon.png" alt="Excel Advanced logo" onerror="this.onerror=null;this.src='https://placehold.co/90x90/FFFFFF/000000?text=XLS';">
-          <span>Advanced Excel</span>
-        </div>
-      </div>
-    </section>
+    <section id="skills" class="skills">
+      <h2 data-translate="section.skills"></h2>
+      <div class="skills-grid">
+        <div class="skill-item">
+          <img src="./assets/images/pbilogo.png" alt="Power BI logo" onerror="this.onerror=null;this.src='https://placehold.co/90x90/FFFFFF/000000?text=PBI';">
+          <span>Power BI</span>
+        </div>
+        <div class="skill-item">
+          <img src="./assets/images/looker.png" alt="Looker Studio logo" onerror="this.onerror=null;this.src='https://placehold.co/90x90/FFFFFF/000000?text=LS';">
+          <span>Looker Studio</span>
+        </div>
+        <div class="skill-item">
+          <img src="./assets/images/logomysql.png" alt="MySQL logo" onerror="this.onerror=null;this.src='https://placehold.co/90x90/FFFFFF/000000?text=SQL';">
+          <span>SQL</span>
+        </div>
+        <div class="skill-item">
+          <img src="./assets/images/python.png" alt="Python logo" onerror="this.onerror=null;this.src='https://placehold.co/90x90/FFFFFF/000000?text=Py';">
+          <span>Python</span>
+        </div>
+        <div class="skill-item">
+          <img src="./assets/images/excelicon.png" alt="Excel Advanced logo" onerror="this.onerror=null;this.src='https://placehold.co/90x90/FFFFFF/000000?text=XLS';">
+          <span>Advanced Excel</span>
+        </div>
+      </div>
+    </section>
 
-    <section id="projects" class="projects">
-      <h2 data-translate="section.projects"></h2>
-      <p class="project-view-note" data-translate="section.projects.note"></p>
-      <div class="projects-grid">
-        <div class="project-card">
-          <a href="https://app.powerbi.com/view?r=eyJrIjoiZDk4NmM2M2YtNzYyNi00YTgxLWI1ZmMtMzhkNDQxZjZjNWI5IiwidCI6ImJhODQzY2Q3LWNiN2MtNGJiMS1hZWE3LTEzY2NhOGZlYzRjOSIsImMiOjR9" target="_blank" rel="noopener noreferrer" class="project-link">
-            <img src="./assets/images/INV.gif" alt="Investment Programs Analysis Demo" class="project-gif">
-          </a>
-          <div class="project-content">
-            <div class="project-tools"><span class="tool-badge">Power BI</span></div>
-            <h3 data-translate="project.inversion.title"></h3>
-            <p data-translate="project.inversion.description"></p>
-            <p class="project-cta" data-translate="project.cta"></p>
-          </div>
-        </div>
-        <div class="project-card">
-          <a href="https://app.powerbi.com/view?r=eyJrIjoiNWY5OGVlMzAtY2ZlOS00M2FhLWIwODUtMGZmN2ViMDBkYTY1IiwidCI6ImJhODQzY2Q3LWNiN2MtNGJiMS1hZWE3LTEzY2NhOGZlYzRjOSIsImY4IjR9" target="_blank" rel="noopener noreferrer" class="project-link">
-            <img src="./assets/images/ComprimidoGEo.gif" alt="Seattle Forecast demo" class="project-gif">
-          </a>
-          <div class="project-content">
-            <div class="project-tools"><span class="tool-badge">Power BI</span><span class="tool-badge">Python</span></div>
-            <h3 data-translate="project.seattle.title"></h3>
-            <p data-translate="project.seattle.description"></p>
-            <p class="project-cta" data-translate="project.cta"></p>
-          </div>
-        </div>
-      </div>
-    </section>
+    <section id="projects" class="projects">
+      <h2 data-translate="section.projects"></h2>
+      <p class="project-view-note" data-translate="section.projects.note"></p>
+      <div class="projects-grid">
+        <div class="project-card">
+          <a href="https://app.powerbi.com/view?r=eyJrIjoiZDk4NmM2M2YtNzYyNi00YTgxLWI1ZmMtMzhkNDQxZjZjNWI5IiwidCI6ImJhODQzY2Q3LWNiN2MtNGJiMS1hZWE3LTEzY2NhOGZlYzRjOSIsImMiOjR9" target="_blank" rel="noopener noreferrer" class="project-link">
+            <img src="./assets/images/INV.gif" alt="Investment Programs Analysis Demo" class="project-gif">
+          </a>
+          <div class="project-content">
+            <div class="project-tools"><span class="tool-badge">Power BI</span></div>
+            <h3 data-translate="project.inversion.title"></h3>
+            <p data-translate="project.inversion.description"></p>
+            <p class="project-cta" data-translate="project.cta"></p>
+          </div>
+        </div>
+        <div class="project-card">
+          <a href="https://app.powerbi.com/view?r=eyJrIjoiNWY5OGVlMzAtY2ZlOS00M2FhLWIwODUtMGZmN2ViMDBkYTY1IiwidCI6ImJhODQzY2Q3LWNiN2MtNGJiMS1hZWE3LTEzY2NhOGZlYzRjOSIsImY4IjR9" target="_blank" rel="noopener noreferrer" class="project-link">
+            <img src="./assets/images/ComprimidoGEo.gif" alt="Seattle Forecast demo" class="project-gif">
+          </a>
+          <div class="project-content">
+            <div class="project-tools"><span class="tool-badge">Power BI</span><span class="tool-badge">Python</span></div>
+            <h3 data-translate="project.seattle.title"></h3>
+            <p data-translate="project.seattle.description"></p>
+            <p class="project-cta" data-translate="project.cta"></p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <section id="testimonials" class="testimonials">
-      <h2 data-translate="section.testimonials"></h2>
-      <div class="testimonials-grid">
-        <div class="testimonial-card">
-          <p>“<span data-translate="testimonial.leonardo.text"></span>” <span class="stars">★★★★★</span></p>
-          <div class="testimonial-author-container">
-            <div class="author" data-translate="testimonial.leonardo.author"></div>
-            <img src="./assets/images/workana.png" alt="Workana Logo" class="platform-logo" onerror="this.onerror=null;this.src='https://placehold.co/100x40/FFFFFF/000000?text=Workana';">
-          </div>
-        </div>
-      </div>
-    </section>
+    <section id="testimonials" class="testimonials">
+      <h2 data-translate="section.testimonials"></h2>
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <p>“<span data-translate="testimonial.leonardo.text"></span>” <span class="stars">★★★★★</span></p>
+          <div class="testimonial-author-container">
+            <div class="author" data-translate="testimonial.leonardo.author"></div>
+            <img src="./assets/images/workana.png" alt="Workana Logo" class="platform-logo" onerror="this.onerror=null;this.src='https://placehold.co/100x40/FFFFFF/000000?text=Workana';">
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <section id="experience" class="experience">
-      <h2 data-translate="section.experience"></h2>
-      <div class="timeline-container">
-        <div class="timeline-item left">
-            <div class="timeline-content">
-                <h3 data-translate="experience.role1.title"></h3>
-                <p class="company" data-translate="experience.role1.company"></p>
-                <span class="timeline-date" data-translate="experience.role1.date"></span>
-                <ul class="responsibilities-list">
-                    <li data-translate="experience.role1.resp1"></li>
-                </ul>
-                <button class="toggle-details-btn" data-translate="experience.toggle"></button>
-            </div>
-        </div>
-        <div class="timeline-item right">
-            <div class="timeline-content">
-                <h3 data-translate="experience.role2.title"></h3>
-                <p class="company" data-translate="experience.company"></p>
-                <span class="timeline-date" data-translate="experience.role2.date"></span>
-                <ul class="responsibilities-list">
-                    <li data-translate="experience.role2.resp1"></li>
-                </ul>
-                <button class="toggle-details-btn" data-translate="experience.toggle"></button>
-            </div>
-        </div>
-        <div class="timeline-item left">
-            <div class="timeline-content">
-                <h3 data-translate="experience.role3.title"></h3>
-                <p class="company" data-translate="experience.company"></p>
-                <span class="timeline-date" data-translate="experience.role3.date"></span>
-                <ul class="responsibilities-list">
-                    <li data-translate="experience.role3.resp1"></li>
-                </ul>
-                <button class="toggle-details-btn" data-translate="experience.toggle"></button>
-            </div>
-        </div>
-        <div class="timeline-item right">
-            <div class="timeline-content">
-                <h3 data-translate="experience.role4.title"></h3>
-                <p class="company" data-translate="experience.company"></p>
-                <span class="timeline-date" data-translate="experience.role4.date"></span>
-                <ul class="responsibilities-list">
-                   <li data-translate="experience.role4.resp1"></li>
-                </ul>
-                <button class="toggle-details-btn" data-translate="experience.toggle"></button>
-            </div>
-        </div>
-        <div class="timeline-item left">
-            <div class="timeline-content">
-                <h3 data-translate="experience.role5.title"></h3>
-                <p class="company" data-translate="experience.company"></p>
-                <span class="timeline-date" data-translate="experience.role5.date"></span>
-                <ul class="responsibilities-list">
-                    <li data-translate="experience.role5.resp1"></li>
-                </ul>
-                <button class="toggle-details-btn" data-translate="experience.toggle"></button>
-            </div>
-        </div>
-         <div class="timeline-item right">
-            <div class="timeline-content">
-                <h3 data-translate="experience.role6.title"></h3>
-                <p class="company" data-translate="experience.company"></p>
-                <span class="timeline-date" data-translate="experience.role6.date"></span>
-                <ul class="responsibilities-list">
-                    <li data-translate="experience.role6.resp1"></li>
-                </ul>
-                <button class="toggle-details-btn" data-translate="experience.toggle"></button>
-            </div>
-        </div>
-        <div class="timeline-item left">
-            <div class="timeline-content">
-                <h3 data-translate="experience.role7.title"></h3>
-                <p class="company" data-translate="experience.company"></p>
-                <span class="timeline-date" data-translate="experience.role7.date"></span>
-                <ul class="responsibilities-list">
-                   <li data-translate="experience.role7.resp1"></li>
-                </ul>
-                <button class="toggle-details-btn" data-translate="experience.toggle"></button>
-            </div>
-        </div>
-        <div class="timeline-item right">
-            <div class="timeline-content">
-                <h3 data-translate="experience.role8.title"></h3>
-                <p class="company" data-translate="experience.company"></p>
-                <span class="timeline-date" data-translate="experience.role8.date"></span>
-                <ul class="responsibilities-list">
-                    <li data-translate="experience.role8.resp1"></li>
-                </ul>
-                <button class="toggle-details-btn" data-translate="experience.toggle"></button>
-            </div>
-        </div>
-        <div class="timeline-item left">
-            <div class="timeline-content">
-                <h3 data-translate="experience.role9.title"></h3>
-                <p class="company" data-translate="experience.company"></p>
-                <span class="timeline-date" data-translate="experience.role9.date"></span>
-                <ul class="responsibilities-list">
-                    <li data-translate="experience.role9.resp1"></li>
-                </ul>
-                <button class="toggle-details-btn" data-translate="experience.toggle"></button>
-            </div>
-        </div>
-        <div class="timeline-item right">
-            <div class="timeline-content">
-                <h3 data-translate="experience.role10.title"></h3>
-                <p class="company" data-translate="experience.company"></p>
-      _            <span class="timeline-date" data-translate="experience.role10.date"></span>
-                <ul class="responsibilities-list">
-                    <li data-translate="experience.role10.resp1"></li>
-                </ul>
-                <button class="toggle-details-btn" data-translate="experience.toggle"></button>
-            </div>
-        </div>
-        <div class="timeline-item left">
-            <div class="timeline-content">
-                <h3 data-translate="experience.role11.title"></h3>
-                <p class="company" data-translate="experience.company"></p>
-                <span class="timeline-date" data-translate="experience.role11.date"></span>
-                <ul class="responsibilities-list">
-                    <li data-translate="experience.role11.resp1"></li>
-                </ul>
-                <button class="toggle-details-btn" data-translate="experience.toggle"></button>
-            </div>
-        </div>
-      </div>
-      <div id="toggle-experience-footer">
-        <span data-translate="experience.toggleAll.expand"></span>
-        <span class="arrow-icon">▼</span>
-      </div>
-    </section>
+    <section id="experience" class="experience">
+      <h2 data-translate="section.experience"></h2>
+      <div class="timeline-container">
+        <div class="timeline-item left">
+            <div class="timeline-content">
+                <h3 data-translate="experience.role1.title"></h3>
+                <p class="company" data-translate="experience.role1.company"></p>
+                <span class="timeline-date" data-translate="experience.role1.date"></span>
+                <ul class="responsibilities-list">
+                    <li data-translate="experience.role1.resp1"></li>
+                </ul>
+                <button class="toggle-details-btn" data-translate="experience.toggle"></button>
+            </div>
+        </div>
+        <div class="timeline-item right">
+            <div class="timeline-content">
+                <h3 data-translate="experience.role2.title"></h3>
+                <p class="company" data-translate="experience.company"></p>
+                <span class="timeline-date" data-translate="experience.role2.date"></span>
+                <ul class="responsibilities-list">
+                    <li data-translate="experience.role2.resp1"></li>
+                </ul>
+                <button class="toggle-details-btn" data-translate="experience.toggle"></button>
+            </div>
+        </div>
+        <div class="timeline-item left">
+            <div class="timeline-content">
+                <h3 data-translate="experience.role3.title"></h3>
+                <p class="company" data-translate="experience.company"></p>
+                <span class="timeline-date" data-translate="experience.role3.date"></span>
+                <ul class="responsibilities-list">
+                    <li data-translate="experience.role3.resp1"></li>
+                </ul>
+                <button class="toggle-details-btn" data-translate="experience.toggle"></button>
+            </div>
+        </div>
+        <div class="timeline-item right">
+            <div class="timeline-content">
+                <h3 data-translate="experience.role4.title"></h3>
+                <p class="company" data-translate="experience.company"></p>
+                <span class="timeline-date" data-translate="experience.role4.date"></span>
+                <ul class="responsibilities-list">
+                   <li data-translate="experience.role4.resp1"></li>
+                </ul>
+                <button class="toggle-details-btn" data-translate="experience.toggle"></button>
+            </div>
+        </div>
+        <div class="timeline-item left">
+            <div class="timeline-content">
+                <h3 data-translate="experience.role5.title"></h3>
+                <p class="company" data-translate="experience.company"></p>
+                <span class="timeline-date" data-translate="experience.role5.date"></span>
+                <ul class="responsibilities-list">
+                    <li data-translate="experience.role5.resp1"></li>
+                </ul>
+                <button class="toggle-details-btn" data-translate="experience.toggle"></button>
+            </div>
+        </div>
+         <div class="timeline-item right">
+            <div class="timeline-content">
+                <h3 data-translate="experience.role6.title"></h3>
+                <p class="company" data-translate="experience.company"></p>
+                <span class="timeline-date" data-translate="experience.role6.date"></span>
+                <ul class="responsibilities-list">
+                    <li data-translate="experience.role6.resp1"></li>
+                </ul>
+                <button class="toggle-details-btn" data-translate="experience.toggle"></button>
+            </div>
+        </div>
+        <div class="timeline-item left">
+            <div class="timeline-content">
+                <h3 data-translate="experience.role7.title"></h3>
+                <p class="company" data-translate="experience.company"></p>
+                <span class="timeline-date" data-translate="experience.role7.date"></span>
+                <ul class="responsibilities-list">
+                   <li data-translate="experience.role7.resp1"></li>
+                </ul>
+                <button class="toggle-details-btn" data-translate="experience.toggle"></button>
+            </div>
+        </div>
+        <div class="timeline-item right">
+            <div class="timeline-content">
+                <h3 data-translate="experience.role8.title"></h3>
+                <p class="company" data-translate="experience.company"></p>
+                <span class="timeline-date" data-translate="experience.role8.date"></span>
+                <ul class="responsibilities-list">
+                    <li data-translate="experience.role8.resp1"></li>
+                </ul>
+                <button class="toggle-details-btn" data-translate="experience.toggle"></button>
+            </div>
+        </div>
+        <div class="timeline-item left">
+            <div class="timeline-content">
+                <h3 data-translate="experience.role9.title"></h3>
+                <p class="company" data-translate="experience.company"></p>
+                <span class="timeline-date" data-translate="experience.role9.date"></span>
+                <ul class="responsibilities-list">
+                    <li data-translate="experience.role9.resp1"></li>
+                </ul>
+                <button class="toggle-details-btn" data-translate="experience.toggle"></button>
+            </div>
+        </div>
+        <div class="timeline-item right">
+            <div class="timeline-content">
+                <h3 data-translate="experience.role10.title"></h3>
+                <p class="company" data-translate="experience.company"></p>
+                <span class="timeline-date" data-translate="experience.role10.date"></span>
+                <ul class="responsibilities-list">
+                    <li data-translate="experience.role10.resp1"></li>
+                </ul>
+                <button class="toggle-details-btn" data-translate="experience.toggle"></button>
+            </div>
+        </div>
+        <div class="timeline-item left">
+            <div class="timeline-content">
+                <h3 data-translate="experience.role11.title"></h3>
+                <p class="company" data-translate="experience.company"></p>
+                <span class="timeline-date" data-translate="experience.role11.date"></span>
+                <ul class="responsibilities-list">
+                    <li data-translate="experience.role11.resp1"></li>
+                </ul>
+                <button class="toggle-details-btn" data-translate="experience.toggle"></button>
+            </div>
+        </div>
+      </div>
+      <div id="toggle-experience-footer">
+        <span data-translate="experience.toggleAll.expand"></span>
+        <span class="arrow-icon">▼</span>
+      </div>
+    </section>
 
-    <section id="contact" class="contact">
-      <h2 data-translate="section.contact"></h2>
-      <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
-      <div id="form-message" style="display: none; text-align: center; margin-top: 10px; color: var(--clr-cold-accent);"></div>
-      <form id="contact-form" action="https://script.google.com/macros/s/AKfycby_UvUqEauWVYHzq_4gLq9yOjHvomkiul1DbUnpfNS0bqznOJzOp-rTfCSRJWjPSBFA/exec" method="post" target="hidden_iframe">
-        <input type="text" name="name" placeholder="Nombre" required />
-        <input type="email" name="email" placeholder="Correo Electrónico" required />
-        <textarea name="message" placeholder="Mensaje" rows="5" required></textarea>
-        <button type="submit" data-translate="contact.button"></button>
-      </form>
-    </section>
-  </main>
-  <footer>
-    <div class="footer-social-container">
-      <a href="https://www.linkedin.com/in/weimar-miranda-salazar/" target="_blank" rel="noopener noreferrer" class="social-icon">
-        <img src="./assets/images/linkedin.png" alt="LinkedIn Profile" onerror="this.onerror=null;this.src='https://placehold.co/40x40/FFFFFF/000000?text=LI';">
-      </a>
-      <a href="https://wa.me/59176700989" target="_blank" rel="noopener noreferrer" class="social-icon">
-        <img src="./assets/images/WSP.png" alt="WhatsApp" onerror="this.onerror=null;this.src='https://placehold.co/40x40/FFFFFF/000000?text=WA';">
-        <span>+591 76700989</span>
-      </a>
-    </div>
-    <p data-translate="footer.text"></p>
-    <a href="#" id="privacy-policy-link" class="privacy-link" data-translate="privacy.title"></a>
-  </footer>
+    <section id="contact" class="contact">
+      <h2 data-translate="section.contact"></h2>
+      <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
+      <div id="form-message" style="display: none; text-align: center; margin-top: 10px; color: var(--clr-cold-accent);"></div>
+      <form id="contact-form" action="https://script.google.com/macros/s/AKfycby_UvUqEauWVYHzq_4gLq9yOjHvomkiul1DbUnpfNS0bqznOJzOp-rTfCSRJWjPSBFA/exec" method="post" target="hidden_iframe">
+        <input type="text" name="name" placeholder="Nombre" required />
+        <input type="email" name="email" placeholder="Correo Electrónico" required />
+        <textarea name="message" placeholder="Mensaje" rows="5" required></textarea>
+        <button type="submit" data-translate="contact.button"></button>
+      </form>
+    </section>
+  </main>
+  <footer>
+    <div class="footer-social-container">
+      <a href="https://www.linkedin.com/in/weimar-miranda-salazar/" target="_blank" rel="noopener noreferrer" class="social-icon">
+        <img src="./assets/images/linkedin.png" alt="LinkedIn Profile" onerror="this.onerror=null;this.src='https://placehold.co/40x40/FFFFFF/000000?text=LI';">
+      </a>
+      <a href="https://wa.me/59176700989" target="_blank" rel="noopener noreferrer" class="social-icon">
+        <img src="./assets/images/WSP.png" alt="WhatsApp" onerror="this.onerror=null;this.src='https://placehold.co/40x40/FFFFFF/000000?text=WA';">
+        <span>+591 76700989</span>
+      </a>
+    </div>
+    <p data-translate="footer.text"></p>
+    <a href="#" id="privacy-policy-link" class="privacy-link" data-translate="privacy.title"></a>
+  </footer>
 
-  <div id="privacy-modal" class="modal-overlay">
-    <div class="modal-content">
-      <button id="close-modal-btn" class="close-modal">&times;</button>
-      <h2 data-translate="privacy.title"></h2>
-      <p data-translate="privacy.text"></p>
-    </div>
-  </div>
+  <div id="privacy-modal" class="modal-overlay">
+    <div class="modal-content">
+      <button id="close-modal-btn" class="close-modal">&times;</button>
+      <h2 data-translate="privacy.title"></h2>
+      <p data-translate="privacy.text"></p>
+    </div>
+  </div>
 
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-    
-      const hamburger = document.querySelector('.hamburger');
-      const navMenu = document.getElementById('nav-menu');
-      hamburger.addEventListener('click', () => {
-          const isExpanded = hamburger.classList.toggle('active');
-          hamburger.setAttribute('aria-expanded', isExpanded);
-          navMenu.classList.toggle('active');
-      });
-      document.querySelectorAll('#nav-menu a').forEach(link => {
-        link.addEventListener('click', () => {
-            hamburger.classList.remove('active');
-            hamburger.setAttribute('aria-expanded', 'false');
-            navMenu.classList.remove('active');
-        });
-      });
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+    
+      const hamburger = document.querySelector('.hamburger');
+      const navMenu = document.getElementById('nav-menu');
+      hamburger.addEventListener('click', () => {
+          const isExpanded = hamburger.classList.toggle('active');
+          hamburger.setAttribute('aria-expanded', isExpanded);
+          navMenu.classList.toggle('active');
+      });
+      document.querySelectorAll('#nav-menu a').forEach(link => {
+        link.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            hamburger.setAttribute('aria-expanded', 'false');
+            navMenu.classList.remove('active');
+        });
+      });
 
-      const translations = {
-        en: {
-            'nav.home': 'Home', 'nav.about': 'About Me', 'nav.skills': 'Skills', 'nav.projects': 'Projects', 'nav.testimonials': 'Testimonials', 'nav.experience': 'Experience', 'nav.contact': 'Contact',
-            'hero.title': 'Data Analyst', 'hero.description': 'I transform data into strategic decisions with innovative solutions.', 'hero.button': 'Contact Me',
-            'section.about': 'About Me', 'about.text': 'I’m Weimar Miranda, an Industrial Engineer with a Master’s degree in Business Intelligence from the University of Barcelona. Over more than a decade of experience managing large-scale, high-impact investment programs, my career has evolved toward a specialization in Business Intelligence. For the last three years, I have implemented advanced solutions with Power BI that have resulted in a 20% improvement in operational efficiency. I leverage Python and MySQL to enrich data workflows and optimize reporting, complementing my core expertise in Business Intelligence. I have C1-level fluency in English (Kaplan, New York, 2024).',
-            'section.skills': 'Skills',
-            'section.projects': 'Projects',
-            'section.projects.note': 'For the best experience, it is recommended to view the dashboards on a computer or on a mobile device in landscape orientation.',
-            'project.inversion.title': 'GNV Programs Analysis in Bolivia', 'project.inversion.description': 'Comprehensive dashboard developed in Power BI for monitoring and controlling the three Natural Gas Vehicle investment programs in Bolivia: Conversion, Maintenance, and Requalification. The tool centralizes and visualizes key KPIs such as goal progress vs. execution and performance by sector. It allows for detailed geographical analysis by department and workshop, facilitating trend identification and optimizing resource allocation nationwide.',
-            'project.seattle.title': 'Seattle 911 Fire Department Incident Report', 'project.seattle.description': 'This Power BI dashboard analyzes over 2 million Seattle 911 fire emergency calls, uncovering trends in frequency, timing, and geographic distribution. Featuring performance comparisons, Azure Maps for district-level insights, and a Python-integrated SARIMA model for forecasting, it empowers data-driven operational and strategic planning.',
-            'project.cta': 'Click on the image to view the interactive dashboard.',
-            'section.testimonials': 'Testimonials', 'testimonial.leonardo.text': 'Excellent service and flexible to make the necessary adjustments. Recommended.', 'testimonial.leonardo.author': 'Leonardo',
-            'section.experience': 'My Professional Journey',
-            'experience.company': 'Executive Entity for Natural Gas Vehicle Conversion',
-            'experience.role1.title': 'Data Analyst Consultant / Freelance', 'experience.role1.company': 'Self-Employed', 'experience.role1.date': 'Feb 2025 - Present', 'experience.role1.resp1': 'Providing data analysis and BI consulting services to various clients, developing custom dashboards and optimizing data workflows.',
-            'experience.role2.title': 'Project Planning Professional', 'experience.role2.date': 'Apr 2023 - Apr 2024', 'experience.role2.resp1': 'Led the implementation of Power BI as a central tool for real-time monitoring of investment programs. I developed automated dashboards that integrated various data sources, enhancing strategic decision-making and accountability at the ministerial level.',
-            'experience.role3.title': 'National Technical Inspection and Monitoring Manager', 'experience.role3.date': 'Jan 2022 - Mar 2023', 'experience.role3.resp1': 'Authored technical specifications for adopting new NGV conversion technologies. Additionally, I implemented Power BI dashboards for trend analysis and technical data tracking, optimizing the area\'s operational efficiency.',
-            'experience.role4.title': 'Technical Inspection and Monitoring Professional', 'experience.role4.date': 'Aug 2021 - Dec 2021', 'experience.role4.resp1': 'Drafted and substantiated the technical procedure for determining NGV conversion costs, achieving its approval via Ministerial Resolution. This regulation replaced the previous framework, adapting it to new technologies and cost structures.',
-            'experience.role5.title': 'Technical Standardization Professional', 'experience.role5.date': 'Mar 2021 - Jul 2021', 'experience.role5.resp1': 'Developed the methodology and technical justification to update the fixed-cost regulations, demonstrating the need for a new regulatory framework to ensure the conversion program\'s sustainability.',
-            'experience.role6.title': 'Program Management Control and Monitoring Professional', 'experience.role6.date': 'Jan 2018 - Sep 2019', 'experience.role6.resp1': 'Oversaw the physical and financial execution of investment programs. I automated budget tracking and report generation using Excel and VBA macros, improving efficiency and traceability.',
-            'experience.role7.title': 'National Manager of Warehouses and Operational Management', 'experience.role7.date': 'Jan 2017 - Dec 2017', 'experience.role7.resp1': 'Co-designed and implemented the first national SQL-based inventory management system. Additionally, I contributed to drafting the Supreme Decree No. 3389 proposal, which authorized an increase in the budget for consultants and established verification mechanisms for the use of NGV conversion equipment.',
-            'experience.role8.title': 'National Manager of NGV Conversion Equipment Warehouses', 'experience.role8.date': 'Jan 2016 - Dec 2016', 'experience.role8.resp1': 'Managed national logistics and supervised inventory, using advanced Excel to ensure stock traceability across more than 7 regional offices.',
-            'experience.role9.title': 'Planning Professional', 'experience.role9.date': 'Dec 2015', 'experience.role9.resp1': 'Automated the generation of budget certifications using VBA macros, reducing errors and improving response times.',
-            'experience.role10.title': 'Consultant - Operational Unit', 'experience.role10.date': 'Sep 2015 - Nov 2015', 'experience.role10.resp1': 'Analyzed operational data with Excel and VBA to identify bottlenecks and propose improvements in conversion processes.',
-            'experience.role11.title': 'Regional Coordinator in Tarija', 'experience.role11.date': 'May 2014 - Jun 2015', 'experience.role11.resp1': 'Coordinated regional maintenance and requalification programs, using Excel and VBA to systematize operational control and report to national headquarters.',
-            'experience.toggle': 'Show Details', 'experience.toggle.hide': 'Hide Details', 'experience.toggleAll': 'Collapse All', 'experience.toggleAll.expand': 'Expand All',
-            'section.contact': 'Contact', 'contact.button': 'Send',
-            'footer.text': '© 2025 - BI Portfolio. All rights reserved.',
-            'privacy.title': 'Privacy Policy', 'privacy.text': 'This website uses Google Analytics to track visitor activity and improve user experience. Google Analytics collects data such as your IP address, browser type, and pages visited. For more information, see <a href="https://policies.google.com/privacy" target="_blank">Google\'s Privacy Policy</a>.',
-        },
-        es: {
-            'nav.home': 'Inicio', 'nav.about': 'Sobre Mí', 'nav.skills': 'Habilidades', 'nav.projects': 'Proyectos', 'nav.testimonials': 'Testimonios', 'nav.experience': 'Experiencia', 'nav.contact': 'Contacto',
-            'hero.title': 'Analista de Datos', 'hero.description': 'Transformo datos en decisiones estratégicas con soluciones innovadoras.', 'hero.button': 'Contáctame',
-            'section.about': 'Sobre Mí', 'about.text': 'Soy Weimar Miranda, Ingeniero Industrial con un Máster en Inteligencia de Negocios de la Universidad de Barcelona. A lo largo de más de una década de experiencia gestionando programas de inversión a gran escala y de alto impacto, mi carrera ha evolucionado hacia la especialización en Business Intelligence. Durante los últimos tres años, he implementado soluciones avanzadas con Power BI que han resultado en una mejora del 20% en la eficiencia operativa. Utilizo Python y MySQL para enriquecer flujos de datos y optimizar informes, complementando mi experiencia principal en Inteligencia de Negocios. Poseo una fluidez en idioma inglés a nivel C1 (Kaplan, Nueva York, 2024).',
-            'section.skills': 'Habilidades',
-            'section.projects': 'Proyectos',
-            'section.projects.note': 'Para una mejor experiencia, se recomienda visualizar los dashboards en una computadora o en un dispositivo móvil en orientación horizontal.',
-            'project.inversion.title': 'Análisis de Programas de GNV en Bolivia', 'project.inversion.description': 'Dashboard integral desarrollado en Power BI para el seguimiento y control de los tres programas de inversión de Gas Natural Vehicular en Bolivia: Conversión, Mantenimiento y Recalificación. La herramienta centraliza y visualiza KPIs clave como el avance de metas vs. ejecución y rendimiento por sector. Permite un análisis geográfico detallado por departamento y taller, facilitando la identificación de tendencias y optimizando la asignación de recursos a nivel nacional.',
-            'project.seattle.title': 'Informe de Incidentes del Departamento de Bomberos 911 de Seattle', 'project.seattle.description': 'Este panel de Power BI analiza más de 2 millones de llamadas de emergencia 911 de bomberos en Seattle, identificando tendencias en frecuencia, horarios y distribución geográfica. Incluye comparaciones de rendimiento, Azure Maps para información a nivel de distrito y un modelo SARIMA integrado en Python para pronósticos, lo que permite una planificación operativa y estratégica basada en datos.',
-            'project.cta': 'Haz clic en la imagen para ver el dashboard interactivo.',
-            'section.testimonials': 'Testimonios', 'testimonial.leonardo.text': 'Excelente servicio y flexible a hacer los ajustes que sean necesarios. Recomendado.', 'testimonial.leonardo.author': 'Leonardo',
-            'section.experience': 'Mi Trayectoria Profesional',
-            'experience.company': 'Entidad Ejecutora de Conversión a Gas Natural Vehicular',
-            'experience.role1.title': 'Consultor / Freelance de Análisis de Datos', 'experience.role1.company': 'Independiente', 'experience.role1.date': 'Feb 2025 - Actualidad', 'experience.role1.resp1': 'Proporcionando servicios de consultoría de análisis de datos e inteligencia de negocios a diversos clientes, desarrollando paneles personalizados y optimizando flujos de trabajo.',
-            'experience.role2.title': 'Profesional de Planificación de Proyectos', 'experience.role2.date': 'Abr 2023 - Abr 2024', 'experience.role2.resp1': 'Lideré la implementación de Power BI como herramienta central para monitorear en tiempo real los programas de inversión. Desarrollé dashboards automatizados que integraron diversas fuentes de datos, mejorando la toma de decisiones estratégicas y la rendición de cuentas a nivel ministerial.',
-            'experience.role3.title': 'Encargado Nacional de Fiscalización y Seguimiento Técnico', 'experience.role3.date': 'Ene 2022 - Mar 2023', 'experience.role3.resp1': 'Elaboré especificaciones técnicas para la adopción de nuevas tecnologías de conversión a GNV. Además, implementé dashboards en Power BI para el análisis de tendencias y seguimiento de datos técnicos, optimizando la eficiencia operativa del área.',
-            'experience.role4.title': 'Profesional de Fiscalización y Seguimiento Técnico', 'experience.role4.date': 'Ago 2021 - Dic 2021', 'experience.role4.resp1': 'Redacté y fundamenté el procedimiento técnico para la determinación de costos de conversión a GNV, logrando su aprobación mediante Resolución Ministerial. Esta normativa reemplazó el marco anterior, adaptándolo a nuevas tecnologías y estructuras de costos.',
-            'experience.role5.title': 'Profesional de Normalización Técnica', 'experience.role5.date': 'Mar 2021 - Jul 2021', 'experience.role5.resp1': 'Desarrollé la metodología y justificación técnica para actualizar la normativa de costos fijos, demostrando la necesidad de un nuevo marco regulatorio para garantizar la sostenibilidad del programa de conversión.',
-            'experience.role6.title': 'Profesional de Control y Seguimiento en Gestión de Programas', 'experience.role6.date': 'Ene 2018 - Sep 2019', 'experience.role6.resp1': 'Supervisé la ejecución física y financiera de los programas de inversión. Automaticé el seguimiento de presupuestos y la generación de informes mediante herramientas en Excel y macros VBA, mejorando la eficiencia y trazabilidad.',
-            'experience.role7.title': 'Encargado Nacional de Almacenes y Gestión Operativa', 'experience.role7.date': 'Ene 2017 - Dic 2017', 'experience.role7.resp1': 'Co-diseñé e implementé el primer sistema nacional de gestión de inventarios en SQL. Adicionalmente, coadyuvé en la elaboración de la propuesta del Decreto Supremo N.º 3389, que autorizó el incremento de la partida para consultores y estableció mecanismos de verificación para el uso de equipos de conversión a GNV.',
-            'experience.role8.title': 'Encargado Nacional de Almacenes de Equipos de Conversión a GNV', 'experience.role8.date': 'Ene 2016 - Dic 2016', 'experience.role8.resp1': 'Gestioné la logística y supervisé el inventario a nivel nacional, utilizando Excel avanzado para asegurar la trazabilidad del stock en más de 7 oficinas regionales.',
-            'experience.role9.title': 'Profesional de Planificación', 'experience.role9.date': 'Dic 2015', 'experience.role9.resp1': 'Automaticé la generación de certificaciones presupuestarias mediante macros en VBA, reduciendo errores y mejorando los tiempos de respuesta.',
-            'experience.role10.title': 'Consultor - Unidad Operativa', 'experience.role10.date': 'Sep 2015 - Nov 2015', 'experience.role10.resp1': 'Analicé datos operativos con Excel y VBA para identificar cuellos de botella y proponer mejoras en los procesos de conversión.',
-            'experience.role11.title': 'Coordinador Regional en Tarija', 'experience.role11.date': 'Mayo 2014 - Jun 2015', 'experience.role11.resp1': 'Coordiné los programas regionales de mantenimiento y recalificación, utilizando Excel y VBA para sistematizar el control operativo y reportar a la sede nacional.',
-            'experience.toggle': 'Mostrar Detalles', 'experience.toggle.hide': 'Ocultar Detalles', 'experience.toggleAll': 'Ocultar Todo', 'experience.toggleAll.expand': 'Expandir Todo',
-            'section.contact': 'Contacto', 'contact.button': 'Enviar',
-            'footer.text': '© 2025 - Portafolio de BI. Todos los derechos reservados.',
-            'privacy.title': 'Política de Privacidad', 'privacy.text': 'Este sitio web utiliza Google Analytics para rastrear la actividad de los visitantes y mejorar la experiencia del usuario. Google Analytics recopila datos como su dirección IP, tipo de navegador y páginas visitadas. Para más información, consulte la <a href="https://policies.google.com/privacy" target="_blank">Política de Privacidad de Google</a>.',
-        }
-      };
+      const translations = {
+        en: {
+            'nav.home': 'Home', 'nav.about': 'About Me', 'nav.skills': 'Skills', 'nav.projects': 'Projects', 'nav.testimonials': 'Testimonials', 'nav.experience': 'Experience', 'nav.contact': 'Contact',
+            'hero.title': 'Data Analyst', 'hero.description': 'I transform data into strategic decisions with innovative solutions.', 'hero.button': 'Contact Me',
+            'section.about': 'About Me', 'about.text': 'I’m Weimar Miranda, an Industrial Engineer with a Master’s degree in Business Intelligence from the University of Barcelona. Over more than a decade of experience managing large-scale, high-impact investment programs, my career has evolved toward a specialization in Business Intelligence. For the last three years, I have implemented advanced solutions with Power BI that have resulted in a 20% improvement in operational efficiency. I leverage Python and MySQL to enrich data workflows and optimize reporting, complementing my core expertise in Business Intelligence. I have C1-level fluency in English (Kaplan, New York, 2024).',
+            'section.skills': 'Skills',
+            'section.projects': 'Projects',
+            'section.projects.note': 'For the best experience, it is recommended to view the dashboards on a computer or on a mobile device in landscape orientation.',
+            'project.inversion.title': 'GNV Programs Analysis in Bolivia', 'project.inversion.description': 'Comprehensive dashboard developed in Power BI for monitoring and controlling the three Natural Gas Vehicle investment programs in Bolivia: Conversion, Maintenance, and Requalification. The tool centralizes and visualizes key KPIs such as goal progress vs. execution and performance by sector. It allows for detailed geographical analysis by department and workshop, facilitating trend identification and optimizing resource allocation nationwide.',
+            'project.seattle.title': 'Seattle 911 Fire Department Incident Report', 'project.seattle.description': 'This Power BI dashboard analyzes over 2 million Seattle 911 fire emergency calls, uncovering trends in frequency, timing, and geographic distribution. Featuring performance comparisons, Azure Maps for district-level insights, and a Python-integrated SARIMA model for forecasting, it empowers data-driven operational and strategic planning.',
+            'project.cta': 'Click on the image to view the interactive dashboard.',
+            'section.testimonials': 'Testimonials', 'testimonial.leonardo.text': 'Excellent service and flexible to make the necessary adjustments. Recommended.', 'testimonial.leonardo.author': 'Leonardo',
+            'section.experience': 'My Professional Journey',
+            'experience.company': 'Executive Entity for Natural Gas Vehicle Conversion',
+            'experience.role1.title': 'Data Analyst Consultant / Freelance', 'experience.role1.company': 'Self-Employed', 'experience.role1.date': 'Feb 2025 - Present', 'experience.role1.resp1': 'Providing data analysis and BI consulting services to various clients, developing custom dashboards and optimizing data workflows.',
+            'experience.role2.title': 'Project Planning Professional', 'experience.role2.date': 'Apr 2023 - Apr 2024', 'experience.role2.resp1': 'Led the implementation of Power BI as a central tool for real-time monitoring of investment programs. I developed automated dashboards that integrated various data sources, enhancing strategic decision-making and accountability at the ministerial level.',
+            'experience.role3.title': 'National Technical Inspection and Monitoring Manager', 'experience.role3.date': 'Jan 2022 - Mar 2023', 'experience.role3.resp1': 'Authored technical specifications for adopting new NGV conversion technologies. Additionally, I implemented Power BI dashboards for trend analysis and technical data tracking, optimizing the area\'s operational efficiency.',
+            'experience.role4.title': 'Technical Inspection and Monitoring Professional', 'experience.role4.date': 'Aug 2021 - Dec 2021', 'experience.role4.resp1': 'Drafted and substantiated the technical procedure for determining NGV conversion costs, achieving its approval via Ministerial Resolution. This regulation replaced the previous framework, adapting it to new technologies and cost structures.',
+            'experience.role5.title': 'Technical Standardization Professional', 'experience.role5.date': 'Mar 2021 - Jul 2021', 'experience.role5.resp1': 'Developed the methodology and technical justification to update the fixed-cost regulations, demonstrating the need for a new regulatory framework to ensure the conversion program\'s sustainability.',
+            'experience.role6.title': 'Program Management Control and Monitoring Professional', 'experience.role6.date': 'Jan 2018 - Sep 2019', 'experience.role6.resp1': 'Oversaw the physical and financial execution of investment programs. I automated budget tracking and report generation using Excel and VBA macros, improving efficiency and traceability.',
+            'experience.role7.title': 'National Manager of Warehouses and Operational Management', 'experience.role7.date': 'Jan 2017 - Dec 2017', 'experience.role7.resp1': 'Co-designed and implemented the first national SQL-based inventory management system. Additionally, I contributed to drafting the Supreme Decree No. 3389 proposal, which authorized an increase in the budget for consultants and established verification mechanisms for the use of NGV conversion equipment.',
+            'experience.role8.title': 'National Manager of NGV Conversion Equipment Warehouses', 'experience.role8.date': 'Jan 2016 - Dec 2016', 'experience.role8.resp1': 'Managed national logistics and supervised inventory, using advanced Excel to ensure stock traceability across more than 7 regional offices.',
+            'experience.role9.title': 'Planning Professional', 'experience.role9.date': 'Dec 2015', 'experience.role9.resp1': 'Automated the generation of budget certifications using VBA macros, reducing errors and improving response times.',
+            'experience.role10.title': 'Consultant - Operational Unit', 'experience.role10.date': 'Sep 2015 - Nov 2015', 'experience.role10.resp1': 'Analyzed operational data with Excel and VBA to identify bottlenecks and propose improvements in conversion processes.',
+            'experience.role11.title': 'Regional Coordinator in Tarija', 'experience.role11.date': 'May 2014 - Jun 2015', 'experience.role11.resp1': 'Coordinated regional maintenance and requalification programs, using Excel and VBA to systematize operational control and report to national headquarters.',
+            'experience.toggle': 'Show Details', 'experience.toggle.hide': 'Hide Details', 'experience.toggleAll': 'Collapse All', 'experience.toggleAll.expand': 'Expand All',
+            'section.contact': 'Contact', 'contact.button': 'Send',
+            'footer.text': '© 2025 - BI Portfolio. All rights reserved.',
+            'privacy.title': 'Privacy Policy', 'privacy.text': 'This website uses Google Analytics to track visitor activity and improve user experience. Google Analytics collects data such as your IP address, browser type, and pages visited. For more information, see <a href="https://policies.google.com/privacy" target="_blank">Google\'s Privacy Policy</a>.',
+        },
+        es: {
+            'nav.home': 'Inicio', 'nav.about': 'Sobre Mí', 'nav.skills': 'Habilidades', 'nav.projects': 'Proyectos', 'nav.testimonials': 'Testimonios', 'nav.experience': 'Experiencia', 'nav.contact': 'Contacto',
+            'hero.title': 'Analista de Datos', 'hero.description': 'Transformo datos en decisiones estratégicas con soluciones innovadoras.', 'hero.button': 'Contáctame',
+            'section.about': 'Sobre Mí', 'about.text': 'Soy Weimar Miranda, Ingeniero Industrial con un Máster en Inteligencia de Negocios de la Universidad de Barcelona. A lo largo de más de una década de experiencia gestionando programas de inversión a gran escala y de alto impacto, mi carrera ha evolucionado hacia la especialización en Business Intelligence. Durante los últimos tres años, he implementado soluciones avanzadas con Power BI que han resultado en una mejora del 20% en la eficiencia operativa. Utilizo Python y MySQL para enriquecer flujos de datos y optimizar informes, complementando mi experiencia principal en Inteligencia de Negocios. Poseo una fluidez en idioma inglés a nivel C1 (Kaplan, Nueva York, 2024).',
+            'section.skills': 'Habilidades',
+            'section.projects': 'Proyectos',
+            'section.projects.note': 'Para una mejor experiencia, se recomienda visualizar los dashboards en una computadora o en un dispositivo móvil en orientación horizontal.',
+            'project.inversion.title': 'Análisis de Programas de GNV en Bolivia', 'project.inversion.description': 'Dashboard integral desarrollado en Power BI para el seguimiento y control de los tres programas de inversión de Gas Natural Vehicular en Bolivia: Conversión, Mantenimiento y Recalificación. La herramienta centraliza y visualiza KPIs clave como el avance de metas vs. ejecución y rendimiento por sector. Permite un análisis geográfico detallado por departamento y taller, facilitando la identificación de tendencias y optimizando la asignación de recursos a nivel nacional.',
+            'project.seattle.title': 'Informe de Incidentes del Departamento de Bomberos 911 de Seattle', 'project.seattle.description': 'Este panel de Power BI analiza más de 2 millones de llamadas de emergencia 911 de bomberos en Seattle, identificando tendencias en frecuencia, horarios y distribución geográfica. Incluye comparaciones de rendimiento, Azure Maps para información a nivel de distrito y un modelo SARIMA integrado en Python para pronósticos, lo que permite una planificación operativa y estratégica basada en datos.',
+            'project.cta': 'Haz clic en la imagen para ver el dashboard interactivo.',
+            'section.testimonials': 'Testimonios', 'testimonial.leonardo.text': 'Excelente servicio y flexible a hacer los ajustes que sean necesarios. Recomendado.', 'testimonial.leonardo.author': 'Leonardo',
+            'section.experience': 'Mi Trayectoria Profesional',
+            'experience.company': 'Entidad Ejecutora de Conversión a Gas Natural Vehicular',
+            'experience.role1.title': 'Consultor / Freelance de Análisis de Datos', 'experience.role1.company': 'Independiente', 'experience.role1.date': 'Feb 2025 - Actualidad', 'experience.role1.resp1': 'Proporcionando servicios de consultoría de análisis de datos e inteligencia de negocios a diversos clientes, desarrollando paneles personalizados y optimizando flujos de trabajo.',
+            'experience.role2.title': 'Profesional de Planificación de Proyectos', 'experience.role2.date': 'Abr 2023 - Abr 2024', 'experience.role2.resp1': 'Lideré la implementación de Power BI como herramienta central para monitorear en tiempo real los programas de inversión. Desarrollé dashboards automatizados que integraron diversas fuentes de datos, mejorando la toma de decisiones estratégicas y la rendición de cuentas a nivel ministerial.',
+            'experience.role3.title': 'Encargado Nacional de Fiscalización y Seguimiento Técnico', 'experience.role3.date': 'Ene 2022 - Mar 2023', 'experience.role3.resp1': 'Elaboré especificaciones técnicas para la adopción de nuevas tecnologías de conversión a GNV. Además, implementé dashboards en Power BI para el análisis de tendencias y seguimiento de datos técnicos, optimizando la eficiencia operativa del área.',
+            'experience.role4.title': 'Profesional de Fiscalización y Seguimiento Técnico', 'experience.role4.date': 'Ago 2021 - Dic 2021', 'experience.role4.resp1': 'Redacté y fundamenté el procedimiento técnico para la determinación de costos de conversión a GNV, logrando su aprobación mediante Resolución Ministerial. Esta normativa reemplazó el marco anterior, adaptándolo a nuevas tecnologías y estructuras de costos.',
+            'experience.role5.title': 'Profesional de Normalización Técnica', 'experience.role5.date': 'Mar 2021 - Jul 2021', 'experience.role5.resp1': 'Desarrollé la metodología y justificación técnica para actualizar la normativa de costos fijos, demostrando la necesidad de un nuevo marco regulatorio para garantizar la sostenibilidad del programa de conversión.',
+            'experience.role6.title': 'Profesional de Control y Seguimiento en Gestión de Programas', 'experience.role6.date': 'Ene 2018 - Sep 2019', 'experience.role6.resp1': 'Supervisé la ejecución física y financiera de los programas de inversión. Automaticé el seguimiento de presupuestos y la generación de informes mediante herramientas en Excel y macros VBA, mejorando la eficiencia y trazabilidad.',
+            'experience.role7.title': 'Encargado Nacional de Almacenes y Gestión Operativa', 'experience.role7.date': 'Ene 2017 - Dic 2017', 'experience.role7.resp1': 'Co-diseñé e implementé el primer sistema nacional de gestión de inventarios en SQL. Adicionalmente, coadyuvé en la elaboración de la propuesta del Decreto Supremo N.º 3389, que autorizó el incremento de la partida para consultores y estableció mecanismos de verificación para el uso de equipos de conversión a GNV.',
+            'experience.role8.title': 'Encargado Nacional de Almacenes de Equipos de Conversión a GNV', 'experience.role8.date': 'Ene 2016 - Dic 2016', 'experience.role8.resp1': 'Gestioné la logística y supervisé el inventario a nivel nacional, utilizando Excel avanzado para asegurar la trazabilidad del stock en más de 7 oficinas regionales.',
+            'experience.role9.title': 'Profesional de Planificación', 'experience.role9.date': 'Dic 2015', 'experience.role9.resp1': 'Automaticé la generación de certificaciones presupuestarias mediante macros en VBA, reduciendo errores y mejorando los tiempos de respuesta.',
+            'experience.role10.title': 'Consultor - Unidad Operativa', 'experience.role10.date': 'Sep 2015 - Nov 2015', 'experience.role10.resp1': 'Analicé datos operativos con Excel y VBA para identificar cuellos de botella y proponer mejoras en los procesos de conversión.',
+            'experience.role11.title': 'Coordinador Regional en Tarija', 'experience.role11.date': 'Mayo 2014 - Jun 2015', 'experience.role11.resp1': 'Coordiné los programas regionales de mantenimiento y recalificación, utilizando Excel y VBA para sistematizar el control operativo y reportar a la sede nacional.',
+            'experience.toggle': 'Mostrar Detalles', 'experience.toggle.hide': 'Ocultar Detalles', 'experience.toggleAll': 'Ocultar Todo', 'experience.toggleAll.expand': 'Expandir Todo',
+            'section.contact': 'Contacto', 'contact.button': 'Enviar',
+            'footer.text': '© 2025 - Portafolio de BI. Todos los derechos reservados.',
+            'privacy.title': 'Política de Privacidad', 'privacy.text': 'Este sitio web utiliza Google Analytics para rastrear la actividad de los visitantes y mejorar la experiencia del usuario. Google Analytics recopila datos como su dirección IP, tipo de navegador y páginas visitadas. Para más información, consulte la <a href="https://policies.google.com/privacy" target="_blank">Política de Privacidad de Google</a>.',
+        }
+      };
 
-      let currentLang = localStorage.getItem('lang') || 'es';
-      const langButton = document.querySelector('.lang-btn');
+      let currentLang = localStorage.getItem('lang') || 'es';
+      const langButton = document.querySelector('.lang-btn');
 
-      const applyTranslations = () => {
-        document.documentElement.lang = currentLang;
-        document.querySelectorAll('[data-translate]').forEach(el => {
-            const key = el.getAttribute('data-translate');
-            const translation = translations[currentLang]?.[key];
-            if (translation !== undefined) {
-                // Para el texto de privacidad que contiene un enlace, usamos innerHTML
-                if (key === 'privacy.text') {
-                    el.innerHTML = translation;
-                } else {
-                    el.textContent = translation;
-                }
-            }
-        });
-        
-        const langImg = langButton.querySelector('img');
-        const langText = langButton.querySelector('span');
-        const contactForm = document.getElementById('contact-form');
-        
-        if (currentLang === 'en') {
-          langImg.src = './assets/images/ESPANA.png';
-          langImg.alt = 'Bandera de España';
-          langText.textContent = 'Español';
-          contactForm.querySelector('[name="name"]').placeholder = 'Name';
-          contactForm.querySelector('[name="email"]').placeholder = 'Email';
-          contactForm.querySelector('[name="message"]').placeholder = 'Message';
-        } else {
-          langImg.src = './assets/images/USAFLAG.png';
-          langImg.alt = 'US Flag';
-          langText.textContent = 'English';
-          contactForm.querySelector('[name="name"]').placeholder = 'Nombre';
-          contactForm.querySelector('[name="email"]').placeholder = 'Correo Electrónico';
-          contactForm.querySelector('[name="message"]').placeholder = 'Mensaje';
-        }
-      };
-      
-      langButton.addEventListener('click', () => {
-        currentLang = currentLang === 'en' ? 'es' : 'en';
-        localStorage.setItem('lang', currentLang);
-        applyTranslations();
-      });
+      const applyTranslations = () => {
+        document.documentElement.lang = currentLang;
+        document.querySelectorAll('[data-translate]').forEach(el => {
+            const key = el.getAttribute('data-translate');
+            const translation = translations[currentLang]?.[key];
+            if (translation !== undefined) {
+                // Para el texto de privacidad que contiene un enlace, usamos innerHTML
+                if (key === 'privacy.text') {
+                    el.innerHTML = translation;
+                } else {
+                    el.textContent = translation;
+                }
+            }
+        });
+        
+        const langImg = langButton.querySelector('img');
+        const langText = langButton.querySelector('span');
+        const contactForm = document.getElementById('contact-form');
+        
+        if (currentLang === 'en') {
+          langImg.src = './assets/images/ESPANA.png';
+          langImg.alt = 'Bandera de España';
+          langText.textContent = 'Español';
+          contactForm.querySelector('[name="name"]').placeholder = 'Name';
+          contactForm.querySelector('[name="email"]').placeholder = 'Email';
+          contactForm.querySelector('[name="message"]').placeholder = 'Message';
+        } else {
+          langImg.src = './assets/images/USAFLAG.png';
+          langImg.alt = 'US Flag';
+          langText.textContent = 'English';
+          contactForm.querySelector('[name="name"]').placeholder = 'Nombre';
+          contactForm.querySelector('[name="email"]').placeholder = 'Correo Electrónico';
+          contactForm.querySelector('[name="message"]').placeholder = 'Mensaje';
+        }
+      };
+      
+      langButton.addEventListener('click', () => {
+        currentLang = currentLang === 'en' ? 'es' : 'en';
+        localStorage.setItem('lang', currentLang);
+        applyTranslations();
+      });
 
-      const toggleExperienceFooter = document.getElementById('toggle-experience-footer');
-      const timelineContainer = document.querySelector('.timeline-container');
-      const detailButtons = document.querySelectorAll('.toggle-details-btn');
+      const toggleExperienceFooter = document.getElementById('toggle-experience-footer');
+      const timelineContainer = document.querySelector('.timeline-container');
+      const detailButtons = document.querySelectorAll('.toggle-details-btn');
 
-      toggleExperienceFooter.addEventListener('click', () => {
-          const isExpanded = timelineContainer.classList.toggle('expanded');
-          toggleExperienceFooter.classList.toggle('expanded', isExpanded);
-          const textSpan = toggleExperienceFooter.querySelector('span:first-of-type');
-          const arrowIcon = toggleExperienceFooter.querySelector('.arrow-icon');
+      toggleExperienceFooter.addEventListener('click', () => {
+          const isExpanded = timelineContainer.classList.toggle('expanded');
+          toggleExperienceFooter.classList.toggle('expanded', isExpanded);
+          const textSpan = toggleExperienceFooter.querySelector('span:first-of-type');
+          const arrowIcon = toggleExperienceFooter.querySelector('.arrow-icon');
 
-          if (isExpanded) {
-              textSpan.textContent = translations[currentLang]['experience.toggleAll'];
-              arrowIcon.innerHTML = '▲';
-          } else {
-              textSpan.textContent = translations[currentLang]['experience.toggleAll.expand'];
-              arrowIcon.innerHTML = '▼';
-              document.querySelectorAll('.responsibilities-list.expanded').forEach(list => {
-                  list.classList.remove('expanded');
-                  const btn = list.nextElementSibling;
-                  if (btn) btn.textContent = translations[currentLang]['experience.toggle'];
-              });
-          }
-      });
+          if (isExpanded) {
+              textSpan.textContent = translations[currentLang]['experience.toggleAll'];
+              arrowIcon.innerHTML = '▲';
+          } else {
+              textSpan.textContent = translations[currentLang]['experience.toggleAll.expand'];
+              arrowIcon.innerHTML = '▼';
+              document.querySelectorAll('.responsibilities-list.expanded').forEach(list => {
+                  list.classList.remove('expanded');
+                  const btn = list.nextElementSibling;
+                  if (btn) btn.textContent = translations[currentLang]['experience.toggle'];
+              });
+          }
+      });
 
-      detailButtons.forEach(button => {
-        button.addEventListener('click', function() {
-          const list = this.previousElementSibling;
-          const isExpanded = list.classList.toggle('expanded');
-          this.textContent = isExpanded ? translations[currentLang]['experience.toggle.hide'] : translations[currentLang]['experience.toggle'];
-        });
-      });
-      
-      const form = document.getElementById('contact-form');
-      const iframe = document.getElementById('hidden_iframe');
-      const formMessage = document.getElementById('form-message');
-      let isSubmitting = false;
+      detailButtons.forEach(button => {
+        button.addEventListener('click', function() {
+          const list = this.previousElementSibling;
+          const isExpanded = list.classList.toggle('expanded');
+          this.textContent = isExpanded ? translations[currentLang]['experience.toggle.hide'] : translations[currentLang]['experience.toggle'];
+        });
+      });
+      
+      const form = document.getElementById('contact-form');
+      const iframe = document.getElementById('hidden_iframe');
+      const formMessage = document.getElementById('form-message');
+      let isSubmitting = false;
 
-      form.addEventListener('submit', () => { isSubmitting = true; });
+      form.addEventListener('submit', () => { isSubmitting = true; });
 
-      iframe.addEventListener('load', () => {
-        if (!isSubmitting) return;
-        formMessage.style.display = 'block';
-        formMessage.textContent = currentLang === 'en' ? 'Message sent! Thank you.' : '¡Mensaje enviado! Gracias.';
-        form.reset();
-        isSubmitting = false;
-        setTimeout(() => { formMessage.style.display = 'none'; }, 3000);
-      });
+      iframe.addEventListener('load', () => {
+        if (!isSubmitting) return;
+        formMessage.style.display = 'block';
+        formMessage.textContent = currentLang === 'en' ? 'Message sent! Thank you.' : '¡Mensaje enviado! Gracias.';
+        form.reset();
+        isSubmitting = false;
+        setTimeout(() => { formMessage.style.display = 'none'; }, 3000);
+      });
 
-      // Lógica para el modal de privacidad
-      const privacyModal = document.getElementById('privacy-modal');
-      const openPrivacyLink = document.getElementById('privacy-policy-link');
-      const closePrivacyBtn = document.getElementById('close-modal-btn');
+      // Lógica para el modal de privacidad
+      const privacyModal = document.getElementById('privacy-modal');
+      const openPrivacyLink = document.getElementById('privacy-policy-link');
+      const closePrivacyBtn = document.getElementById('close-modal-btn');
 
-      openPrivacyLink.addEventListener('click', (e) => {
-        e.preventDefault();
-        privacyModal.style.display = 'flex';
-      });
+      openPrivacyLink.addEventListener('click', (e) => {
+        e.preventDefault();
+        privacyModal.style.display = 'flex';
+      });
 
-      closePrivacyBtn.addEventListener('click', () => {
-        privacyModal.style.display = 'none';
-      });
+      closePrivacyBtn.addEventListener('click', () => {
+        privacyModal.style.display = 'none';
+      });
 
-      privacyModal.addEventListener('click', (e) => {
-        if (e.target === privacyModal) {
-          privacyModal.style.display = 'none';
-        }
-      });
+      privacyModal.addEventListener('click', (e) => {
+        if (e.target === privacyModal) {
+          privacyModal.style.display = 'none';
+        }
+      });
 
 
-      applyTranslations(); 
-    });
-  </script>
+      applyTranslations(); 
+    });
+  </script>
 </body>
 </html>
-
-
-
-
-
 
