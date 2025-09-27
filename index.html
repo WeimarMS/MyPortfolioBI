@@ -56,6 +56,30 @@
     .hero-content p { font-size: 1.2rem; margin-bottom: 30px; animation: fadeIn 2s ease-in; }
     .btn { display: inline-block; padding: 10px 20px; background: var(--clr-highlight); color: var(--clr-bg); text-decoration: none; border-radius: 5px; font-weight: 500; transition: transform 0.3s ease, box-shadow 0.3s ease; }
     .btn:hover { transform: translateY(-3px); box-shadow: 0 5px 15px rgba(0,0,0,0.2); background: var(--clr-warm-accent); }
+
+    /* --- INICIO CÓDIGO MODIFICADO --- */
+    .btn-ghost {
+      display: block;
+      width: fit-content;
+      margin: 15px auto 0 auto;
+      padding: 10px 20px;
+      background: var(--clr-cold-accent);
+      color: var(--clr-bg);
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      font-size: 0.9rem;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+      border: none;
+    }
+    .btn-ghost:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.25);
+      filter: brightness(1.15);
+    }
+    /* --- FIN CÓDIGO MODIFICADO --- */
+
     section { padding: 80px 20px; max-width: 1200px; margin: 0 auto; }
     h2 { font-family: 'Oswald', sans-serif; font-size: 2.5rem; text-align: center; margin-bottom: 40px; color: var(--clr-text); line-height: 1.2; }
     .about, .skills, .projects, .testimonials, .contact, .experience { background: #fff; border-radius: 10px; padding: 40px; margin: 20px auto; box-shadow: 0 5px 15px rgba(0,0,0,0.05); animation: slideUp 1s ease-in-out; }
@@ -209,6 +233,9 @@
         <h2 class="title" data-translate="hero.title"></h2>
         <p data-translate="hero.description"></p>
         <a href="#contact" class="btn" data-translate="hero.button"></a>
+        <!-- --- INICIO CÓDIGO MODIFICADO --- -->
+        <a href="https://drive.google.com/file/d/1xQAGhgYT2bZGmmRbDakQ2Ve6Kup3PArI/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn-ghost">Bonus Track: ¿Y si rediseñamos la conversión a GNV en Bolivia? Explora la Propuesta</a>
+        <!-- --- FIN CÓDIGO MODIFICADO --- -->
       </div>
     </section>
 
@@ -622,4 +649,7 @@
   </script>
 </body>
 </html>
+
+
+
 
