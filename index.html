@@ -59,7 +59,7 @@
     .hero { min-height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center; background: linear-gradient(135deg, var(--clr-cold-accent), var(--clr-warm-accent)); color: var(--clr-bg); clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%); padding: 60px 20px 0; }
     .hero-content .name { font-family: 'Oswald', sans-serif; font-size: 4rem; margin-bottom: 5px; line-height: 1.1; animation: fadeIn 1s ease-in; display: flex; align-items: center; justify-content: center; gap: 10px; }
     .hero-content .name img { height: 70px; width: auto; }
-    .hero-content .title { font-family: 'Oswald', sans-serif; font-size: 3rem; margin-bottom: 15px; line-height: 1.1; color: #fff; animation: fadeIn 1.5s ease-in; }
+    .hero-content .title { font-family: 'Oswald', sans-serif; font-size: 2.2rem; margin-bottom: 15px; line-height: 1.2; color: #fff; animation: fadeIn 1.5s ease-in; }
     .hero-content p { font-size: 1.2rem; margin-bottom: 30px; animation: fadeIn 2s ease-in; }
     .btn { display: inline-block; padding: 10px 20px; background: var(--clr-highlight); color: var(--clr-bg); text-decoration: none; border-radius: 5px; font-weight: 500; transition: transform 0.3s ease, box-shadow 0.3s ease; }
     .btn:hover { transform: translateY(-3px); box-shadow: 0 5px 15px rgba(0,0,0,0.2); background: var(--clr-warm-accent); }
@@ -89,7 +89,7 @@
 
     section { padding: 80px 20px; max-width: 1200px; margin: 0 auto; }
     h2 { font-family: 'Oswald', sans-serif; font-size: 2.5rem; text-align: center; margin-bottom: 40px; color: var(--clr-text); line-height: 1.2; }
-    .about, .skills, .projects, .testimonials, .contact, .experience { background: #fff; border-radius: 10px; padding: 40px; margin: 20px auto; box-shadow: 0 5px 15px rgba(0,0,0,0.05); animation: slideUp 1s ease-in-out; }
+    .about, .skills, .projects, .contact, .experience { background: #fff; border-radius: 10px; padding: 40px; margin: 20px auto; box-shadow: 0 5px 15px rgba(0,0,0,0.05); animation: slideUp 1s ease-in-out; }
     .about-container { display: flex; align-items: center; gap: 40px; }
     .about-image img { width: 200px; height: 200px; border-radius: 50%; object-fit: cover; }
     .about-text { flex: 1; }
@@ -109,13 +109,6 @@
     .project-tools { margin-bottom: 10px; }
     .tool-badge { display: inline-block; background: var(--clr-cold-accent); color: #fff; font-family: 'Oswald', sans-serif; font-size: 0.8rem; padding: 3px 8px; border-radius: 4px; margin-right: 5px; }
     .project-cta { font-size: 0.8rem; font-style: italic; color: var(--clr-cold-accent); margin-top: auto; padding-top: 10px; font-weight: 500; text-align: right; }
-    .testimonials-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
-    .testimonial-card { background: var(--clr-bg); padding: 20px; border-radius: 8px; box-shadow: 0 3px 10px rgba(0,0,0,0.1); }
-    .testimonial-card p { font-style: italic; margin-bottom: 15px; }
-    .testimonial-author-container { display: flex; flex-direction: column; align-items: flex-start; gap: 8px; }
-    .testimonial-card .author { font-family: 'Oswald', sans-serif; font-size: 1rem; color: var(--clr-cold-accent); }
-    .testimonial-card .platform-logo { width: 100px; height: 40px; object-fit: contain; }
-    .stars { color: var(--clr-gold); font-size: 1rem; }
     #toggle-experience-footer { display: flex; align-items: center; justify-content: center; gap: 8px; width: fit-content; margin: 40px auto 0 auto; padding: 8px 15px; border-radius: 5px; cursor: pointer; font-family: 'Poppins', sans-serif; font-size: 0.9rem; color: var(--clr-text); border: 1px solid var(--clr-text); transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease; }
     #toggle-experience-footer:hover { background-color: var(--clr-cold-accent); color: var(--clr-bg); border-color: var(--clr-cold-accent); }
     #toggle-experience-footer .arrow-icon { display: inline-block; transition: transform 0.3s ease; }
@@ -208,7 +201,6 @@
           <li><a href="#about" data-translate="nav.about"></a></li>
           <li><a href="#skills" data-translate="nav.skills"></a></li>
           <li><a href="#projects" data-translate="nav.projects"></a></li>
-          <li><a href="#testimonials" data-translate="nav.testimonials"></a></li>
           <li><a href="#experience" data-translate="nav.experience"></a></li>
           <li><a href="#contact" data-translate="nav.contact"></a></li>
         </ul>
@@ -231,7 +223,7 @@
         <h2 class="title" data-translate="hero.title"></h2>
         <p data-translate="hero.description"></p>
         <a href="#contact" class="btn" data-translate="hero.button"></a>
-        <a href="https://drive.google.com/file/d/1xQAGhgYT2bZGmmRbDakQ2Ve6Kup3PArI/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn-ghost">Bonus Track: ¿Y si rediseñamos la conversión a GNV en Bolivia? Explora la Propuesta</a>
+        <a href="https://drive.google.com/file/d/1xQAGhgYT2bZGmmRbDakQ2Ve6Kup3PArI/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn-ghost" data-translate="hero.bonus">Bonus Track: ¿Y si rediseñamos la conversión a GNV en Bolivia? Explora la Propuesta</a>
         </div>
     </section>
 
@@ -297,19 +289,6 @@
             <h3 data-translate="project.seattle.title"></h3>
             <p data-translate="project.seattle.description"></p>
             <p class="project-cta" data-translate="project.cta"></p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="testimonials" class="testimonials">
-      <h2 data-translate="section.testimonials"></h2>
-      <div class="testimonials-grid">
-        <div class="testimonial-card">
-          <p>“<span data-translate="testimonial.leonardo.text"></span>” <span class="stars">★★★★★</span></p>
-          <div class="testimonial-author-container">
-            <div class="author" data-translate="testimonial.leonardo.author"></div>
-            <img src="assets/images/workana.png" alt="Workana Logo" class="platform-logo" onerror="this.onerror=null;this.src='https://placehold.co/100x40/FFFFFF/000000?text=Workana';">
           </div>
         </div>
       </div>
@@ -491,16 +470,17 @@
 
       const translations = {
         en: {
-            'nav.home': 'Home', 'nav.about': 'About Me', 'nav.skills': 'Skills', 'nav.projects': 'Projects', 'nav.testimonials': 'Testimonials', 'nav.experience': 'Experience', 'nav.contact': 'Contact',
-            'hero.title': 'Data Analyst', 'hero.description': 'I transform data into strategic decisions with innovative solutions.', 'hero.button': 'Contact Me',
-            'section.about': 'About Me', 'about.text': 'I’m Weimar Miranda, an Industrial Engineer with a Master’s degree in Business Intelligence from the University of Barcelona. Over more than a decade of experience managing large-scale, high-impact investment programs, my career has evolved toward a specialization in Business Intelligence. For the last three years, I have implemented advanced solutions with Power BI that have resulted in a 20% improvement in operational efficiency. I leverage Python and MySQL to enrich data workflows and optimize reporting, complementing my core expertise in Business Intelligence. I have C1-level fluency in English (Kaplan, New York, 2024).',
+            'nav.home': 'Home', 'nav.about': 'About Me', 'nav.skills': 'Skills', 'nav.projects': 'Projects', 'nav.experience': 'Experience', 'nav.contact': 'Contact',
+            'hero.title': 'Specialist in Public Investment Programs &<br>Natural Gas for Vehicles (NGV)',
+            'hero.description': 'I transform data into strategic decisions with innovative solutions.', 'hero.button': 'Contact Me',
+            'hero.bonus': 'Bonus Track: What if we redesigned CNG conversion in Bolivia? Explore the Proposal',
+            'section.about': 'About Me', 'about.text': 'Industrial Engineer with over 9 years of experience in strategic leadership and transformation management in the Bolivian public sector. My career has focused on directing and optimizing national investment programs in the energy sector, achieving measurable improvements in efficiency, transparency, and sustainability. I have led the modernization of key entities, such as the NGV Conversion Executing Entity, overseeing the implementation of technological and analytical systems (supported by my Master\'s in Business Intelligence) that revolutionized decision-making and accountability. My goal is to lead high-performance teams in creating and implementing evidence-based public policies, driving economic development and the modernization of the State.',
             'section.skills': 'Skills',
             'section.projects': 'Projects',
             'section.projects.note': 'For the best experience, it is recommended to view the dashboards on a computer or on a mobile device in landscape orientation.',
             'project.inversion.title': 'GNV Programs Analysis in Bolivia', 'project.inversion.description': 'Comprehensive dashboard developed in Power BI for monitoring and controlling the three Natural Gas Vehicle investment programs in Bolivia: Conversion, Maintenance, and Requalification. The tool centralizes and visualizes key KPIs such as goal progress vs. execution and performance by sector. It allows for detailed geographical analysis by department and workshop, facilitating trend identification and optimizing resource allocation nationwide.',
             'project.seattle.title': 'Seattle 911 Fire Department Incident Report', 'project.seattle.description': 'This Power BI dashboard analyzes over 2 million Seattle 911 fire emergency calls, uncovering trends in frequency, timing, and geographic distribution. Featuring performance comparisons, Azure Maps for district-level insights, and a Python-integrated SARIMA model for forecasting, it empowers data-driven operational and strategic planning.',
             'project.cta': 'Click on the image to view the interactive dashboard.',
-            'section.testimonials': 'Testimonials', 'testimonial.leonardo.text': 'Excellent service and flexible to make the necessary adjustments. Recommended.', 'testimonial.leonardo.author': 'Leonardo',
             'section.experience': 'My Professional Journey',
             'experience.company': 'Executive Entity for Natural Gas Vehicle Conversion',
             'experience.role1.title': 'Data Analyst Consultant / Freelance', 'experience.role1.company': 'Self-Employed', 'experience.role1.date': 'Feb 2025 - Present', 'experience.role1.resp1': 'Providing data analysis and BI consulting services to various clients, developing custom dashboards and optimizing data workflows.',
@@ -519,16 +499,17 @@
             'footer.text': '© 2025 - BI Portfolio. All rights reserved.',
         },
         es: {
-            'nav.home': 'Inicio', 'nav.about': 'Sobre Mí', 'nav.skills': 'Habilidades', 'nav.projects': 'Proyectos', 'nav.testimonials': 'Testimonios', 'nav.experience': 'Experiencia', 'nav.contact': 'Contacto',
-            'hero.title': 'Analista de Datos', 'hero.description': 'Transformo datos en decisiones estratégicas con soluciones innovadoras.', 'hero.button': 'Contáctame',
-            'section.about': 'Sobre Mí', 'about.text': 'Soy Weimar Miranda, Ingeniero Industrial con un Máster en Inteligencia de Negocios de la Universidad de Barcelona. A lo largo de más de una década de experiencia gestionando programas de inversión a gran escala y de alto impacto, mi carrera ha evolucionado hacia la especialización en Business Intelligence. Durante los últimos tres años, he implementado soluciones avanzadas con Power BI que han resultado en una mejora del 20% en la eficiencia operativa. Utilizo Python y MySQL para enriquecer flujos de datos y optimizar informes, complementando mi experiencia principal en Inteligencia de Negocios. Poseo una fluidez en idioma inglés a nivel C1 (Kaplan, Nueva York, 2024).',
+            'nav.home': 'Inicio', 'nav.about': 'Sobre Mí', 'nav.skills': 'Habilidades', 'nav.projects': 'Proyectos', 'nav.experience': 'Experiencia', 'nav.contact': 'Contacto',
+            'hero.title': 'Especialista en Programas de Inversion Pública y<br>Gas Natural Vehicular GNV',
+            'hero.description': 'Transformo datos en decisiones estratégicas con soluciones innovadoras.', 'hero.button': 'Contáctame',
+            'hero.bonus': 'Bonus Track: ¿Y si rediseñamos la conversión a GNV en Bolivia? Explora la Propuesta',
+            'section.about': 'Sobre Mí', 'about.text': 'Ingeniero Industrial con más de 9 años de experiencia en liderazgo estratégico y gestión de la transformación en el sector público boliviano. Mi carrera se ha centrado en la dirección y optimización de programas de inversión nacional en el sector energético, logrando mejoras medibles en eficiencia, transparencia y sostenibilidad. He liderado la modernización de entidades clave, como la Entidad Ejecutora de Conversión a GNV, supervisando la implementación de sistemas tecnológicos y de análisis (apoyado en mi Máster en Business Intelligence) que revolucionaron la toma de decisiones y la rendición de cuentas. Mi objetivo es liderar equipos de alto rendimiento en la creación e implementación de políticas públicas basadas en evidencia, impulsando el desarrollo económico y la modernización del Estado.',
             'section.skills': 'Habilidades',
             'section.projects': 'Proyectos',
             'section.projects.note': 'Para una mejor experiencia, se recomienda visualizar los dashboards en una computadora o en un dispositivo móvil en orientación horizontal.',
             'project.inversion.title': 'Análisis de Programas de GNV en Bolivia', 'project.inversion.description': 'Dashboard integral desarrollado en Power BI para el seguimiento y control de los tres programas de inversión de Gas Natural Vehicular en Bolivia: Conversión, Mantenimiento y Recalificación. La herramienta centraliza y visualiza KPIs clave como el avance de metas vs. ejecución y rendimiento por sector. Permite un análisis geográfico detallado por departamento y taller, facilitando la identificación de tendencias y optimizando la asignación de recursos a nivel nacional.',
             'project.seattle.title': 'Informe de Incidentes del Departamento de Bomberos 911 de Seattle', 'project.seattle.description': 'Este panel de Power BI analiza más de 2 millones de llamadas de emergencia 911 de bomberos en Seattle, identificando tendencias en frecuencia, horarios y distribución geográfica. Incluye comparaciones de rendimiento, Azure Maps para información a nivel de distrito y un modelo SARIMA integrado en Python para pronósticos, lo que permite una planificación operativa y estratégica basada en datos.',
             'project.cta': 'Haz clic en la imagen para ver el dashboard interactivo.',
-            'section.testimonials': 'Testimonios', 'testimonial.leonardo.text': 'Excelente servicio y flexible a hacer los ajustes que sean necesarios. Recomendado.', 'testimonial.leonardo.author': 'Leonardo',
             'section.experience': 'Mi Trayectoria Profesional',
             'experience.company': 'Entidad Ejecutora de Conversión a Gas Natural Vehicular',
             'experience.role1.title': 'Consultor / Freelance de Análisis de Datos', 'experience.role1.company': 'Independiente', 'experience.role1.date': 'Feb 2025 - Actualidad', 'experience.role1.resp1': 'Proporcionando servicios de consultoría de análisis de datos e inteligencia de negocios a diversos clientes, desarrollando paneles personalizados y optimizando flujos de trabajo.',
@@ -557,7 +538,7 @@
             const key = el.getAttribute('data-translate');
             const translation = translations[currentLang]?.[key];
             if (translation !== undefined) {
-                if (key === 'privacy.text') {
+                if (key === 'privacy.text' || key === 'hero.title') {
                     el.innerHTML = translation;
                 } else {
                     el.textContent = translation;
@@ -645,8 +626,6 @@
   </script>
 </body>
 </html>
-
-
 
 
 
