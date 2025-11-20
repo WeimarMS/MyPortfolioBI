@@ -64,7 +64,6 @@
     .btn { display: inline-block; padding: 10px 20px; background: var(--clr-highlight); color: var(--clr-bg); text-decoration: none; border-radius: 5px; font-weight: 500; transition: transform 0.3s ease, box-shadow 0.3s ease; }
     .btn:hover { transform: translateY(-3px); box-shadow: 0 5px 15px rgba(0,0,0,0.2); background: var(--clr-warm-accent); }
 
-    /* --- INICIO CÓDIGO MODIFICADO --- */
     .btn-ghost {
       display: block;
       width: fit-content;
@@ -85,10 +84,22 @@
       background: var(--clr-bg);
       color: var(--clr-text);
     }
-    /* --- FIN CÓDIGO MODIFICADO --- */
 
     section { padding: 80px 20px; max-width: 1200px; margin: 0 auto; }
     h2 { font-family: 'Oswald', sans-serif; font-size: 2.5rem; text-align: center; margin-bottom: 40px; color: var(--clr-text); line-height: 1.2; }
+    
+    /* --- INICIO ESTILOS NUEVOS PARA CATEGORÍAS --- */
+    .category-title {
+      font-family: 'Oswald', sans-serif;
+      font-size: 1.8rem;
+      color: var(--clr-cold-accent);
+      margin: 40px 0 20px;
+      padding-left: 15px;
+      border-left: 5px solid var(--clr-warm-accent);
+      text-align: left;
+    }
+    /* --- FIN ESTILOS NUEVOS --- */
+
     .about, .skills, .projects, .contact, .experience { background: #fff; border-radius: 10px; padding: 40px; margin: 20px auto; box-shadow: 0 5px 15px rgba(0,0,0,0.05); animation: slideUp 1s ease-in-out; }
     .about-container { display: flex; align-items: center; gap: 40px; }
     .about-image img { width: 200px; height: 200px; border-radius: 50%; object-fit: cover; }
@@ -98,7 +109,7 @@
     .skill-item { display: flex; flex-direction: column; align-items: center; min-width: 150px; }
     .skill-item img { max-height: 90px; width: auto; object-fit: contain; margin-bottom: 10px; }
     .skill-item span { font-family: 'Oswald', sans-serif; font-size: 1rem; line-height: 1.2; color: var(--clr-text); }
-    .projects-grid { display: grid; grid-template-columns: 1fr; gap: 40px; }
+    .projects-grid { display: grid; grid-template-columns: 1fr; gap: 40px; margin-bottom: 40px; }
     .project-view-note { text-align: center; margin-top: -20px; margin-bottom: 40px; font-size: 0.9rem; font-style: italic; color: var(--clr-text); }
     .project-card { display: flex; align-items: stretch; gap: 20px; background: var(--clr-bg); padding: 20px; border-radius: 8px; box-shadow: 0 3px 10px rgba(0,0,0,0.1); transition: transform 0.3s ease, box-shadow 0.3s ease; }
     .project-card:hover { transform: translateY(-5px); box-shadow: 0 5px 15px rgba(0,0,0,0.2); }
@@ -107,7 +118,7 @@
     .project-gif { width: 100%; height: 100%; object-fit: cover; border-radius: 8px; display: block; transition: transform 0.3s ease; }
     .project-content { flex: 1; display: flex; flex-direction: column; }
     .project-tools { margin-bottom: 10px; }
-    .tool-badge { display: inline-block; background: var(--clr-cold-accent); color: #fff; font-family: 'Oswald', sans-serif; font-size: 0.8rem; padding: 3px 8px; border-radius: 4px; margin-right: 5px; }
+    .tool-badge { display: inline-block; background: var(--clr-cold-accent); color: #fff; font-family: 'Oswald', sans-serif; font-size: 0.8rem; padding: 3px 8px; border-radius: 4px; margin-right: 5px; margin-bottom: 5px; }
     .project-cta { font-size: 0.8rem; font-style: italic; color: var(--clr-cold-accent); margin-top: auto; padding-top: 10px; font-weight: 500; text-align: right; }
     #toggle-experience-footer { display: flex; align-items: center; justify-content: center; gap: 8px; width: fit-content; margin: 40px auto 0 auto; padding: 8px 15px; border-radius: 5px; cursor: pointer; font-family: 'Poppins', sans-serif; font-size: 0.9rem; color: var(--clr-text); border: 1px solid var(--clr-text); transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease; }
     #toggle-experience-footer:hover { background-color: var(--clr-cold-accent); color: var(--clr-bg); border-color: var(--clr-cold-accent); }
@@ -268,7 +279,28 @@
     <section id="projects" class="projects">
       <h2 data-translate="section.projects"></h2>
       <p class="project-view-note" data-translate="section.projects.note"></p>
+      
+      <!-- Categoría 1: Gestión Pública y GNV -->
+      <h3 class="category-title" data-translate="projects.cat1"></h3>
       <div class="projects-grid">
+        <!-- Tarjeta 1: Simulador (NUEVA) -->
+        <div class="project-card">
+          <a href="https://weimarms.github.io/simulador-precio-gnv-bolivia/" target="_blank" rel="noopener noreferrer" class="project-link">
+            <img src="assets/images/SimuladorGNV.png" alt="Simulador GNV" class="project-gif">
+          </a>
+          <div class="project-content">
+            <div class="project-tools">
+              <span class="tool-badge">JavaScript</span>
+              <span class="tool-badge">Tailwind CSS</span>
+              <span class="tool-badge">Regulatory Analysis</span>
+            </div>
+            <h3 data-translate="project.simulador.title"></h3>
+            <p data-translate="project.simulador.description"></p>
+            <p class="project-cta" data-translate="project.cta"></p>
+          </div>
+        </div>
+
+        <!-- Tarjeta 2: Análisis GNV (EXISTENTE) -->
         <div class="project-card">
           <a href="https://app.powerbi.com/view?r=eyJrIjoiZDk4NmM2M2YtNzYyNi00YTgxLWI1ZmMtMzhkNDQxZjZjNWI5IiwidCI6ImJhODQzY2Q3LWNiN2MtNGJiMS1hZWE3LTEzY2NhOGZlYzRjOSIsImMiOjR9" target="_blank" rel="noopener noreferrer" class="project-link">
             <img src="assets/images/INV.gif" alt="Investment Programs Analysis Demo" class="project-gif">
@@ -280,6 +312,12 @@
             <p class="project-cta" data-translate="project.cta"></p>
           </div>
         </div>
+      </div>
+
+      <!-- Categoría 2: Análisis de Datos y BI -->
+      <h3 class="category-title" data-translate="projects.cat2"></h3>
+      <div class="projects-grid">
+        <!-- Tarjeta 3: Seattle 911 (EXISTENTE) -->
         <div class="project-card">
           <a href="https://app.powerbi.com/view?r=eyJrIjoiNWY5OGVlMzAtY2ZlOS00M2FhLWIwODUtMGZmN2ViMDBkYTY1IiwidCI6ImJhODQzY2Q3LWNiN2MtNGJiMS1hZWE3LTEzY2NhOGZlYzRjOSIsImY4IjR9" target="_blank" rel="noopener noreferrer" class="project-link">
             <img src="assets/images/ComprimidoGEo.gif" alt="Seattle Forecast demo" class="project-gif">
@@ -477,7 +515,10 @@
             'section.about': 'About Me', 'about.text': 'Industrial Engineer with over 9 years of experience in strategic leadership and transformation management in the Bolivian public sector. My career has focused on directing and optimizing national investment programs in the energy sector, achieving measurable improvements in efficiency, transparency, and sustainability. I have led the modernization of key entities, such as the NGV Conversion Executing Entity, overseeing the implementation of technological and analytical systems (supported by my Master\'s in Business Intelligence) that revolutionized decision-making and accountability. My goal is to lead high-performance teams in creating and implementing evidence-based public policies, driving economic development and the modernization of the State.',
             'section.skills': 'Skills',
             'section.projects': 'Projects',
+            'projects.cat1': 'Public Management & NGV Projects',
+            'projects.cat2': 'Data Analytics & BI Projects',
             'section.projects.note': 'For the best experience, it is recommended to view the dashboards on a computer or on a mobile device in landscape orientation.',
+            'project.simulador.title': 'GNV Price Sensitivity Simulator', 'project.simulador.description': 'Web application performing sensitivity analysis on critical variables affecting the subsidized NGV price in Bolivia. This tool provides regulatory scenario simulation, fiscal deficit calculation, and automated generation of technical PDF reports.',
             'project.inversion.title': 'GNV Programs Analysis in Bolivia', 'project.inversion.description': 'Comprehensive dashboard developed in Power BI for monitoring and controlling the three Natural Gas Vehicle investment programs in Bolivia: Conversion, Maintenance, and Requalification. The tool centralizes and visualizes key KPIs such as goal progress vs. execution and performance by sector. It allows for detailed geographical analysis by department and workshop, facilitating trend identification and optimizing resource allocation nationwide.',
             'project.seattle.title': 'Seattle 911 Fire Department Incident Report', 'project.seattle.description': 'This Power BI dashboard analyzes over 2 million Seattle 911 fire emergency calls, uncovering trends in frequency, timing, and geographic distribution. Featuring performance comparisons, Azure Maps for district-level insights, and a Python-integrated SARIMA model for forecasting, it empowers data-driven operational and strategic planning.',
             'project.cta': 'Click on the image to view the interactive dashboard.',
@@ -489,11 +530,11 @@
             'experience.role4.title': 'Technical Inspection and Monitoring Professional', 'experience.role4.date': 'Aug 2021 - Dec 2021', 'experience.role4.resp1': 'Drafted and substantiated the technical procedure for determining NGV conversion costs, achieving its approval via Ministerial Resolution. This regulation replaced the previous framework, adapting it to new technologies and cost structures.',
             'experience.role5.title': 'Technical Standardization Professional', 'experience.role5.date': 'Mar 2021 - Jul 2021', 'experience.role5.resp1': 'Developed the methodology and technical justification to update the fixed-cost regulations, demonstrating the need for a new regulatory framework to ensure the conversion program\'s sustainability.',
             'experience.role6.title': 'Program Management Control and Monitoring Professional', 'experience.role6.date': 'Jan 2018 - Sep 2019', 'experience.role6.resp1': 'Oversaw the physical and financial execution of investment programs. I automated budget tracking and report generation using Excel and VBA macros, improving efficiency and traceability.',
-            'experience.role7.title': 'National Manager of Warehouses and Operational Management', 'experience.role7.date': 'Jan 2017 - Dec 2017', 'experience.role7.resp1': 'Co-designed and implemented the first national SQL-based inventory management system. Additionally, I contributed to drafting the Supreme Decree No. 3389 proposal, which authorized an increase in the budget for consultants and established verification mechanisms for the use of NGV conversion equipment.',
+            'experience.role7.title': 'National Manager of Warehouses and Operational Management', 'experience.role7.date': 'Jan 2017 - Dec 2017', 'experience.role7.resp1': 'Co-designed and implemented the first national SQL-based inventory management system. Additionally, I contributed to drafting the Supreme Decree No. 3389, que autorizó el incremento de la partida para consultores y estableció mecanismos de verificación para el uso de equipos de conversión a GNV.',
             'experience.role8.title': 'National Manager of NGV Conversion Equipment Warehouses', 'experience.role8.date': 'Jan 2016 - Dec 2016', 'experience.role8.resp1': 'Managed national logistics and supervised inventory, using advanced Excel to ensure stock traceability across more than 7 regional offices.',
             'experience.role9.title': 'Planning Professional', 'experience.role9.date': 'Dec 2015', 'experience.role9.resp1': 'Automated the generation of budget certifications using VBA macros, reducing errors and improving response times.',
             'experience.role10.title': 'Consultant - Operational Unit', 'experience.role10.date': 'Sep 2015 - Nov 2015', 'experience.role10.resp1': 'Analyzed operational data with Excel and VBA to identify bottlenecks and propose improvements in conversion processes.',
-            'experience.role11.title': 'Regional Coordinator in Tarija', 'experience.role11.date': 'May 2014 - Jun 2015', 'experience.role11.resp1': 'Coordinated regional maintenance and requalification programs, using Excel and VBA to systematize operational control and report to national headquarters.',
+            'experience.role11.title': 'Coordinador Regional en Tarija', 'experience.role11.date': 'May 2014 - Jun 2015', 'experience.role11.resp1': 'Coordinated regional maintenance and requalification programs, using Excel and VBA to systematize operational control and report to national headquarters.',
             'experience.toggle': 'Show Details', 'experience.toggle.hide': 'Hide Details', 'experience.toggleAll': 'Collapse All', 'experience.toggleAll.expand': 'Expand All',
             'section.contact': 'Contact', 'contact.button': 'Send',
             'footer.text': '© 2025 - BI Portfolio. All rights reserved.',
@@ -506,7 +547,10 @@
             'section.about': 'Sobre Mí', 'about.text': 'Ingeniero Industrial con más de 9 años de experiencia en liderazgo estratégico y gestión de la transformación en el sector público boliviano. Mi carrera se ha centrado en la dirección y optimización de programas de inversión nacional en el sector energético, logrando mejoras medibles en eficiencia, transparencia y sostenibilidad. He liderado la modernización de entidades clave, como la Entidad Ejecutora de Conversión a GNV, supervisando la implementación de sistemas tecnológicos y de análisis (apoyado en mi Máster en Business Intelligence) que revolucionaron la toma de decisiones y la rendición de cuentas. Mi objetivo es liderar equipos de alto rendimiento en la creación e implementación de políticas públicas basadas en evidencia, impulsando el desarrollo económico y la modernización del Estado.',
             'section.skills': 'Habilidades',
             'section.projects': 'Proyectos',
+            'projects.cat1': 'Proyectos de Gestión Pública y GNV',
+            'projects.cat2': 'Proyectos de Análisis de Datos y BI',
             'section.projects.note': 'Para una mejor experiencia, se recomienda visualizar los dashboards en una computadora o en un dispositivo móvil en orientación horizontal.',
+            'project.simulador.title': 'Simulador de Sensibilidad de Precios GNV', 'project.simulador.description': 'Aplicación que realiza un análisis de sensibilidad de las variables críticas que intervienen en el cálculo del precio del GNV subsidiado en Bolivia. Esta herramienta proporciona simulación de escenarios regulatorios, cálculo del déficit fiscal y generación automática de informes técnicos en PDF.',
             'project.inversion.title': 'Análisis de Programas de GNV en Bolivia', 'project.inversion.description': 'Dashboard integral desarrollado en Power BI para el seguimiento y control de los tres programas de inversión de Gas Natural Vehicular en Bolivia: Conversión, Mantenimiento y Recalificación. La herramienta centraliza y visualiza KPIs clave como el avance de metas vs. ejecución y rendimiento por sector. Permite un análisis geográfico detallado por departamento y taller, facilitando la identificación de tendencias y optimizando la asignación de recursos a nivel nacional.',
             'project.seattle.title': 'Informe de Incidentes del Departamento de Bomberos 911 de Seattle', 'project.seattle.description': 'Este panel de Power BI analiza más de 2 millones de llamadas de emergencia 911 de bomberos en Seattle, identificando tendencias en frecuencia, horarios y distribución geográfica. Incluye comparaciones de rendimiento, Azure Maps para información a nivel de distrito y un modelo SARIMA integrado en Python para pronósticos, lo que permite una planificación operativa y estratégica basada en datos.',
             'project.cta': 'Haz clic en la imagen para ver el dashboard interactivo.',
