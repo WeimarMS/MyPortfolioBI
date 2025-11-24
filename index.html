@@ -1,831 +1,939 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-2HTD21VTL3"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <!-- Sección: Configuración de Meta Tags y Scripts Iniciales -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2HTD21VTL3"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
-  gtag('config', 'G-2HTD21VTL3');
-</script>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Portafolio de Business Intelligence de Weimar Miranda, mostrando proyectos en Power BI, Looker Studio, Python y SQL.">
-  <meta name="keywords" content="Business Intelligence, Data Analyst, Power BI, Looker Studio, Python, SQL, Weimar Miranda">
-  <meta name="author" content="Weimar Miranda">
-  <title>Portafolio - Business Intelligence</title>
+      gtag('config', 'G-2HTD21VTL3');
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content="Portafolio de Business Intelligence de Weimar Miranda, mostrando proyectos en Power BI, Looker Studio, Python y SQL.">
+    <meta name="keywords" content="Business Intelligence, Data Analyst, Power BI, Looker Studio, Python, SQL, Weimar Miranda">
+    <meta name="author" content="Weimar Miranda">
+    <title>Portafolio - Business Intelligence</title>
 
-  <meta property="og:title" content="Portafolio de Weimar Miranda - Analista de Datos" />
-  <meta property="og:description" content="Transformo datos en decisiones estratégicas con soluciones innovadoras. Experto en Power BI, Looker Studio, Python y SQL." />
-  <meta property="og:image" content="https://placehold.co/1200x630/2A9D8F/FFFFFF?text=Weimar+Miranda+BI+Portfolio" />
-  <meta property="og:url" content="https://weirrams.github.io/MyPortfolioB/" />
-  <meta property="og:type" content="website" />
+    <meta property="og:title" content="Portafolio de Weimar Miranda - Analista de Datos" />
+    <meta property="og:description" content="Transformo datos en decisiones estratégicas con soluciones innovadoras. Experto en Power BI, Looker Studio, Python y SQL." />
+    <meta property="og:image" content="https://placehold.co/1200x630/2A9D8F/FFFFFF?text=Weimar+Miranda+BI+Portfolio" />
+    <meta property="og:url" content="https://weirrams.github.io/MyPortfolioB/" />
+    <meta property="og:type" content="website" />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
 
-  <style>
-    :root {
-      --clr-bg: #F2F5F7;
-      --clr-text: #264653;
-      --clr-cold-accent: #2A9D8F;
-      --clr-warm-accent: #E9C46A;
-      --clr-highlight: #F4A261;
-      --clr-gold: #FFD700;
-    }
-    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    body { font-family: 'Poppins', sans-serif; background: var(--clr-bg); color: var(--clr-text); line-height: 1.6; overflow-x: hidden; }
-    nav { position: fixed; top: 0; width: 100%; background: var(--clr-cold-accent); box-shadow: 0 2px 5px rgba(0,0,0,0.1); z-index: 1000; }
-    .nav-container { display: flex; align-items: center; justify-content: space-between; max-width: 1200px; margin: 0 auto; padding: 10px 20px; }
-    #nav-menu { display: flex; align-items: center; gap: 20px; }
-    .nav-left, .nav-right { display: flex; list-style: none; gap: 20px; }
-    nav ul li a { color: var(--clr-bg); font-weight: 500; text-decoration: none; transition: color 0.3s ease; padding: 5px; }
-    nav ul li a:hover { color: var(--clr-highlight); }
-    .lang-btn { background: transparent; border: 1px solid var(--clr-bg); color: var(--clr-bg); padding: 5px 10px; border-radius: 5px; font-family: 'Oswald', sans-serif; font-size: 1rem; cursor: pointer; transition: background 0.3s ease, color 0.3s ease; display: flex; align-items: center; gap: 8px; }
-    .lang-btn img { width: 24px; height: 24px; object-fit: contain; }
-    .lang-btn:hover { background: var(--clr-highlight); color: var(--clr-bg); }
-    .hamburger { display: none; flex-direction: column; justify-content: space-between; width: 30px; height: 21px; cursor: pointer; background: none; border: none; padding: 0; }
-    .hamburger span { background: var(--clr-bg); height: 3px; width: 100%; transition: all 0.3s ease; border-radius: 2px; }
-    .hamburger.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
-    .hamburger.active span:nth-child(2) { opacity: 0; }
-    .hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(7px, -7px); }
-    .social-icon { display: inline-flex; align-items: center; gap: 8px; text-decoration: none; color: var(--clr-bg); margin-bottom: 10px; transition: transform 0.3s ease, opacity 0.3s ease; }
-    .social-icon span { font-size: 1rem; font-weight: 500;}
-    .social-icon img { width: 40px; height: 40px; object-fit: contain; }
-    .social-icon:hover { transform: scale(1.1); opacity: 0.9; }
-    .hero { min-height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center; background: linear-gradient(135deg, var(--clr-cold-accent), var(--clr-warm-accent)); color: var(--clr-bg); clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%); padding: 60px 20px 0; }
-    .hero-content .name { font-family: 'Oswald', sans-serif; font-size: 4rem; margin-bottom: 5px; line-height: 1.1; animation: fadeIn 1s ease-in; display: flex; align-items: center; justify-content: center; gap: 10px; }
-    .hero-content .name img { height: 70px; width: auto; }
-    .hero-content .title { font-family: 'Oswald', sans-serif; font-size: 2.2rem; margin-bottom: 15px; line-height: 1.2; color: #fff; animation: fadeIn 1.5s ease-in; }
-    .hero-content p { font-size: 1.2rem; margin-bottom: 30px; animation: fadeIn 2s ease-in; }
-    .btn { display: inline-block; padding: 10px 20px; background: var(--clr-highlight); color: var(--clr-bg); text-decoration: none; border-radius: 5px; font-weight: 500; transition: transform 0.3s ease, box-shadow 0.3s ease; }
-    .btn:hover { transform: translateY(-3px); box-shadow: 0 5px 15px rgba(0,0,0,0.2); background: var(--clr-warm-accent); }
-
-    .btn-ghost {
-      display: block;
-      width: fit-content;
-      margin: 15px auto 0 auto;
-      padding: 10px 20px;
-      background: transparent;
-      color: var(--clr-bg);
-      text-decoration: none;
-      border-radius: 5px;
-      font-weight: 500;
-      transition: all 0.3s ease;
-      font-size: 0.9rem;
-      border: 2px solid var(--clr-bg);
-    }
-    .btn-ghost:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 5px 15px rgba(0,0,0,0.25);
-      background: var(--clr-bg);
-      color: var(--clr-text);
-    }
-
-    section { padding: 80px 20px; max-width: 1200px; margin: 0 auto; }
-    h2 { font-family: 'Oswald', sans-serif; font-size: 2.5rem; text-align: center; margin-bottom: 40px; color: var(--clr-text); line-height: 1.2; }
-    
-    .category-title {
-      font-family: 'Oswald', sans-serif;
-      font-size: 1.8rem;
-      color: var(--clr-cold-accent);
-      margin: 30px 0 20px; /* Ajustado para compacidad */
-      padding: 15px 20px;
-      background: var(--clr-bg);
-      border-left: 6px solid var(--clr-warm-accent);
-      border-radius: 8px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-      text-align: left;
-    }
-
-    .about, .skills, .projects, .contact, .experience, .education { background: #fff; border-radius: 10px; padding: 40px; margin: 20px auto; box-shadow: 0 5px 15px rgba(0,0,0,0.05); animation: slideUp 1s ease-in-out; }
-    .about-container { display: flex; align-items: center; gap: 40px; }
-    .about-image img { width: 200px; height: 200px; border-radius: 50%; object-fit: cover; }
-    .about-text { flex: 1; }
-    .about-text p { text-align: justify; }
-    
-    /* --- ESTILOS EDUCACIÓN (ACTUALIZADO) --- */
-    .education-grid { display: flex; flex-direction: column; gap: 15px; } /* Gap reducido */
-    .education-card { 
-      display: flex; 
-      align-items: center; 
-      gap: 20px; 
-      padding: 15px; /* Padding reducido para compacidad */
-      border-radius: 10px; 
-      background: var(--clr-bg); 
-      box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-      border-left: 5px solid var(--clr-cold-accent);
-      transition: transform 0.3s ease;
-    }
-    .education-card:hover { transform: translateX(5px); }
-    
-    /* Estilo para logos individuales y dentro del wrapper */
-    .education-logo { width: 50px; height: 50px; object-fit: contain; flex-shrink: 0; } /* Tamaño reducido */
-    
-    /* Nuevo contenedor para doble logo */
-    .logo-wrapper { display: flex; gap: 10px; align-items: center; flex-shrink: 0; }
-
-    .education-info h3 { font-family: 'Oswald', sans-serif; font-size: 1.1rem; color: var(--clr-text); margin-bottom: 3px; line-height: 1.2; }
-    .education-info .institution { font-weight: 500; color: var(--clr-cold-accent); margin-bottom: 3px; font-size: 0.9rem; }
-    .edu-details { list-style: none; padding-left: 0; margin-top: 5px; }
-    .edu-details li { font-size: 0.85rem; position: relative; padding-left: 15px; margin-bottom: 2px; color: #555; }
-    .edu-details li::before { content: '•'; color: var(--clr-warm-accent); position: absolute; left: 0; top: 0; }
-    /* --- FIN ESTILOS EDUCACIÓN --- */
-
-    .skills-grid { display: flex; justify-content: center; align-items: center; gap: 20px; flex-wrap: wrap; }
-    .skill-item { display: flex; flex-direction: column; align-items: center; min-width: 150px; }
-    .skill-item img { max-height: 90px; width: auto; object-fit: contain; margin-bottom: 10px; }
-    .skill-item span { font-family: 'Oswald', sans-serif; font-size: 1rem; line-height: 1.2; color: var(--clr-text); }
-    .projects-grid { display: grid; grid-template-columns: 1fr; gap: 40px; margin-bottom: 40px; }
-    .project-view-note { text-align: center; margin-top: -20px; margin-bottom: 40px; font-size: 0.9rem; font-style: italic; color: var(--clr-text); }
-    .project-card { display: flex; align-items: stretch; gap: 20px; background: var(--clr-bg); padding: 20px; border-radius: 8px; box-shadow: 0 3px 10px rgba(0,0,0,0.1); transition: transform 0.3s ease, box-shadow 0.3s ease; }
-    .project-card:hover { transform: translateY(-5px); box-shadow: 0 5px 15px rgba(0,0,0,0.2); }
-    .project-link { flex: 0 0 50%; display: block; overflow: hidden; border-radius: 8px;}
-    .project-link:hover .project-gif { transform: scale(1.05); }
-    .project-gif { width: 100%; height: 100%; object-fit: cover; border-radius: 8px; display: block; transition: transform 0.3s ease; }
-    .project-content { flex: 1; display: flex; flex-direction: column; }
-    .project-tools { margin-bottom: 10px; }
-    .tool-badge { display: inline-block; background: var(--clr-cold-accent); color: #fff; font-family: 'Oswald', sans-serif; font-size: 0.8rem; padding: 3px 8px; border-radius: 4px; margin-right: 5px; margin-bottom: 5px; }
-    .project-cta { font-size: 0.8rem; font-style: italic; color: var(--clr-cold-accent); margin-top: auto; padding-top: 10px; font-weight: 500; text-align: right; }
-    #toggle-experience-footer { display: flex; align-items: center; justify-content: center; gap: 8px; width: fit-content; margin: 40px auto 0 auto; padding: 8px 15px; border-radius: 5px; cursor: pointer; font-family: 'Poppins', sans-serif; font-size: 0.9rem; color: var(--clr-text); border: 1px solid var(--clr-text); transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease; }
-    #toggle-experience-footer:hover { background-color: var(--clr-cold-accent); color: var(--clr-bg); border-color: var(--clr-cold-accent); }
-    #toggle-experience-footer .arrow-icon { display: inline-block; transition: transform 0.3s ease; }
-    #toggle-experience-footer.expanded .arrow-icon { transform: rotate(180deg); }
-    
-    .timeline-container { position: relative; max-width: 800px; margin: 0 auto; padding: 0; max-height: 0; overflow: hidden; opacity: 0; transition: max-height 0.8s ease-in-out, opacity 0.8s ease-in-out; }
-    .timeline-container.expanded { max-height: 10000px; opacity: 1; padding: 20px 0; }
-    
-    .timeline-container::after { content: ''; position: absolute; width: 4px; background: var(--clr-cold-accent); top: 0; bottom: 0; left: 50%; margin-left: -2px; border-radius: 2px; }
-    .timeline-item { padding: 10px 40px; position: relative; background-color: inherit; width: 50%; margin-bottom: 30px; }
-    .timeline-item::after { content: ''; position: absolute; width: 20px; height: 20px; right: -10px; background-color: var(--clr-highlight); border: 3px solid #fff; top: 15px; border-radius: 50%; z-index: 1; }
-    .timeline-item.left { left: 0; }
-    .timeline-item.right { left: 50%; }
-    .timeline-item.right::after { left: -10px; }
-    .timeline-content { padding: 20px 30px; background-color: var(--clr-bg); position: relative; border-radius: 8px; box-shadow: 0 3px 10px rgba(0,0,0,0.1); }
-    .timeline-content h3 { font-family: 'Oswald', sans-serif; font-size: 1.5rem; color: var(--clr-cold-accent); margin-bottom: 5px; }
-    .timeline-content .company { font-size: 1rem; color: var(--clr-text); margin-bottom: 5px; font-weight: 500;}
-    .timeline-date { font-size: 0.85rem; color: #777; display: block; margin-bottom: 10px; }
-    .responsibilities-list { list-style: none; padding-left: 0; margin-top: 10px; max-height: 0; overflow: hidden; transition: max-height 0.5s ease-out, opacity 0.5s ease-out; opacity: 0; }
-    .responsibilities-list.expanded { max-height: 500px; opacity: 1; }
-    .responsibilities-list li { margin-bottom: 5px; padding-left: 15px; position: relative; font-size: 0.9rem; }
-    .responsibilities-list li::before { content: '•'; color: var(--clr-warm-accent); position: absolute; left: 0; top: 0; }
-    .toggle-details-btn { background: var(--clr-warm-accent); color: var(--clr-text); border: none; padding: 5px 10px; border-radius: 5px; cursor: pointer; font-size: 0.85rem; margin-top: 10px; transition: background 0.3s ease; display: inline-block; font-weight: 500; }
-    .toggle-details-btn:hover { background: var(--clr-highlight); }
-    .contact form { display: flex; flex-direction: column; gap: 15px; max-width: 500px; margin: 0 auto; }
-    .contact input, .contact textarea { padding: 10px; border: 1px solid #ddd; border-radius: 5px; font-size: 1rem; font-family: 'Poppins', sans-serif; }
-    .contact button { padding: 10px; background: var(--clr-cold-accent); color: var(--clr-bg); border: none; border-radius: 5px; cursor: pointer; transition: background 0.3s ease; font-family: 'Oswald', sans-serif; }
-    .contact button:hover { background: var(--clr-highlight); }
-    footer { text-align: center; padding: 20px; background: var(--clr-text); color: var(--clr-bg); }
-    .footer-social-container { display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 20px; margin-bottom: 10px; }
-    footer p { margin-top: 10px; }
-    
-    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
-    @keyframes slideUp { from { transform: translateY(50px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
-    
-    @media (max-width: 768px) {
-      .hero-content .name { font-size: 3rem; flex-direction: column; gap: 5px; }
-      .hero-content .name img { height: 50px; }
-      .hero-content .title { font-size: 2rem; }
-      .hero-content p { font-size: 1rem; }
-      .nav-container { flex-direction: row; justify-content: space-between; align-items: center; }
-      #nav-menu { 
-        display: flex;
-        flex-direction: column;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        width: 100%;
-        background: var(--clr-cold-accent);
-        padding: 10px 0;
-        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        transform: translateY(-150%);
-        transition: transform 0.3s ease-in-out;
-        z-index: 999;
+    <!-- Sección: Estilos CSS -->
+    <style>
+      :root {
+        --clr-bg: #F2F5F7;
+        --clr-text: #264653;
+        --clr-cold-accent: #2A9D8F;
+        --clr-warm-accent: #E9C46A;
+        --clr-highlight: #F4A261;
+        --clr-gold: #FFD700;
       }
-      #nav-menu.active {
-        transform: translateY(0);
+      *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
+      body { font-family: 'Poppins', sans-serif; background: var(--clr-bg); color: var(--clr-text); line-height: 1.6; overflow-x: hidden; }
+      nav { position: fixed; top: 0; width: 100%; background: var(--clr-cold-accent); box-shadow: 0 2px 5px rgba(0,0,0,0.1); z-index: 1000; }
+      .nav-container { display: flex; align-items: center; justify-content: space-between; max-width: 1200px; margin: 0 auto; padding: 10px 20px; }
+      #nav-menu { display: flex; align-items: center; gap: 20px; }
+      .nav-left, .nav-right { display: flex; list-style: none; gap: 20px; }
+      nav ul li a { color: var(--clr-bg); font-weight: 500; text-decoration: none; transition: color 0.3s ease; padding: 5px; }
+      nav ul li a:hover { color: var(--clr-highlight); }
+      .lang-btn { background: transparent; border: 1px solid var(--clr-bg); color: var(--clr-bg); padding: 5px 10px; border-radius: 5px; font-family: 'Oswald', sans-serif; font-size: 1rem; cursor: pointer; transition: background 0.3s ease, color 0.3s ease; display: flex; align-items: center; gap: 8px; }
+      .lang-btn img { width: 24px; height: 24px; object-fit: contain; }
+      .lang-btn:hover { background: var(--clr-highlight); color: var(--clr-bg); }
+      .hamburger { display: none; flex-direction: column; justify-content: space-between; width: 30px; height: 21px; cursor: pointer; background: none; border: none; padding: 0; }
+      .hamburger span { background: var(--clr-bg); height: 3px; width: 100%; transition: all 0.3s ease; border-radius: 2px; }
+      .hamburger.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+      .hamburger.active span:nth-child(2) { opacity: 0; }
+      .hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(7px, -7px); }
+      .social-icon { display: inline-flex; align-items: center; gap: 8px; text-decoration: none; color: var(--clr-bg); margin-bottom: 10px; transition: transform 0.3s ease, opacity 0.3s ease; }
+      .social-icon span { font-size: 1rem; font-weight: 500;}
+      .social-icon img { width: 40px; height: 40px; object-fit: contain; }
+      .social-icon:hover { transform: scale(1.1); opacity: 0.9; }
+      .hero { min-height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center; background: linear-gradient(135deg, var(--clr-cold-accent), var(--clr-warm-accent)); color: var(--clr-bg); clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%); padding: 60px 20px 0; }
+      .hero-content .name { font-family: 'Oswald', sans-serif; font-size: 4rem; margin-bottom: 5px; line-height: 1.1; animation: fadeIn 1s ease-in; display: flex; align-items: center; justify-content: center; gap: 10px; }
+      .hero-content .name img { height: 70px; width: auto; }
+      .hero-content .title { font-family: 'Oswald', sans-serif; font-size: 2.2rem; margin-bottom: 15px; line-height: 1.2; color: #fff; animation: fadeIn 1.5s ease-in; }
+      .hero-content p { font-size: 1.2rem; margin-bottom: 30px; animation: fadeIn 2s ease-in; }
+      .btn { display: inline-block; padding: 10px 20px; background: var(--clr-highlight); color: var(--clr-bg); text-decoration: none; border-radius: 5px; font-weight: 500; transition: transform 0.3s ease, box-shadow 0.3s ease; }
+      .btn:hover { transform: translateY(-3px); box-shadow: 0 5px 15px rgba(0,0,0,0.2); background: var(--clr-warm-accent); }
+
+      .btn-ghost {
+        display: block;
+        width: fit-content;
+        margin: 15px auto 0 auto;
+        padding: 10px 20px;
+        background: transparent;
+        color: var(--clr-bg);
+        text-decoration: none;
+        border-radius: 5px;
+        font-weight: 500;
+        transition: all 0.3s ease;
+        font-size: 0.9rem;
+        border: 2px solid var(--clr-bg);
       }
-      .nav-left, .nav-right {
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-        gap: 0;
+      .btn-ghost:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 5px 15px rgba(0,0,0,0.25);
+        background: var(--clr-bg);
+        color: var(--clr-text);
       }
-      .nav-left li, .nav-right li {
-        margin: 10px 0;
-      }
-      .hamburger { display: flex; z-index: 1001; }
-      .lang-btn { gap: 6px; margin-left: auto; padding: 5px 8px; font-size: 0.9rem; }
-      .lang-btn img { width: 20px; height: 20px; }
-      .about-container { flex-direction: column; text-align: center; }
-      .project-card { flex-direction: column; align-items: center; }
-      .project-link { flex: 0 0 auto; width: 100%; }
-      .timeline-container::after { left: 31px; }
-      .timeline-item { width: 100%; padding-left: 70px; padding-right: 25px; }
-      .timeline-item.right { left: 0%; }
-      .timeline-item::after, .timeline-item.right::after { left: 15px; }
+
+      section { padding: 80px 20px; max-width: 1200px; margin: 0 auto; }
+      h2 { font-family: 'Oswald', sans-serif; font-size: 2.5rem; text-align: center; margin-bottom: 40px; color: var(--clr-text); line-height: 1.2; }
       
-      /* Responsive Educación */
-      .education-card { flex-direction: column; text-align: center; }
-      .education-card .edu-details li { padding-left: 0; }
-      .education-card .edu-details li::before { display: none; }
-    }
-  </style>
+      .category-title {
+        font-family: 'Oswald', sans-serif;
+        font-size: 1.8rem;
+        color: var(--clr-cold-accent);
+        margin: 30px 0 20px; /* Ajustado para compacidad */
+        padding: 15px 20px;
+        background: var(--clr-bg);
+        border-left: 6px solid var(--clr-warm-accent);
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        text-align: left;
+      }
+
+      .about, .skills, .projects, .contact, .experience, .education { background: #fff; border-radius: 10px; padding: 40px; margin: 20px auto; box-shadow: 0 5px 15px rgba(0,0,0,0.05); animation: slideUp 1s ease-in-out; }
+      .about-container { display: flex; align-items: center; gap: 40px; }
+      .about-image img { width: 200px; height: 200px; border-radius: 50%; object-fit: cover; }
+      .about-text { flex: 1; }
+      .about-text p { text-align: justify; }
+      
+      /* --- ESTILOS EDUCACIÓN (ACTUALIZADO A TABLA) --- */
+      .education-table { 
+        width: 100%; 
+        border-collapse: separate; 
+        border-spacing: 0 20px; /* Espacio entre filas */
+      }
+
+      .education-table tr { 
+        background: var(--clr-bg); 
+        box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        border-radius: 10px;
+        transition: transform 0.3s ease;
+      }
+
+      .education-table tr:hover { transform: translateX(5px); }
+
+      .logo-cell { 
+        padding: 15px; 
+        text-align: center; 
+        border-top-left-radius: 10px; 
+        border-bottom-left-radius: 10px; 
+        border-left: 5px solid var(--clr-cold-accent);
+        width: 20%; /* Ancho fijo para columna de logos */
+      }
+
+      .info-cell { 
+        padding: 15px; 
+        border-top-right-radius: 10px; 
+        border-bottom-right-radius: 10px; 
+      }
+
+      /* Estilo para logos individuales y dentro del wrapper */
+      .education-logo { 
+        width: 80px;  /* Aumentado de 50px */
+        height: 80px; /* Aumentado de 50px */
+        object-fit: contain; 
+      }
+
+      /* Contenedor para doble logo */
+      .logo-wrapper { 
+        display: flex; 
+        justify-content: center; 
+        gap: 15px; /* Aumentado ligeramente de 10px para dar más espacio a las logos más grandes */
+      }
+
+      .education-info h3 { 
+        font-family: 'Oswald', sans-serif; 
+        font-size: 1.1rem; 
+        color: var(--clr-text); 
+        margin-bottom: 3px; 
+        line-height: 1.2; 
+      }
+
+      .education-info .institution { 
+        font-weight: 500; 
+        color: var(--clr-cold-accent); 
+        margin-bottom: 3px; 
+        font-size: 0.9rem; 
+        text-align: justify; 
+      }
+
+      .edu-details { 
+        list-style: none; 
+        padding-left: 0; 
+        margin-top: 5px; 
+      }
+
+      .edu-details li { 
+        font-size: 0.85rem; 
+        position: relative; 
+        padding-left: 15px; 
+        margin-bottom: 2px; 
+        color: #555; 
+        text-align: justify; 
+      }
+
+      .edu-details li::before { 
+        content: '•'; 
+        color: var(--clr-warm-accent); 
+        position: absolute; 
+        left: 0; 
+        top: 0; 
+      }
+
+      /* Responsividad */
+      @media (max-width: 768px) {
+        .education-table tr { 
+          display: flex; 
+          flex-direction: column; 
+        }
+        .logo-cell { 
+          width: 100%; 
+          border-radius: 10px 10px 0 0; 
+          border-left: none; 
+          border-top: 5px solid var(--clr-cold-accent); 
+        }
+        .info-cell { 
+          border-radius: 0 0 10px 10px; 
+        }
+        .education-info .institution, .edu-details li { 
+          text-align: left; 
+        }
+      }
+      /* --- FIN ESTILOS EDUCACIÓN --- */
+
+      .skills-grid { display: flex; justify-content: center; align-items: center; gap: 20px; flex-wrap: wrap; }
+      .skill-item { display: flex; flex-direction: column; align-items: center; min-width: 150px; }
+      .skill-item img { max-height: 90px; width: auto; object-fit: contain; margin-bottom: 10px; }
+      .skill-item span { font-family: 'Oswald', sans-serif; font-size: 1rem; line-height: 1.2; color: var(--clr-text); }
+      .projects-grid { display: grid; grid-template-columns: 1fr; gap: 40px; margin-bottom: 40px; }
+      .project-view-note { text-align: center; margin-top: -20px; margin-bottom: 40px; font-size: 0.9rem; font-style: italic; color: var(--clr-text); }
+      .project-card { display: flex; align-items: stretch; gap: 20px; background: var(--clr-bg); padding: 20px; border-radius: 8px; box-shadow: 0 3px 10px rgba(0,0,0,0.1); transition: transform 0.3s ease, box-shadow 0.3s ease; }
+      .project-card:hover { transform: translateY(-5px); box-shadow: 0 5px 15px rgba(0,0,0,0.2); }
+      .project-link { flex: 0 0 50%; display: block; overflow: hidden; border-radius: 8px;}
+      .project-link:hover .project-gif { transform: scale(1.05); }
+      .project-gif { width: 100%; height: 100%; object-fit: cover; border-radius: 8px; display: block; transition: transform 0.3s ease; }
+      .project-content { flex: 1; display: flex; flex-direction: column; }
+      .project-tools { margin-bottom: 10px; }
+      .tool-badge { display: inline-block; background: var(--clr-cold-accent); color: #fff; font-family: 'Oswald', sans-serif; font-size: 0.8rem; padding: 3px 8px; border-radius: 4px; margin-right: 5px; margin-bottom: 5px; }
+      .project-cta { font-size: 0.8rem; font-style: italic; color: var(--clr-cold-accent); margin-top: auto; padding-top: 10px; font-weight: 500; text-align: right; }
+      #toggle-experience-footer { display: flex; align-items: center; justify-content: center; gap: 8px; width: fit-content; margin: 40px auto 0 auto; padding: 8px 15px; border-radius: 5px; cursor: pointer; font-family: 'Poppins', sans-serif; font-size: 0.9rem; color: var(--clr-text); border: 1px solid var(--clr-text); transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease; }
+      #toggle-experience-footer:hover { background-color: var(--clr-cold-accent); color: var(--clr-bg); border-color: var(--clr-cold-accent); }
+      #toggle-experience-footer .arrow-icon { display: inline-block; transition: transform 0.3s ease; }
+      #toggle-experience-footer.expanded .arrow-icon { transform: rotate(180deg); }
+      
+      .timeline-container { position: relative; max-width: 800px; margin: 0 auto; padding: 0; max-height: 0; overflow: hidden; opacity: 0; transition: max-height 0.8s ease-in-out, opacity 0.8s ease-in-out; }
+      .timeline-container.expanded { max-height: 10000px; opacity: 1; padding: 20px 0; }
+      
+      .timeline-container::after { content: ''; position: absolute; width: 4px; background: var(--clr-cold-accent); top: 0; bottom: 0; left: 50%; margin-left: -2px; border-radius: 2px; }
+      .timeline-item { padding: 10px 40px; position: relative; background-color: inherit; width: 50%; margin-bottom: 30px; }
+      .timeline-item::after { content: ''; position: absolute; width: 20px; height: 20px; right: -10px; background-color: var(--clr-highlight); border: 3px solid #fff; top: 15px; border-radius: 50%; z-index: 1; }
+      .timeline-item.left { left: 0; }
+      .timeline-item.right { left: 50%; }
+      .timeline-item.right::after { left: -10px; }
+      .timeline-content { padding: 20px 30px; background-color: var(--clr-bg); position: relative; border-radius: 8px; box-shadow: 0 3px 10px rgba(0,0,0,0.1); }
+      .timeline-content h3 { font-family: 'Oswald', sans-serif; font-size: 1.5rem; color: var(--clr-cold-accent); margin-bottom: 5px; }
+      .timeline-content .company { font-size: 1rem; color: var(--clr-text); margin-bottom: 5px; font-weight: 500;}
+      .timeline-date { font-size: 0.85rem; color: #777; display: block; margin-bottom: 10px; }
+      .responsibilities-list { list-style: none; padding-left: 0; margin-top: 10px; max-height: 0; overflow: hidden; transition: max-height 0.5s ease-out, opacity 0.5s ease-out; opacity: 0; }
+      .responsibilities-list.expanded { max-height: 500px; opacity: 1; }
+      .responsibilities-list li { margin-bottom: 5px; padding-left: 15px; position: relative; font-size: 0.9rem; }
+      .responsibilities-list li::before { content: '•'; color: var(--clr-warm-accent); position: absolute; left: 0; top: 0; }
+      .toggle-details-btn { background: var(--clr-warm-accent); color: var(--clr-text); border: none; padding: 5px 10px; border-radius: 5px; cursor: pointer; font-size: 0.85rem; margin-top: 10px; transition: background 0.3s ease; display: inline-block; font-weight: 500; }
+      .toggle-details-btn:hover { background: var(--clr-highlight); }
+      .contact form { display: flex; flex-direction: column; gap: 15px; max-width: 500px; margin: 0 auto; }
+      .contact input, .contact textarea { padding: 10px; border: 1px solid #ddd; border-radius: 5px; font-size: 1rem; font-family: 'Poppins', sans-serif; }
+      .contact button { padding: 10px; background: var(--clr-cold-accent); color: var(--clr-bg); border: none; border-radius: 5px; cursor: pointer; transition: background 0.3s ease; font-family: 'Oswald', sans-serif; }
+      .contact button:hover { background: var(--clr-highlight); }
+      footer { text-align: center; padding: 20px; background: var(--clr-text); color: var(--clr-bg); }
+      .footer-social-container { display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 20px; margin-bottom: 10px; }
+      footer p { margin-top: 10px; }
+      
+      @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+      @keyframes slideUp { from { transform: translateY(50px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+      
+      @media (max-width: 768px) {
+        .hero-content .name { font-size: 3rem; flex-direction: column; gap: 5px; }
+        .hero-content .name img { height: 50px; }
+        .hero-content .title { font-size: 2rem; }
+        .hero-content p { font-size: 1rem; }
+        .nav-container { flex-direction: row; justify-content: space-between; align-items: center; }
+        #nav-menu { 
+          display: flex;
+          flex-direction: column;
+          position: absolute;
+          top: 60px;
+          left: 0;
+          width: 100%;
+          background: var(--clr-cold-accent);
+          padding: 10px 0;
+          box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+          transform: translateY(-150%);
+          transition: transform 0.3s ease-in-out;
+          z-index: 999;
+        }
+        #nav-menu.active {
+          transform: translateY(0);
+        }
+        .nav-left, .nav-right {
+          flex-direction: column;
+          align-items: center;
+          width: 100%;
+          gap: 0;
+        }
+        .nav-left li, .nav-right li {
+          margin: 10px 0;
+        }
+        .hamburger { display: flex; z-index: 1001; }
+        .lang-btn { gap: 6px; margin-left: auto; padding: 5px 8px; font-size: 0.9rem; }
+        .lang-btn img { width: 20px; height: 20px; }
+        .about-container { flex-direction: column; text-align: center; }
+        .project-card { flex-direction: column; align-items: center; }
+        .project-link { flex: 0 0 auto; width: 100%; }
+        .timeline-container::after { left: 31px; }
+        .timeline-item { width: 100%; padding-left: 70px; padding-right: 25px; }
+        .timeline-item.right { left: 0%; }
+        .timeline-item::after, .timeline-item.right::after { left: 15px; }
+      }
+    </style>
 </head>
 <body>
-  <nav>
-    <div class="nav-container">
-      <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-menu">
-        <span></span><span></span><span></span>
-      </button>
-      <div id="nav-menu">
-        <ul class="nav-left">
-          <li><a href="#home" data-translate="nav.home"></a></li>
-        </ul>
-        <ul class="nav-right">
-          <li><a href="#about" data-translate="nav.about"></a></li>
-          <li><a href="#education" data-translate="nav.education"></a></li>
-          <li><a href="#skills" data-translate="nav.skills"></a></li>
-          <li><a href="#projects" data-translate="nav.projects"></a></li>
-          <li><a href="#experience" data-translate="nav.experience"></a></li>
-          <li><a href="#contact" data-translate="nav.contact"></a></li>
-        </ul>
+    <!-- Sección: Navegación -->
+    <nav>
+      <div class="nav-container">
+        <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-menu">
+          <span></span><span></span><span></span>
+        </button>
+        <div id="nav-menu">
+          <ul class="nav-left">
+            <li><a href="#home" data-translate="nav.home"></a></li>
+          </ul>
+          <ul class="nav-right">
+            <li><a href="#about" data-translate="nav.about"></a></li>
+            <li><a href="#education" data-translate="nav.education"></a></li>
+            <li><a href="#skills" data-translate="nav.skills"></a></li>
+            <li><a href="#projects" data-translate="nav.projects"></a></li>
+            <li><a href="#experience" data-translate="nav.experience"></a></li>
+            <li><a href="#contact" data-translate="nav.contact"></a></li>
+          </ul>
+        </div>
+        <button class="lang-btn">
+          <img src="assets/images/USAFLAG.png" alt="US Flag" class="lang-flag">
+          <span></span>
+        </button>
       </div>
-      <button class="lang-btn">
-        <img src="assets/images/USAFLAG.png" alt="US Flag" class="lang-flag">
-        <span></span>
-      </button>
-    </div>
-  </nav>
+    </nav>
 
-  <main>
-    <section id="home" class="hero">
-      <div class="hero-content">
-        <h1 class="name">
-          <span>Weimar</span>
-          <img src="assets/images/blanco.png" alt="Logo Weimar Miranda" onerror="this.onerror=null;this.src='https://placehold.co/70x70/FFFFFF/000000?text=Logo';">
-          <span>Miranda</span>
-        </h1>
-        <h2 class="title" data-translate="hero.title"></h2>
-        <p data-translate="hero.description"></p>
-        <a href="#contact" class="btn" data-translate="hero.button"></a>
-        <a href="https://drive.google.com/file/d/1xQAGhgYT2bZGmmRbDakQ2Ve6Kup3PArI/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn-ghost" data-translate="hero.bonus">Bonus Track: ¿Y si rediseñamos la conversión a GNV en Bolivia? Explora la Propuesta</a>
+    <!-- Sección: Contenido Principal (Main) -->
+    <main>
+      <!-- Subsección: Hero -->
+      <section id="home" class="hero">
+        <div class="hero-content">
+          <h1 class="name">
+            <span>Weimar</span>
+            <img src="assets/images/blanco.png" alt="Logo Weimar Miranda" onerror="this.onerror=null;this.src='https://placehold.co/70x70/FFFFFF/000000?text=Logo';">
+            <span>Miranda</span>
+          </h1>
+          <h2 class="title" data-translate="hero.title"></h2>
+          <p data-translate="hero.description"></p>
+          <a href="#contact" class="btn" data-translate="hero.button"></a>
+          <a href="https://drive.google.com/file/d/1xQAGhgYT2bZGmmRbDakQ2Ve6Kup3PArI/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn-ghost" data-translate="hero.bonus">Bonus Track: ¿Y si rediseñamos la conversión a GNV en Bolivia? Explora la Propuesta</a>
         </div>
-    </section>
+      </section>
 
-    <section id="about" class="about">
-      <h2 data-translate="section.about"></h2>
-      <div class="about-container">
-        <div class="about-image">
-          <img src="assets/images/digital.png" alt="Weimar Miranda" onerror="this.onerror=null;this.src='https://placehold.co/200x200/2A9D8F/FFFFFF?text=Weimar';">
+      <!-- Subsección: Sobre Mí -->
+      <section id="about" class="about">
+        <h2 data-translate="section.about"></h2>
+        <div class="about-container">
+          <div class="about-image">
+            <img src="assets/images/digital.png" alt="Weimar Miranda" onerror="this.onerror=null;this.src='https://placehold.co/200x200/2A9D8F/FFFFFF?text=Weimar';">
+          </div>
+          <div class="about-text">
+            <p data-translate="about.text"></p>
+          </div>
         </div>
-        <div class="about-text">
-          <p data-translate="about.text"></p>
-        </div>
-      </div>
-    </section>
+      </section>
 
-    <section id="education" class="education">
-      <h2 data-translate="section.education"></h2>
-      <div class="education-grid">
-        <!-- Card 1: UB (Master) -->
-        <div class="education-card">
-          <img src="assets/images/UB.png" alt="UB Logo" class="education-logo" onerror="this.onerror=null;this.src='https://placehold.co/50x50/FFFFFF/000000?text=UB';">
-          <div class="education-info">
-            <h3 data-translate="edu.ub.title"></h3>
-            <p class="institution" data-translate="edu.ub.inst"></p>
+      <!-- Subsección: Educación -->
+      <section id="education" class="education">
+        <h2 data-translate="section.education"></h2>
+        <table class="education-table">
+          <!-- Fila 1: UB (Master) -->
+          <tr>
+            <td class="logo-cell">
+              <img src="assets/images/UB.png" alt="UB Logo" class="education-logo" onerror="this.onerror=null;this.src='https://placehold.co/50x50/FFFFFF/000000?text=UB';">
+            </td>
+            <td class="info-cell">
+              <div class="education-info">
+                <h3 data-translate="edu.ub.title"></h3>
+                <p class="institution" data-translate="edu.ub.inst"></p>
+              </div>
+            </td>
+          </tr>
+
+          <!-- Fila 2: UPV/UCB (Especialidad - Doble Logo) -->
+          <tr>
+            <td class="logo-cell">
+              <div class="logo-wrapper">
+                <img src="assets/images/CATO.png" alt="UCB Logo" class="education-logo" onerror="this.onerror=null;this.src='https://placehold.co/50x50/FFFFFF/000000?text=UCB';">
+                <img src="assets/images/UPV.png" alt="UPV Logo" class="education-logo" onerror="this.onerror=null;this.src='https://placehold.co/50x50/FFFFFF/000000?text=UPV';">
+              </div>
+            </td>
+            <td class="info-cell">
+              <div class="education-info">
+                <h3 data-translate="edu.upv.title"></h3>
+                <p class="institution" data-translate="edu.upv.inst"></p>
+              </div>
+            </td>
+          </tr>
+
+          <!-- Fila 3: UCB (Ingeniería) -->
+          <tr>
+            <td class="logo-cell">
+              <img src="assets/images/CATO.png" alt="UCB Logo" class="education-logo" onerror="this.onerror=null;this.src='https://placehold.co/50x50/FFFFFF/000000?text=UCB';">
+            </td>
+            <td class="info-cell">
+              <div class="education-info">
+                <h3 data-translate="edu.ucb.title"></h3>
+                <p class="institution" data-translate="edu.ucb.inst"></p>
+              </div>
+            </td>
+          </tr>
+
+          <!-- Fila 4: Kaplan (Inglés) -->
+          <tr>
+            <td class="logo-cell">
+              <img src="assets/images/KAPLAN.PNG" alt="Kaplan Logo" class="education-logo" onerror="this.onerror=null;this.src='https://placehold.co/50x50/FFFFFF/000000?text=Kaplan';">
+            </td>
+            <td class="info-cell">
+              <div class="education-info">
+                <h3 data-translate="edu.kaplan.title"></h3>
+                <p class="institution" data-translate="edu.kaplan.inst"></p>
+                <ul class="edu-details">
+                  <li data-translate="edu.kaplan.det1"></li>
+                  <li data-translate="edu.kaplan.det2"></li>
+                </ul>
+              </div>
+            </td>
+          </tr>
+        </table>
+      </section>
+
+      <!-- Subsección: Habilidades -->
+      <section id="skills" class="skills">
+        <h2 data-translate="section.skills"></h2>
+        <div class="skills-grid">
+          <div class="skill-item">
+            <img src="assets/images/pbilogo.png" alt="Power BI logo" onerror="this.onerror=null;this.src='https://placehold.co/90x90/FFFFFF/000000?text=PBI';">
+            <span>Power BI</span>
+          </div>
+          <div class="skill-item">
+            <img src="assets/images/looker.png" alt="Looker Studio logo" onerror="this.onerror=null;this.src='https://placehold.co/90x90/FFFFFF/000000?text=LS';">
+            <span>Looker Studio</span>
+          </div>
+          <div class="skill-item">
+            <img src="assets/images/logomysql.png" alt="MySQL logo" onerror="this.onerror=null;this.src='https://placehold.co/90x90/FFFFFF/000000?text=SQL';">
+            <span>SQL</span>
+          </div>
+          <div class="skill-item">
+            <img src="assets/images/python.png" alt="Python logo" onerror="this.onerror=null;this.src='https://placehold.co/90x90/FFFFFF/000000?text=Py';">
+            <span>Python</span>
+          </div>
+          <div class="skill-item">
+            <img src="assets/images/excelicon.png" alt="Excel Advanced logo" onerror="this.onerror=null;this.src='https://placehold.co/90x90/FFFFFF/000000?text=XLS';">
+            <span>Advanced Excel</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Subsección: Proyectos -->
+      <section id="projects" class="projects">
+        <h2 data-translate="section.projects"></h2>
+        <p class="project-view-note" data-translate="section.projects.note"></p>
+        
+        <!-- Categoría 1: Gestión Pública y GNV -->
+        <h3 class="category-title" data-translate="projects.cat1"></h3>
+        <div class="projects-grid">
+          <!-- Tarjeta 1: Simulador -->
+          <div class="project-card">
+            <a href="https://weimarms.github.io/simulador-precio-gnv-bolivia/" target="_blank" rel="noopener noreferrer" class="project-link">
+              <img src="assets/images/SimuladorGNV.png" alt="Simulador GNV" class="project-gif">
+            </a>
+            <div class="project-content">
+              <div class="project-tools">
+                <span class="tool-badge">JavaScript</span>
+                <span class="tool-badge">Tailwind CSS</span>
+                <span class="tool-badge">Regulatory Analysis</span>
+              </div>
+              <h3 data-translate="project.simulador.title"></h3>
+              <p data-translate="project.simulador.description"></p>
+              <p class="project-cta" data-translate="project.cta.app"></p>
+            </div>
+          </div>
+
+          <!-- Tarjeta 2: Análisis GNV -->
+          <div class="project-card">
+            <a href="https://app.powerbi.com/view?r=eyJrIjoiZDk4NmM2M2YtNzYyNi00YTgxLWI1ZmMtMzhkNDQxZjZjNWI5IiwidCI6ImJhODQzY2Q3LWNiN2MtNGJiMS1hZWE3LTEzY2NhOGZlYzRjOSIsImMiOjR9" target="_blank" rel="noopener noreferrer" class="project-link">
+              <img src="assets/images/INV.gif" alt="Investment Programs Analysis Demo" class="project-gif">
+            </a>
+            <div class="project-content">
+              <div class="project-tools"><span class="tool-badge">Power BI</span></div>
+              <h3 data-translate="project.inversion.title"></h3>
+              <p data-translate="project.inversion.description"></p>
+              <p class="project-cta" data-translate="project.cta.dash"></p>
+            </div>
           </div>
         </div>
 
-        <!-- Card 2: UPV/UCB (Especialidad - Doble Logo) -->
-        <div class="education-card">
-          <div class="logo-wrapper">
-            <img src="assets/images/CATO.png" alt="UCB Logo" class="education-logo" onerror="this.onerror=null;this.src='https://placehold.co/50x50/FFFFFF/000000?text=UCB';">
-            <img src="assets/images/UPV.png" alt="UPV Logo" class="education-logo" onerror="this.onerror=null;this.src='https://placehold.co/50x50/FFFFFF/000000?text=UPV';">
-          </div>
-          <div class="education-info">
-            <h3 data-translate="edu.upv.title"></h3>
-            <p class="institution" data-translate="edu.upv.inst"></p>
+        <!-- Categoría 2: Análisis de Datos y BI -->
+        <h3 class="category-title" data-translate="projects.cat2"></h3>
+        <div class="projects-grid">
+          <!-- Tarjeta 3: Seattle 911 -->
+          <div class="project-card">
+            <a href="https://app.powerbi.com/view?r=eyJrIjoiNzg5ZDRlZjktY2I0MS00OTExLWI0ZjktY2JlMTM3M2NhYjg2IiwidCI6ImJhODQzY2Q3LWNiN2MtNGJiMS1hZWE3LTEzY2NhOGZlYzRjOSIsImMiOjR9" target="_blank" rel="noopener noreferrer" class="project-link">
+              <img src="assets/images/SEATTLE.gif" alt="Seattle 911 Demo" class="project-gif">
+            </a>
+            <div class="project-content">
+              <div class="project-tools">
+                <span class="tool-badge">Power BI</span>
+                <span class="tool-badge">Python</span>
+              </div>
+              <h3 data-translate="project.seattle.title"></h3>
+              <p data-translate="project.seattle.description"></p>
+              <p class="project-cta" data-translate="project.cta.dash"></p>
+            </div>
           </div>
         </div>
+      </section>
 
-        <!-- Card 3: UCB (Ingeniería) -->
-        <div class="education-card">
-          <img src="assets/images/CATO.png" alt="UCB Logo" class="education-logo" onerror="this.onerror=null;this.src='https://placehold.co/50x50/FFFFFF/000000?text=UCB';">
-          <div class="education-info">
-            <h3 data-translate="edu.ucb.title"></h3>
-            <p class="institution" data-translate="edu.ucb.inst"></p>
-          </div>
+      <!-- Subsección: Experiencia -->
+      <section id="experience" class="experience">
+        <h2 data-translate="section.experience"></h2>
+        <div id="toggle-experience-footer">
+          <span data-translate="experience.toggleAll.expand"></span>
+          <span class="arrow-icon">▼</span>
         </div>
+        <div class="timeline-container">
+          <div class="timeline-item left">
+            <div class="timeline-content">
+              <h3 data-translate="experience.roleNew.title"></h3>
+              <span class="company" data-translate="experience.roleNew.company"></span>
+              <span class="timeline-date" data-translate="experience.roleNew.date"></span>
+              <ul class="responsibilities-list">
+                <li data-translate="experience.roleNew.resp1"></li>
+                <li data-translate="experience.roleNew.resp2"></li>
+                <li data-translate="experience.roleNew.resp3"></li>
+                <li data-translate="experience.roleNew.resp4"></li>
+              </ul>
+              <button class="toggle-details-btn" data-translate="experience.toggle"></button>
+            </div>
+          </div>
 
-        <!-- Card 4: Kaplan (Inglés) -->
-        <div class="education-card">
-          <img src="assets/images/KAPLAN.PNG" alt="Kaplan Logo" class="education-logo" onerror="this.onerror=null;this.src='https://placehold.co/50x50/FFFFFF/000000?text=Kaplan';">
-          <div class="education-info">
-            <h3 data-translate="edu.kaplan.title"></h3>
-            <p class="institution" data-translate="edu.kaplan.inst"></p>
-            <ul class="edu-details">
-              <li data-translate="edu.kaplan.det1"></li>
-              <li data-translate="edu.kaplan.det2"></li>
-            </ul>
+          <div class="timeline-item right">
+            <div class="timeline-content">
+              <h3 data-translate="experience.role1.title"></h3>
+              <span class="company" data-translate="experience.role1.company"></span>
+              <span class="timeline-date" data-translate="experience.role1.date"></span>
+              <ul class="responsibilities-list">
+                <li data-translate="experience.role1.resp1"></li>
+              </ul>
+              <button class="toggle-details-btn" data-translate="experience.toggle"></button>
+            </div>
+          </div>
+
+          <div class="timeline-item left">
+            <div class="timeline-content">
+              <h3 data-translate="experience.role2.title"></h3>
+              <span class="company" data-translate="experience.company"></span>
+              <span class="timeline-date" data-translate="experience.role2.date"></span>
+              <ul class="responsibilities-list">
+                <li data-translate="experience.role2.resp1"></li>
+              </ul>
+              <button class="toggle-details-btn" data-translate="experience.toggle"></button>
+            </div>
+          </div>
+
+          <div class="timeline-item right">
+            <div class="timeline-content">
+              <h3 data-translate="experience.role3.title"></h3>
+              <span class="company" data-translate="experience.company"></span>
+              <span class="timeline-date" data-translate="experience.role3.date"></span>
+              <ul class="responsibilities-list">
+                <li data-translate="experience.role3.resp1"></li>
+              </ul>
+              <button class="toggle-details-btn" data-translate="experience.toggle"></button>
+            </div>
+          </div>
+
+          <div class="timeline-item left">
+            <div class="timeline-content">
+              <h3 data-translate="experience.role4.title"></h3>
+              <span class="company" data-translate="experience.company"></span>
+              <span class="timeline-date" data-translate="experience.role4.date"></span>
+              <ul class="responsibilities-list">
+                <li data-translate="experience.role4.resp1"></li>
+              </ul>
+              <button class="toggle-details-btn" data-translate="experience.toggle"></button>
+            </div>
+          </div>
+
+          <div class="timeline-item right">
+            <div class="timeline-content">
+              <h3 data-translate="experience.role5.title"></h3>
+              <span class="company" data-translate="experience.company"></span>
+              <span class="timeline-date" data-translate="experience.role5.date"></span>
+              <ul class="responsibilities-list">
+                <li data-translate="experience.role5.resp1"></li>
+              </ul>
+              <button class="toggle-details-btn" data-translate="experience.toggle"></button>
+            </div>
+          </div>
+
+          <div class="timeline-item left">
+            <div class="timeline-content">
+              <h3 data-translate="experience.role6.title"></h3>
+              <span class="company" data-translate="experience.company"></span>
+              <span class="timeline-date" data-translate="experience.role6.date"></span>
+              <ul class="responsibilities-list">
+                <li data-translate="experience.role6.resp1"></li>
+              </ul>
+              <button class="toggle-details-btn" data-translate="experience.toggle"></button>
+            </div>
+          </div>
+
+          <div class="timeline-item right">
+            <div class="timeline-content">
+              <h3 data-translate="experience.role7.title"></h3>
+              <span class="company" data-translate="experience.company"></span>
+              <span class="timeline-date" data-translate="experience.role7.date"></span>
+              <ul class="responsibilities-list">
+                <li data-translate="experience.role7.resp1"></li>
+              </ul>
+              <button class="toggle-details-btn" data-translate="experience.toggle"></button>
+            </div>
+          </div>
+
+          <div class="timeline-item left">
+            <div class="timeline-content">
+              <h3 data-translate="experience.role8.title"></h3>
+              <span class="company" data-translate="experience.company"></span>
+              <span class="timeline-date" data-translate="experience.role8.date"></span>
+              <ul class="responsibilities-list">
+                <li data-translate="experience.role8.resp1"></li>
+              </ul>
+              <button class="toggle-details-btn" data-translate="experience.toggle"></button>
+            </div>
+          </div>
+
+          <div class="timeline-item right">
+            <div class="timeline-content">
+              <h3 data-translate="experience.role9.title"></h3>
+              <span class="company" data-translate="experience.company"></span>
+              <span class="timeline-date" data-translate="experience.role9.date"></span>
+              <ul class="responsibilities-list">
+                <li data-translate="experience.role9.resp1"></li>
+              </ul>
+              <button class="toggle-details-btn" data-translate="experience.toggle"></button>
+            </div>
+          </div>
+
+          <div class="timeline-item left">
+            <div class="timeline-content">
+              <h3 data-translate="experience.role10.title"></h3>
+              <span class="company" data-translate="experience.company"></span>
+              <span class="timeline-date" data-translate="experience.role10.date"></span>
+              <ul class="responsibilities-list">
+                <li data-translate="experience.role10.resp1"></li>
+              </ul>
+              <button class="toggle-details-btn" data-translate="experience.toggle"></button>
+            </div>
+          </div>
+
+          <div class="timeline-item right">
+            <div class="timeline-content">
+              <h3 data-translate="experience.role11.title"></h3>
+              <span class="company" data-translate="experience.company"></span>
+              <span class="timeline-date" data-translate="experience.role11.date"></span>
+              <ul class="responsibilities-list">
+                <li data-translate="experience.role11.resp1"></li>
+              </ul>
+              <button class="toggle-details-btn" data-translate="experience.toggle"></button>
+            </div>
           </div>
         </div>
+      </section>
+
+      <!-- Subsección: Contacto -->
+      <section id="contact" class="contact">
+        <h2 data-translate="section.contact"></h2>
+        <form id="contact-form" action="https://docs.google.com/forms/d/e/1FAIpQLSfBazP7C1yVEMr3uO3B1W74S7b2a5-1hSM6Xq3aTj2y3e0wWQ/formResponse" target="hidden_iframe" method="post">
+          <input type="text" name="entry.2005620554" placeholder="Nombre" required>
+          <input type="email" name="entry.1045781291" placeholder="Correo Electrónico" required>
+          <textarea name="entry.839337160" placeholder="Mensaje" required></textarea>
+          <button type="submit" data-translate="contact.button"></button>
+        </form>
+        <div id="form-message" style="display: none; text-align: center; margin-top: 10px; color: green;"></div>
+        <iframe name="hidden_iframe" id="hidden_iframe" style="display: none;"></iframe>
+      </section>
+    </main>
+
+    <!-- Sección: Footer -->
+    <footer>
+      <div class="footer-social-container">
+        <a href="https://linkedin.com/in/weimar-miranda-s/" class="social-icon" target="_blank" rel="noopener noreferrer">
+          <img src="assets/images/LINKEDIN.png" alt="LinkedIn">
+          <span>LinkedIn</span>
+        </a>
+        <a href="https://github.com/weimarms" class="social-icon" target="_blank" rel="noopener noreferrer">
+          <img src="assets/images/GITHUB.png" alt="GitHub">
+          <span>GitHub</span>
+        </a>
+        <a href="https://x.com/weimar_miranda" class="social-icon" target="_blank" rel="noopener noreferrer">
+          <img src="assets/images/TWITTER.png" alt="X (Twitter)">
+          <span>X (Twitter)</span>
+        </a>
       </div>
-    </section>
+      <p data-translate="footer.text"></p>
+    </footer>
 
-    <section id="skills" class="skills">
-      <h2 data-translate="section.skills"></h2>
-      <div class="skills-grid">
-        <div class="skill-item">
-          <img src="assets/images/pbilogo.png" alt="Power BI logo" onerror="this.onerror=null;this.src='https://placehold.co/90x90/FFFFFF/000000?text=PBI';">
-          <span>Power BI</span>
-        </div>
-        <div class="skill-item">
-          <img src="assets/images/looker.png" alt="Looker Studio logo" onerror="this.onerror=null;this.src='https://placehold.co/90x90/FFFFFF/000000?text=LS';">
-          <span>Looker Studio</span>
-        </div>
-        <div class="skill-item">
-          <img src="assets/images/logomysql.png" alt="MySQL logo" onerror="this.onerror=null;this.src='https://placehold.co/90x90/FFFFFF/000000?text=SQL';">
-          <span>SQL</span>
-        </div>
-        <div class="skill-item">
-          <img src="assets/images/python.png" alt="Python logo" onerror="this.onerror=null;this.src='https://placehold.co/90x90/FFFFFF/000000?text=Py';">
-          <span>Python</span>
-        </div>
-        <div class="skill-item">
-          <img src="assets/images/excelicon.png" alt="Excel Advanced logo" onerror="this.onerror=null;this.src='https://placehold.co/90x90/FFFFFF/000000?text=XLS';">
-          <span>Advanced Excel</span>
-        </div>
-      </div>
-    </section>
+    <!-- Sección: Script JavaScript -->
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.getElementById('nav-menu');
 
-    <section id="projects" class="projects">
-      <h2 data-translate="section.projects"></h2>
-      <p class="project-view-note" data-translate="section.projects.note"></p>
-      
-      <!-- Categoría 1: Gestión Pública y GNV -->
-      <h3 class="category-title" data-translate="projects.cat1"></h3>
-      <div class="projects-grid">
-        <!-- Tarjeta 1: Simulador -->
-        <div class="project-card">
-          <a href="https://weimarms.github.io/simulador-precio-gnv-bolivia/" target="_blank" rel="noopener noreferrer" class="project-link">
-            <img src="assets/images/SimuladorGNV.png" alt="Simulador GNV" class="project-gif">
-          </a>
-          <div class="project-content">
-            <div class="project-tools">
-              <span class="tool-badge">JavaScript</span>
-              <span class="tool-badge">Tailwind CSS</span>
-              <span class="tool-badge">Regulatory Analysis</span>
-            </div>
-            <h3 data-translate="project.simulador.title"></h3>
-            <p data-translate="project.simulador.description"></p>
-            <p class="project-cta" data-translate="project.cta.app"></p>
-          </div>
-        </div>
-
-        <!-- Tarjeta 2: Análisis GNV -->
-        <div class="project-card">
-          <a href="https://app.powerbi.com/view?r=eyJrIjoiZDk4NmM2M2YtNzYyNi00YTgxLWI1ZmMtMzhkNDQxZjZjNWI5IiwidCI6ImJhODQzY2Q3LWNiN2MtNGJiMS1hZWE3LTEzY2NhOGZlYzRjOSIsImMiOjR9" target="_blank" rel="noopener noreferrer" class="project-link">
-            <img src="assets/images/INV.gif" alt="Investment Programs Analysis Demo" class="project-gif">
-          </a>
-          <div class="project-content">
-            <div class="project-tools"><span class="tool-badge">Power BI</span></div>
-            <h3 data-translate="project.inversion.title"></h3>
-            <p data-translate="project.inversion.description"></p>
-            <p class="project-cta" data-translate="project.cta.dash"></p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Categoría 2: Análisis de Datos y BI -->
-      <h3 class="category-title" data-translate="projects.cat2"></h3>
-      <div class="projects-grid">
-        <!-- Tarjeta 3: Seattle 911 -->
-        <div class="project-card">
-          <a href="https://app.powerbi.com/view?r=eyJrIjoiNWY5OGVlMzAtY2ZlOS00M2FhLWIwODUtMGZmN2ViMDBkYTY1IiwidCI6ImJhODQzY2Q3LWNiN2MtNGJiMS1hZWE3LTEzY2NhOGZlYzRjOSIsImY4IjR9" target="_blank" rel="noopener noreferrer" class="project-link">
-            <img src="assets/images/ComprimidoGEo.gif" alt="Seattle Forecast demo" class="project-gif">
-          </a>
-          <div class="project-content">
-            <div class="project-tools"><span class="tool-badge">Power BI</span><span class="tool-badge">Python</span></div>
-            <h3 data-translate="project.seattle.title"></h3>
-            <p data-translate="project.seattle.description"></p>
-            <p class="project-cta" data-translate="project.cta.dash"></p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="experience" class="experience">
-      <h2 data-translate="section.experience"></h2>
-      <div class="timeline-container">
-        <!-- NUEVA EXPERIENCIA (LEFT) -->
-        <div class="timeline-item left">
-            <div class="timeline-content">
-                <h3 data-translate="experience.roleNew.title"></h3>
-                <p class="company" data-translate="experience.roleNew.company"></p>
-                <span class="timeline-date" data-translate="experience.roleNew.date"></span>
-                <ul class="responsibilities-list">
-                    <li data-translate="experience.roleNew.resp1"></li>
-                    <li data-translate="experience.roleNew.resp2"></li>
-                    <li data-translate="experience.roleNew.resp3"></li>
-                    <li data-translate="experience.roleNew.resp4"></li>
-                </ul>
-                <button class="toggle-details-btn" data-translate="experience.toggle"></button>
-            </div>
-        </div>
-        <!-- EXPERIENCIA 1 (ANTES LEFT, AHORA RIGHT) -->
-        <div class="timeline-item right">
-            <div class="timeline-content">
-                <h3 data-translate="experience.role1.title"></h3>
-                <p class="company" data-translate="experience.role1.company"></p>
-                <span class="timeline-date" data-translate="experience.role1.date"></span>
-                <ul class="responsibilities-list">
-                    <li data-translate="experience.role1.resp1"></li>
-                </ul>
-                <button class="toggle-details-btn" data-translate="experience.toggle"></button>
-            </div>
-        </div>
-        <!-- EXPERIENCIA 2 (ANTES RIGHT, AHORA LEFT) -->
-        <div class="timeline-item left">
-            <div class="timeline-content">
-                <h3 data-translate="experience.role2.title"></h3>
-                <p class="company" data-translate="experience.company"></p>
-                <span class="timeline-date" data-translate="experience.role2.date"></span>
-                <ul class="responsibilities-list">
-                    <li data-translate="experience.role2.resp1"></li>
-                </ul>
-                <button class="toggle-details-btn" data-translate="experience.toggle"></button>
-            </div>
-        </div>
-        <!-- EXPERIENCIA 3 (ANTES LEFT, AHORA RIGHT) -->
-        <div class="timeline-item right">
-            <div class="timeline-content">
-                <h3 data-translate="experience.role3.title"></h3>
-                <p class="company" data-translate="experience.company"></p>
-                <span class="timeline-date" data-translate="experience.role3.date"></span>
-                <ul class="responsibilities-list">
-                    <li data-translate="experience.role3.resp1"></li>
-                </ul>
-                <button class="toggle-details-btn" data-translate="experience.toggle"></button>
-            </div>
-        </div>
-        <!-- EXPERIENCIA 4 (ANTES RIGHT, AHORA LEFT) -->
-        <div class="timeline-item left">
-            <div class="timeline-content">
-                <h3 data-translate="experience.role4.title"></h3>
-                <p class="company" data-translate="experience.company"></p>
-                <span class="timeline-date" data-translate="experience.role4.date"></span>
-                <ul class="responsibilities-list">
-                   <li data-translate="experience.role4.resp1"></li>
-                </ul>
-                <button class="toggle-details-btn" data-translate="experience.toggle"></button>
-            </div>
-        </div>
-        <!-- EXPERIENCIA 5 (ANTES LEFT, AHORA RIGHT) -->
-        <div class="timeline-item right">
-            <div class="timeline-content">
-                <h3 data-translate="experience.role5.title"></h3>
-                <p class="company" data-translate="experience.company"></p>
-                <span class="timeline-date" data-translate="experience.role5.date"></span>
-                <ul class="responsibilities-list">
-                    <li data-translate="experience.role5.resp1"></li>
-                </ul>
-                <button class="toggle-details-btn" data-translate="experience.toggle"></button>
-            </div>
-        </div>
-         <!-- EXPERIENCIA 6 (ANTES RIGHT, AHORA LEFT) -->
-         <div class="timeline-item left">
-            <div class="timeline-content">
-                <h3 data-translate="experience.role6.title"></h3>
-                <p class="company" data-translate="experience.company"></p>
-                <span class="timeline-date" data-translate="experience.role6.date"></span>
-                <ul class="responsibilities-list">
-                    <li data-translate="experience.role6.resp1"></li>
-                </ul>
-                <button class="toggle-details-btn" data-translate="experience.toggle"></button>
-            </div>
-        </div>
-        <!-- EXPERIENCIA 7 (ANTES LEFT, AHORA RIGHT) -->
-        <div class="timeline-item right">
-            <div class="timeline-content">
-                <h3 data-translate="experience.role7.title"></h3>
-                <p class="company" data-translate="experience.company"></p>
-                <span class="timeline-date" data-translate="experience.role7.date"></span>
-                <ul class="responsibilities-list">
-                   <li data-translate="experience.role7.resp1"></li>
-                </ul>
-                <button class="toggle-details-btn" data-translate="experience.toggle"></button>
-            </div>
-        </div>
-        <!-- EXPERIENCIA 8 (ANTES RIGHT, AHORA LEFT) -->
-        <div class="timeline-item left">
-            <div class="timeline-content">
-                <h3 data-translate="experience.role8.title"></h3>
-                <p class="company" data-translate="experience.company"></p>
-                <span class="timeline-date" data-translate="experience.role8.date"></span>
-                <ul class="responsibilities-list">
-                    <li data-translate="experience.role8.resp1"></li>
-                </ul>
-                <button class="toggle-details-btn" data-translate="experience.toggle"></button>
-            </div>
-        </div>
-        <!-- EXPERIENCIA 9 (ANTES LEFT, AHORA RIGHT) -->
-        <div class="timeline-item right">
-            <div class="timeline-content">
-                <h3 data-translate="experience.role9.title"></h3>
-                <p class="company" data-translate="experience.company"></p>
-                <span class="timeline-date" data-translate="experience.role9.date"></span>
-                <ul class="responsibilities-list">
-                    <li data-translate="experience.role9.resp1"></li>
-                </ul>
-                <button class="toggle-details-btn" data-translate="experience.toggle"></button>
-            </div>
-        </div>
-        <!-- EXPERIENCIA 10 (ANTES RIGHT, AHORA LEFT) -->
-        <div class="timeline-item left">
-            <div class="timeline-content">
-                <h3 data-translate="experience.role10.title"></h3>
-                <p class="company" data-translate="experience.company"></p>
-                <span class="timeline-date" data-translate="experience.role10.date"></span>
-                <ul class="responsibilities-list">
-                    <li data-translate="experience.role10.resp1"></li>
-                </ul>
-                <button class="toggle-details-btn" data-translate="experience.toggle"></button>
-            </div>
-        </div>
-        <!-- EXPERIENCIA 11 (ANTES LEFT, AHORA RIGHT) -->
-        <div class="timeline-item right">
-            <div class="timeline-content">
-                <h3 data-translate="experience.role11.title"></h3>
-                <p class="company" data-translate="experience.company"></p>
-                <span class="timeline-date" data-translate="experience.role11.date"></span>
-                <ul class="responsibilities-list">
-                    <li data-translate="experience.role11.resp1"></li>
-                </ul>
-                <button class="toggle-details-btn" data-translate="experience.toggle"></button>
-            </div>
-        </div>
-      </div>
-      <div id="toggle-experience-footer">
-        <span data-translate="experience.toggleAll.expand"></span>
-        <span class="arrow-icon">▼</span>
-      </div>
-    </section>
-
-    <section id="contact" class="contact">
-      <h2 data-translate="section.contact"></h2>
-      <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
-      <div id="form-message" style="display: none; text-align: center; margin-top: 10px; color: var(--clr-cold-accent);"></div>
-      <form id="contact-form" action="https://script.google.com/macros/s/AKfycby_UvUqEauWVYHzq_4gLq9yOjHvomkiul1DbUnpfNS0bqznOJzOp-rTfCSRJWjPSBFA/exec" method="post" target="hidden_iframe">
-        <input type="text" name="name" placeholder="Nombre" required />
-        <input type="email" name="email" placeholder="Correo Electrónico" required />
-        <textarea name="message" placeholder="Mensaje" rows="5" required></textarea>
-        <button type="submit" data-translate="contact.button"></button>
-      </form>
-    </section>
-  </main>
-  <footer>
-    <div class="footer-social-container">
-      <a href="https://www.linkedin.com/in/weimar-miranda-salazar/" target="_blank" rel="noopener noreferrer" class="social-icon">
-        <img src="assets/images/linkedin.png" alt="LinkedIn Profile" onerror="this.onerror=null;this.src='https://placehold.co/40x40/FFFFFF/000000?text=LI';">
-      </a>
-      <a href="https://wa.me/59176700989" target="_blank" rel="noopener noreferrer" class="social-icon">
-        <img src="assets/images/WSP.png" alt="WhatsApp" onerror="this.onerror=null;this.src='https://placehold.co/40x40/FFFFFF/000000?text=WA';">
-        <span>+591 76700989</span>
-      </a>
-    </div>
-    <p data-translate="footer.text"></p>
-  </footer>
-
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-    
-      const hamburger = document.querySelector('.hamburger');
-      const navMenu = document.getElementById('nav-menu');
-      hamburger.addEventListener('click', () => {
-        const isExpanded = hamburger.classList.toggle('active');
-        hamburger.setAttribute('aria-expanded', isExpanded);
-        navMenu.classList.toggle('active');
-      });
-      document.querySelectorAll('#nav-menu a').forEach(link => {
-        link.addEventListener('click', () => {
-          hamburger.classList.remove('active');
-          hamburger.setAttribute('aria-expanded', 'false');
-          navMenu.classList.remove('active');
+        hamburger.addEventListener('click', () => {
+          hamburger.classList.toggle('active');
+          navMenu.classList.toggle('active');
         });
-      });
 
-      const translations = {
-        en: {
-            'nav.home': 'Home', 'nav.about': 'About Me', 'nav.education': 'Education', 'nav.skills': 'Skills', 'nav.projects': 'Projects', 'nav.experience': 'Experience', 'nav.contact': 'Contact',
-            'hero.title': 'Specialist in Public Investment Programs &<br>Natural Gas for Vehicles (NGV)',
-            'hero.description': 'I transform data into strategic decisions with innovative solutions.', 'hero.button': 'Contact Me',
-            'hero.bonus': 'Bonus Track: What if we redesigned CNG conversion in Bolivia? Explore the Proposal',
-            'section.about': 'About Me', 'about.text': 'Industrial Engineer with over 9 years of experience in strategic leadership and transformation management in the Bolivian public sector. My career has focused on directing and optimizing national investment programs in the energy sector, achieving measurable improvements in efficiency, transparency, and sustainability. I have led the modernization of key entities, such as the NGV Conversion Executing Entity, overseeing the implementation of technological and analytical systems (supported by my Master\'s in Business Intelligence) that revolutionized decision-making and accountability. My goal is to lead high-performance teams in creating and implementing evidence-based public policies, driving economic development and the modernization of the State.',
-            
-            'section.education': 'Education',
-            'edu.kaplan.title': 'Intensive English Program (Advanced Level C1)',
-            'edu.kaplan.inst': 'Kaplan International Languages | New York, USA',
-            'edu.kaplan.det1': 'In-person Modality: Full immersion in a native environment.',
-            'edu.kaplan.det2': 'Development of conversational fluency for negotiation and technical management.',
-            'edu.ub.title': 'MBI - Master in Business Intelligence',
-            'edu.ub.inst': 'University of Barcelona',
-            'edu.upv.title': 'Specialization in Environmental and Industrial Process Simulation',
-            'edu.upv.inst': 'Bolivian Catholic University “San Pablo” | Polytechnic University of Valencia',
-            'edu.ucb.title': 'Industrial Engineering',
-            'edu.ucb.inst': 'Bolivian Catholic University “San Pablo”',
+        document.querySelectorAll('#nav-menu a').forEach(link => {
+          link.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            navMenu.classList.remove('active');
+          });
+        });
 
-            'section.skills': 'Skills',
-            'section.projects': 'Projects',
-            'projects.cat1': 'Public Management & NGV Projects',
-            'projects.cat2': 'Data Analytics & BI Projects',
-            'section.projects.note': 'For the best experience, it is recommended to view the dashboards on a computer or on a mobile device in landscape orientation.',
-            'project.simulador.title': 'GNV Price Sensitivity Simulator', 'project.simulador.description': 'Web application performing sensitivity analysis on critical variables affecting the subsidized NGV price in Bolivia. This tool provides regulatory scenario simulation, fiscal deficit calculation, and automated generation of technical PDF reports.',
-            'project.inversion.title': 'GNV Programs Analysis in Bolivia', 'project.inversion.description': 'Comprehensive dashboard developed in Power BI for monitoring and controlling the three Natural Gas Vehicle investment programs in Bolivia: Conversion, Maintenance, and Requalification. The tool centralizes and visualizes key KPIs such as goal progress vs. execution and performance by sector. It allows for detailed geographical analysis by department and workshop, facilitating trend identification and optimizing resource allocation nationwide.',
-            'project.seattle.title': 'Seattle 911 Fire Department Incident Report', 'project.seattle.description': 'This Power BI dashboard analyzes over 2 million Seattle 911 fire emergency calls, uncovering trends in frequency, timing, and geographic distribution. Featuring performance comparisons, Azure Maps for district-level insights, and a Python-integrated SARIMA model for forecasting, it empowers data-driven operational and strategic planning.',
-            'project.cta.app': 'Click to try the simulator.',
-            'project.cta.dash': 'Click to interact with the dashboard.',
-            'section.experience': 'My Professional Journey',
-            'experience.company': 'Executive Entity for Natural Gas Vehicle Conversion',
-            
-            'experience.roleNew.title': 'Product Consultant – Requalification Cost Determination',
-            'experience.roleNew.company': 'Executing Entity for NGV Conversion (EEC-GNV) - Ministry of Hydrocarbons and Energies',
-            'experience.roleNew.date': 'Aug 2025 – Nov 2025',
-            'experience.roleNew.resp1': '<strong>Regulatory Financial Model Design:</strong> Developed the new Cost Structure for Requalification workshops (R.M. N° 296-13 and NB 722001:2025), ensuring traceability and legality.',
-            'experience.roleNew.resp2': '<strong>FRCGNV Optimization:</strong> Introduced tiered costs for Condemned Cylinders (Levels 1, 2, and 3), aligning payments with actual costs and optimizing resources.',
-            'experience.roleNew.resp3': '<strong>Management Tool:</strong> Designed a Macroeconomic Simulator for hybrid cost indexation adjustment, preventing tariff obsolescence.',
-            'experience.roleNew.resp4': '<strong>Regulatory Management:</strong> Issued the Final Report for the formalization of the structure via Administrative Resolution and its implementation in the SUIC system.',
+        const translations = {
+          en: {
+              'nav.home': 'Home', 'nav.about': 'About Me', 'nav.education': 'Education', 'nav.skills': 'Skills', 'nav.projects': 'Projects', 'nav.experience': 'Experience', 'nav.contact': 'Contact',
+              'hero.title': 'Specialist in Public Investment Programs &<br>Natural Gas for Vehicles (NGV)',
+              'hero.description': 'I transform data into strategic decisions with innovative solutions.', 'hero.button': 'Contact Me',
+              'hero.bonus': 'Bonus Track: What if we redesigned CNG conversion in Bolivia? Explore the Proposal',
+              'section.about': 'About Me', 'about.text': 'Industrial Engineer with over 9 years of experience in strategic leadership and transformation management in the Bolivian public sector. My career has focused on directing and optimizing national investment programs in the energy sector, achieving measurable improvements in efficiency, transparency, and sustainability. I have led the modernization of key entities, such as the NGV Conversion Executing Entity, overseeing the implementation of technological and analytical systems (supported by my Master\'s in Business Intelligence) that revolutionized decision-making and accountability. My goal is to lead high-performance teams in creating and implementing evidence-based public policies, driving economic development and the modernization of the State.',
+              
+              'section.education': 'Education',
+              'edu.kaplan.title': 'Intensive English Program (Advanced Level C1)',
+              'edu.kaplan.inst': 'Kaplan International Languages | New York, USA',
+              'edu.kaplan.det1': 'In-person Modality: Full immersion in a native environment.',
+              'edu.kaplan.det2': 'Development of conversational fluency for negotiation and technical management.',
+              'edu.ub.title': 'MBI - Master in Business Intelligence',
+              'edu.ub.inst': 'University of Barcelona',
+              'edu.upv.title': 'Specialization in Environmental and Industrial Process Simulation',
+              'edu.upv.inst': 'Bolivian Catholic University “San Pablo” | Polytechnic University of Valencia',
+              'edu.ucb.title': 'Industrial Engineering',
+              'edu.ucb.inst': 'Bolivian Catholic University “San Pablo”',
 
-            'experience.role1.title': 'Data Analyst Consultant / Freelance', 'experience.role1.company': 'Self-Employed', 'experience.role1.date': 'Feb 2025 - Present', 'experience.role1.resp1': 'Providing data analysis and BI consulting services to various clients, developing custom dashboards and optimizing data workflows.',
-            'experience.role2.title': 'Project Planning Professional', 'experience.role2.date': 'Apr 2023 - Apr 2024', 'experience.role2.resp1': 'Led the implementation of Power BI as a central tool for real-time monitoring of investment programs. I developed automated dashboards that integrated various data sources, enhancing strategic decision-making and accountability at the ministerial level.',
-            'experience.role3.title': 'National Technical Inspection and Monitoring Manager', 'experience.role3.date': 'Jan 2022 - Mar 2023', 'experience.role3.resp1': 'Authored technical specifications for adopting new NGV conversion technologies. Additionally, I implemented Power BI dashboards for trend analysis and technical data tracking, optimizing the area\'s operational efficiency.',
-            'experience.role4.title': 'Technical Inspection and Monitoring Professional', 'experience.role4.date': 'Aug 2021 - Dec 2021', 'experience.role4.resp1': 'Drafted and substantiated the technical procedure for determining NGV conversion costs, achieving its approval via Ministerial Resolution. This regulation replaced the previous framework, adapting it to new technologies and cost structures.',
-            'experience.role5.title': 'Technical Standardization Professional', 'experience.role5.date': 'Mar 2021 - Jul 2021', 'experience.role5.resp1': 'Developed the methodology and technical justification to update the fixed-cost regulations, demonstrating the need for a new regulatory framework to ensure the conversion program\'s sustainability.',
-            'experience.role6.title': 'Program Management Control and Monitoring Professional', 'experience.role6.date': 'Jan 2018 - Sep 2019', 'experience.role6.resp1': 'Oversaw the physical and financial execution of investment programs. I automated budget tracking and report generation using Excel and VBA macros, improving efficiency and traceability.',
-            'experience.role7.title': 'National Manager of Warehouses and Operational Management', 'experience.role7.date': 'Jan 2017 - Dec 2017', 'experience.role7.resp1': 'Co-designed and implemented the first national SQL-based inventory management system. Additionally, I contributed to drafting the Supreme Decree No. 3389, que autorizó el incremento de la partida para consultores y estableció mecanismos de verificación para el uso de equipos de conversión a GNV.',
-            'experience.role8.title': 'National Manager of NGV Conversion Equipment Warehouses', 'experience.role8.date': 'Ene 2016 - Dic 2016', 'experience.role8.resp1': 'Managed national logistics and supervised inventory, using advanced Excel to ensure stock traceability across more than 7 regional offices.',
-            'experience.role9.title': 'Planning Professional', 'experience.role9.date': 'Dic 2015', 'experience.role9.resp1': 'Automated the generation of budget certifications using VBA macros, reducing errors and improving response times.',
-            'experience.role10.title': 'Consultant - Operational Unit', 'experience.role10.date': 'Sep 2015 - Nov 2015', 'experience.role10.resp1': 'Analyzed operational data with Excel and VBA to identify bottlenecks and propose improvements in conversion processes.',
-            'experience.role11.title': 'Coordinador Regional en Tarija', 'experience.role11.date': 'Mayo 2014 - Jun 2015', 'experience.role11.resp1': 'Coordinated regional maintenance and requalification programs, using Excel and VBA to systematize operational control and report to national headquarters.',
-            'experience.toggle': 'Show Details', 'experience.toggle.hide': 'Hide Details', 'experience.toggleAll': 'Collapse All', 'experience.toggleAll.expand': 'Expand All',
-            'section.contact': 'Contact', 'contact.button': 'Send',
-            'footer.text': '© 2025 - BI Portfolio. All rights reserved.',
-        },
-        es: {
-            'nav.home': 'Inicio', 'nav.about': 'Sobre Mí', 'nav.education': 'Educación', 'nav.skills': 'Habilidades', 'nav.projects': 'Proyectos', 'nav.experience': 'Experiencia', 'nav.contact': 'Contacto',
-            'hero.title': 'Especialista en Programas de Inversion Pública y<br>Gas Natural Vehicular GNV',
-            'hero.description': 'Transformo datos en decisiones estratégicas con soluciones innovadoras.', 'hero.button': 'Contáctame',
-            'hero.bonus': 'Bonus Track: ¿Y si rediseñamos la conversión a GNV en Bolivia? Explora la Propuesta',
-            'section.about': 'Sobre Mí', 'about.text': 'Ingeniero Industrial con más de 9 años de experiencia en liderazgo estratégico y gestión de la transformación en el sector público boliviano. Mi carrera se ha centrado en la dirección y optimización de programas de inversión nacional en el sector energético, logrando mejoras medibles en eficiencia, transparencia y sostenibilidad. He liderado la modernización de entidades clave, como la Entidad Ejecutora de Conversión a GNV, supervisando la implementación de sistemas tecnológicos y de análisis (apoyado en mi Máster en Business Intelligence) que revolucionaron la toma de decisiones y la rendición de cuentas. Mi objetivo es liderar equipos de alto rendimiento en la creación e implementación de políticas públicas basadas en evidencia, impulsando el desarrollo económico y la modernización del Estado.',
-            
-            'section.education': 'Formación Académica',
-            'edu.kaplan.title': 'Programa Intensivo de Inglés (Nivel Avanzado C1)',
-            'edu.kaplan.inst': 'Kaplan International Languages | Nueva York, EE. UU.',
-            'edu.kaplan.det1': 'Modalidad Presencial: Inmersión total en entorno nativo.',
-            'edu.kaplan.det2': 'Desarrollo de fluidez conversacional para negociación y gestión técnica.',
-            'edu.ub.title': 'MBI - Master en Business Intelligence',
-            'edu.ub.inst': 'Universidad de Barcelona',
-            'edu.upv.title': 'Especialidad en Simulación de Procesos Ambientales e Industriales',
-            'edu.upv.inst': 'Universidad Católica Boliviana “San Pablo” | Universidad Politécnica de Valencia',
-            'edu.ucb.title': 'Ingeniería Industrial',
-            'edu.ucb.inst': 'Universidad Católica Boliviana “San Pablo”',
+              'section.skills': 'Skills',
+              'section.projects': 'Projects',
+              'projects.cat1': 'Public Management & NGV Projects',
+              'projects.cat2': 'Data Analytics & BI Projects',
+              'section.projects.note': 'For the best experience, it is recommended to view the dashboards on a computer or on a mobile device in landscape orientation.',
+              'project.simulador.title': 'GNV Price Sensitivity Simulator', 'project.simulador.description': 'Web application performing sensitivity analysis on critical variables affecting the subsidized NGV price in Bolivia. This tool provides regulatory scenario simulation, fiscal deficit calculation, and automated generation of technical PDF reports.',
+              'project.inversion.title': 'GNV Programs Analysis in Bolivia', 'project.inversion.description': 'Comprehensive dashboard developed in Power BI for monitoring and controlling the three Natural Gas Vehicle investment programs in Bolivia: Conversion, Maintenance, and Requalification. The tool centralizes and visualizes key KPIs such as goal progress vs. execution and performance by sector. It allows for detailed geographical analysis by department and workshop, facilitating trend identification and optimizing resource allocation nationwide.',
+              'project.seattle.title': 'Seattle 911 Fire Department Incident Report', 'project.seattle.description': 'This Power BI dashboard analyzes over 2 million Seattle 911 fire emergency calls, uncovering trends in frequency, timing, and geographic distribution. Featuring performance comparisons, Azure Maps for district-level insights, and a Python-integrated SARIMA model for forecasting, it empowers data-driven operational and strategic planning.',
+              'project.cta.app': 'Click to try the simulator.',
+              'project.cta.dash': 'Click to interact with the dashboard.',
+              'section.experience': 'My Professional Journey',
+              'experience.company': 'Executive Entity for Natural Gas Vehicle Conversion',
+              
+              'experience.roleNew.title': 'Product Consultant – Requalification Cost Determination',
+              'experience.roleNew.company': 'Executing Entity for NGV Conversion (EEC-GNV) - Ministry of Hydrocarbons and Energies',
+              'experience.roleNew.date': 'Aug 2025 – Nov 2025',
+              'experience.roleNew.resp1': '<strong>Regulatory Financial Model Design:</strong> Developed the new Cost Structure for Requalification workshops (R.M. N° 296-13 and NB 722001:2025), ensuring traceability and legality.',
+              'experience.roleNew.resp2': '<strong>FRCGNV Optimization:</strong> Introduced tiered costs for Condemned Cylinders (Levels 1, 2, and 3), aligning payments with actual costs and optimizing resources.',
+              'experience.roleNew.resp3': '<strong>Management Tool:</strong> Designed a Macroeconomic Simulator for hybrid cost indexation adjustment, preventing tariff obsolescence.',
+              'experience.roleNew.resp4': '<strong>Regulatory Management:</strong> Issued the Final Report for the formalization of the structure via Administrative Resolution and its implementation in the SUIC system.',
 
-            'section.skills': 'Habilidades',
-            'section.projects': 'Proyectos',
-            'projects.cat1': 'Proyectos de Gestión Pública y GNV',
-            'projects.cat2': 'Proyectos de Análisis de Datos y BI',
-            'section.projects.note': 'Para una mejor experiencia, se recomienda visualizar los dashboards en una computadora o en un dispositivo móvil en orientación horizontal.',
-            'project.simulador.title': 'Simulador de Sensibilidad de Precios GNV', 'project.simulador.description': 'Aplicación que realiza un análisis de sensibilidad de las variables críticas que intervienen en el cálculo del precio del GNV subsidiado en Bolivia. Esta herramienta proporciona simulación de escenarios regulatorios, cálculo del déficit fiscal y generación automática de informes técnicos en PDF.',
-            'project.inversion.title': 'Análisis de Programas de GNV en Bolivia', 'project.inversion.description': 'Dashboard integral desarrollado en Power BI para el seguimiento y control de los tres programas de inversión de Gas Natural Vehicular en Bolivia: Conversión, Mantenimiento y Recalificación. La herramienta centraliza y visualiza KPIs clave como el avance de metas vs. ejecución y rendimiento por sector. Permite un análisis geográfico detallado por departamento y taller, facilitando la identificación de tendencias y optimizando la asignación de recursos a nivel nacional.',
-            'project.seattle.title': 'Informe de Incidentes del Departamento de Bomberos 911 de Seattle', 'project.seattle.description': 'Este panel de Power BI analiza más de 2 millones de llamadas de emergencia 911 de bomberos en Seattle, identificando tendencias en frecuencia, horarios y distribución geográfica. Incluye comparaciones de rendimiento, Azure Maps para información a nivel de distrito y un modelo SARIMA integrado en Python para pronósticos, lo que permite una planificación operativa y estratégica basada en datos.',
-            'project.cta.app': 'Haz clic para probar el simulador.',
-            'project.cta.dash': 'Haz clic para interactuar con el dashboard.',
-            'section.experience': 'Mi Trayectoria Profesional',
-            'experience.company': 'Entidad Ejecutora de Conversión a Gas Natural Vehicular',
-            
-            'experience.roleNew.title': 'Consultor por Producto – Determinación de Costos de Recalificación',
-            'experience.roleNew.company': 'Entidad Ejecutora de Conversión a GNV (EEC-GNV) - Ministerio de Hidrocarburos y Energías',
-            'experience.roleNew.date': 'Ago 2025 – Nov 2025',
-            'experience.roleNew.resp1': '<strong>Diseño de Modelo Financiero Regulatorio:</strong> Desarrollé la nueva Estructura de Costos para los talleres de Recalificación (R.M. N° 296-13 y NB 722001:2025), garantizando trazabilidad y legalidad.',
-            'experience.roleNew.resp2': '<strong>Optimización del FRCGNV:</strong> Introduje costos escalonados para Cilindros Condenados (Niveles 1, 2 y 3), alineando pagos con costos reales y optimizando recursos.',
-            'experience.roleNew.resp3': '<strong>Herramienta de Gestión:</strong> Diseñé un Simulador Macroeconómico para el ajuste híbrido de indexación de costos, previniendo obsolescencia tarifaria.',
-            'experience.roleNew.resp4': '<strong>Gestión Regulatoria:</strong> Emití el Informe Final para la formalización de la estructura mediante Resolución Administrativa y su implementación en el sistema SUIC.',
+              'experience.role1.title': 'Data Analyst Consultant / Freelance', 'experience.role1.company': 'Self-Employed', 'experience.role1.date': 'Feb 2025 - Present', 'experience.role1.resp1': 'Providing data analysis and BI consulting services to various clients, developing custom dashboards and optimizing data workflows.',
+              'experience.role2.title': 'Project Planning Professional', 'experience.role2.date': 'Apr 2023 - Apr 2024', 'experience.role2.resp1': 'Led the implementation of Power BI as a central tool for real-time monitoring of investment programs. I developed automated dashboards that integrated various data sources, enhancing strategic decision-making and accountability at the ministerial level.',
+              'experience.role3.title': 'National Technical Inspection and Monitoring Manager', 'experience.role3.date': 'Jan 2022 - Mar 2023', 'experience.role3.resp1': 'Authored technical specifications for adopting new NGV conversion technologies. Additionally, I implemented Power BI dashboards for trend analysis and technical data tracking, optimizing the area\'s operational efficiency.',
+              'experience.role4.title': 'Technical Inspection and Monitoring Professional', 'experience.role4.date': 'Aug 2021 - Dec 2021', 'experience.role4.resp1': 'Drafted and substantiated the technical procedure for determining NGV conversion costs, achieving its approval via Ministerial Resolution. This regulation replaced the previous framework, adapting it to new technologies and cost structures.',
+              'experience.role5.title': 'Technical Standardization Professional', 'experience.role5.date': 'Mar 2021 - Jul 2021', 'experience.role5.resp1': 'Developed the methodology and technical justification to update the fixed-cost regulations, demonstrating the need for a new regulatory framework to ensure the conversion program\'s sustainability.',
+              'experience.role6.title': 'Program Management Control and Monitoring Professional', 'experience.role6.date': 'Jan 2018 - Sep 2019', 'experience.role6.resp1': 'Oversaw the physical and financial execution of investment programs. I automated budget tracking and report generation using Excel and VBA macros, improving efficiency and traceability.',
+              'experience.role7.title': 'National Manager of Warehouses and Operational Management', 'experience.role7.date': 'Jan 2017 - Dec 2017', 'experience.role7.resp1': 'Co-designed and implemented the first national SQL-based inventory management system. Additionally, I contributed to drafting the Supreme Decree No. 3389, que autorizó el incremento de la partida para consultores y estableció mecanismos de verificación para el uso de equipos de conversión a GNV.',
+              'experience.role8.title': 'National Manager of NGV Conversion Equipment Warehouses', 'experience.role8.date': 'Jan 2016 - Dec 2016', 'experience.role8.resp1': 'Managed national logistics and supervised inventory, using advanced Excel to ensure stock traceability across more than 7 regional offices.',
+              'experience.role9.title': 'Planning Professional', 'experience.role9.date': 'Dec 2015', 'experience.role9.resp1': 'Automated the generation of budget certifications using VBA macros, reducing errors and improving response times.',
+              'experience.role10.title': 'Consultant - Operational Unit', 'experience.role10.date': 'Sep 2015 - Nov 2015', 'experience.role10.resp1': 'Analyzed operational data with Excel and VBA to identify bottlenecks and propose improvements in conversion processes.',
+              'experience.role11.title': 'Regional Coordinator in Tarija', 'experience.role11.date': 'May 2014 - Jun 2015', 'experience.role11.resp1': 'Coordinated regional maintenance and requalification programs, using Excel and VBA to systematize operational control and report to national headquarters.',
+              'experience.toggle': 'Show Details', 'experience.toggle.hide': 'Hide Details', 'experience.toggleAll': 'Collapse All', 'experience.toggleAll.expand': 'Expand All',
+              'section.contact': 'Contact', 'contact.button': 'Send',
+              'footer.text': '© 2025 - BI Portfolio. All rights reserved.',
+          },
+          es: {
+              'nav.home': 'Inicio', 'nav.about': 'Sobre Mí', 'nav.education': 'Educación', 'nav.skills': 'Habilidades', 'nav.projects': 'Proyectos', 'nav.experience': 'Experiencia', 'nav.contact': 'Contacto',
+              'hero.title': 'Especialista en Programas de Inversion Pública y<br>Gas Natural Vehicular GNV',
+              'hero.description': 'Transformo datos en decisiones estratégicas con soluciones innovadoras.', 'hero.button': 'Contáctame',
+              'hero.bonus': 'Bonus Track: ¿Y si rediseñamos la conversión a GNV en Bolivia? Explora la Propuesta',
+              'section.about': 'Sobre Mí', 'about.text': 'Ingeniero Industrial con más de 9 años de experiencia en liderazgo estratégico y gestión de la transformación en el sector público boliviano. Mi carrera se ha centrado en la dirección y optimización de programas de inversión nacional en el sector energético, logrando mejoras medibles en eficiencia, transparencia y sostenibilidad. He liderado la modernización de entidades clave, como la Entidad Ejecutora de Conversión a GNV, supervisando la implementación de sistemas tecnológicos y de análisis (apoyado en mi Máster en Business Intelligence) que revolucionaron la toma de decisiones y la rendición de cuentas. Mi objetivo es liderar equipos de alto rendimiento en la creación e implementación de políticas públicas basadas en evidencia, impulsando el desarrollo económico y la modernización del Estado.',
+              
+              'section.education': 'Formación Académica',
+              'edu.kaplan.title': 'Programa Intensivo de Inglés (Nivel Avanzado C1)',
+              'edu.kaplan.inst': 'Kaplan International Languages | Nueva York, EE. UU.',
+              'edu.kaplan.det1': 'Modalidad Presencial: Inmersión total en entorno nativo.',
+              'edu.kaplan.det2': 'Desarrollo de fluidez conversacional para negociación y gestión técnica.',
+              'edu.ub.title': 'MBI - Master en Business Intelligence',
+              'edu.ub.inst': 'Universidad de Barcelona',
+              'edu.upv.title': 'Especialidad en Simulación de Procesos Ambientales e Industriales',
+              'edu.upv.inst': 'Universidad Católica Boliviana “San Pablo” | Universidad Politécnica de Valencia',
+              'edu.ucb.title': 'Ingeniería Industrial',
+              'edu.ucb.inst': 'Universidad Católica Boliviana “San Pablo”',
 
-            'experience.role1.title': 'Consultor / Freelance de Análisis de Datos', 'experience.role1.company': 'Independiente', 'experience.role1.date': 'Feb 2025 - Actualidad', 'experience.role1.resp1': 'Proporcionando servicios de consultoría de análisis de datos e inteligencia de negocios a diversos clientes, desarrollando paneles personalizados y optimizando flujos de trabajo.',
-            'experience.role2.title': 'Profesional de Planificación de Proyectos', 'experience.role2.date': 'Abr 2023 - Abr 2024', 'experience.role2.resp1': 'Lideré la implementación de Power BI como herramienta central para monitorear en tiempo real los programas de inversión. Desarrollé dashboards automatizados que integraron diversas fuentes de datos, mejorando la toma de decisiones estratégicas y la rendición de cuentas a nivel ministerial.',
-            'experience.role3.title': 'Encargado Nacional de Fiscalización y Seguimiento Técnico', 'experience.role3.date': 'Ene 2022 - Mar 2023', 'experience.role3.resp1': 'Elaboré especificaciones técnicas para la adopción de nuevas tecnologías de conversión a GNV. Además, implementé dashboards en Power BI para el análisis de tendencias y seguimiento de datos técnicos, optimizando la eficiencia operativa del área.',
-            'experience.role4.title': 'Profesional de Fiscalización y Seguimiento Técnico', 'experience.role4.date': 'Ago 2021 - Dic 2021', 'experience.role4.resp1': 'Redacté y fundamenté el procedimiento técnico para la determinación de costos de conversión a GNV, logrando su aprobación mediante Resolución Ministerial. Esta normativa reemplazó el marco anterior, adaptándolo a nuevas tecnologías y estructuras de costos.',
-            'experience.role5.title': 'Profesional de Normalización Técnica', 'experience.role5.date': 'Mar 2021 - Jul 2021', 'experience.role5.resp1': 'Desarrollé la metodología y justificación técnica para actualizar la normativa de costos fijos, demostrando la necesidad de un nuevo marco regulatorio para garantizar la sostenibilidad del programa de conversión.',
-            'experience.role6.title': 'Profesional de Control y Seguimiento en Gestión de Programas', 'experience.role6.date': 'Ene 2018 - Sep 2019', 'experience.role6.resp1': 'Supervisé la ejecución física y financiera de los programas de inversión. Automaticé el seguimiento de presupuestos y la generación de informes mediante herramientas en Excel y macros VBA, mejorando la eficiencia y trazabilidad.',
-            'experience.role7.title': 'Encargado Nacional de Almacenes y Gestión Operativa', 'experience.role7.date': 'Ene 2017 - Dic 2017', 'experience.role7.resp1': 'Co-diseñé e implementé el primer sistema nacional de gestión de inventarios en SQL. Adicionalmente, coadyuvé en la elaboración de la propuesta del Decreto Supremo N.º 3389, que autorizó el incremento de la partida para consultores y estableció mecanismos de verificación para el uso de equipos de conversión a GNV.',
-            'experience.role8.title': 'Encargado Nacional de Almacenes de Equipos de Conversión a GNV', 'experience.role8.date': 'Ene 2016 - Dic 2016', 'experience.role8.resp1': 'Gestioné la logística y supervisé el inventario a nivel nacional, utilizando Excel avanzado para asegurar la trazabilidad del stock en más de 7 oficinas regionales.',
-            'experience.role9.title': 'Profesional de Planificación', 'experience.role9.date': 'Dic 2015', 'experience.role9.resp1': 'Automaticé la generación de certificaciones presupuestarias mediante macros en VBA, reduciendo errores y mejorando los tiempos de respuesta.',
-            'experience.role10.title': 'Consultor - Unidad Operativa', 'experience.role10.date': 'Sep 2015 - Nov 2015', 'experience.role10.resp1': 'Analicé datos operativos con Excel y VBA para identificar cuellos de botella y proponer mejoras en los procesos de conversión.',
-            'experience.role11.title': 'Coordinador Regional en Tarija', 'experience.role11.date': 'Mayo 2014 - Jun 2015', 'experience.role11.resp1': 'Coordiné los programas regionales de mantenimiento y recalificación, utilizando Excel y VBA para sistematizar el control operativo y reportar a la sede nacional.',
-            'experience.toggle': 'Mostrar Detalles', 'experience.toggle.hide': 'Ocultar Detalles', 'experience.toggleAll': 'Ocultar Todo', 'experience.toggleAll.expand': 'Expandir Todo',
-            'section.contact': 'Contacto', 'contact.button': 'Enviar',
-            'footer.text': '© 2025 - Portafolio de BI. Todos los derechos reservados.',
-        }
-      };
+              'section.skills': 'Habilidades',
+              'section.projects': 'Proyectos',
+              'projects.cat1': 'Proyectos de Gestión Pública y GNV',
+              'projects.cat2': 'Proyectos de Análisis de Datos y BI',
+              'section.projects.note': 'Para una mejor experiencia, se recomienda visualizar los dashboards en una computadora o en un dispositivo móvil en orientación horizontal.',
+              'project.simulador.title': 'Simulador de Sensibilidad de Precios GNV', 'project.simulador.description': 'Aplicación que realiza un análisis de sensibilidad de las variables críticas que intervienen en el cálculo del precio del GNV subsidiado en Bolivia. Esta herramienta proporciona simulación de escenarios regulatorios, cálculo del déficit fiscal y generación automática de informes técnicos en PDF.',
+              'project.inversion.title': 'Análisis de Programas de GNV en Bolivia', 'project.inversion.description': 'Dashboard integral desarrollado en Power BI para el seguimiento y control de los tres programas de inversión de Gas Natural Vehicular en Bolivia: Conversión, Mantenimiento y Recalificación. La herramienta centraliza y visualiza KPIs clave como el avance de metas vs. ejecución y rendimiento por sector. Permite un análisis geográfico detallado por departamento y taller, facilitando la identificación de tendencias y optimizando la asignación de recursos a nivel nacional.',
+              'project.seattle.title': 'Informe de Incidentes del Departamento de Bomberos 911 de Seattle', 'project.seattle.description': 'Este panel de Power BI analiza más de 2 millones de llamadas de emergencia 911 de bomberos en Seattle, identificando tendencias en frecuencia, horarios y distribución geográfica. Incluye comparaciones de rendimiento, Azure Maps para información a nivel de distrito y un modelo SARIMA integrado en Python para pronósticos, lo que permite una planificación operativa y estratégica basada en datos.',
+              'project.cta.app': 'Haz clic para probar el simulador.',
+              'project.cta.dash': 'Haz clic para interactuar con el dashboard.',
+              'section.experience': 'Mi Trayectoria Profesional',
+              'experience.company': 'Entidad Ejecutora de Conversión a Gas Natural Vehicular',
+              
+              'experience.roleNew.title': 'Consultor por Producto – Determinación de Costos de Recalificación',
+              'experience.roleNew.company': 'Entidad Ejecutora de Conversión a GNV (EEC-GNV) - Ministerio de Hidrocarburos y Energías',
+              'experience.roleNew.date': 'Ago 2025 – Nov 2025',
+              'experience.roleNew.resp1': '<strong>Diseño de Modelo Financiero Regulatorio:</strong> Desarrollé la nueva Estructura de Costos para los talleres de Recalificación (R.M. N° 296-13 y NB 722001:2025), garantizando trazabilidad y legalidad.',
+              'experience.roleNew.resp2': '<strong>Optimización del FRCGNV:</strong> Introduje costos escalonados para Cilindros Condenados (Niveles 1, 2 y 3), alineando pagos con costos reales y optimizando recursos.',
+              'experience.roleNew.resp3': '<strong>Herramienta de Gestión:</strong> Diseñé un Simulador Macroeconómico para el ajuste híbrido de indexación de costos, previniendo obsolescencia tarifaria.',
+              'experience.roleNew.resp4': '<strong>Gestión Regulatoria:</strong> Emití el Informe Final para la formalización de la estructura mediante Resolución Administrativa y su implementación en el sistema SUIC.',
 
-      let currentLang = localStorage.getItem('lang') || 'es';
-      const langButton = document.querySelector('.lang-btn');
+              'experience.role1.title': 'Consultor / Freelance de Análisis de Datos', 'experience.role1.company': 'Independiente', 'experience.role1.date': 'Feb 2025 - Actualidad', 'experience.role1.resp1': 'Proporcionando servicios de consultoría de análisis de datos e inteligencia de negocios a diversos clientes, desarrollando paneles personalizados y optimizando flujos de trabajo.',
+              'experience.role2.title': 'Profesional de Planificación de Proyectos', 'experience.role2.date': 'Abr 2023 - Abr 2024', 'experience.role2.resp1': 'Lideré la implementación de Power BI como herramienta central para monitorear en tiempo real los programas de inversión. Desarrollé dashboards automatizados que integraron diversas fuentes de datos, mejorando la toma de decisiones estratégicas y la rendición de cuentas a nivel ministerial.',
+              'experience.role3.title': 'Encargado Nacional de Fiscalización y Seguimiento Técnico', 'experience.role3.date': 'Ene 2022 - Mar 2023', 'experience.role3.resp1': 'Elaboré especificaciones técnicas para la adopción de nuevas tecnologías de conversión a GNV. Además, implementé dashboards en Power BI para el análisis de tendencias y seguimiento de datos técnicos, optimizando la eficiencia operativa del área.',
+              'experience.role4.title': 'Profesional de Fiscalización y Seguimiento Técnico', 'experience.role4.date': 'Ago 2021 - Dic 2021', 'experience.role4.resp1': 'Redacté y fundamenté el procedimiento técnico para la determinación de costos de conversión a GNV, logrando su aprobación mediante Resolución Ministerial. Esta normativa reemplazó el marco anterior, adaptándolo a nuevas tecnologías y estructuras de costos.',
+              'experience.role5.title': 'Profesional de Normalización Técnica', 'experience.role5.date': 'Mar 2021 - Jul 2021', 'experience.role5.resp1': 'Desarrollé la metodología y justificación técnica para actualizar la normativa de costos fijos, demostrando la necesidad de un nuevo marco regulatorio para garantizar la sostenibilidad del programa de conversión.',
+              'experience.role6.title': 'Profesional de Control y Seguimiento en Gestión de Programas', 'experience.role6.date': 'Ene 2018 - Sep 2019', 'experience.role6.resp1': 'Supervisé la ejecución física y financiera de los programas de inversión. Automaticé el seguimiento de presupuestos y la generación de informes mediante herramientas en Excel y macros VBA, mejorando la eficiencia y trazabilidad.',
+              'experience.role7.title': 'Encargado Nacional de Almacenes y Gestión Operativa', 'experience.role7.date': 'Ene 2017 - Dic 2017', 'experience.role7.resp1': 'Co-diseñé e implementé el primer sistema nacional de gestión de inventarios en SQL. Adicionalmente, coadyuvé en la elaboración de la propuesta del Decreto Supremo N.º 3389, que autorizó el incremento de la partida para consultores y estableció mecanismos de verificación para el uso de equipos de conversión a GNV.',
+              'experience.role8.title': 'Encargado Nacional de Almacenes de Equipos de Conversión a GNV', 'experience.role8.date': 'Ene 2016 - Dic 2016', 'experience.role8.resp1': 'Gestioné la logística y supervisé el inventario a nivel nacional, utilizando Excel avanzado para asegurar la trazabilidad del stock en más de 7 oficinas regionales.',
+              'experience.role9.title': 'Profesional de Planificación', 'experience.role9.date': 'Dic 2015', 'experience.role9.resp1': 'Automaticé la generación de certificaciones presupuestarias mediante macros en VBA, reduciendo errores y mejorando los tiempos de respuesta.',
+              'experience.role10.title': 'Consultor - Unidad Operativa', 'experience.role10.date': 'Sep 2015 - Nov 2015', 'experience.role10.resp1': 'Analicé datos operativos con Excel y VBA para identificar cuellos de botella y proponer mejoras en los procesos de conversión.',
+              'experience.role11.title': 'Coordinador Regional en Tarija', 'experience.role11.date': 'Mayo 2014 - Jun 2015', 'experience.role11.resp1': 'Coordiné los programas regionales de mantenimiento y recalificación, utilizando Excel y VBA para sistematizar el control operativo y reportar a la sede nacional.',
+              'experience.toggle': 'Mostrar Detalles', 'experience.toggle.hide': 'Ocultar Detalles', 'experience.toggleAll': 'Ocultar Todo', 'experience.toggleAll.expand': 'Expandir Todo',
+              'section.contact': 'Contacto', 'contact.button': 'Enviar',
+              'footer.text': '© 2025 - Portafolio de BI. Todos los derechos reservados.',
+          }
+        };
 
-      const applyTranslations = () => {
-        document.documentElement.lang = currentLang;
-        document.querySelectorAll('[data-translate]').forEach(el => {
-            const key = el.getAttribute('data-translate');
-            const translation = translations[currentLang]?.[key];
-            if (translation !== undefined) {
-                // MODIFICADO: Permitir innerHTML para claves que contienen 'resp' (responsabilidades) para soportar <strong>
-                if (key === 'privacy.text' || key === 'hero.title' || key.includes('resp')) {
-                    el.innerHTML = translation;
-                } else {
-                    el.textContent = translation;
-                }
+        let currentLang = localStorage.getItem('lang') || 'es';
+        const langButton = document.querySelector('.lang-btn');
+
+        const applyTranslations = () => {
+          document.documentElement.lang = currentLang;
+          document.querySelectorAll('[data-translate]').forEach(el => {
+              const key = el.getAttribute('data-translate');
+              const translation = translations[currentLang]?.[key];
+              if (translation !== undefined) {
+                  // MODIFICADO: Permitir innerHTML para claves que contienen 'resp' (responsabilidades) para soportar <strong>
+                  if (key === 'privacy.text' || key === 'hero.title' || key.includes('resp')) {
+                      el.innerHTML = translation;
+                  } else {
+                      el.textContent = translation;
+                  }
+              }
+          });
+          
+          const langImg = langButton.querySelector('img');
+          const langText = langButton.querySelector('span');
+          const contactForm = document.getElementById('contact-form');
+          
+          if (currentLang === 'en') {
+            langImg.src = 'assets/images/ESPANA.png';
+            langImg.alt = 'Bandera de España';
+            langText.textContent = 'Español';
+            contactForm.querySelector('[name="entry.2005620554"]').placeholder = 'Name';
+            contactForm.querySelector('[name="entry.1045781291"]').placeholder = 'Email';
+            contactForm.querySelector('[name="entry.839337160"]').placeholder = 'Message';
+          } else {
+            langImg.src = 'assets/images/USAFLAG.png';
+            langImg.alt = 'US Flag';
+            langText.textContent = 'English';
+            contactForm.querySelector('[name="entry.2005620554"]').placeholder = 'Nombre';
+            contactForm.querySelector('[name="entry.1045781291"]').placeholder = 'Correo Electrónico';
+            contactForm.querySelector('[name="entry.839337160"]').placeholder = 'Mensaje';
+          }
+        };
+        
+        langButton.addEventListener('click', () => {
+          currentLang = currentLang === 'en' ? 'es' : 'en';
+          localStorage.setItem('lang', currentLang);
+          applyTranslations();
+        });
+
+        const toggleExperienceFooter = document.getElementById('toggle-experience-footer');
+        const timelineContainer = document.querySelector('.timeline-container');
+        const detailButtons = document.querySelectorAll('.toggle-details-btn');
+
+        toggleExperienceFooter.addEventListener('click', () => {
+            const isExpanded = timelineContainer.classList.toggle('expanded');
+            toggleExperienceFooter.classList.toggle('expanded', isExpanded);
+            const textSpan = toggleExperienceFooter.querySelector('span:first-of-type');
+            const arrowIcon = toggleExperienceFooter.querySelector('.arrow-icon');
+
+            if (isExpanded) {
+                textSpan.textContent = translations[currentLang]['experience.toggleAll'];
+                arrowIcon.innerHTML = '▲';
+            } else {
+                textSpan.textContent = translations[currentLang]['experience.toggleAll.expand'];
+                arrowIcon.innerHTML = '▼';
+                document.querySelectorAll('.responsibilities-list.expanded').forEach(list => {
+                    list.classList.remove('expanded');
+                    const btn = list.nextElementSibling;
+                    if (btn) btn.textContent = translations[currentLang]['experience.toggle'];
+                });
             }
         });
-        
-        const langImg = langButton.querySelector('img');
-        const langText = langButton.querySelector('span');
-        const contactForm = document.getElementById('contact-form');
-        
-        if (currentLang === 'en') {
-          langImg.src = 'assets/images/ESPANA.png';
-          langImg.alt = 'Bandera de España';
-          langText.textContent = 'Español';
-          contactForm.querySelector('[name="name"]').placeholder = 'Name';
-          contactForm.querySelector('[name="email"]').placeholder = 'Email';
-          contactForm.querySelector('[name="message"]').placeholder = 'Message';
-        } else {
-          langImg.src = 'assets/images/USAFLAG.png';
-          langImg.alt = 'US Flag';
-          langText.textContent = 'English';
-          contactForm.querySelector('[name="name"]').placeholder = 'Nombre';
-          contactForm.querySelector('[name="email"]').placeholder = 'Correo Electrónico';
-          contactForm.querySelector('[name="message"]').placeholder = 'Mensaje';
-        }
-      };
-      
-      langButton.addEventListener('click', () => {
-        currentLang = currentLang === 'en' ? 'es' : 'en';
-        localStorage.setItem('lang', currentLang);
-        applyTranslations();
-      });
 
-      const toggleExperienceFooter = document.getElementById('toggle-experience-footer');
-      const timelineContainer = document.querySelector('.timeline-container');
-      const detailButtons = document.querySelectorAll('.toggle-details-btn');
-
-      toggleExperienceFooter.addEventListener('click', () => {
-          const isExpanded = timelineContainer.classList.toggle('expanded');
-          toggleExperienceFooter.classList.toggle('expanded', isExpanded);
-          const textSpan = toggleExperienceFooter.querySelector('span:first-of-type');
-          const arrowIcon = toggleExperienceFooter.querySelector('.arrow-icon');
-
-          if (isExpanded) {
-              textSpan.textContent = translations[currentLang]['experience.toggleAll'];
-              arrowIcon.innerHTML = '▲';
-          } else {
-              textSpan.textContent = translations[currentLang]['experience.toggleAll.expand'];
-              arrowIcon.innerHTML = '▼';
-              document.querySelectorAll('.responsibilities-list.expanded').forEach(list => {
-                  list.classList.remove('expanded');
-                  const btn = list.nextElementSibling;
-                  if (btn) btn.textContent = translations[currentLang]['experience.toggle'];
-              });
-          }
-      });
-
-      detailButtons.forEach(button => {
-        button.addEventListener('click', function() {
-          const list = this.previousElementSibling;
-          const isExpanded = list.classList.toggle('expanded');
-          this.textContent = isExpanded ? translations[currentLang]['experience.toggle.hide'] : translations[currentLang]['experience.toggle'];
+        detailButtons.forEach(button => {
+          button.addEventListener('click', function() {
+            const list = this.previousElementSibling;
+            const isExpanded = list.classList.toggle('expanded');
+            this.textContent = isExpanded ? translations[currentLang]['experience.toggle.hide'] : translations[currentLang]['experience.toggle'];
+          });
         });
+        
+        const form = document.getElementById('contact-form');
+        const iframe = document.getElementById('hidden_iframe');
+        const formMessage = document.getElementById('form-message');
+        let isSubmitting = false;
+
+        form.addEventListener('submit', () => { isSubmitting = true; });
+
+        iframe.addEventListener('load', () => {
+          if (!isSubmitting) return;
+          formMessage.style.display = 'block';
+          formMessage.textContent = currentLang === 'en' ? 'Message sent! Thank you.' : '¡Mensaje enviado! Gracias.';
+          form.reset();
+          isSubmitting = false;
+          setTimeout(() => { formMessage.style.display = 'none'; }, 3000);
+        });
+
+        applyTranslations(); 
       });
-      
-      const form = document.getElementById('contact-form');
-      const iframe = document.getElementById('hidden_iframe');
-      const formMessage = document.getElementById('form-message');
-      let isSubmitting = false;
-
-      form.addEventListener('submit', () => { isSubmitting = true; });
-
-      iframe.addEventListener('load', () => {
-        if (!isSubmitting) return;
-        formMessage.style.display = 'block';
-        formMessage.textContent = currentLang === 'en' ? 'Message sent! Thank you.' : '¡Mensaje enviado! Gracias.';
-        form.reset();
-        isSubmitting = false;
-        setTimeout(() => { formMessage.style.display = 'none'; }, 3000);
-      });
-
-      applyTranslations(); 
-    });
-  </script>
+    </script>
 </body>
 </html>
