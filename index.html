@@ -1,4 +1,3 @@
-<!-- Start of 00_head.html -->
 <!DOCTYPE html>
 <html lang="es">
 
@@ -94,7 +93,7 @@
         font-family: 'Oswald', sans-serif;
         font-size: 1.8rem;
         color: var(--clr-cold-accent);
-        margin: 30px 0 20px; /* Ajustado para compacidad */
+        margin: 30px 0 20px; 
         padding: 15px 20px;
         background: var(--clr-bg);
         border-left: 6px solid var(--clr-warm-accent);
@@ -109,11 +108,11 @@
       .about-text { flex: 1; }
       .about-text p { text-align: justify; }
       
-      /* --- ESTILOS EDUCACIÓN (ACTUALIZADO A TABLA) --- */
+      /* --- ESTILOS EDUCACIÓN --- */
       .education-table { 
         width: 100%; 
         border-collapse: separate; 
-        border-spacing: 0 20px; /* Espacio entre filas */
+        border-spacing: 0 20px; 
       }
 
       .education-table tr { 
@@ -131,7 +130,7 @@
         border-top-left-radius: 10px; 
         border-bottom-left-radius: 10px; 
         border-left: 5px solid var(--clr-cold-accent);
-        width: 20%; /* Ancho fijo para columna de logos */
+        width: 20%; 
       }
 
       .info-cell { 
@@ -140,22 +139,19 @@
         border-bottom-right-radius: 10px; 
       }
 
-      /* Estilo para logos individuales y dentro del wrapper */
       .education-logo { 
-        width: auto;           /* Deja que el navegador calcule el ancho natural */
-        height: auto;          /* Deja que el navegador calcule el alto natural */
-        max-width: 200px;      /* Tope máximo de ancho en PC */
-        max-height: 120px;     /* Tope máximo de alto en PC (más estético) */
-        object-fit: contain;   /* Mantiene la proporción sin estirar */
+        width: auto;           
+        height: auto;          
+        max-width: 200px;      
+        max-height: 120px;     
+        object-fit: contain;   
       }
 
-      /* Contenedor para doble logo */
       .logo-wrapper { 
         display: flex; 
         justify-content: center; 
-        gap: 15px; /* Aumentado ligeramente de 10px para dar más espacio a las logos más grandes */
+        gap: 15px; 
       }
-
 
       .education-info h3 { 
         font-family: 'Oswald', sans-serif; 
@@ -164,7 +160,6 @@
         margin-bottom: 3px; 
         line-height: 1.2; 
       }
-
 
       .education-info .institution { 
         font-weight: 500; 
@@ -189,8 +184,6 @@
         text-align: justify; 
       }
 
-
-
       .edu-details li::before { 
         content: '•'; 
         color: var(--clr-warm-accent); 
@@ -199,54 +192,77 @@
         top: 0; 
       }
 
-      /* Responsividad */
-
-
+      /* Responsividad Educación */
       @media (max-width: 768px) {
-  .education-table tr { 
-    display: flex; 
-    flex-direction: column; 
-  }
-  
-  /* --- CAMBIOS NUEVOS AQUI --- */
-  .logo-cell { 
-    width: 100%; 
-    border-radius: 10px 10px 0 0; 
-    border-left: none; 
-    border-top: 5px solid var(--clr-cold-accent);
-    /* Agregamos padding para que respire */
-    padding: 20px 10px; 
-  }
+        
+        /* Convertimos la fila en una tarjeta flexible y separada */
+        .education-table tr { 
+          display: flex; 
+          flex-direction: column; 
+          margin-bottom: 25px; 
+          background: #fff;
+          border: 1px solid #e0e0e0; 
+          box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+        }
+        
+        /* Ajuste de la celda del logo */
+        .logo-cell { 
+          width: 100%; 
+          border-radius: 10px 10px 0 0; 
+          border-left: none; 
+          border-top: 5px solid var(--clr-cold-accent);
+          border-bottom: 1px solid #f0f0f0; 
+          padding: 20px 10px; 
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
 
-  /* Forzamos que la imagen no tenga altura fija de 150px */
-  .education-logo {
-    width: auto;
-    max-width: 80%;
-    height: auto;       /* Clave: quita la altura fija */
-    max-height: 80px;   /* Clave: pone un tope razonable para móvil */
-    margin-bottom: 5px;
-  }
-  
-  /* Ajustamos el contenedor si hay dos logos */
+        .education-logo {
+          width: auto;
+          max-width: 80%;
+          height: auto;       
+          max-height: 80px;   
+          margin-bottom: 0;
+        }
+        
+        .logo-wrapper {
+          flex-direction: column; /* CAMBIO CLAVE: Logos uno encima del otro */
+          gap: 10px;               
+          align-items: center;
+          justify-content: center;
+        }
 
-  .logo-wrapper {
-    flex-direction: column;  /* <--- CAmbio*/
-    gap: 15px;               /* (Opcional) Aumenté un poco el espacio para que no se peguen */
-    align-items: center;
-  }
+        /* Ajuste de la celda de información */
+        .info-cell { 
+          border-radius: 0 0 10px 10px; 
+          padding: 20px 25px; 
+          text-align: center; 
+        }
 
-  /* --------------------------- */
+        .education-info h3 {
+          font-size: 1.2rem;
+          margin-bottom: 10px;
+          color: var(--clr-text);
+        }
 
-  .info-cell { 
-    border-radius: 0 0 10px 10px; 
-  }
-  .education-info .institution, .edu-details li { 
-    text-align: left; 
-  }
-}
+        /* OCULTAR EL NOMBRE DE LA UNIVERSIDAD EN MÓVIL */
+        .education-info .institution { 
+          display: none; 
+        }
 
+        /* Ajuste de la lista de detalles */
+        .edu-details {
+            text-align: left; 
+            margin-top: 10px;
+        }
 
-
+        .edu-details li { 
+          text-align: left; 
+          font-size: 0.85rem;
+          line-height: 1.5;
+        }
+      }
       /* --- FIN ESTILOS EDUCACIÓN --- */
 
       .skills-grid { display: flex; justify-content: center; align-items: center; gap: 20px; flex-wrap: wrap; }
@@ -335,8 +351,51 @@
         .lang-btn { gap: 6px; margin-left: auto; padding: 5px 8px; font-size: 0.9rem; }
         .lang-btn img { width: 20px; height: 20px; }
         .about-container { flex-direction: column; text-align: center; }
-        .project-card { flex-direction: column; align-items: center; }
-        .project-link { flex: 0 0 auto; width: 100%; }
+
+        /* --- INICIO REORDENAMIENTO PROYECTOS MÓVIL --- */
+        .project-card { 
+          display: flex; 
+          flex-direction: column; 
+          align-items: center; 
+        }
+
+        .project-content {
+          display: contents; /* Permite ordenar los hijos de project-content como si fueran directos de project-card */
+        }
+
+        /* 1. TÍTULO */
+        .project-content h3 {
+          order: 1;
+          margin-bottom: 15px;
+          text-align: center;
+          width: 100%;
+        }
+
+        /* 2. IMAGEN */
+        .project-link { 
+          order: 2;
+          flex: 0 0 auto; 
+          width: 100%; 
+          margin-bottom: 15px;
+        }
+
+        /* 3. HERRAMIENTAS Y DESCRIPCIÓN */
+        .project-tools {
+          order: 3;
+          justify-content: center;
+          display: flex;
+          flex-wrap: wrap;
+        }
+        
+        .project-content p {
+          order: 4;
+        }
+
+        .project-cta {
+          order: 5;
+        }
+        /* --- FIN REORDENAMIENTO PROYECTOS MÓVIL --- */
+        
         .timeline-container::after { left: 31px; }
         .timeline-item { width: 100%; padding-left: 70px; padding-right: 25px; }
         .timeline-item.right { left: 0%; }
@@ -345,7 +404,6 @@
     </style>
 </head>
 <body>
-  <!-- End of 00_head.html -->
 
 <!-- Start of 01_navbar.html -->
   <nav>
@@ -554,7 +612,7 @@
   <div class="projects-grid">
     <div class="project-card">
       <a href="https://app.powerbi.com/view?r=eyJrIjoiNzg5ZDRlZjktY2I0MS00OTExLWI0ZjktY2JlMTM3M2NhYjg2IiwidCI6ImJhODQzY2Q3LWNiN2MtNGJiMS1hZWE3LTEzY2NhOGZlYzRjOSIsImMiOjR9" target="_blank" rel="noopener noreferrer" class="project-link">
-        <img src="assets/images/SEATTLE.gif" alt="Seattle 911 Demo" class="project-gif">
+        <img src="assets/images/ComprimidoGEo.gif" alt="Seattle 911 Demo" class="project-gif">
       </a>
       <div class="project-content">
         <div class="project-tools">
