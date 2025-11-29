@@ -1,3 +1,4 @@
+<!-- Start of 00_head.html -->
 <!DOCTYPE html>
 <html lang="es">
 
@@ -191,10 +192,17 @@
         left: 0; 
         top: 0; 
       }
+      
+      /* Clases de utilidad para visibilidad condicional */
+      .mobile-only-content { display: none; }
 
       /* Responsividad Educación */
       @media (max-width: 768px) {
         
+        /* Activamos visibilidad condicional para móvil */
+        .mobile-only-content { display: block; }
+        .desktop-only-content { display: none; }
+
         /* Convertimos la fila en una tarjeta flexible y separada */
         .education-table tr { 
           display: flex; 
@@ -404,6 +412,7 @@
     </style>
 </head>
 <body>
+<!-- End of 00_head.html -->
 
 <!-- Start of 01_navbar.html -->
   <nav>
@@ -431,7 +440,6 @@
     </div>
   </nav>
 <!-- End of 01_navbar.html -->
-
 <!-- Start of 02_hero.html -->
   <main>
     <section id="home" class="hero">
@@ -463,10 +471,9 @@
     </section>
 <!-- End of 03_about.html -->
 <!-- Start of 04_education.html -->
-    <section id="education" class="education">
+<section id="education" class="education">
       <h2 data-translate="section.education"></h2>
       <table class="education-table">
-        <!-- Fila 1: UB (Master) -->
         <tr>
           <td class="logo-cell">
             <img src="assets/images/UB.png" alt="UB Logo" class="education-logo" onerror="this.onerror=null;this.src='https://placehold.co/50x50/FFFFFF/000000?text=UB';">
@@ -479,7 +486,6 @@
           </td>
         </tr>
 
-        <!-- Fila 2: UPV/UCB (Especialidad - Doble Logo) -->
         <tr>
           <td class="logo-cell">
             <div class="logo-wrapper">
@@ -495,7 +501,6 @@
           </td>
         </tr>
 
-        <!-- Fila 3: UCB (Ingeniería) -->
         <tr>
           <td class="logo-cell">
             <img src="assets/images/CATO.png" alt="UCB Logo" class="education-logo" onerror="this.onerror=null;this.src='https://placehold.co/50x50/FFFFFF/000000?text=UCB';">
@@ -508,7 +513,6 @@
           </td>
         </tr>
 
-        <!-- Fila 4: Kaplan (Inglés) -->
         <tr>
           <td class="logo-cell">
             <img src="assets/images/Kaplan.png" alt="Kaplan Logo" class="education-logo" onerror="this.onerror=null;this.src='https://placehold.co/50x50/FFFFFF/000000?text=Kaplan';">
@@ -518,7 +522,9 @@
               <h3 data-translate="edu.kaplan.title"></h3>
               <p class="institution" data-translate="edu.kaplan.inst"></p>
               <ul class="edu-details">
-                <li data-translate="edu.kaplan.det1"></li>
+                <li class="desktop-only-content" data-translate="edu.kaplan.det1"></li>
+                <li class="mobile-only-content" data-translate="edu.kaplan.det1.mobile"></li>
+                
                 <li data-translate="edu.kaplan.det2"></li>
               </ul>
             </div>
@@ -556,6 +562,7 @@
       </div>
     </section>
 <!-- End of 05_skills.html -->
+<!-- Start of 06_proyectos.html -->
 <section id="projects" class="projects">
   <h2 data-translate="section.projects"></h2>
   <p class="project-view-note" data-translate="section.projects.note"></p>
@@ -626,6 +633,7 @@
     </div>
   </div>
 </section>
+<!-- End of 06_proyectos.html -->
 
 <!-- Start of 07_experiencia.html -->
     <section id="experience" class="experience">
@@ -817,7 +825,7 @@
 </footer>
 <!-- End of 09_footer.html -->
 <!-- Start of 99_scripts.html -->
-  <script>
+<script>
     document.addEventListener('DOMContentLoaded', () => {
       const hamburger = document.querySelector('.hamburger');
       const navMenu = document.getElementById('nav-menu');
@@ -846,6 +854,7 @@
             'edu.kaplan.title': 'Intensive English Program (Advanced Level C1)',
             'edu.kaplan.inst': 'Kaplan International Languages | New York, USA',
             'edu.kaplan.det1': 'In-person Modality: Full immersion in a native environment.',
+            'edu.kaplan.det1.mobile': 'In-person Modality in New York, USA: Full immersion in a native environment.',
             'edu.kaplan.det2': 'Development of conversational fluency for negotiation and technical management.',
             'edu.ub.title': 'MBI - Master in Business Intelligence',
             'edu.ub.inst': 'University of Barcelona',
@@ -901,6 +910,7 @@
             'edu.kaplan.title': 'Programa Intensivo de Inglés (Nivel Avanzado C1)',
             'edu.kaplan.inst': 'Kaplan International Languages | Nueva York, EE. UU.',
             'edu.kaplan.det1': 'Modalidad Presencial: Inmersión total en entorno nativo.',
+            'edu.kaplan.det1.mobile': 'Modalidad Presencial en Nueva York, EE. UU.: Inmersión total en entorno nativo.',
             'edu.kaplan.det2': 'Desarrollo de fluidez conversacional para negociación y gestión técnica.',
             'edu.ub.title': 'MBI - Master en Business Intelligence',
             'edu.ub.inst': 'Universidad de Barcelona',
@@ -1043,7 +1053,4 @@
       applyTranslations(); 
     });
   </script>
-</body>
-</html>
 <!-- End of 99_scripts.html -->
-
