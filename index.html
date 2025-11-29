@@ -324,6 +324,12 @@
       @keyframes slideUp { from { transform: translateY(50px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
       
       @media (max-width: 768px) {
+        /* ESTILO AÑADIDO: Eliminar diagonal en móvil */
+        .hero {
+            clip-path: none;
+            padding-bottom: 40px;
+        }
+
         .hero-content .name { font-size: 3rem; flex-direction: column; gap: 5px; }
         .hero-content .name img { height: 50px; }
         .hero-content .title { font-size: 2rem; }
@@ -576,13 +582,13 @@
       </a>
       <div class="project-content">
         <div class="project-tools">
-          <span class="tool-badge">Toma de Decisiones</span>
-          <span class="tool-badge">Termodinámica</span>
-          <span class="tool-badge">Estrategia Energética</span>
+          <span class="tool-badge" data-translate="tool.decision">Toma de Decisiones</span>
+          <span class="tool-badge" data-translate="tool.thermo">Termodinámica</span>
+          <span class="tool-badge" data-translate="tool.strategy">Estrategia Energética</span>
         </div>
-        <h3>Simulador de Equivalencia Gasolina - GNV</h3>
-        <p>Para determinar la viabilidad de la conversión a GNV no solo se debe tomar en cuenta la equivalencia energética, sino otras variables críticas. Este simulador estratégico trasciende la visión convencional teórica. Al integrar variables termodinámicas y operativas críticas —frecuentemente omitidas en los análisis tradicionales—, esta herramienta llena un vacío técnico esencial. Provee datos de soporte a la toma de decisiones para garantizar la sostenibilidad y acelerar el cambio de la matriz energética en Bolivia.</p>
-        <p class="project-cta">Haz clic en la imagen para ver el simulador</p>
+        <h3 data-translate="project.equiv.title">Simulador de Equivalencia Gasolina - GNV</h3>
+        <p data-translate="project.equiv.description">Para determinar la viabilidad de la conversión a GNV no solo se debe tomar en cuenta la equivalencia energética, sino otras variables críticas. Este simulador estratégico trasciende la visión convencional teórica. Al integrar variables termodinámicas y operativas críticas —frecuentemente omitidas en los análisis tradicionales—, esta herramienta llena un vacío técnico esencial. Provee datos de soporte a la toma de decisiones para garantizar la sostenibilidad y acelerar el cambio de la matriz energética en Bolivia.</p>
+        <p class="project-cta" data-translate="project.cta.sim">Haz clic en la imagen para ver el simulador</p>
       </div>
     </div>
 
@@ -868,6 +874,16 @@
             'projects.cat1': 'Public Management & NGV Projects',
             'projects.cat2': 'Data Analytics & BI Projects',
             'section.projects.note': 'For the best experience, it is recommended to view the dashboards on a computer or on a mobile device in landscape orientation.',
+            
+            // --- NUEVAS TRADUCCIONES PARA PROYECTO EQUIVALENCIA (EN) ---
+            'tool.decision': 'Decision Making',
+            'tool.thermo': 'Thermodynamics',
+            'tool.strategy': 'Energy Strategy',
+            'project.equiv.title': 'Gasoline - NGV Equivalence Simulator',
+            'project.equiv.description': 'To determine the viability of NGV conversion, considering energy equivalence is not enough; other critical variables must be accounted for. This strategic simulator transcends the conventional theoretical view. By integrating critical thermodynamic and operational variables—often omitted in traditional analyses—this tool fills an essential technical gap. It provides support data for decision-making to ensure sustainability and accelerate the energy matrix transition in Bolivia.',
+            'project.cta.sim': 'Click on the image to view the simulator',
+            // -----------------------------------------------------------
+
             'project.simulador.title': 'GNV Price Sensitivity Simulator', 'project.simulador.description': 'Web application performing sensitivity analysis on critical variables affecting the subsidized NGV price in Bolivia. This tool provides regulatory scenario simulation, fiscal deficit calculation, and automated generation of technical PDF reports.',
             'project.inversion.title': 'GNV Programs Analysis in Bolivia', 'project.inversion.description': 'Comprehensive dashboard developed in Power BI for monitoring and controlling the three Natural Gas Vehicle investment programs in Bolivia: Conversion, Maintenance, and Requalification. The tool centralizes and visualizes key KPIs such as goal progress vs. execution and performance by sector. It allows for detailed geographical analysis by department and workshop, facilitating trend identification and optimizing resource allocation nationwide.',
             'project.seattle.title': 'Seattle 911 Fire Department Incident Report', 'project.seattle.description': 'This Power BI dashboard analyzes over 2 million Seattle 911 fire emergency calls, uncovering trends in frequency, timing, and geographic distribution. Featuring performance comparisons, Azure Maps for district-level insights, and a Python-integrated SARIMA model for forecasting, it empowers data-driven operational and strategic planning.',
@@ -924,6 +940,16 @@
             'projects.cat1': 'Proyectos de Gestión Pública y GNV',
             'projects.cat2': 'Proyectos de Análisis de Datos y BI',
             'section.projects.note': 'Para una mejor experiencia, se recomienda visualizar los dashboards en una computadora o en un dispositivo móvil en orientación horizontal.',
+            
+            // --- NUEVAS TRADUCCIONES PARA PROYECTO EQUIVALENCIA (ES) ---
+            'tool.decision': 'Toma de Decisiones',
+            'tool.thermo': 'Termodinámica',
+            'tool.strategy': 'Estrategia Energética',
+            'project.equiv.title': 'Simulador de Equivalencia Gasolina - GNV',
+            'project.equiv.description': 'Para determinar la viabilidad de la conversión a GNV no solo se debe tomar en cuenta la equivalencia energética, sino otras variables críticas. Este simulador estratégico trasciende la visión convencional teórica. Al integrar variables termodinámicas y operativas críticas —frecuentemente omitidas en los análisis tradicionales—, esta herramienta llena un vacío técnico esencial. Provee datos de soporte a la toma de decisiones para garantizar la sostenibilidad y acelerar el cambio de la matriz energética en Bolivia.',
+            'project.cta.sim': 'Haz clic en la imagen para ver el simulador',
+            // -----------------------------------------------------------
+
             'project.simulador.title': 'Simulador de Sensibilidad de Precios GNV', 'project.simulador.description': 'Aplicación que realiza un análisis de sensibilidad de las variables críticas que intervienen en el cálculo del precio del GNV subsidiado en Bolivia. Esta herramienta proporciona simulación de escenarios regulatorios, cálculo del déficit fiscal y generación automática de informes técnicos en PDF.',
             'project.inversion.title': 'Análisis de Programas de GNV en Bolivia', 'project.inversion.description': 'Dashboard integral desarrollado en Power BI para el seguimiento y control de los tres programas de inversión de Gas Natural Vehicular en Bolivia: Conversión, Mantenimiento y Recalificación. La herramienta centraliza y visualiza KPIs clave como el avance de metas vs. ejecución y rendimiento por sector. Permite un análisis geográfico detallado por departamento y taller, facilitando la identificación de tendencias y optimizando la asignación de recursos a nivel nacional.',
             'project.seattle.title': 'Informe de Incidentes del Departamento de Bomberos 911 de Seattle', 'project.seattle.description': 'Este panel de Power BI analiza más de 2 millones de llamadas de emergencia 911 de bomberos en Seattle, identificando tendencias en frecuencia, horarios y distribución geográfica. Incluye comparaciones de rendimiento, Azure Maps para información a nivel de distrito y un modelo SARIMA integrado en Python para pronósticos, lo que permite una planificación operativa y estratégica basada en datos.',
