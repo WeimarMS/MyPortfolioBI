@@ -92,7 +92,7 @@
       
       .category-title {
         font-family: 'Oswald', sans-serif;
-        font-size: 1.8rem;
+        font-size: 1.2rem;
         color: var(--clr-cold-accent);
         margin: 30px 0 20px; 
         padding: 15px 20px;
@@ -100,7 +100,8 @@
         border-left: 6px solid var(--clr-warm-accent);
         border-radius: 8px;
         box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-        text-align: left;
+        text-align: center;
+	text-transform: uppercase;
       }
 
       .about, .skills, .projects, .contact, .experience, .education { background: #fff; border-radius: 10px; padding: 40px; margin: 20px auto; box-shadow: 0 5px 15px rgba(0,0,0,0.05); animation: slideUp 1s ease-in-out; }
@@ -432,9 +433,9 @@
         </ul>
         <ul class="nav-right">
           <li><a href="#about" data-translate="nav.about"></a></li>
-          <li><a href="#education" data-translate="nav.education"></a></li>
-          <li><a href="#skills" data-translate="nav.skills"></a></li>
           <li><a href="#projects" data-translate="nav.projects"></a></li>
+	  <li><a href="#education" data-translate="nav.education"></a></li>
+          <li><a href="#skills" data-translate="nav.skills"></a></li>
           <li><a href="#experience" data-translate="nav.experience"></a></li>
           <li><a href="#contact" data-translate="nav.contact"></a></li>
         </ul>
@@ -476,6 +477,93 @@
       </div>
     </section>
 <!-- End of 03_about.html -->
+<!-- Start of 06_proyectos.html -->
+<section id="projects" class="projects">
+  <h2 data-translate="section.projects"></h2>
+  <p class="project-view-note" data-translate="section.projects.note"></p>
+  
+  <h3 class="category-title" data-translate="projects.cat1"></h3>
+  <div class="projects-grid">
+    
+    <div class="project-card">
+      <a href="https://drive.google.com/file/d/1zVCJqioTLBIi5EX_KveH2MuCeStT-7Rm/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="project-link">
+        <img src="assets/images/GLP.png" alt="Reingeniería Subvención GLP" class="project-gif">
+      </a>
+      <div class="project-content">
+        <div class="project-tools">
+          <span class="tool-badge" data-translate="tool.public_policy">Política Pública</span>
+          <span class="tool-badge" data-translate="tool.fiscal">Ingeniería Fiscal</span>
+        </div>
+        <h3 data-translate="project.glp.title"></h3>
+        <p data-translate="project.glp.description"></p>
+        <p class="project-cta" data-translate="project.cta.general"></p>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <a href="https://equivalenciagnv.netlify.app/" target="_blank" rel="noopener noreferrer" class="project-link">
+        <img src="assets/images/Equiv.png" alt="Simulador Equivalencia GNV" class="project-gif">
+      </a>
+      <div class="project-content">
+        <div class="project-tools">
+          <span class="tool-badge" data-translate="tool.decision">Toma de Decisiones</span>
+          <span class="tool-badge" data-translate="tool.thermo">Termodinámica</span>
+          <span class="tool-badge" data-translate="tool.strategy">Estrategia Energética</span>
+        </div>
+        <h3 data-translate="project.equiv.title">Simulador de Equivalencia Gasolina - GNV</h3>
+        <p data-translate="project.equiv.description">Para determinar la viabilidad de la conversión a GNV no solo se debe tomar en cuenta la equivalencia energética, sino otras variables críticas. Este simulador estratégico trasciende la visión convencional teórica. Al integrar variables termodinámicas y operativas críticas —frecuentemente omitidas en los análisis tradicionales—, esta herramienta llena un vacío técnico esencial. Provee datos de soporte a la toma de decisiones para garantizar la sostenibilidad y acelerar el cambio de la matriz energética en Bolivia.</p>
+        <p class="project-cta" data-translate="project.cta.sim"></p>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <a href="https://weimarms.github.io/simulador-precio-gnv-bolivia/" target="_blank" rel="noopener noreferrer" class="project-link">
+        <img src="assets/images/SimuladorGNV.png" alt="Simulador GNV" class="project-gif">
+      </a>
+      <div class="project-content">
+        <div class="project-tools">
+          <span class="tool-badge">JavaScript</span>
+          <span class="tool-badge">Tailwind CSS</span>
+          <span class="tool-badge">Regulatory Analysis</span>
+        </div>
+        <h3 data-translate="project.simulador.title"></h3>
+        <p data-translate="project.simulador.description"></p>
+        <p class="project-cta" data-translate="project.cta.app"></p>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <a href="https://app.powerbi.com/view?r=eyJrIjoiZDk4NmM2M2YtNzYyNi00YTgxLWI1ZmMtMzhkNDQxZjZjNWI5IiwidCI6ImJhODQzY2Q3LWNiN2MtNGJiMS1hZWE3LTEzY2NhOGZlYzRjOSIsImMiOjR9" target="_blank" rel="noopener noreferrer" class="project-link">
+        <img src="assets/images/INV.gif" alt="Investment Programs Analysis Demo" class="project-gif">
+      </a>
+      <div class="project-content">
+        <div class="project-tools"><span class="tool-badge">Power BI</span></div>
+        <h3 data-translate="project.inversion.title"></h3>
+        <p data-translate="project.inversion.description"></p>
+        <p class="project-cta" data-translate="project.cta.dash"></p>
+      </div>
+    </div>
+  </div>
+
+  <h3 class="category-title" data-translate="projects.cat2"></h3>
+  <div class="projects-grid">
+    <div class="project-card">
+      <a href="https://app.powerbi.com/view?r=eyJrIjoiNzg5ZDRlZjktY2I0MS00OTExLWI0ZjktY2JlMTM3M2NhYjg2IiwidCI6ImJhODQzY2Q3LWNiN2MtNGJiMS1hZWE3LTEzY2NhOGZlYzRjOSIsImMiOjR9" target="_blank" rel="noopener noreferrer" class="project-link">
+        <img src="assets/images/ComprimidoGEo.gif" alt="Seattle 911 Demo" class="project-gif">
+      </a>
+      <div class="project-content">
+        <div class="project-tools">
+          <span class="tool-badge">Power BI</span>
+          <span class="tool-badge">Python</span>
+        </div>
+        <h3 data-translate="project.seattle.title"></h3>
+        <p data-translate="project.seattle.description"></p>
+        <p class="project-cta" data-translate="project.cta.dash"></p>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End of 06_proyectos.html -->
 <!-- Start of 04_education.html -->
 <section id="education" class="education">
       <h2 data-translate="section.education"></h2>
@@ -568,93 +656,6 @@
       </div>
     </section>
 <!-- End of 05_skills.html -->
-<!-- Start of 06_proyectos.html -->
-<section id="projects" class="projects">
-  <h2 data-translate="section.projects"></h2>
-  <p class="project-view-note" data-translate="section.projects.note"></p>
-  
-  <h3 class="category-title" data-translate="projects.cat1"></h3>
-  <div class="projects-grid">
-    
-    <div class="project-card">
-      <a href="https://drive.google.com/file/d/1zVCJqioTLBIi5EX_KveH2MuCeStT-7Rm/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="project-link">
-        <img src="assets/images/GLP.png" alt="Reingeniería Subvención GLP" class="project-gif">
-      </a>
-      <div class="project-content">
-        <div class="project-tools">
-          <span class="tool-badge" data-translate="tool.public_policy">Política Pública</span>
-          <span class="tool-badge" data-translate="tool.fiscal">Ingeniería Fiscal</span>
-        </div>
-        <h3 data-translate="project.glp.title"></h3>
-        <p data-translate="project.glp.description"></p>
-        <p class="project-cta" data-translate="project.cta.general"></p>
-      </div>
-    </div>
-
-    <div class="project-card">
-      <a href="https://equivalenciagnv.netlify.app/" target="_blank" rel="noopener noreferrer" class="project-link">
-        <img src="assets/images/Equiv.png" alt="Simulador Equivalencia GNV" class="project-gif">
-      </a>
-      <div class="project-content">
-        <div class="project-tools">
-          <span class="tool-badge" data-translate="tool.decision">Toma de Decisiones</span>
-          <span class="tool-badge" data-translate="tool.thermo">Termodinámica</span>
-          <span class="tool-badge" data-translate="tool.strategy">Estrategia Energética</span>
-        </div>
-        <h3 data-translate="project.equiv.title">Simulador de Equivalencia Gasolina - GNV</h3>
-        <p data-translate="project.equiv.description">Para determinar la viabilidad de la conversión a GNV no solo se debe tomar en cuenta la equivalencia energética, sino otras variables críticas. Este simulador estratégico trasciende la visión convencional teórica. Al integrar variables termodinámicas y operativas críticas —frecuentemente omitidas en los análisis tradicionales—, esta herramienta llena un vacío técnico esencial. Provee datos de soporte a la toma de decisiones para garantizar la sostenibilidad y acelerar el cambio de la matriz energética en Bolivia.</p>
-        <p class="project-cta" data-translate="project.cta.sim"></p>
-      </div>
-    </div>
-
-    <div class="project-card">
-      <a href="https://weimarms.github.io/simulador-precio-gnv-bolivia/" target="_blank" rel="noopener noreferrer" class="project-link">
-        <img src="assets/images/SimuladorGNV.png" alt="Simulador GNV" class="project-gif">
-      </a>
-      <div class="project-content">
-        <div class="project-tools">
-          <span class="tool-badge">JavaScript</span>
-          <span class="tool-badge">Tailwind CSS</span>
-          <span class="tool-badge">Regulatory Analysis</span>
-        </div>
-        <h3 data-translate="project.simulador.title"></h3>
-        <p data-translate="project.simulador.description"></p>
-        <p class="project-cta" data-translate="project.cta.app"></p>
-      </div>
-    </div>
-
-    <div class="project-card">
-      <a href="https://app.powerbi.com/view?r=eyJrIjoiZDk4NmM2M2YtNzYyNi00YTgxLWI1ZmMtMzhkNDQxZjZjNWI5IiwidCI6ImJhODQzY2Q3LWNiN2MtNGJiMS1hZWE3LTEzY2NhOGZlYzRjOSIsImMiOjR9" target="_blank" rel="noopener noreferrer" class="project-link">
-        <img src="assets/images/INV.gif" alt="Investment Programs Analysis Demo" class="project-gif">
-      </a>
-      <div class="project-content">
-        <div class="project-tools"><span class="tool-badge">Power BI</span></div>
-        <h3 data-translate="project.inversion.title"></h3>
-        <p data-translate="project.inversion.description"></p>
-        <p class="project-cta" data-translate="project.cta.dash"></p>
-      </div>
-    </div>
-  </div>
-
-  <h3 class="category-title" data-translate="projects.cat2"></h3>
-  <div class="projects-grid">
-    <div class="project-card">
-      <a href="https://app.powerbi.com/view?r=eyJrIjoiNzg5ZDRlZjktY2I0MS00OTExLWI0ZjktY2JlMTM3M2NhYjg2IiwidCI6ImJhODQzY2Q3LWNiN2MtNGJiMS1hZWE3LTEzY2NhOGZlYzRjOSIsImMiOjR9" target="_blank" rel="noopener noreferrer" class="project-link">
-        <img src="assets/images/ComprimidoGEo.gif" alt="Seattle 911 Demo" class="project-gif">
-      </a>
-      <div class="project-content">
-        <div class="project-tools">
-          <span class="tool-badge">Power BI</span>
-          <span class="tool-badge">Python</span>
-        </div>
-        <h3 data-translate="project.seattle.title"></h3>
-        <p data-translate="project.seattle.description"></p>
-        <p class="project-cta" data-translate="project.cta.dash"></p>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End of 06_proyectos.html -->
 
 <!-- Start of 07_experiencia.html -->
     <section id="experience" class="experience">
@@ -888,7 +889,7 @@
             'section.projects': 'Projects',
             'projects.cat1': 'Public Management & NGV Projects',
             'projects.cat2': 'Data Analytics & BI Projects',
-            'section.projects.note': 'For the best experience, it is recommended to view the dashboards on a computer or on a mobile device in landscape orientation.',
+            'section.projects.note': 'For the best experience, it is recommended to view the projects on a computer or on a mobile device in landscape orientation.',
             
             // --- NUEVAS TRADUCCIONES PARA PROYECTO GLP (EN) ---
             'tool.public_policy': 'Public Policy',
@@ -967,7 +968,7 @@
             'section.projects': 'Proyectos',
             'projects.cat1': 'Proyectos de Gestión Pública y GNV',
             'projects.cat2': 'Proyectos de Análisis de Datos y BI',
-            'section.projects.note': 'Para una mejor experiencia, se recomienda visualizar los dashboards en una computadora o en un dispositivo móvil en orientación horizontal.',
+            'section.projects.note': 'Para una mejor experiencia, se recomienda visualizar los proyectos en una computadora o en un dispositivo móvil en orientación horizontal.',
             
             // --- NUEVAS TRADUCCIONES PARA PROYECTO GLP (ES) ---
             'tool.public_policy': 'Política Pública',
